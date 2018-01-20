@@ -4,7 +4,7 @@ CUAir's Updates:
 So far, this seems to work on Mac OS
 
 How to compile:
-1. Install dependencies: ```wget flex bison autoconf gettext texlive ncurses-dev```
+1. Install dependencies: ```wget flex bison autoconf gettext texlive ncurses-dev``` (might be ncurses-devel)
 
 2.
 ```
