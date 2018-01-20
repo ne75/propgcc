@@ -13,7 +13,7 @@
 
 #dependencies:
 # binutils and gcc have to be built first
-# 
+#
 ROOT=$(shell pwd)
 CURSES=
 CURSES_PREFIX=$(HOME)
@@ -125,30 +125,30 @@ help:
 	@$(ECHO)
 	@$(ECHO) 'Targets:'
 	@$(ECHO) '  all - build all targets (default)'
-	@$(ECHO) '  binutils - build binutils'	
-	@$(ECHO) '  gcc - build gcc'	
-	@$(ECHO) '  libstdc++ - build the C++ library'	
-	@$(ECHO) '  libgcc - build libgcc'	
-	@$(ECHO) '  gdb - build gdb'	
-	@$(ECHO) '  gdbstub - build gdbstub'	
-	@$(ECHO) '  lib - build the library'	
-	@$(ECHO) '  lib-cog - build the cog library'	
-	@$(ECHO) '  lib-tiny - build libtiny'	
-	@$(ECHO) '  install-spin-compiler - install OpenSpin'	
-	@$(ECHO) '  spin2cpp - build spin2cpp'	
-	@$(ECHO) '  spinsim - build spinsim'	
-	@$(ECHO) '  loader - build the loader'	
+	@$(ECHO) '  binutils - build binutils'
+	@$(ECHO) '  gcc - build gcc'
+	@$(ECHO) '  libstdc++ - build the C++ library'
+	@$(ECHO) '  libgcc - build libgcc'
+	@$(ECHO) '  gdb - build gdb'
+	@$(ECHO) '  gdbstub - build gdbstub'
+	@$(ECHO) '  lib - build the library'
+	@$(ECHO) '  lib-cog - build the cog library'
+	@$(ECHO) '  lib-tiny - build libtiny'
+	@$(ECHO) '  install-spin-compiler - install OpenSpin'
+	@$(ECHO) '  spin2cpp - build spin2cpp'
+	@$(ECHO) '  spinsim - build spinsim'
+	@$(ECHO) '  loader - build the loader'
 	@$(ECHO)
 	@$(ECHO) 'Cleaning targets:'
 	@$(ECHO) '  clean - prepare for a fresh build'
 	@$(ECHO) '  clean-all - prepare for a fresh build and remove the $(PREFIX) directory'
-	@$(ECHO) '  clean-binutils - prepare for a fresh rebuild of binutils'	
-	@$(ECHO) '  clean-gcc - prepare for a fresh rebuild of gcc, libgcc, libstdc++'	
-	@$(ECHO) '  clean-gdb - prepare for a fresh rebuild of gdb'	
-	@$(ECHO) '  clean-gdbstub - prepare for a fresh rebuild of gdbstub'	
-	@$(ECHO) '  clean-lib - prepare for a fresh rebuild of lib, lib-cog, lib-tiny'	
-	@$(ECHO) '  clean-spin2cpp - prepare for a fresh rebuild of spin2cpp'	
-	@$(ECHO) '  clean-spinsim prepare for a fresh rebuild of spinsim'	
+	@$(ECHO) '  clean-binutils - prepare for a fresh rebuild of binutils'
+	@$(ECHO) '  clean-gcc - prepare for a fresh rebuild of gcc, libgcc, libstdc++'
+	@$(ECHO) '  clean-gdb - prepare for a fresh rebuild of gdb'
+	@$(ECHO) '  clean-gdbstub - prepare for a fresh rebuild of gdbstub'
+	@$(ECHO) '  clean-lib - prepare for a fresh rebuild of lib, lib-cog, lib-tiny'
+	@$(ECHO) '  clean-spin2cpp - prepare for a fresh rebuild of spin2cpp'
+	@$(ECHO) '  clean-spinsim prepare for a fresh rebuild of spinsim'
 	@$(ECHO)
 
 ############
@@ -167,7 +167,7 @@ $(BUILD)/binutils/binutils-built:	$(BUILD)/binutils/binutils-configured
 
 $(BUILD)/binutils/binutils-configured:	$(BUILD)/binutils/binutils-created
 	@$(ECHO) Configuring binutils
-	@$(CD) $(BUILD)/binutils; $(ROOT)/binutils/configure --target=propeller-elf --prefix=$(PREFIX) --disable-nls --disable-shared $(CONFIG_OPTIONS)
+	@$(CD) $(BUILD)/binutils; $(ROOT)/binutils/configure --target=propeller-elf --prefix=$(PREFIX) --disable-nls --disable-shared $(CONFIG_OPTIONS) --disable-werror
 	@$(TOUCH) $@
 
 #######
@@ -233,7 +233,7 @@ $(BUILD)/gdb/gdb-built:	binutils gcc $(BUILD)/gdb/gdb-configured
 
 $(BUILD)/gdb/gdb-configured:	$(BUILD)/gdb/gdb-created
 	@$(ECHO) Configuring gdb
-	@$(CD) $(BUILD)/gdb; $(ROOT)/gdb/configure $(CFGCROSS) --target=propeller-elf --prefix=$(PREFIX) --with-system-gdbinit=$(PREFIX)/lib/gdb/gdbinit $(WITH_CURSES)
+	@$(CD) $(BUILD)/gdb; $(ROOT)/gdb/configure $(CFGCROSS) --target=propeller-elf --prefix=$(PREFIX) --with-system-gdbinit=$(PREFIX)/lib/gdb/gdbinit $(WITH_CURSES) --disable-werror
 	@$(TOUCH) $@
 
 ###########

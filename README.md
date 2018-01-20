@@ -1,3 +1,31 @@
+
+CUAir's Updates:
+
+So far, this seems to work on Mac OS
+
+How to compile:
+1. Install dependencies: ```wget flex bison autoconf gettext texlive ncurses-dev```
+
+2.
+```
+cd texinfo-4.13
+./configure
+make
+sudo make install
+```
+
+3.
+```
+cd ..
+make -j<n>
+```
+n is the number of cores on the build machine
+If compiling on Mac, run ```source fix-xcode-warnings.sh```.
+
+4. Wait.
+
+------------------------------------------------------------------
+
 This is a project for the port of GCC (the GNU Compiler Collection) to
 the Parallax Propeller.
 
@@ -38,10 +66,10 @@ spinsim   - Dave Hein's Propeller simulator
 A number of demos are provided. In each directory there should be a
 Makefile. To build the demo do "make"; to run it do "make run".
 
-Of particular interest is the 
+Of particular interest is the
 demo/toggle directory, containing a number of different ways of
 toggling an LED, using one or multiple COGs.
- 
+
 --------------------------- test suites ---------------------------------
 
 Copy the contents of propgcc/dejagnu to
