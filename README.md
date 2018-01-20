@@ -1,7 +1,7 @@
 
 CUAir's Updates:
 
-So far, this seems to work on Mac OS
+So far, this seems to work on Mac OS and Linux.
 
 How to compile:
 1. Install dependencies: ```wget flex bison autoconf gettext texlive ncurses-dev``` (might be ncurses-devel)
@@ -14,6 +14,11 @@ make
 sudo make install
 ```
 
+3. own the opt folder (or read below how to change the install location)
+```
+sudo chown $USER /opt
+```
+
 3.
 ```
 cd ..
@@ -23,6 +28,8 @@ n is the number of cores on the build machine
 If compiling on Mac, run ```source fix-xcode-warnings.sh```.
 
 4. Wait.
+
+5. GDB currently fails to build on Linux, thats okay, it's not needed.
 
 ------------------------------------------------------------------
 
