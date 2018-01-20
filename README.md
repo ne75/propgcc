@@ -6,22 +6,14 @@ So far, this seems to work on Mac OS and Linux.
 How to compile:
 1. Install dependencies: ```wget flex bison autoconf gettext texlive ncurses-dev``` (might be ncurses-devel)
 
-2.
-```
-cd texinfo-4.13
-./configure
-make
-sudo make install
-```
 
-3. own the opt folder (or read below how to change the install location)
+2. own the opt folder (or read below how to change the install location)
 ```
 sudo chown $USER /opt
 ```
 
 3.
 ```
-cd ..
 make -j<n>
 ```
 n is the number of cores on the build machine
