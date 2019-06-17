@@ -1,0 +1,309 @@
+\hypertarget{propeller2_8h}{}\section{include/propeller2.h File Reference}
+\label{propeller2_8h}\index{include/propeller2.h@{include/propeller2.h}}
+
+
+Provides Propeller 2 specific functions.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{propeller2_8h_aa5b59706bf235bbd1936ae801f125507}{P\+I\+NA}}~\+\_\+\+P\+I\+NA
+\begin{DoxyCompactList}\small\item\em P\+I\+NA by default allows reading or writing P2 P\mbox{[}00\+:31\mbox{]} values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a49f0e8289e962c02128f24b94d7aea7c}{P\+I\+NB}}~\+\_\+\+P\+I\+NB
+\begin{DoxyCompactList}\small\item\em P\+I\+NB by default allows reading or writing P2 P\mbox{[}32\+:63\mbox{]} values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a0545e73dc7ae14b1f62293c1feba3983}{P\+I\+NC}}~\+\_\+\+P\+I\+NC
+\begin{DoxyCompactList}\small\item\em P\+I\+NC by default allows reading or writing P2 P\mbox{[}64\+:91\mbox{]} values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a50997bc44119b844ceaab463c564bfb7}{P\+I\+ND}}~\+\_\+\+P\+I\+ND
+\begin{DoxyCompactList}\small\item\em P\+I\+ND by default allows reading or writing P2 P\+I\+ND shadow register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a9b229d9c9c5247460353d9b573f4c4cf}{D\+I\+RA}}~\+\_\+\+D\+I\+RA
+\begin{DoxyCompactList}\small\item\em D\+I\+RA by default allows setting P2 P\mbox{[}00\+:31\mbox{]} to input/output or input only. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a418d7f0dc17bdb79cc99dabd325014d3}{D\+I\+RB}}~\+\_\+\+D\+I\+RB
+\begin{DoxyCompactList}\small\item\em D\+I\+RB by default allows setting P2 P\mbox{[}32\+:63\mbox{]} to input/output or input only. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a4b61596a2e34f3b8170e10da9a473693}{D\+I\+RC}}~\+\_\+\+D\+I\+RC
+\begin{DoxyCompactList}\small\item\em D\+I\+RC by default allows setting P2 P\mbox{[}64\+:91\mbox{]} to input/output or input only. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller2_8h_a5c05c43d7812215b2feb49c71fdd86b7}{D\+I\+RD}}~\+\_\+\+D\+I\+RD
+\begin{DoxyCompactList}\small\item\em D\+I\+RD by default allows setting P2 P\+I\+ND shadow register to input/output or input only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ int \mbox{\hyperlink{propeller2_8h_a233b263323595f4d8e910ef0f8f87e6a}{coginit}} (int id, void $\ast$image, void $\ast$par)
+\begin{DoxyCompactList}\small\item\em Start a cog with a parameter. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ uint32\+\_\+t \mbox{\hyperlink{propeller2_8h_a0c2761254092365ee7d3fa7788cf46d9}{getcnt}} (void)
+\begin{DoxyCompactList}\small\item\em C\+NT register accessor. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ int \mbox{\hyperlink{propeller2_8h_a0454360d6b382cffed87bf3baf9337a8}{getpin}} (int pin)
+\begin{DoxyCompactList}\small\item\em getpin accessor used to read the state of a pin. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ void \mbox{\hyperlink{propeller2_8h_a7a9feb4de74aac32154d3bdc2bdab17e}{setpin}} (int pin, int value)
+\begin{DoxyCompactList}\small\item\em setpin accessor used to write the state of a pin. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ void \mbox{\hyperlink{propeller2_8h_a8c4c801692cb0f887cdf59fa13c67a29}{togglepin}} (int pin)
+\begin{DoxyCompactList}\small\item\em togglepin accessor used to toggle the state of a pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides Propeller 2 specific functions. 
+
+Propeller 2 (P2) provides hardware registers that may be accessed differently from P8x32a (P1). This header provides access to the P2 hardware resources. Similar functions are provided for P1 users for portability.
+
+Common registers are D\+I\+RA and D\+I\+RB (only D\+I\+RA is used in P1). To access other pin hardware on P2 requires the use of D\+I\+RA, P\+I\+NA, and other variations for more than 32 pins.
+
+The P2 Propeller-\/\+G\+CC compiler/assembler provides direct access to P\+I\+Nx and D\+I\+Rx registers. Pins of P2 are also accessible individually by A\+SM instructions getpin, setpc, and notp. The A\+SM code is encapsulated by inline functions getpin, setpin, and togglepin.
+
+The C\+NT value in P2 is not a register as in P1. The C\+NT value can be read by the getcnt instruction. The getcnt inline function provides access to the A\+SM for C users.
+
+Copyright (c) 2011-\/2013 by Parallax, Inc. M\+IT Licensed 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{propeller2_8h_a9b229d9c9c5247460353d9b573f4c4cf}\label{propeller2_8h_a9b229d9c9c5247460353d9b573f4c4cf}} 
+\index{propeller2.h@{propeller2.h}!DIRA@{DIRA}}
+\index{DIRA@{DIRA}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{DIRA}{DIRA}}
+{\footnotesize\ttfamily \#define D\+I\+RA~\+\_\+\+D\+I\+RA}
+
+
+
+D\+I\+RA by default allows setting P2 P\mbox{[}00\+:31\mbox{]} to input/output or input only. 
+
+D\+I\+Rx definitions are variables which map to the register defaults in the P2 C\+OG. They are used to to set P\+I\+Nx pins as inputs only or outputs which can be read. D\+I\+Rx means D\+I\+RA, D\+I\+RB, D\+I\+RC, or D\+I\+RD. The D\+I\+Rx registers may be remapped by instructions to point to each-\/other. 
+
+Definition at line 171 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_a418d7f0dc17bdb79cc99dabd325014d3}\label{propeller2_8h_a418d7f0dc17bdb79cc99dabd325014d3}} 
+\index{propeller2.h@{propeller2.h}!DIRB@{DIRB}}
+\index{DIRB@{DIRB}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{DIRB}{DIRB}}
+{\footnotesize\ttfamily \#define D\+I\+RB~\+\_\+\+D\+I\+RB}
+
+
+
+D\+I\+RB by default allows setting P2 P\mbox{[}32\+:63\mbox{]} to input/output or input only. 
+
+
+
+Definition at line 173 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_a4b61596a2e34f3b8170e10da9a473693}\label{propeller2_8h_a4b61596a2e34f3b8170e10da9a473693}} 
+\index{propeller2.h@{propeller2.h}!DIRC@{DIRC}}
+\index{DIRC@{DIRC}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{DIRC}{DIRC}}
+{\footnotesize\ttfamily \#define D\+I\+RC~\+\_\+\+D\+I\+RC}
+
+
+
+D\+I\+RC by default allows setting P2 P\mbox{[}64\+:91\mbox{]} to input/output or input only. 
+
+
+
+Definition at line 175 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_a5c05c43d7812215b2feb49c71fdd86b7}\label{propeller2_8h_a5c05c43d7812215b2feb49c71fdd86b7}} 
+\index{propeller2.h@{propeller2.h}!DIRD@{DIRD}}
+\index{DIRD@{DIRD}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{DIRD}{DIRD}}
+{\footnotesize\ttfamily \#define D\+I\+RD~\+\_\+\+D\+I\+RD}
+
+
+
+D\+I\+RD by default allows setting P2 P\+I\+ND shadow register to input/output or input only. 
+
+
+
+Definition at line 177 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_aa5b59706bf235bbd1936ae801f125507}\label{propeller2_8h_aa5b59706bf235bbd1936ae801f125507}} 
+\index{propeller2.h@{propeller2.h}!PINA@{PINA}}
+\index{PINA@{PINA}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{PINA}{PINA}}
+{\footnotesize\ttfamily \#define P\+I\+NA~\+\_\+\+P\+I\+NA}
+
+
+
+P\+I\+NA by default allows reading or writing P2 P\mbox{[}00\+:31\mbox{]} values. 
+
+P\+I\+Nx definitions are variables which map to the register defaults in the P2 C\+OG. They are used to read the actual pin states if set to input or output by D\+I\+Rx. They are used to write the pin states if enabled as outputs by D\+I\+Rx. P\+I\+Nx means P\+I\+NA, P\+I\+NB, P\+I\+NC, or P\+I\+ND. The P\+I\+Nx registers may be remapped by instructions to point to each-\/other. 
+
+Definition at line 156 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_a49f0e8289e962c02128f24b94d7aea7c}\label{propeller2_8h_a49f0e8289e962c02128f24b94d7aea7c}} 
+\index{propeller2.h@{propeller2.h}!PINB@{PINB}}
+\index{PINB@{PINB}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{PINB}{PINB}}
+{\footnotesize\ttfamily \#define P\+I\+NB~\+\_\+\+P\+I\+NB}
+
+
+
+P\+I\+NB by default allows reading or writing P2 P\mbox{[}32\+:63\mbox{]} values. 
+
+
+
+Definition at line 158 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_a0545e73dc7ae14b1f62293c1feba3983}\label{propeller2_8h_a0545e73dc7ae14b1f62293c1feba3983}} 
+\index{propeller2.h@{propeller2.h}!PINC@{PINC}}
+\index{PINC@{PINC}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{PINC}{PINC}}
+{\footnotesize\ttfamily \#define P\+I\+NC~\+\_\+\+P\+I\+NC}
+
+
+
+P\+I\+NC by default allows reading or writing P2 P\mbox{[}64\+:91\mbox{]} values. 
+
+
+
+Definition at line 160 of file propeller2.\+h.
+
+\mbox{\Hypertarget{propeller2_8h_a50997bc44119b844ceaab463c564bfb7}\label{propeller2_8h_a50997bc44119b844ceaab463c564bfb7}} 
+\index{propeller2.h@{propeller2.h}!PIND@{PIND}}
+\index{PIND@{PIND}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{PIND}{PIND}}
+{\footnotesize\ttfamily \#define P\+I\+ND~\+\_\+\+P\+I\+ND}
+
+
+
+P\+I\+ND by default allows reading or writing P2 P\+I\+ND shadow register. 
+
+
+
+Definition at line 162 of file propeller2.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{propeller2_8h_a233b263323595f4d8e910ef0f8f87e6a}\label{propeller2_8h_a233b263323595f4d8e910ef0f8f87e6a}} 
+\index{propeller2.h@{propeller2.h}!coginit@{coginit}}
+\index{coginit@{coginit}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{coginit()}{coginit()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ int coginit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{void $\ast$}]{image,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Start a cog with a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The C\+OG id to initialize \\
+\hline
+{\em image} & Start address of P\+A\+SM code to load. \\
+\hline
+{\em par} & address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+OG ID provided by the builtin function or -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file propeller2.\+h.
+
+
+
+References \+\_\+\+\_\+asm\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{propeller2_8h_a0c2761254092365ee7d3fa7788cf46d9}\label{propeller2_8h_a0c2761254092365ee7d3fa7788cf46d9}} 
+\index{propeller2.h@{propeller2.h}!getcnt@{getcnt}}
+\index{getcnt@{getcnt}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{getcnt()}{getcnt()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ uint32\+\_\+t getcnt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+C\+NT register accessor. 
+
+P2 provides a shared C\+NT register, but it is not register memory mapped as in P1. The C\+NT is only readable with the getcnt instruction.
+
+\begin{DoxyReturn}{Returns}
+the global C\+NT value. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file propeller2.\+h.
+
+
+
+References \+\_\+\+\_\+asm\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{propeller2_8h_a0454360d6b382cffed87bf3baf9337a8}\label{propeller2_8h_a0454360d6b382cffed87bf3baf9337a8}} 
+\index{propeller2.h@{propeller2.h}!getpin@{getpin}}
+\index{getpin@{getpin}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{getpin()}{getpin()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ int getpin (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+getpin accessor used to read the state of a pin. 
+
+P2 provides pin registers and instructions. This inline macro provides access to read a given pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Pin to read in the range 0\+:127. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State of the requested pin with range 0\+:1. 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file propeller2.\+h.
+
+
+
+References \+\_\+\+\_\+asm\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{propeller2_8h_a7a9feb4de74aac32154d3bdc2bdab17e}\label{propeller2_8h_a7a9feb4de74aac32154d3bdc2bdab17e}} 
+\index{propeller2.h@{propeller2.h}!setpin@{setpin}}
+\index{setpin@{setpin}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{setpin()}{setpin()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ void setpin (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+setpin accessor used to write the state of a pin. 
+
+P2 provides pin registers and instructions. This inline macro provides access to write the value to a given pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Pin to read in the range 0\+:127. \\
+\hline
+{\em value} & The value to set to the pin 0\+:1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file propeller2.\+h.
+
+
+
+References \+\_\+\+\_\+asm\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{propeller2_8h_a8c4c801692cb0f887cdf59fa13c67a29}\label{propeller2_8h_a8c4c801692cb0f887cdf59fa13c67a29}} 
+\index{propeller2.h@{propeller2.h}!togglepin@{togglepin}}
+\index{togglepin@{togglepin}!propeller2.h@{propeller2.h}}
+\subsubsection{\texorpdfstring{togglepin()}{togglepin()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ void togglepin (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+togglepin accessor used to toggle the state of a pin. 
+
+P2 provides pin registers and instructions. This inline macro provides access to toggle the value of a given pin. Toggle means to set the opposite of the existing state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Pin to read in the range 0\+:127. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file propeller2.\+h.
+
+
+
+References \+\_\+\+\_\+asm\+\_\+\+\_\+().
+

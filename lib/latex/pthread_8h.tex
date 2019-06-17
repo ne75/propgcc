@@ -1,0 +1,695 @@
+\hypertarget{pthread_8h}{}\section{include/pthread.h File Reference}
+\label{pthread_8h}\index{include/pthread.h@{include/pthread.h}}
+
+
+Provides A\+PI for implementation of pthread functions.  
+
+
+{\ttfamily \#include $<$sys/thread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/size\+\_\+t.\+h$>$}\newline
+{\ttfamily \#include $<$sys/null.\+h$>$}\newline
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include $<$propeller.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} struct T\+O\+DO. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} T\+O\+DO. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Condition variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a9adfbca2a0e90522632b104318508b6a}{\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+N\+E\+E\+D\+ED}}~(0)
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a8b3dc1c5c1a165d6143b1dce950e8266}{P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+IN}}~(64 + \mbox{\hyperlink{pthread_8h_a9adfbca2a0e90522632b104318508b6a}{\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+N\+E\+E\+D\+ED}})
+\begin{DoxyCompactList}\small\item\em Minimum stack size for a thread. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{pthread_8h_a0610bafffed629ef9b0573cb6cd7a320}{\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+D\+E\+F\+A\+U\+LT}}~(512 + \mbox{\hyperlink{pthread_8h_a9adfbca2a0e90522632b104318508b6a}{\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+N\+E\+E\+D\+ED}})
+\begin{DoxyCompactList}\small\item\em Default stack size for a thread. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{pthread_8h_a6764a9781b535a6c46e21000f2cd76e3}{\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+D\+E\+T\+A\+C\+H\+ED}}~0x0001
+\begin{DoxyCompactList}\small\item\em Detached flag for the pthread \char`\"{}flags\char`\"{} field. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{pthread_8h_a672b5c1cb0790572c6f53b3b2cfcc023}{\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED}}~0x8000
+\begin{DoxyCompactList}\small\item\em Terminated flag for the pthread \char`\"{}flags\char`\"{} field. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{pthread_8h_afb10d234d831c7b57768d62786748bc7}{P\+T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+J\+O\+I\+N\+A\+B\+LE}}~0
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a391c5eb0f6b5febc48710d0be3f62394}{P\+T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+T\+A\+C\+H\+ED}}~1
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a84e55100366a6a8338a2af3b3f279686}{P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER}}~\{ 0, 0 \}
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a14c1f716b4f49d6f45c033de9d9cc97f}{\+\_\+\+\_\+lock\+\_\+pthreads}}()~\mbox{\hyperlink{thread_8h_aac2b35a75f8ff779459102e506bddf27}{\+\_\+\+\_\+lock}}(\&\mbox{\hyperlink{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}{\+\_\+\+\_\+pthreads\+\_\+lock}})
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a3e682959a236ec37b9f39b9f895f3ba7}{\+\_\+\+\_\+unlock\+\_\+pthreads}}()~\mbox{\hyperlink{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}{\+\_\+\+\_\+unlock}}(\&\mbox{\hyperlink{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}{\+\_\+\+\_\+pthreads\+\_\+lock}})
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a0a23e66e087bcf5c253b9b2746f19a64}{P\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}~\mbox{\hyperlink{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}{\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}
+\begin{DoxyCompactList}\small\item\em Maximum number of keys for per-\/thread data. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{pthread_8h_af667a407d87d33000ccafe9540ddd916}{\+\_\+pthread\+\_\+ptr}}(thread)~(thread)
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a6f659050380fe55acd040e8658fb6964}{\+\_\+pthread\+\_\+self}}()~\+\_\+\+T\+LS
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a0b7ef06127d24b06049f7f15670da67c}{pthread\+\_\+set\+\_\+cog\+\_\+affinity\+\_\+np}}(thread,  mask)~do \{ thread-\/$>$affinity = $\sim$(mask); \} while (0)
+\item 
+\#define \mbox{\hyperlink{pthread_8h_affc10d7fd64f3b51c36aa7fec8316626}{pthread\+\_\+set\+\_\+affinity\+\_\+thiscog\+\_\+np}}()~\mbox{\hyperlink{pthread_8h_a0408c250320637da84d73b96648f417a}{pthread\+\_\+set\+\_\+cog\+\_\+affinity\+\_\+np}}(\+\_\+\+T\+LS, \mbox{\hyperlink{thread_8h_ac0efe65b72ed90ffd30610437a9911b4}{\+\_\+\+\_\+this\+\_\+cpu\+\_\+mask}}())
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a560416e4775eb226bf819121f9bfbd14}{pthread\+\_\+getspecific}}(i)~(\+\_\+\+T\+LS-\/$>$thread\+\_\+data\mbox{[}i\mbox{]})
+\item 
+\#define \mbox{\hyperlink{pthread_8h_a6ee5d1e5129a4a0752d1cc0126ba6fa7}{pthread\+\_\+setspecific}}(i,  x)~(\+\_\+\+T\+LS-\/$>$thread\+\_\+data\mbox{[}i\mbox{]} = (x))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} \mbox{\hyperlink{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}{\+\_\+pthread\+\_\+state\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{thread_8h_acb75659012caf2e738ff936db5473447}{\+\_\+thread\+\_\+queue\+\_\+t}} \mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}{\+\_\+pthread\+\_\+state\+\_\+t}} $\ast$ \mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The pthread\+\_\+t typedef is used as the \char`\"{}handle\char`\"{} for threads and functions. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} \mbox{\hyperlink{pthread_8h_a2aaed8baf229d8eb74fae2e704b6be80}{pthread\+\_\+attr\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} struct T\+O\+DO. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{pthread_8h_a5d7aa6696d82c0454e3f0d48231a1ac2}{pthread\+\_\+mutex\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} T\+O\+DO. \end{DoxyCompactList}\item 
+typedef int \mbox{\hyperlink{pthread_8h_acf558cc182e69a8fee691e7e3249adec}{pthread\+\_\+mutexattr\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Mutex attributes are not implemented. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} \mbox{\hyperlink{pthread_8h_af45fa0984a5d7c8c3709a1d88863fb34}{pthread\+\_\+cond\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Condition variables. \end{DoxyCompactList}\item 
+typedef int \mbox{\hyperlink{pthread_8h_a598223d4c21c5ed7d2391c33c8346cd7}{pthread\+\_\+condattr\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Condition variable attributes are not implemented. \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{pthread_8h_aacf793c4d6e266c68d82fcb067ec4afa}{\+\_\+\+\_\+pthread\+\_\+destruct\+\_\+func}}) (void $\ast$)
+\begin{DoxyCompactList}\small\item\em Destructor function associated with thread specific data. \end{DoxyCompactList}\item 
+typedef unsigned char \mbox{\hyperlink{pthread_8h_afe91885241857052409058ad23850489}{pthread\+\_\+key\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Type for per-\/thread data keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pthread_8h_a13f034bd8e79762d371ea8d14634cd76}{\+\_\+pthread\+\_\+sleep}} (\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$queue)
+\item 
+void \mbox{\hyperlink{pthread_8h_a9bead97930d1965f0b68739ee7494743}{\+\_\+pthread\+\_\+sleep\+\_\+with\+\_\+lock}} (\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$queue)
+\item 
+int \mbox{\hyperlink{pthread_8h_ac096263c23626ccf4f6bdf3e881e55d2}{\+\_\+pthread\+\_\+wake}} (\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$queue)
+\item 
+int \mbox{\hyperlink{pthread_8h_a3696bae4d054a0a3a484d2445fd9fcf4}{\+\_\+pthread\+\_\+wakeall}} (\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$queue)
+\item 
+void \mbox{\hyperlink{pthread_8h_a40e8ec62da24a48b239130b53bb66fa0}{\+\_\+pthread\+\_\+free}} (\mbox{\hyperlink{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}{\+\_\+pthread\+\_\+state\+\_\+t}} $\ast$thr)
+\item 
+int \mbox{\hyperlink{pthread_8h_a0b85ebb1e3aac081a4c0a5e85ae3cbe9}{pthread\+\_\+attr\+\_\+init}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr)
+\item 
+int \mbox{\hyperlink{pthread_8h_a4bcdbf47c17c7dcc51e9f05f5cb56d81}{pthread\+\_\+attr\+\_\+destroy}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr)
+\item 
+int \mbox{\hyperlink{pthread_8h_ac97de7a8a6d460109843215a81a52f7c}{pthread\+\_\+attr\+\_\+getdetachstate}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr, int $\ast$detachstate)
+\item 
+int \mbox{\hyperlink{pthread_8h_a511b59792283a165b37ee6e475f8f9f9}{pthread\+\_\+attr\+\_\+getstacksize}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} $\ast$stacksize)
+\item 
+int \mbox{\hyperlink{pthread_8h_a812a9a455ae2ef2bb0dca4fff201a281}{pthread\+\_\+attr\+\_\+setstacksize}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} stacksize)
+\item 
+int \mbox{\hyperlink{pthread_8h_ae6ee78c307d8467b34a9b0c330993a54}{pthread\+\_\+attr\+\_\+setdetachstate}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr, int detachstate)
+\item 
+int \mbox{\hyperlink{pthread_8h_a298a51c79184546ef78800ea6d4463b9}{pthread\+\_\+attr\+\_\+setstackaddr}} (\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr, void $\ast$stackaddr)
+\item 
+int \mbox{\hyperlink{pthread_8h_a6beb641ff083f52043dde196d0566b8e}{pthread\+\_\+create}} (\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} $\ast$thread, const \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$attr, void $\ast$(startfunc)(void $\ast$), void $\ast$arg)
+\item 
+void \mbox{\hyperlink{pthread_8h_a35c2ea250c655c5c052c9bbaa903290a}{pthread\+\_\+exit}} (void $\ast$)
+\item 
+int \mbox{\hyperlink{pthread_8h_a97d3e693fa374978eadce9eec81da737}{pthread\+\_\+join}} (\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} thread, void $\ast$$\ast$result\+\_\+ptr)
+\item 
+int \mbox{\hyperlink{pthread_8h_a7c275c509c26566b6dd95a2de1668a2f}{pthread\+\_\+detach}} (\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} thread)
+\item 
+int \mbox{\hyperlink{pthread_8h_a7454d249ed94ad5d5e57ba1529d7a7f2}{pthread\+\_\+mutex\+\_\+init}} (\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$mutex, const \mbox{\hyperlink{pthread_8h_acf558cc182e69a8fee691e7e3249adec}{pthread\+\_\+mutexattr\+\_\+t}} $\ast$attr)
+\item 
+int \mbox{\hyperlink{pthread_8h_a12809c44718c21544ceb280dc1a53573}{pthread\+\_\+mutex\+\_\+lock}} (\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$mutex)
+\item 
+int \mbox{\hyperlink{pthread_8h_a27da386211db1a7e9a3b2a0db4d22144}{pthread\+\_\+mutex\+\_\+trylock}} (\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$mutex)
+\item 
+int \mbox{\hyperlink{pthread_8h_a96184290ffb60e04c53a52869cf960a2}{pthread\+\_\+mutex\+\_\+unlock}} (\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$mutex)
+\item 
+int \mbox{\hyperlink{pthread_8h_a3cf620ff3a40af11d79cf28901dc55e2}{pthread\+\_\+mutex\+\_\+destroy}} (\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$mutex)
+\item 
+int \mbox{\hyperlink{pthread_8h_ad5b6c558bcd5260289981207b9ca9687}{pthread\+\_\+cond\+\_\+init}} (\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$cond, const \mbox{\hyperlink{pthread_8h_a598223d4c21c5ed7d2391c33c8346cd7}{pthread\+\_\+condattr\+\_\+t}} $\ast$attr)
+\item 
+int \mbox{\hyperlink{pthread_8h_aa1587e01856a579b78effd0a1a284a47}{pthread\+\_\+cond\+\_\+destroy}} (\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$cond)
+\item 
+int \mbox{\hyperlink{pthread_8h_a20f98235b024efb10e5c76a64f0d94e5}{pthread\+\_\+cond\+\_\+signal}} (\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$cond)
+\item 
+int \mbox{\hyperlink{pthread_8h_afc4b19aa8ea2dce0956579ce878b4998}{pthread\+\_\+cond\+\_\+broadcast}} (\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$cond)
+\item 
+int \mbox{\hyperlink{pthread_8h_a907ae104b6dfd8fc12e23e84952aa7ca}{pthread\+\_\+cond\+\_\+wait}} (\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$cond, \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$mutex)
+\item 
+int \mbox{\hyperlink{pthread_8h_af4b7ced8ecff505380fe8216244a3764}{pthread\+\_\+key\+\_\+create}} (\mbox{\hyperlink{pthread_8h_afe91885241857052409058ad23850489}{pthread\+\_\+key\+\_\+t}} $\ast$key, void($\ast$destructor)(void $\ast$))
+\item 
+int \mbox{\hyperlink{pthread_8h_aee96306dc79294927ee840bb4de2244b}{pthread\+\_\+key\+\_\+delete}} (\mbox{\hyperlink{pthread_8h_afe91885241857052409058ad23850489}{pthread\+\_\+key\+\_\+t}} key)
+\item 
+void \mbox{\hyperlink{pthread_8h_a7ee9fabf7372dc770c942376f8707841}{pthread\+\_\+yield}} (void)
+\item 
+\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} \mbox{\hyperlink{pthread_8h_a4c4f5f3b4f8f45d9d897847d53b11aaa}{pthread\+\_\+self}} (void)
+\item 
+void \mbox{\hyperlink{pthread_8h_a0408c250320637da84d73b96648f417a}{pthread\+\_\+set\+\_\+cog\+\_\+affinity\+\_\+np}} (\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} $\ast$thread, unsigned short cogmask)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{propeller_8h_aed019fe98cd209831728779153c5e247}{H\+U\+B\+D\+A\+TA}} \mbox{\hyperlink{thread_8h_a2fac39c4595ddd15ce94cef2a50c8a7b}{atomic\+\_\+t}} \mbox{\hyperlink{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}{\+\_\+\+\_\+pthreads\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em Lock for pthreads data structures. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{pthread_8h_aacf793c4d6e266c68d82fcb067ec4afa}{\+\_\+\+\_\+pthread\+\_\+destruct\+\_\+func}} \mbox{\hyperlink{pthread_8h_a923299ad39283549475423e4d67ce034}{\+\_\+\+\_\+pdestruct}} \mbox{[}\mbox{\hyperlink{pthread_8h_a0a23e66e087bcf5c253b9b2746f19a64}{P\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table of destructors for thread specific data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides A\+PI for implementation of pthread functions. 
+
+P\+O\+S\+IX threads are a set of functions that support applications with requirements for multiple flows of control, called threads, within a process. Multithreading is used to improve the performance of a program.
+
+The pthread module provides a subset of the P\+O\+S\+IX standard pthread library for allowing multiple threads to run on multiple C\+OG instances of the Propeller\+G\+CC L\+MM interpreter. Multiple threads can also run on an X\+MM interpreter, but only one X\+MM interpreter can run at any given time (this restriction will probably be lifted soon).
+
+\begin{DoxyPrecond}{Precondition}
+It is very important to understand that pthreads provide a cooperative non-\/preemptive multithreading system. The consequences are that certain rules will apply. I.\+E. \begin{DoxyItemize}
+\item The Propeller \mbox{\hyperlink{propeller_8h_abfb115793a1f26315b713a46891d53b2}{waitcnt()}} function can not be used. \item Delays can only be introduced with \mbox{\hyperlink{sys_2unistd_8h_ac0383719bafa9b5b2aa25fabc586bd1f}{usleep()}} and its variations. \item Standard \mbox{\hyperlink{stdio_8h_a55f3d956bb2ba20b5059e9e25484a47f}{printf()}} and friends must be used. \item Do not use -\/Dprintf=\+\_\+\+\_\+simple\+\_\+printf with pthreads. \item Threads must not hog the L\+MM C\+OG kernel; they must yield. \item Gobal data must be protected by mutex/semaphore.\end{DoxyItemize}
+Copyright (c) 2011 Parallax, Inc. Written by Eric R. Smith, Total Spectrum Software Inc. M\+IT licensed. 
+\end{DoxyPrecond}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pthread_8h_a14c1f716b4f49d6f45c033de9d9cc97f}\label{pthread_8h_a14c1f716b4f49d6f45c033de9d9cc97f}} 
+\index{pthread.h@{pthread.h}!\_\_lock\_pthreads@{\_\_lock\_pthreads}}
+\index{\_\_lock\_pthreads@{\_\_lock\_pthreads}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_\_lock\_pthreads}{\_\_lock\_pthreads}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+lock\+\_\+pthreads(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{thread_8h_aac2b35a75f8ff779459102e506bddf27}{\+\_\+\+\_\+lock}}(\&\mbox{\hyperlink{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}{\+\_\+\+\_\+pthreads\+\_\+lock}})}
+
+
+
+Definition at line 97 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a3e682959a236ec37b9f39b9f895f3ba7}\label{pthread_8h_a3e682959a236ec37b9f39b9f895f3ba7}} 
+\index{pthread.h@{pthread.h}!\_\_unlock\_pthreads@{\_\_unlock\_pthreads}}
+\index{\_\_unlock\_pthreads@{\_\_unlock\_pthreads}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_\_unlock\_pthreads}{\_\_unlock\_pthreads}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+unlock\+\_\+pthreads(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}{\+\_\+\+\_\+unlock}}(\&\mbox{\hyperlink{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}{\+\_\+\+\_\+pthreads\+\_\+lock}})}
+
+
+
+Definition at line 98 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a9adfbca2a0e90522632b104318508b6a}\label{pthread_8h_a9adfbca2a0e90522632b104318508b6a}} 
+\index{pthread.h@{pthread.h}!\_CACHE\_SIZE\_NEEDED@{\_CACHE\_SIZE\_NEEDED}}
+\index{\_CACHE\_SIZE\_NEEDED@{\_CACHE\_SIZE\_NEEDED}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_CACHE\_SIZE\_NEEDED}{\_CACHE\_SIZE\_NEEDED}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+N\+E\+E\+D\+ED~(0)}
+
+
+
+Definition at line 44 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a6764a9781b535a6c46e21000f2cd76e3}\label{pthread_8h_a6764a9781b535a6c46e21000f2cd76e3}} 
+\index{pthread.h@{pthread.h}!\_PTHREAD\_DETACHED@{\_PTHREAD\_DETACHED}}
+\index{\_PTHREAD\_DETACHED@{\_PTHREAD\_DETACHED}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_PTHREAD\_DETACHED}{\_PTHREAD\_DETACHED}}
+{\footnotesize\ttfamily \#define \+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+D\+E\+T\+A\+C\+H\+ED~0x0001}
+
+
+
+Detached flag for the pthread \char`\"{}flags\char`\"{} field. 
+
+
+
+Definition at line 53 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_af667a407d87d33000ccafe9540ddd916}\label{pthread_8h_af667a407d87d33000ccafe9540ddd916}} 
+\index{pthread.h@{pthread.h}!\_pthread\_ptr@{\_pthread\_ptr}}
+\index{\_pthread\_ptr@{\_pthread\_ptr}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_ptr}{\_pthread\_ptr}}
+{\footnotesize\ttfamily \#define \+\_\+pthread\+\_\+ptr(\begin{DoxyParamCaption}\item[{}]{thread }\end{DoxyParamCaption})~(thread)}
+
+
+
+Definition at line 131 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a6f659050380fe55acd040e8658fb6964}\label{pthread_8h_a6f659050380fe55acd040e8658fb6964}} 
+\index{pthread.h@{pthread.h}!\_pthread\_self@{\_pthread\_self}}
+\index{\_pthread\_self@{\_pthread\_self}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_self}{\_pthread\_self}}
+{\footnotesize\ttfamily \#define \+\_\+pthread\+\_\+self(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+T\+LS}
+
+
+
+Definition at line 132 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a0610bafffed629ef9b0573cb6cd7a320}\label{pthread_8h_a0610bafffed629ef9b0573cb6cd7a320}} 
+\index{pthread.h@{pthread.h}!\_PTHREAD\_STACK\_DEFAULT@{\_PTHREAD\_STACK\_DEFAULT}}
+\index{\_PTHREAD\_STACK\_DEFAULT@{\_PTHREAD\_STACK\_DEFAULT}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_PTHREAD\_STACK\_DEFAULT}{\_PTHREAD\_STACK\_DEFAULT}}
+{\footnotesize\ttfamily \#define \+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+D\+E\+F\+A\+U\+LT~(512 + \mbox{\hyperlink{pthread_8h_a9adfbca2a0e90522632b104318508b6a}{\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+N\+E\+E\+D\+ED}})}
+
+
+
+Default stack size for a thread. 
+
+
+
+Definition at line 50 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a672b5c1cb0790572c6f53b3b2cfcc023}\label{pthread_8h_a672b5c1cb0790572c6f53b3b2cfcc023}} 
+\index{pthread.h@{pthread.h}!\_PTHREAD\_TERMINATED@{\_PTHREAD\_TERMINATED}}
+\index{\_PTHREAD\_TERMINATED@{\_PTHREAD\_TERMINATED}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_PTHREAD\_TERMINATED}{\_PTHREAD\_TERMINATED}}
+{\footnotesize\ttfamily \#define \+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED~0x8000}
+
+
+
+Terminated flag for the pthread \char`\"{}flags\char`\"{} field. 
+
+
+
+Definition at line 55 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a391c5eb0f6b5febc48710d0be3f62394}\label{pthread_8h_a391c5eb0f6b5febc48710d0be3f62394}} 
+\index{pthread.h@{pthread.h}!PTHREAD\_CREATE\_DETACHED@{PTHREAD\_CREATE\_DETACHED}}
+\index{PTHREAD\_CREATE\_DETACHED@{PTHREAD\_CREATE\_DETACHED}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{PTHREAD\_CREATE\_DETACHED}{PTHREAD\_CREATE\_DETACHED}}
+{\footnotesize\ttfamily \#define P\+T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+T\+A\+C\+H\+ED~1}
+
+
+
+Definition at line 58 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_afb10d234d831c7b57768d62786748bc7}\label{pthread_8h_afb10d234d831c7b57768d62786748bc7}} 
+\index{pthread.h@{pthread.h}!PTHREAD\_CREATE\_JOINABLE@{PTHREAD\_CREATE\_JOINABLE}}
+\index{PTHREAD\_CREATE\_JOINABLE@{PTHREAD\_CREATE\_JOINABLE}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{PTHREAD\_CREATE\_JOINABLE}{PTHREAD\_CREATE\_JOINABLE}}
+{\footnotesize\ttfamily \#define P\+T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+J\+O\+I\+N\+A\+B\+LE~0}
+
+
+
+Definition at line 57 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a560416e4775eb226bf819121f9bfbd14}\label{pthread_8h_a560416e4775eb226bf819121f9bfbd14}} 
+\index{pthread.h@{pthread.h}!pthread\_getspecific@{pthread\_getspecific}}
+\index{pthread\_getspecific@{pthread\_getspecific}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_getspecific}{pthread\_getspecific}}
+{\footnotesize\ttfamily \#define pthread\+\_\+getspecific(\begin{DoxyParamCaption}\item[{}]{i }\end{DoxyParamCaption})~(\+\_\+\+T\+LS-\/$>$thread\+\_\+data\mbox{[}i\mbox{]})}
+
+
+
+Definition at line 189 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a0a23e66e087bcf5c253b9b2746f19a64}\label{pthread_8h_a0a23e66e087bcf5c253b9b2746f19a64}} 
+\index{pthread.h@{pthread.h}!PTHREAD\_KEYS\_MAX@{PTHREAD\_KEYS\_MAX}}
+\index{PTHREAD\_KEYS\_MAX@{PTHREAD\_KEYS\_MAX}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{PTHREAD\_KEYS\_MAX}{PTHREAD\_KEYS\_MAX}}
+{\footnotesize\ttfamily \#define P\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX~\mbox{\hyperlink{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}{\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}}
+
+
+
+Maximum number of keys for per-\/thread data. 
+
+
+
+Definition at line 112 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a84e55100366a6a8338a2af3b3f279686}\label{pthread_8h_a84e55100366a6a8338a2af3b3f279686}} 
+\index{pthread.h@{pthread.h}!PTHREAD\_MUTEX\_INITIALIZER@{PTHREAD\_MUTEX\_INITIALIZER}}
+\index{PTHREAD\_MUTEX\_INITIALIZER@{PTHREAD\_MUTEX\_INITIALIZER}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{PTHREAD\_MUTEX\_INITIALIZER}{PTHREAD\_MUTEX\_INITIALIZER}}
+{\footnotesize\ttfamily \#define P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER~\{ 0, 0 \}}
+
+
+
+Definition at line 90 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_affc10d7fd64f3b51c36aa7fec8316626}\label{pthread_8h_affc10d7fd64f3b51c36aa7fec8316626}} 
+\index{pthread.h@{pthread.h}!pthread\_set\_affinity\_thiscog\_np@{pthread\_set\_affinity\_thiscog\_np}}
+\index{pthread\_set\_affinity\_thiscog\_np@{pthread\_set\_affinity\_thiscog\_np}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_set\_affinity\_thiscog\_np}{pthread\_set\_affinity\_thiscog\_np}}
+{\footnotesize\ttfamily void pthread\+\_\+set\+\_\+affinity\+\_\+thiscog\+\_\+np(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{pthread_8h_a0408c250320637da84d73b96648f417a}{pthread\+\_\+set\+\_\+cog\+\_\+affinity\+\_\+np}}(\+\_\+\+T\+LS, \mbox{\hyperlink{thread_8h_ac0efe65b72ed90ffd30610437a9911b4}{\+\_\+\+\_\+this\+\_\+cpu\+\_\+mask}}())}
+
+
+
+Definition at line 187 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a0b7ef06127d24b06049f7f15670da67c}\label{pthread_8h_a0b7ef06127d24b06049f7f15670da67c}} 
+\index{pthread.h@{pthread.h}!pthread\_set\_cog\_affinity\_np@{pthread\_set\_cog\_affinity\_np}}
+\index{pthread\_set\_cog\_affinity\_np@{pthread\_set\_cog\_affinity\_np}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_set\_cog\_affinity\_np}{pthread\_set\_cog\_affinity\_np}}
+{\footnotesize\ttfamily \#define pthread\+\_\+set\+\_\+cog\+\_\+affinity\+\_\+np(\begin{DoxyParamCaption}\item[{}]{thread,  }\item[{}]{mask }\end{DoxyParamCaption})~do \{ thread-\/$>$affinity = $\sim$(mask); \} while (0)}
+
+
+
+Definition at line 184 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a6ee5d1e5129a4a0752d1cc0126ba6fa7}\label{pthread_8h_a6ee5d1e5129a4a0752d1cc0126ba6fa7}} 
+\index{pthread.h@{pthread.h}!pthread\_setspecific@{pthread\_setspecific}}
+\index{pthread\_setspecific@{pthread\_setspecific}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_setspecific}{pthread\_setspecific}}
+{\footnotesize\ttfamily \#define pthread\+\_\+setspecific(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{x }\end{DoxyParamCaption})~(\+\_\+\+T\+LS-\/$>$thread\+\_\+data\mbox{[}i\mbox{]} = (x))}
+
+
+
+Definition at line 190 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a8b3dc1c5c1a165d6143b1dce950e8266}\label{pthread_8h_a8b3dc1c5c1a165d6143b1dce950e8266}} 
+\index{pthread.h@{pthread.h}!PTHREAD\_STACK\_MIN@{PTHREAD\_STACK\_MIN}}
+\index{PTHREAD\_STACK\_MIN@{PTHREAD\_STACK\_MIN}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{PTHREAD\_STACK\_MIN}{PTHREAD\_STACK\_MIN}}
+{\footnotesize\ttfamily \#define P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+IN~(64 + \mbox{\hyperlink{pthread_8h_a9adfbca2a0e90522632b104318508b6a}{\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+N\+E\+E\+D\+ED}})}
+
+
+
+Minimum stack size for a thread. 
+
+
+
+Definition at line 48 of file pthread.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{pthread_8h_aacf793c4d6e266c68d82fcb067ec4afa}\label{pthread_8h_aacf793c4d6e266c68d82fcb067ec4afa}} 
+\index{pthread.h@{pthread.h}!\_\_pthread\_destruct\_func@{\_\_pthread\_destruct\_func}}
+\index{\_\_pthread\_destruct\_func@{\_\_pthread\_destruct\_func}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_\_pthread\_destruct\_func}{\_\_pthread\_destruct\_func}}
+{\footnotesize\ttfamily typedef void($\ast$ \+\_\+\+\_\+pthread\+\_\+destruct\+\_\+func) (void $\ast$)}
+
+
+
+Destructor function associated with thread specific data. 
+
+
+
+Definition at line 109 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a547e924a1dbc72063242456b6390011e}\label{pthread_8h_a547e924a1dbc72063242456b6390011e}} 
+\index{pthread.h@{pthread.h}!\_pthread\_queue\_t@{\_pthread\_queue\_t}}
+\index{\_pthread\_queue\_t@{\_pthread\_queue\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_queue\_t}{\_pthread\_queue\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{thread_8h_acb75659012caf2e738ff936db5473447}{\+\_\+thread\+\_\+queue\+\_\+t}} \mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}}}
+
+
+
+Definition at line 62 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}\label{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}} 
+\index{pthread.h@{pthread.h}!\_pthread\_state\_t@{\_pthread\_state\_t}}
+\index{\_pthread\_state\_t@{\_pthread\_state\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_state\_t}{\_pthread\_state\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} \mbox{\hyperlink{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}{\+\_\+pthread\+\_\+state\+\_\+t}}}
+
+
+
+Definition at line 61 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a2aaed8baf229d8eb74fae2e704b6be80}\label{pthread_8h_a2aaed8baf229d8eb74fae2e704b6be80}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_t@{pthread\_attr\_t}}
+\index{pthread\_attr\_t@{pthread\_attr\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_t}{pthread\_attr\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}}  \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}}}
+
+
+
+The \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} struct T\+O\+DO. 
+
+\mbox{\Hypertarget{pthread_8h_af45fa0984a5d7c8c3709a1d88863fb34}\label{pthread_8h_af45fa0984a5d7c8c3709a1d88863fb34}} 
+\index{pthread.h@{pthread.h}!pthread\_cond\_t@{pthread\_cond\_t}}
+\index{pthread\_cond\_t@{pthread\_cond\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_cond\_t}{pthread\_cond\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}}  \mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}}}
+
+
+
+Condition variables. 
+
+\mbox{\Hypertarget{pthread_8h_a598223d4c21c5ed7d2391c33c8346cd7}\label{pthread_8h_a598223d4c21c5ed7d2391c33c8346cd7}} 
+\index{pthread.h@{pthread.h}!pthread\_condattr\_t@{pthread\_condattr\_t}}
+\index{pthread\_condattr\_t@{pthread\_condattr\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_condattr\_t}{pthread\_condattr\_t}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{pthread_8h_a598223d4c21c5ed7d2391c33c8346cd7}{pthread\+\_\+condattr\+\_\+t}}}
+
+
+
+Condition variable attributes are not implemented. 
+
+
+
+Definition at line 106 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_afe91885241857052409058ad23850489}\label{pthread_8h_afe91885241857052409058ad23850489}} 
+\index{pthread.h@{pthread.h}!pthread\_key\_t@{pthread\_key\_t}}
+\index{pthread\_key\_t@{pthread\_key\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_key\_t}{pthread\_key\_t}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{pthread_8h_afe91885241857052409058ad23850489}{pthread\+\_\+key\+\_\+t}}}
+
+
+
+Type for per-\/thread data keys. 
+
+
+
+Definition at line 115 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a5d7aa6696d82c0454e3f0d48231a1ac2}\label{pthread_8h_a5d7aa6696d82c0454e3f0d48231a1ac2}} 
+\index{pthread.h@{pthread.h}!pthread\_mutex\_t@{pthread\_mutex\_t}}
+\index{pthread\_mutex\_t@{pthread\_mutex\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutex\_t}{pthread\_mutex\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}}  \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}}}
+
+
+
+The \mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} T\+O\+DO. 
+
+\mbox{\Hypertarget{pthread_8h_acf558cc182e69a8fee691e7e3249adec}\label{pthread_8h_acf558cc182e69a8fee691e7e3249adec}} 
+\index{pthread.h@{pthread.h}!pthread\_mutexattr\_t@{pthread\_mutexattr\_t}}
+\index{pthread\_mutexattr\_t@{pthread\_mutexattr\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutexattr\_t}{pthread\_mutexattr\_t}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{pthread_8h_acf558cc182e69a8fee691e7e3249adec}{pthread\+\_\+mutexattr\+\_\+t}}}
+
+
+
+Mutex attributes are not implemented. 
+
+
+
+Definition at line 93 of file pthread.\+h.
+
+\mbox{\Hypertarget{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}\label{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}} 
+\index{pthread.h@{pthread.h}!pthread\_t@{pthread\_t}}
+\index{pthread\_t@{pthread\_t}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_t}{pthread\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}{\+\_\+pthread\+\_\+state\+\_\+t}}$\ast$ \mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}}}
+
+
+
+The pthread\+\_\+t typedef is used as the \char`\"{}handle\char`\"{} for threads and functions. 
+
+
+
+Definition at line 67 of file pthread.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pthread_8h_a40e8ec62da24a48b239130b53bb66fa0}\label{pthread_8h_a40e8ec62da24a48b239130b53bb66fa0}} 
+\index{pthread.h@{pthread.h}!\_pthread\_free@{\_pthread\_free}}
+\index{\_pthread\_free@{\_pthread\_free}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_free()}{\_pthread\_free()}}
+{\footnotesize\ttfamily void \+\_\+pthread\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a6ed225e8413b257dbdb0b1cb7a80fb1b}{\+\_\+pthread\+\_\+state\+\_\+t}} $\ast$}]{thr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a13f034bd8e79762d371ea8d14634cd76}\label{pthread_8h_a13f034bd8e79762d371ea8d14634cd76}} 
+\index{pthread.h@{pthread.h}!\_pthread\_sleep@{\_pthread\_sleep}}
+\index{\_pthread\_sleep@{\_pthread\_sleep}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_sleep()}{\_pthread\_sleep()}}
+{\footnotesize\ttfamily void \+\_\+pthread\+\_\+sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a9bead97930d1965f0b68739ee7494743}\label{pthread_8h_a9bead97930d1965f0b68739ee7494743}} 
+\index{pthread.h@{pthread.h}!\_pthread\_sleep\_with\_lock@{\_pthread\_sleep\_with\_lock}}
+\index{\_pthread\_sleep\_with\_lock@{\_pthread\_sleep\_with\_lock}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_sleep\_with\_lock()}{\_pthread\_sleep\_with\_lock()}}
+{\footnotesize\ttfamily void \+\_\+pthread\+\_\+sleep\+\_\+with\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_ac096263c23626ccf4f6bdf3e881e55d2}\label{pthread_8h_ac096263c23626ccf4f6bdf3e881e55d2}} 
+\index{pthread.h@{pthread.h}!\_pthread\_wake@{\_pthread\_wake}}
+\index{\_pthread\_wake@{\_pthread\_wake}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_wake()}{\_pthread\_wake()}}
+{\footnotesize\ttfamily int \+\_\+pthread\+\_\+wake (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a3696bae4d054a0a3a484d2445fd9fcf4}\label{pthread_8h_a3696bae4d054a0a3a484d2445fd9fcf4}} 
+\index{pthread.h@{pthread.h}!\_pthread\_wakeall@{\_pthread\_wakeall}}
+\index{\_pthread\_wakeall@{\_pthread\_wakeall}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_pthread\_wakeall()}{\_pthread\_wakeall()}}
+{\footnotesize\ttfamily int \+\_\+pthread\+\_\+wakeall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a547e924a1dbc72063242456b6390011e}{\+\_\+pthread\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a4bcdbf47c17c7dcc51e9f05f5cb56d81}\label{pthread_8h_a4bcdbf47c17c7dcc51e9f05f5cb56d81}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_destroy@{pthread\_attr\_destroy}}
+\index{pthread\_attr\_destroy@{pthread\_attr\_destroy}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_destroy()}{pthread\_attr\_destroy()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_ac97de7a8a6d460109843215a81a52f7c}\label{pthread_8h_ac97de7a8a6d460109843215a81a52f7c}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_getdetachstate@{pthread\_attr\_getdetachstate}}
+\index{pthread\_attr\_getdetachstate@{pthread\_attr\_getdetachstate}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_getdetachstate()}{pthread\_attr\_getdetachstate()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+getdetachstate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr,  }\item[{int $\ast$}]{detachstate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a511b59792283a165b37ee6e475f8f9f9}\label{pthread_8h_a511b59792283a165b37ee6e475f8f9f9}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_getstacksize@{pthread\_attr\_getstacksize}}
+\index{pthread\_attr\_getstacksize@{pthread\_attr\_getstacksize}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_getstacksize()}{pthread\_attr\_getstacksize()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+getstacksize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} $\ast$}]{stacksize }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a0b85ebb1e3aac081a4c0a5e85ae3cbe9}\label{pthread_8h_a0b85ebb1e3aac081a4c0a5e85ae3cbe9}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_init@{pthread\_attr\_init}}
+\index{pthread\_attr\_init@{pthread\_attr\_init}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_init()}{pthread\_attr\_init()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_ae6ee78c307d8467b34a9b0c330993a54}\label{pthread_8h_ae6ee78c307d8467b34a9b0c330993a54}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_setdetachstate@{pthread\_attr\_setdetachstate}}
+\index{pthread\_attr\_setdetachstate@{pthread\_attr\_setdetachstate}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_setdetachstate()}{pthread\_attr\_setdetachstate()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+setdetachstate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr,  }\item[{int}]{detachstate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a298a51c79184546ef78800ea6d4463b9}\label{pthread_8h_a298a51c79184546ef78800ea6d4463b9}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_setstackaddr@{pthread\_attr\_setstackaddr}}
+\index{pthread\_attr\_setstackaddr@{pthread\_attr\_setstackaddr}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_setstackaddr()}{pthread\_attr\_setstackaddr()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+setstackaddr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr,  }\item[{void $\ast$}]{stackaddr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a812a9a455ae2ef2bb0dca4fff201a281}\label{pthread_8h_a812a9a455ae2ef2bb0dca4fff201a281}} 
+\index{pthread.h@{pthread.h}!pthread\_attr\_setstacksize@{pthread\_attr\_setstacksize}}
+\index{pthread\_attr\_setstacksize@{pthread\_attr\_setstacksize}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_attr\_setstacksize()}{pthread\_attr\_setstacksize()}}
+{\footnotesize\ttfamily int pthread\+\_\+attr\+\_\+setstacksize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{stacksize }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_afc4b19aa8ea2dce0956579ce878b4998}\label{pthread_8h_afc4b19aa8ea2dce0956579ce878b4998}} 
+\index{pthread.h@{pthread.h}!pthread\_cond\_broadcast@{pthread\_cond\_broadcast}}
+\index{pthread\_cond\_broadcast@{pthread\_cond\_broadcast}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_cond\_broadcast()}{pthread\_cond\_broadcast()}}
+{\footnotesize\ttfamily int pthread\+\_\+cond\+\_\+broadcast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$}]{cond }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_aa1587e01856a579b78effd0a1a284a47}\label{pthread_8h_aa1587e01856a579b78effd0a1a284a47}} 
+\index{pthread.h@{pthread.h}!pthread\_cond\_destroy@{pthread\_cond\_destroy}}
+\index{pthread\_cond\_destroy@{pthread\_cond\_destroy}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_cond\_destroy()}{pthread\_cond\_destroy()}}
+{\footnotesize\ttfamily int pthread\+\_\+cond\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$}]{cond }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_ad5b6c558bcd5260289981207b9ca9687}\label{pthread_8h_ad5b6c558bcd5260289981207b9ca9687}} 
+\index{pthread.h@{pthread.h}!pthread\_cond\_init@{pthread\_cond\_init}}
+\index{pthread\_cond\_init@{pthread\_cond\_init}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_cond\_init()}{pthread\_cond\_init()}}
+{\footnotesize\ttfamily int pthread\+\_\+cond\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$}]{cond,  }\item[{const \mbox{\hyperlink{pthread_8h_a598223d4c21c5ed7d2391c33c8346cd7}{pthread\+\_\+condattr\+\_\+t}} $\ast$}]{attr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a20f98235b024efb10e5c76a64f0d94e5}\label{pthread_8h_a20f98235b024efb10e5c76a64f0d94e5}} 
+\index{pthread.h@{pthread.h}!pthread\_cond\_signal@{pthread\_cond\_signal}}
+\index{pthread\_cond\_signal@{pthread\_cond\_signal}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_cond\_signal()}{pthread\_cond\_signal()}}
+{\footnotesize\ttfamily int pthread\+\_\+cond\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$}]{cond }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a907ae104b6dfd8fc12e23e84952aa7ca}\label{pthread_8h_a907ae104b6dfd8fc12e23e84952aa7ca}} 
+\index{pthread.h@{pthread.h}!pthread\_cond\_wait@{pthread\_cond\_wait}}
+\index{pthread\_cond\_wait@{pthread\_cond\_wait}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_cond\_wait()}{pthread\_cond\_wait()}}
+{\footnotesize\ttfamily int pthread\+\_\+cond\+\_\+wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__cond__t}{pthread\+\_\+cond\+\_\+t}} $\ast$}]{cond,  }\item[{\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a6beb641ff083f52043dde196d0566b8e}\label{pthread_8h_a6beb641ff083f52043dde196d0566b8e}} 
+\index{pthread.h@{pthread.h}!pthread\_create@{pthread\_create}}
+\index{pthread\_create@{pthread\_create}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_create()}{pthread\_create()}}
+{\footnotesize\ttfamily int pthread\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} $\ast$}]{thread,  }\item[{const \mbox{\hyperlink{structpthread__attr__t}{pthread\+\_\+attr\+\_\+t}} $\ast$}]{attr,  }\item[{void $\ast$}]{startfunc)(void $\ast$,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a7c275c509c26566b6dd95a2de1668a2f}\label{pthread_8h_a7c275c509c26566b6dd95a2de1668a2f}} 
+\index{pthread.h@{pthread.h}!pthread\_detach@{pthread\_detach}}
+\index{pthread\_detach@{pthread\_detach}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_detach()}{pthread\_detach()}}
+{\footnotesize\ttfamily int pthread\+\_\+detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}}}]{thread }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a35c2ea250c655c5c052c9bbaa903290a}\label{pthread_8h_a35c2ea250c655c5c052c9bbaa903290a}} 
+\index{pthread.h@{pthread.h}!pthread\_exit@{pthread\_exit}}
+\index{pthread\_exit@{pthread\_exit}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_exit()}{pthread\_exit()}}
+{\footnotesize\ttfamily void pthread\+\_\+exit (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a97d3e693fa374978eadce9eec81da737}\label{pthread_8h_a97d3e693fa374978eadce9eec81da737}} 
+\index{pthread.h@{pthread.h}!pthread\_join@{pthread\_join}}
+\index{pthread\_join@{pthread\_join}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_join()}{pthread\_join()}}
+{\footnotesize\ttfamily int pthread\+\_\+join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}}}]{thread,  }\item[{void $\ast$$\ast$}]{result\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_af4b7ced8ecff505380fe8216244a3764}\label{pthread_8h_af4b7ced8ecff505380fe8216244a3764}} 
+\index{pthread.h@{pthread.h}!pthread\_key\_create@{pthread\_key\_create}}
+\index{pthread\_key\_create@{pthread\_key\_create}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_key\_create()}{pthread\_key\_create()}}
+{\footnotesize\ttfamily int pthread\+\_\+key\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_afe91885241857052409058ad23850489}{pthread\+\_\+key\+\_\+t}} $\ast$}]{key,  }\item[{void($\ast$)(void $\ast$)}]{destructor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_aee96306dc79294927ee840bb4de2244b}\label{pthread_8h_aee96306dc79294927ee840bb4de2244b}} 
+\index{pthread.h@{pthread.h}!pthread\_key\_delete@{pthread\_key\_delete}}
+\index{pthread\_key\_delete@{pthread\_key\_delete}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_key\_delete()}{pthread\_key\_delete()}}
+{\footnotesize\ttfamily int pthread\+\_\+key\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_afe91885241857052409058ad23850489}{pthread\+\_\+key\+\_\+t}}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a3cf620ff3a40af11d79cf28901dc55e2}\label{pthread_8h_a3cf620ff3a40af11d79cf28901dc55e2}} 
+\index{pthread.h@{pthread.h}!pthread\_mutex\_destroy@{pthread\_mutex\_destroy}}
+\index{pthread\_mutex\_destroy@{pthread\_mutex\_destroy}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutex\_destroy()}{pthread\_mutex\_destroy()}}
+{\footnotesize\ttfamily int pthread\+\_\+mutex\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a7454d249ed94ad5d5e57ba1529d7a7f2}\label{pthread_8h_a7454d249ed94ad5d5e57ba1529d7a7f2}} 
+\index{pthread.h@{pthread.h}!pthread\_mutex\_init@{pthread\_mutex\_init}}
+\index{pthread\_mutex\_init@{pthread\_mutex\_init}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutex\_init()}{pthread\_mutex\_init()}}
+{\footnotesize\ttfamily int pthread\+\_\+mutex\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$}]{mutex,  }\item[{const \mbox{\hyperlink{pthread_8h_acf558cc182e69a8fee691e7e3249adec}{pthread\+\_\+mutexattr\+\_\+t}} $\ast$}]{attr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a12809c44718c21544ceb280dc1a53573}\label{pthread_8h_a12809c44718c21544ceb280dc1a53573}} 
+\index{pthread.h@{pthread.h}!pthread\_mutex\_lock@{pthread\_mutex\_lock}}
+\index{pthread\_mutex\_lock@{pthread\_mutex\_lock}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutex\_lock()}{pthread\_mutex\_lock()}}
+{\footnotesize\ttfamily int pthread\+\_\+mutex\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a27da386211db1a7e9a3b2a0db4d22144}\label{pthread_8h_a27da386211db1a7e9a3b2a0db4d22144}} 
+\index{pthread.h@{pthread.h}!pthread\_mutex\_trylock@{pthread\_mutex\_trylock}}
+\index{pthread\_mutex\_trylock@{pthread\_mutex\_trylock}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutex\_trylock()}{pthread\_mutex\_trylock()}}
+{\footnotesize\ttfamily int pthread\+\_\+mutex\+\_\+trylock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a96184290ffb60e04c53a52869cf960a2}\label{pthread_8h_a96184290ffb60e04c53a52869cf960a2}} 
+\index{pthread.h@{pthread.h}!pthread\_mutex\_unlock@{pthread\_mutex\_unlock}}
+\index{pthread\_mutex\_unlock@{pthread\_mutex\_unlock}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_mutex\_unlock()}{pthread\_mutex\_unlock()}}
+{\footnotesize\ttfamily int pthread\+\_\+mutex\+\_\+unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpthread__mutex__t}{pthread\+\_\+mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a4c4f5f3b4f8f45d9d897847d53b11aaa}\label{pthread_8h_a4c4f5f3b4f8f45d9d897847d53b11aaa}} 
+\index{pthread.h@{pthread.h}!pthread\_self@{pthread\_self}}
+\index{pthread\_self@{pthread\_self}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_self()}{pthread\_self()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} pthread\+\_\+self (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a0408c250320637da84d73b96648f417a}\label{pthread_8h_a0408c250320637da84d73b96648f417a}} 
+\index{pthread.h@{pthread.h}!pthread\_set\_cog\_affinity\_np@{pthread\_set\_cog\_affinity\_np}}
+\index{pthread\_set\_cog\_affinity\_np@{pthread\_set\_cog\_affinity\_np}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_set\_cog\_affinity\_np()}{pthread\_set\_cog\_affinity\_np()}}
+{\footnotesize\ttfamily void pthread\+\_\+set\+\_\+cog\+\_\+affinity\+\_\+np (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_a89f205910487f36a0a113c1b8ec1ac90}{pthread\+\_\+t}} $\ast$}]{thread,  }\item[{unsigned short}]{cogmask }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pthread_8h_a7ee9fabf7372dc770c942376f8707841}\label{pthread_8h_a7ee9fabf7372dc770c942376f8707841}} 
+\index{pthread.h@{pthread.h}!pthread\_yield@{pthread\_yield}}
+\index{pthread\_yield@{pthread\_yield}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{pthread\_yield()}{pthread\_yield()}}
+{\footnotesize\ttfamily void pthread\+\_\+yield (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{pthread_8h_a923299ad39283549475423e4d67ce034}\label{pthread_8h_a923299ad39283549475423e4d67ce034}} 
+\index{pthread.h@{pthread.h}!\_\_pdestruct@{\_\_pdestruct}}
+\index{\_\_pdestruct@{\_\_pdestruct}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_\_pdestruct}{\_\_pdestruct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pthread_8h_aacf793c4d6e266c68d82fcb067ec4afa}{\+\_\+\+\_\+pthread\+\_\+destruct\+\_\+func}} \+\_\+\+\_\+pdestruct\mbox{[}\mbox{\hyperlink{pthread_8h_a0a23e66e087bcf5c253b9b2746f19a64}{P\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+Table of destructors for thread specific data. 
+
+\mbox{\Hypertarget{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}\label{pthread_8h_a3c7afc0c98231e408e8aac8cbde1463b}} 
+\index{pthread.h@{pthread.h}!\_\_pthreads\_lock@{\_\_pthreads\_lock}}
+\index{\_\_pthreads\_lock@{\_\_pthreads\_lock}!pthread.h@{pthread.h}}
+\subsubsection{\texorpdfstring{\_\_pthreads\_lock}{\_\_pthreads\_lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{propeller_8h_aed019fe98cd209831728779153c5e247}{H\+U\+B\+D\+A\+TA}} \mbox{\hyperlink{thread_8h_a2fac39c4595ddd15ce94cef2a50c8a7b}{atomic\+\_\+t}} \+\_\+\+\_\+pthreads\+\_\+lock}
+
+
+
+Lock for pthreads data structures. 
+

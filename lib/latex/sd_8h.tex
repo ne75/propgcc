@@ -1,0 +1,94 @@
+\hypertarget{sd_8h}{}\section{include/sys/sd.h File Reference}
+\label{sd_8h}\index{include/sys/sd.h@{include/sys/sd.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__SD__SingleSPI}{\+\_\+\+S\+D\+\_\+\+Single\+S\+PI}}
+\item 
+struct \mbox{\hyperlink{struct__SD__SerialDeMUX}{\+\_\+\+S\+D\+\_\+\+Serial\+De\+M\+UX}}
+\item 
+struct \mbox{\hyperlink{struct__SD__ParallelDeMUX}{\+\_\+\+S\+D\+\_\+\+Parallel\+De\+M\+UX}}
+\item 
+struct \mbox{\hyperlink{struct__SD__ConfigWords}{\+\_\+\+S\+D\+\_\+\+Config\+Words}}
+\item 
+struct \mbox{\hyperlink{struct__SD__Params}{\+\_\+\+S\+D\+\_\+\+Params}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sd_8h_ab581f52e9a0c0b3237ed39225109fd90}{\+\_\+\+S\+D\+Attach\+Type}} \{ \mbox{\hyperlink{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a43e9db8cc48e439a93d1223a29f628c4}{\+\_\+\+S\+D\+A\+\_\+\+Single\+S\+PI}}, 
+\mbox{\hyperlink{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a51eac2dce6e68e3a54541c0ad189c74a}{\+\_\+\+S\+D\+A\+\_\+\+Serial\+De\+M\+UX}}, 
+\mbox{\hyperlink{sd_8h_ab581f52e9a0c0b3237ed39225109fd90ad0fb4eacc8c0ef39593623fc8c2b50bb}{\+\_\+\+S\+D\+A\+\_\+\+Parallel\+De\+M\+UX}}, 
+\mbox{\hyperlink{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a5993b90953190b010a7b1603393c9980}{\+\_\+\+S\+D\+A\+\_\+\+Config\+Words}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{sd_8h_ae3a5745ac9401b1f4201af547d6741fd}{dfs\+\_\+mount}} (\mbox{\hyperlink{struct__SD__Params}{\+\_\+\+S\+D\+\_\+\+Params}} $\ast$params)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{sd_8h_af09aa57b646f54e6530b4e85e1e5eccc}{dfs\+\_\+mount\+\_\+defaults}} (void)
+\item 
+void \mbox{\hyperlink{sd_8h_a41c603a0dc2c80154cc6f729d6e367ed}{dfs\+\_\+use\+\_\+lock}} (uint32\+\_\+t lock\+Id)
+\item 
+void \mbox{\hyperlink{sd_8h_afad7cf7683d24fff9354caaad9b23367}{dfs\+\_\+set\+Default\+File\+Date\+Time}} (struct \mbox{\hyperlink{structtm}{tm}} $\ast$\mbox{\hyperlink{structtm}{tm}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sd_8h_ab581f52e9a0c0b3237ed39225109fd90}\label{sd_8h_ab581f52e9a0c0b3237ed39225109fd90}} 
+\index{sd.h@{sd.h}!\_SDAttachType@{\_SDAttachType}}
+\index{\_SDAttachType@{\_SDAttachType}!sd.h@{sd.h}}
+\subsubsection{\texorpdfstring{\_SDAttachType}{\_SDAttachType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sd_8h_ab581f52e9a0c0b3237ed39225109fd90}{\+\_\+\+S\+D\+Attach\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_SDA\_SingleSPI@{\_SDA\_SingleSPI}!sd.h@{sd.h}}\index{sd.h@{sd.h}!\_SDA\_SingleSPI@{\_SDA\_SingleSPI}}}\mbox{\Hypertarget{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a43e9db8cc48e439a93d1223a29f628c4}\label{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a43e9db8cc48e439a93d1223a29f628c4}} 
+\+\_\+\+S\+D\+A\+\_\+\+Single\+S\+PI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_SDA\_SerialDeMUX@{\_SDA\_SerialDeMUX}!sd.h@{sd.h}}\index{sd.h@{sd.h}!\_SDA\_SerialDeMUX@{\_SDA\_SerialDeMUX}}}\mbox{\Hypertarget{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a51eac2dce6e68e3a54541c0ad189c74a}\label{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a51eac2dce6e68e3a54541c0ad189c74a}} 
+\+\_\+\+S\+D\+A\+\_\+\+Serial\+De\+M\+UX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_SDA\_ParallelDeMUX@{\_SDA\_ParallelDeMUX}!sd.h@{sd.h}}\index{sd.h@{sd.h}!\_SDA\_ParallelDeMUX@{\_SDA\_ParallelDeMUX}}}\mbox{\Hypertarget{sd_8h_ab581f52e9a0c0b3237ed39225109fd90ad0fb4eacc8c0ef39593623fc8c2b50bb}\label{sd_8h_ab581f52e9a0c0b3237ed39225109fd90ad0fb4eacc8c0ef39593623fc8c2b50bb}} 
+\+\_\+\+S\+D\+A\+\_\+\+Parallel\+De\+M\+UX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_SDA\_ConfigWords@{\_SDA\_ConfigWords}!sd.h@{sd.h}}\index{sd.h@{sd.h}!\_SDA\_ConfigWords@{\_SDA\_ConfigWords}}}\mbox{\Hypertarget{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a5993b90953190b010a7b1603393c9980}\label{sd_8h_ab581f52e9a0c0b3237ed39225109fd90a5993b90953190b010a7b1603393c9980}} 
+\+\_\+\+S\+D\+A\+\_\+\+Config\+Words&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 68 of file sd.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sd_8h_ae3a5745ac9401b1f4201af547d6741fd}\label{sd_8h_ae3a5745ac9401b1f4201af547d6741fd}} 
+\index{sd.h@{sd.h}!dfs\_mount@{dfs\_mount}}
+\index{dfs\_mount@{dfs\_mount}!sd.h@{sd.h}}
+\subsubsection{\texorpdfstring{dfs\_mount()}{dfs\_mount()}}
+{\footnotesize\ttfamily uint32\+\_\+t dfs\+\_\+mount (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__SD__Params}{\+\_\+\+S\+D\+\_\+\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sd_8h_af09aa57b646f54e6530b4e85e1e5eccc}\label{sd_8h_af09aa57b646f54e6530b4e85e1e5eccc}} 
+\index{sd.h@{sd.h}!dfs\_mount\_defaults@{dfs\_mount\_defaults}}
+\index{dfs\_mount\_defaults@{dfs\_mount\_defaults}!sd.h@{sd.h}}
+\subsubsection{\texorpdfstring{dfs\_mount\_defaults()}{dfs\_mount\_defaults()}}
+{\footnotesize\ttfamily uint32\+\_\+t dfs\+\_\+mount\+\_\+defaults (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sd_8h_afad7cf7683d24fff9354caaad9b23367}\label{sd_8h_afad7cf7683d24fff9354caaad9b23367}} 
+\index{sd.h@{sd.h}!dfs\_setDefaultFileDateTime@{dfs\_setDefaultFileDateTime}}
+\index{dfs\_setDefaultFileDateTime@{dfs\_setDefaultFileDateTime}!sd.h@{sd.h}}
+\subsubsection{\texorpdfstring{dfs\_setDefaultFileDateTime()}{dfs\_setDefaultFileDateTime()}}
+{\footnotesize\ttfamily void dfs\+\_\+set\+Default\+File\+Date\+Time (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtm}{tm}} $\ast$}]{tm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sd_8h_a41c603a0dc2c80154cc6f729d6e367ed}\label{sd_8h_a41c603a0dc2c80154cc6f729d6e367ed}} 
+\index{sd.h@{sd.h}!dfs\_use\_lock@{dfs\_use\_lock}}
+\index{dfs\_use\_lock@{dfs\_use\_lock}!sd.h@{sd.h}}
+\subsubsection{\texorpdfstring{dfs\_use\_lock()}{dfs\_use\_lock()}}
+{\footnotesize\ttfamily void dfs\+\_\+use\+\_\+lock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{lock\+Id }\end{DoxyParamCaption})}
+

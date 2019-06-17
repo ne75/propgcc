@@ -1,0 +1,276 @@
+\hypertarget{struct____driver}{}\section{\+\_\+\+\_\+driver Struct Reference}
+\label{struct____driver}\index{\_\_driver@{\_\_driver}}
+
+
+Generic and customizable driver struct for stdio devices.  
+
+
+
+
+{\ttfamily \#include $<$driver.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{struct____driver_ac71ee9154799b2e861d2eeb8a1d4187b}{prefix}}
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}{fopen}} )(\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, const char $\ast$name, const char $\ast$mode)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_a31af02555db35d9f4f4f8c63614fee62}{fclose}} )(\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_ad0ae4ab69b55f0a0723b955e3bfca5fa}{read}} )(\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_a902b3520e511e35b74bcab898856031d}{write}} )(\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_ae5f6ef5127202521669991e7f16ae23f}{seek}} )(\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, long offset, int whence)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_a239638fb330ecc6377047de9b7f5d34a}{remove}} )(const char $\ast$name)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_a3c7a25bc3839094e0808f464bcea1ec8}{getbyte}} )(\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int($\ast$ \mbox{\hyperlink{struct____driver_aa5d9cb7bcaa7b8d06d68c3da1c81160e}{putbyte}} )(int c, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic and customizable driver struct for stdio devices. 
+
+The purpose is to allow replacing the stdio functions. Any device can be attached to stdio functions with this struct.
+
+Typically the \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} array is defined by users for setting up stdin, stdout, stderr F\+I\+LE drivers, SD card F\+I\+LE drivers, and others.
+
+The \+\_\+\+Driver list is a list of all drivers we can use in the program. The default \+\_\+\+Init\+IO function opens stdin, stdout, and stderr based on the first driver in the list (typically the serial driver). The serial driver could be replaced by a T\+V/\+Keyboard driver.
+
+When defined by the user, the array of structs may look like this\+: \begin{DoxyVerb}extern _Driver _SimpleSerialDriver;
+extern _Driver _FileDriver;
+
+_Driver *_driverlist[] = {
+  &_SimpleSerialDriver,
+  &_FileDriver,
+  NULL
+};\end{DoxyVerb}
+ The N\+U\+LL driver ends the \+\_\+\+Driver list.
+
+The device driver interface is the \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} struct. By defining the struct in the device driver, one connects driver functions to the \+\_\+\+Driver.
+
+In a TV output device driver for example, we need to define \mbox{\hyperlink{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}{fopen()}} for the \mbox{\hyperlink{driver_8h_adbf07ea45760d1ad007a2c7be8102336}{\+\_\+\+Init\+I\+O()}} routine, \mbox{\hyperlink{stdio_8h_a9de5969c36eab7f18a1966d6d43aba78}{fwrite()}}, and \mbox{\hyperlink{struct____driver_a31af02555db35d9f4f4f8c63614fee62}{fclose()}}.
+
+\begin{DoxyVerb}_Driver TvDriver = {
+  TvPrefix,     // TvPrefix is the device driver name "TV"
+  Tv_fopen,     // fopen starts the TV COG (term for Propeller core).
+  Tv_fclose,    // fclose stops the TV COG if necessary, etc....
+  _null_read,   // use _null_read instead of defining Tv_fread
+  Tv_write,     // fwrite is used to send characters to the TV
+  NULL,         // seek; not applicable
+  NULL,         // remove; not applicable
+  NULL,         // getbyte; not applicable
+  Tv_putbyte,   // putbyte: write a single byte
+};\end{DoxyVerb}
+
+
+Of course it is not necessary to use a stdio method for TV output. There are some cases where the stdio infrastructure is not necessary. The standard stdio library is relatively big, but as small as possible.
+
+The \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} mechanism gives the program flexibility in a standard way. The types of drivers are limited only by the programmer\textquotesingle{}s imagination.
+
+Some V\+GA demo programs have been written entirely in C. 
+
+Definition at line 88 of file driver.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct____driver_a31af02555db35d9f4f4f8c63614fee62}\label{struct____driver_a31af02555db35d9f4f4f8c63614fee62}} 
+\index{\_\_driver@{\_\_driver}!fclose@{fclose}}
+\index{fclose@{fclose}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{fclose}{fclose}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::fclose) (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)}
+
+Prototype for closing files to be filled in by user\textquotesingle{}s driver. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fp} & F\+I\+LE pointer set by previous \mbox{\hyperlink{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}{fopen()}} call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, nonzero on failure 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}\label{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}} 
+\index{\_\_driver@{\_\_driver}!fopen@{fopen}}
+\index{fopen@{fopen}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{fopen}{fopen}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::fopen) (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, const char $\ast$name, const char $\ast$mode)}
+
+Prototype for opening files.
+
+A function for the user\textquotesingle{}s device must be provided by the user\textquotesingle{}s driver. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em fp} & This is the file pointer for the driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & This is the device name string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & This is the device open mode string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, nonzero on failure 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_a3c7a25bc3839094e0808f464bcea1ec8}\label{struct____driver_a3c7a25bc3839094e0808f464bcea1ec8}} 
+\index{\_\_driver@{\_\_driver}!getbyte@{getbyte}}
+\index{getbyte@{getbyte}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{getbyte}{getbyte}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::getbyte) (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)}
+
+Optional prototype for single character input.
+
+Function getbyte is needed for reading the generic terminal driver. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fp} & The file pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+character read by the function. 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_ac71ee9154799b2e861d2eeb8a1d4187b}\label{struct____driver_ac71ee9154799b2e861d2eeb8a1d4187b}} 
+\index{\_\_driver@{\_\_driver}!prefix@{prefix}}
+\index{prefix@{prefix}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{prefix}{prefix}}
+{\footnotesize\ttfamily const char$\ast$ \+\_\+\+\_\+driver\+::prefix}
+
+The file \char`\"{}device\char`\"{} prefix for fopen.
+
+This string allows users to name their devices an pass startup information to the driver if nessesary.
+
+Some library device names\+: \char`\"{}\+S\+S\+E\+R\char`\"{}, \char`\"{}\+F\+D\+S\char`\"{}, \char`\"{}\+T\+V\char`\"{}, etc....
+
+The default Propeller-\/\+G\+CC stdio console device name is \char`\"{}\+S\+S\+E\+R\char`\"{}. 
+
+Definition at line 100 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_aa5d9cb7bcaa7b8d06d68c3da1c81160e}\label{struct____driver_aa5d9cb7bcaa7b8d06d68c3da1c81160e}} 
+\index{\_\_driver@{\_\_driver}!putbyte@{putbyte}}
+\index{putbyte@{putbyte}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{putbyte}{putbyte}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::putbyte) (int c, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)}
+
+Optional prototype for single character output.
+
+Function putbyte is needed for writing to the generic terminal driver. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em c} & The character to write. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fp} & The file pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+character written by the function. 
+\end{DoxyReturn}
+
+
+Definition at line 173 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_ad0ae4ab69b55f0a0723b955e3bfca5fa}\label{struct____driver_ad0ae4ab69b55f0a0723b955e3bfca5fa}} 
+\index{\_\_driver@{\_\_driver}!read@{read}}
+\index{read@{read}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::read) (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)}
+
+Prototype for reading multi byte I/O.
+
+A function for the user\textquotesingle{}s device must be provided by the user\textquotesingle{}s driver. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fp} & F\+I\+LE pointer set by previous \mbox{\hyperlink{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}{fopen()}} call. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & A char buffer of at least size length where data is put after read. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & The size of the buf parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read. If an error occurs, or the end-\/of-\/file is reached, the return value is a short object count (or zero). 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_a239638fb330ecc6377047de9b7f5d34a}\label{struct____driver_a239638fb330ecc6377047de9b7f5d34a}} 
+\index{\_\_driver@{\_\_driver}!remove@{remove}}
+\index{remove@{remove}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{remove}{remove}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::remove) (const char $\ast$name)}
+
+Prototype for removing a file or directory from the file system. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the file to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero on success, or -\/1 on error with errno set to indicate error. 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_ae5f6ef5127202521669991e7f16ae23f}\label{struct____driver_ae5f6ef5127202521669991e7f16ae23f}} 
+\index{\_\_driver@{\_\_driver}!seek@{seek}}
+\index{seek@{seek}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{seek}{seek}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::seek) (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, long offset, int whence)}
+
+Prototype for seek to a position in the file.
+
+A function for the user\textquotesingle{}s device must be provided by the user\textquotesingle{}s driver. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fp} & F\+I\+LE pointer set by previous \mbox{\hyperlink{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}{fopen()}} call. \\
+\hline
+\mbox{\texttt{ in}}  & {\em offset} & The offset to add to the file position specified by whence. \\
+\hline
+\mbox{\texttt{ in}}  & {\em whence} & The start position specifier\+: S\+E\+E\+K\+\_\+\+S\+ET, S\+E\+E\+K\+\_\+\+C\+UR, or S\+E\+E\+K\+\_\+\+E\+ND. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero on success, or -\/1 on error with errno set to indicate error. 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file driver.\+h.
+
+\mbox{\Hypertarget{struct____driver_a902b3520e511e35b74bcab898856031d}\label{struct____driver_a902b3520e511e35b74bcab898856031d}} 
+\index{\_\_driver@{\_\_driver}!write@{write}}
+\index{write@{write}!\_\_driver@{\_\_driver}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+\+\_\+driver\+::write) (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)}
+
+Prototype for writing multi byte I/O.
+
+A function for the user\textquotesingle{}s device must be provided by the user\textquotesingle{}s driver. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fp} & F\+I\+LE pointer set by previous \mbox{\hyperlink{struct____driver_aff96f49764bd6d991e204f1e3cd0adfd}{fopen()}} call. \\
+\hline
+\mbox{\texttt{ in}}  & {\em buf} & A char buffer of at least size length where data is put befoe write. \\
+\hline
+ & {\em size} & The size of the buf to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read. If an error occurs, or the end-\/of-\/file is reached, the return value is a short object count (or zero). 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file driver.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/sys/\mbox{\hyperlink{sys_2driver_8h}{driver.\+h}}\end{DoxyCompactItemize}

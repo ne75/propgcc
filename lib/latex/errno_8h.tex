@@ -1,0 +1,825 @@
+\hypertarget{errno_8h}{}\section{include/errno.h File Reference}
+\label{errno_8h}\index{include/errno.h@{include/errno.h}}
+
+
+Defines error condition reporting macros.  
+
+
+{\ttfamily \#include $<$sys/thread.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{errno_8h_ab03f640d90fbc5bcb75285d08a0f25ed}{errno}}~(\+\_\+\+T\+LS-\/$>$errno)
+\item 
+\#define \mbox{\hyperlink{errno_8h_acf2e4414e0bf0d331a111e70f9317434}{E\+OK}}~0
+\item 
+\#define \mbox{\hyperlink{errno_8h_a5fe247e079b591a68e0fdbf7caec5b70}{E\+D\+OM}}~1
+\item 
+\#define \mbox{\hyperlink{errno_8h_aa1591a4f3a86360108de5b9ba34980ca}{E\+R\+A\+N\+GE}}~2
+\item 
+\#define \mbox{\hyperlink{errno_8h_ac6c071293826a4e66a717bb38db7794d}{E\+I\+L\+S\+EQ}}~3
+\item 
+\#define \mbox{\hyperlink{errno_8h_a03e689f378f643d16ea7537918528a48}{E\+N\+O\+E\+NT}}~4
+\item 
+\#define \mbox{\hyperlink{errno_8h_ac54507d66b43ad12f9356257323c0018}{E\+B\+A\+DF}}~5
+\item 
+\#define \mbox{\hyperlink{errno_8h_ac2a2e9fa555401f94478f74e01868032}{E\+A\+C\+C\+ES}}~6
+\item 
+\#define \mbox{\hyperlink{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}{E\+N\+O\+M\+EM}}~7
+\item 
+\#define \mbox{\hyperlink{errno_8h_af0fac1cea1165b4debec7f686edf3313}{E\+A\+G\+A\+IN}}~8
+\item 
+\#define \mbox{\hyperlink{errno_8h_a0a3bef9e5c47e42917692b5dae3b5498}{E\+E\+X\+I\+ST}}~9
+\item 
+\#define \mbox{\hyperlink{errno_8h_a2d1678d5a7cc8ce499643f3b8957def4}{E\+I\+N\+V\+AL}}~10
+\item 
+\#define \mbox{\hyperlink{errno_8h_a64a75c174882ddbfa726c7fd040f87a1}{E\+M\+F\+I\+LE}}~11
+\item 
+\#define \mbox{\hyperlink{errno_8h_a70979f50f9c83e5aebab3d6a1bd4cf35}{E\+IO}}~12
+\item 
+\#define \mbox{\hyperlink{errno_8h_a9262fb92f7ef662d0bdd577912a5b101}{E\+N\+O\+T\+D\+IR}}~13
+\item 
+\#define \mbox{\hyperlink{errno_8h_ae22c3a1e0a38f3896de238cc30d0e19b}{E\+I\+S\+D\+IR}}~14
+\item 
+\#define \mbox{\hyperlink{errno_8h_acb02bb67dddd7ca8cf82634a0781d58d}{E\+R\+O\+FS}}~15
+\item 
+\#define \mbox{\hyperlink{errno_8h_a43785b9969e0bd1af532dbde06c5540b}{E\+N\+O\+S\+YS}}~16
+\item 
+\#define \mbox{\hyperlink{errno_8h_aa0f602f3fd369a6fede82190710b9c5c}{E\+N\+O\+T\+E\+M\+P\+TY}}~17
+\item 
+\#define \mbox{\hyperlink{errno_8h_a41d5ab3a8a05f9c5eab536c9cfba305b}{E\+N\+A\+M\+E\+T\+O\+O\+L\+O\+NG}}~18
+\item 
+\#define \mbox{\hyperlink{errno_8h_abece363a30f36127f6e54e9878767d94}{E\+N\+O\+S\+E\+EK}}~19
+\item 
+\#define \mbox{\hyperlink{errno_8h_a3f317946e043623f9d6b93dbf60e6316}{E\+F\+A\+U\+LT}}~20
+\item 
+\#define \mbox{\hyperlink{errno_8h_a5f8d33deb08fa27c04897b278ac7f965}{E\+P\+I\+PE}}~21
+\item 
+\#define \mbox{\hyperlink{errno_8h_a8368025077a0385849d6817b2007c095}{E\+B\+U\+SY}}~22
+\item 
+\#define \mbox{\hyperlink{errno_8h_a3396cf9fb0ff5af3a18dd2a2bbdb21e1}{E\+X\+D\+EV}}~23
+\item 
+\#define \mbox{\hyperlink{errno_8h_a088abe8bad2df798edad3053d719b937}{E\+N\+O\+S\+PC}}~24
+\item 
+\#define \mbox{\hyperlink{errno_8h_a46b83d9f6c23b1b65a8cecfd775ddaed}{E\+I\+N\+TR}}~25
+\item 
+\#define \mbox{\hyperlink{errno_8h_ab9b8cc17d1947160d13faaba7a18d6d1}{E\+N\+O\+D\+EV}}~26
+\item 
+\#define \mbox{\hyperlink{errno_8h_a5554094b3fb4bb6ebeb0157cb3f82a55}{E\+N\+F\+I\+LE}}~27
+\item 
+\#define \mbox{\hyperlink{errno_8h_a55cc70ce0ba661298f3c412095dfeeb6}{E\+D\+E\+A\+D\+LK}}~28
+\item 
+\#define \mbox{\hyperlink{errno_8h_a9e655f47bfd914a1174f281fc31cf63d}{E\+N\+O\+B\+U\+FS}}~50
+\item 
+\#define \mbox{\hyperlink{errno_8h_a47b42c351e0e011a048058d224205c0f}{E\+C\+H\+I\+LD}}~51
+\item 
+\#define \mbox{\hyperlink{errno_8h_a65e1a7bda392be276a701988d0604e63}{E\+N\+O\+L\+CK}}~52
+\item 
+\#define \mbox{\hyperlink{errno_8h_a462e47a8af6288232a5df548221ada4c}{E\+S\+R\+CH}}~53
+\item 
+\#define \mbox{\hyperlink{errno_8h_a97f59fa1a5a2f61b792c1b9dfc218072}{E\+M\+L\+I\+NK}}~54
+\item 
+\#define \mbox{\hyperlink{errno_8h_a2f78c246352d2bf2f19dc5d43da2f0c9}{E\+L\+O\+OP}}~55
+\item 
+\#define \mbox{\hyperlink{errno_8h_ae6014faa948366b8321d755204acf755}{E\+P\+R\+O\+T\+O\+T\+Y\+PE}}~56
+\item 
+\#define \mbox{\hyperlink{errno_8h_a2b3884b11e4932bd372bb6d899d6fbfe}{E\+N\+X\+IO}}~57
+\item 
+\#define \mbox{\hyperlink{errno_8h_a4c3a793b4d51cb7dd020af92e536fe21}{E\+A\+F\+N\+O\+S\+U\+P\+P\+O\+RT}}~100
+\item 
+\#define \mbox{\hyperlink{errno_8h_a61676e39b42371c65c3b960a91887b03}{E\+A\+D\+D\+R\+I\+N\+U\+SE}}~101
+\item 
+\#define \mbox{\hyperlink{errno_8h_a556612e55358838192165684c971a44f}{E\+A\+D\+D\+R\+N\+O\+T\+A\+V\+A\+IL}}~102
+\item 
+\#define \mbox{\hyperlink{errno_8h_a164ca8549da7a385e2fe1cba823b9eaf}{E\+I\+S\+C\+O\+NN}}~103
+\item 
+\#define \mbox{\hyperlink{errno_8h_aba8481985c201ff726f349d7f2d09895}{E2\+B\+IG}}~104
+\item 
+\#define \mbox{\hyperlink{errno_8h_aad88020b394ef1aa4af2f4ef9b4c8b39}{E\+C\+O\+N\+N\+R\+E\+F\+U\+S\+ED}}~105
+\item 
+\#define \mbox{\hyperlink{errno_8h_add4258b08af02fbe4590fbaae7260037}{E\+C\+O\+N\+N\+R\+E\+S\+ET}}~106
+\item 
+\#define \mbox{\hyperlink{errno_8h_a0e416d3478cf030e37e90c55d68ad97a}{E\+D\+E\+S\+T\+A\+D\+D\+R\+R\+EQ}}~107
+\item 
+\#define \mbox{\hyperlink{errno_8h_a53e186028fc992c3341ccb0d4d239b24}{E\+H\+O\+S\+T\+U\+N\+R\+E\+A\+CH}}~108
+\item 
+\#define \mbox{\hyperlink{errno_8h_ae37becfaa095a9df5c5c788bce5aa06f}{E\+M\+S\+G\+S\+I\+ZE}}~109
+\item 
+\#define \mbox{\hyperlink{errno_8h_ae40596feaa3f66f5440b485bf7c1c2d1}{E\+N\+O\+M\+SG}}~110
+\item 
+\#define \mbox{\hyperlink{errno_8h_acd570f8ab92198653b4459773dc3bca3}{E\+N\+O\+P\+R\+O\+T\+O\+O\+PT}}~111
+\item 
+\#define \mbox{\hyperlink{errno_8h_aac51995026fa19cdd0ad84a272304af0}{E\+N\+E\+T\+D\+O\+WN}}~112
+\item 
+\#define \mbox{\hyperlink{errno_8h_a92750db73ff8e83591c977bbb3a5bea1}{E\+N\+E\+T\+R\+E\+S\+ET}}~113
+\item 
+\#define \mbox{\hyperlink{errno_8h_a3f91f1ad503432783c7a5d1481b45419}{E\+N\+E\+T\+U\+N\+R\+E\+A\+CH}}~114
+\item 
+\#define \mbox{\hyperlink{errno_8h_ae34fa7a550ac1c415daa2e114a1c0f38}{E\+N\+O\+T\+S\+O\+CK}}~115
+\item 
+\#define \mbox{\hyperlink{errno_8h_a6c045d5be06e715cc335784a7320714e}{E\+I\+N\+P\+R\+O\+G\+R\+E\+SS}}~116
+\item 
+\#define \mbox{\hyperlink{errno_8h_ad581c46fdd4dee9419f60eaff40415e7}{E\+P\+R\+O\+T\+O\+N\+O\+S\+U\+P\+P\+O\+RT}}~117
+\item 
+\#define \mbox{\hyperlink{errno_8h_af23e48762a0676f49d480db91cfd5e4b}{E\+N\+O\+T\+C\+O\+NN}}~118
+\item 
+\#define \mbox{\hyperlink{errno_8h_a45342991e001e28bbf87916d92b7e09a}{E\+C\+O\+N\+N\+A\+B\+O\+R\+T\+ED}}~119
+\item 
+\#define \mbox{\hyperlink{errno_8h_aa4ccb54aa806de3e41a8515f06db85d4}{E\+A\+L\+R\+E\+A\+DY}}~120
+\item 
+\#define \mbox{\hyperlink{errno_8h_a597718e59a8fc9c4d4ab63f5a34e28b1}{E\+T\+I\+M\+E\+D\+O\+UT}}~121
+\item 
+\#define \mbox{\hyperlink{errno_8h_a4a3a0b3605fd3b2336455062ee8e25f0}{E\+W\+O\+U\+L\+D\+B\+L\+O\+CK}}~\mbox{\hyperlink{errno_8h_af0fac1cea1165b4debec7f686edf3313}{E\+A\+G\+A\+IN}}
+\item 
+\#define \mbox{\hyperlink{errno_8h_a0e42d4f9fecdcf5fcca2b333252173c3}{E\+S\+P\+I\+PE}}~\mbox{\hyperlink{errno_8h_a5f8d33deb08fa27c04897b278ac7f965}{E\+P\+I\+PE}}
+\item 
+\#define \mbox{\hyperlink{errno_8h_a4d0b1b435ec441e7d50a430b83df5832}{E\+N\+O\+E\+X\+EC}}~\mbox{\hyperlink{errno_8h_a43785b9969e0bd1af532dbde06c5540b}{E\+N\+O\+S\+YS}}
+\item 
+\#define \mbox{\hyperlink{errno_8h_af5401a500939ed1812c04ca200b95eef}{E\+F\+B\+IG}}~\mbox{\hyperlink{errno_8h_aa1591a4f3a86360108de5b9ba34980ca}{E\+R\+A\+N\+GE}}
+\item 
+\#define \mbox{\hyperlink{errno_8h_a4b807895c74cea4d0302bf27725d4b9d}{E\+O\+P\+N\+O\+T\+S\+U\+PP}}~\mbox{\hyperlink{errno_8h_a43785b9969e0bd1af532dbde06c5540b}{E\+N\+O\+S\+YS}}
+\item 
+\#define \mbox{\hyperlink{errno_8h_ac3daf409082bb528032f4452a81e1034}{E\+N\+O\+T\+TY}}~\mbox{\hyperlink{errno_8h_abece363a30f36127f6e54e9878767d94}{E\+N\+O\+S\+E\+EK}}
+\item 
+\#define \mbox{\hyperlink{errno_8h_add669d31505a077f769cff8e66c780b3}{E\+P\+E\+RM}}~\mbox{\hyperlink{errno_8h_ac2a2e9fa555401f94478f74e01868032}{E\+A\+C\+C\+ES}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines error condition reporting macros. 
+
+These simple macros support error conditions for the libraries. The only macros required by A\+N\+S\+I-\/C are E\+D\+OM, E\+I\+L\+S\+EQ, and E\+R\+A\+N\+GE.
+
+The undocumented \char`\"{}\+Unlikely\char`\"{} and \char`\"{}\+Network\char`\"{} macros are included for compatibility with G\+NU libstdc++. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{errno_8h_aba8481985c201ff726f349d7f2d09895}\label{errno_8h_aba8481985c201ff726f349d7f2d09895}} 
+\index{errno.h@{errno.h}!E2BIG@{E2BIG}}
+\index{E2BIG@{E2BIG}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{E2BIG}{E2BIG}}
+{\footnotesize\ttfamily \#define E2\+B\+IG~104}
+
+
+
+Definition at line 124 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ac2a2e9fa555401f94478f74e01868032}\label{errno_8h_ac2a2e9fa555401f94478f74e01868032}} 
+\index{errno.h@{errno.h}!EACCES@{EACCES}}
+\index{EACCES@{EACCES}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EACCES}{EACCES}}
+{\footnotesize\ttfamily \#define E\+A\+C\+C\+ES~6}
+
+Permission denied 
+
+Definition at line 42 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a61676e39b42371c65c3b960a91887b03}\label{errno_8h_a61676e39b42371c65c3b960a91887b03}} 
+\index{errno.h@{errno.h}!EADDRINUSE@{EADDRINUSE}}
+\index{EADDRINUSE@{EADDRINUSE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EADDRINUSE}{EADDRINUSE}}
+{\footnotesize\ttfamily \#define E\+A\+D\+D\+R\+I\+N\+U\+SE~101}
+
+
+
+Definition at line 121 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a556612e55358838192165684c971a44f}\label{errno_8h_a556612e55358838192165684c971a44f}} 
+\index{errno.h@{errno.h}!EADDRNOTAVAIL@{EADDRNOTAVAIL}}
+\index{EADDRNOTAVAIL@{EADDRNOTAVAIL}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EADDRNOTAVAIL}{EADDRNOTAVAIL}}
+{\footnotesize\ttfamily \#define E\+A\+D\+D\+R\+N\+O\+T\+A\+V\+A\+IL~102}
+
+
+
+Definition at line 122 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a4c3a793b4d51cb7dd020af92e536fe21}\label{errno_8h_a4c3a793b4d51cb7dd020af92e536fe21}} 
+\index{errno.h@{errno.h}!EAFNOSUPPORT@{EAFNOSUPPORT}}
+\index{EAFNOSUPPORT@{EAFNOSUPPORT}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EAFNOSUPPORT}{EAFNOSUPPORT}}
+{\footnotesize\ttfamily \#define E\+A\+F\+N\+O\+S\+U\+P\+P\+O\+RT~100}
+
+
+
+Definition at line 120 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_af0fac1cea1165b4debec7f686edf3313}\label{errno_8h_af0fac1cea1165b4debec7f686edf3313}} 
+\index{errno.h@{errno.h}!EAGAIN@{EAGAIN}}
+\index{EAGAIN@{EAGAIN}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EAGAIN}{EAGAIN}}
+{\footnotesize\ttfamily \#define E\+A\+G\+A\+IN~8}
+
+Temporary failure 
+
+Definition at line 48 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_aa4ccb54aa806de3e41a8515f06db85d4}\label{errno_8h_aa4ccb54aa806de3e41a8515f06db85d4}} 
+\index{errno.h@{errno.h}!EALREADY@{EALREADY}}
+\index{EALREADY@{EALREADY}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EALREADY}{EALREADY}}
+{\footnotesize\ttfamily \#define E\+A\+L\+R\+E\+A\+DY~120}
+
+
+
+Definition at line 140 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ac54507d66b43ad12f9356257323c0018}\label{errno_8h_ac54507d66b43ad12f9356257323c0018}} 
+\index{errno.h@{errno.h}!EBADF@{EBADF}}
+\index{EBADF@{EBADF}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EBADF}{EBADF}}
+{\footnotesize\ttfamily \#define E\+B\+A\+DF~5}
+
+Bad file number 
+
+Definition at line 39 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a8368025077a0385849d6817b2007c095}\label{errno_8h_a8368025077a0385849d6817b2007c095}} 
+\index{errno.h@{errno.h}!EBUSY@{EBUSY}}
+\index{EBUSY@{EBUSY}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EBUSY}{EBUSY}}
+{\footnotesize\ttfamily \#define E\+B\+U\+SY~22}
+
+Device or resource busy 
+
+Definition at line 90 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a47b42c351e0e011a048058d224205c0f}\label{errno_8h_a47b42c351e0e011a048058d224205c0f}} 
+\index{errno.h@{errno.h}!ECHILD@{ECHILD}}
+\index{ECHILD@{ECHILD}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ECHILD}{ECHILD}}
+{\footnotesize\ttfamily \#define E\+C\+H\+I\+LD~51}
+
+
+
+Definition at line 111 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a45342991e001e28bbf87916d92b7e09a}\label{errno_8h_a45342991e001e28bbf87916d92b7e09a}} 
+\index{errno.h@{errno.h}!ECONNABORTED@{ECONNABORTED}}
+\index{ECONNABORTED@{ECONNABORTED}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ECONNABORTED}{ECONNABORTED}}
+{\footnotesize\ttfamily \#define E\+C\+O\+N\+N\+A\+B\+O\+R\+T\+ED~119}
+
+
+
+Definition at line 139 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_aad88020b394ef1aa4af2f4ef9b4c8b39}\label{errno_8h_aad88020b394ef1aa4af2f4ef9b4c8b39}} 
+\index{errno.h@{errno.h}!ECONNREFUSED@{ECONNREFUSED}}
+\index{ECONNREFUSED@{ECONNREFUSED}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ECONNREFUSED}{ECONNREFUSED}}
+{\footnotesize\ttfamily \#define E\+C\+O\+N\+N\+R\+E\+F\+U\+S\+ED~105}
+
+
+
+Definition at line 125 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_add4258b08af02fbe4590fbaae7260037}\label{errno_8h_add4258b08af02fbe4590fbaae7260037}} 
+\index{errno.h@{errno.h}!ECONNRESET@{ECONNRESET}}
+\index{ECONNRESET@{ECONNRESET}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ECONNRESET}{ECONNRESET}}
+{\footnotesize\ttfamily \#define E\+C\+O\+N\+N\+R\+E\+S\+ET~106}
+
+
+
+Definition at line 126 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a55cc70ce0ba661298f3c412095dfeeb6}\label{errno_8h_a55cc70ce0ba661298f3c412095dfeeb6}} 
+\index{errno.h@{errno.h}!EDEADLK@{EDEADLK}}
+\index{EDEADLK@{EDEADLK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EDEADLK}{EDEADLK}}
+{\footnotesize\ttfamily \#define E\+D\+E\+A\+D\+LK~28}
+
+
+
+Definition at line 103 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a0e416d3478cf030e37e90c55d68ad97a}\label{errno_8h_a0e416d3478cf030e37e90c55d68ad97a}} 
+\index{errno.h@{errno.h}!EDESTADDRREQ@{EDESTADDRREQ}}
+\index{EDESTADDRREQ@{EDESTADDRREQ}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EDESTADDRREQ}{EDESTADDRREQ}}
+{\footnotesize\ttfamily \#define E\+D\+E\+S\+T\+A\+D\+D\+R\+R\+EQ~107}
+
+
+
+Definition at line 127 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a5fe247e079b591a68e0fdbf7caec5b70}\label{errno_8h_a5fe247e079b591a68e0fdbf7caec5b70}} 
+\index{errno.h@{errno.h}!EDOM@{EDOM}}
+\index{EDOM@{EDOM}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EDOM}{EDOM}}
+{\footnotesize\ttfamily \#define E\+D\+OM~1}
+
+Math arg out of domain of func 
+
+Definition at line 27 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a0a3bef9e5c47e42917692b5dae3b5498}\label{errno_8h_a0a3bef9e5c47e42917692b5dae3b5498}} 
+\index{errno.h@{errno.h}!EEXIST@{EEXIST}}
+\index{EEXIST@{EEXIST}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EEXIST}{EEXIST}}
+{\footnotesize\ttfamily \#define E\+E\+X\+I\+ST~9}
+
+File exists 
+
+Definition at line 51 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a3f317946e043623f9d6b93dbf60e6316}\label{errno_8h_a3f317946e043623f9d6b93dbf60e6316}} 
+\index{errno.h@{errno.h}!EFAULT@{EFAULT}}
+\index{EFAULT@{EFAULT}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EFAULT}{EFAULT}}
+{\footnotesize\ttfamily \#define E\+F\+A\+U\+LT~20}
+
+Bad address 
+
+Definition at line 84 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_af5401a500939ed1812c04ca200b95eef}\label{errno_8h_af5401a500939ed1812c04ca200b95eef}} 
+\index{errno.h@{errno.h}!EFBIG@{EFBIG}}
+\index{EFBIG@{EFBIG}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EFBIG}{EFBIG}}
+{\footnotesize\ttfamily \#define E\+F\+B\+IG~\mbox{\hyperlink{errno_8h_aa1591a4f3a86360108de5b9ba34980ca}{E\+R\+A\+N\+GE}}}
+
+Math result not representable 
+
+Definition at line 155 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a53e186028fc992c3341ccb0d4d239b24}\label{errno_8h_a53e186028fc992c3341ccb0d4d239b24}} 
+\index{errno.h@{errno.h}!EHOSTUNREACH@{EHOSTUNREACH}}
+\index{EHOSTUNREACH@{EHOSTUNREACH}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EHOSTUNREACH}{EHOSTUNREACH}}
+{\footnotesize\ttfamily \#define E\+H\+O\+S\+T\+U\+N\+R\+E\+A\+CH~108}
+
+
+
+Definition at line 128 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ac6c071293826a4e66a717bb38db7794d}\label{errno_8h_ac6c071293826a4e66a717bb38db7794d}} 
+\index{errno.h@{errno.h}!EILSEQ@{EILSEQ}}
+\index{EILSEQ@{EILSEQ}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EILSEQ}{EILSEQ}}
+{\footnotesize\ttfamily \#define E\+I\+L\+S\+EQ~3}
+
+Illegal sequence 
+
+Definition at line 33 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a6c045d5be06e715cc335784a7320714e}\label{errno_8h_a6c045d5be06e715cc335784a7320714e}} 
+\index{errno.h@{errno.h}!EINPROGRESS@{EINPROGRESS}}
+\index{EINPROGRESS@{EINPROGRESS}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EINPROGRESS}{EINPROGRESS}}
+{\footnotesize\ttfamily \#define E\+I\+N\+P\+R\+O\+G\+R\+E\+SS~116}
+
+
+
+Definition at line 136 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a46b83d9f6c23b1b65a8cecfd775ddaed}\label{errno_8h_a46b83d9f6c23b1b65a8cecfd775ddaed}} 
+\index{errno.h@{errno.h}!EINTR@{EINTR}}
+\index{EINTR@{EINTR}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EINTR}{EINTR}}
+{\footnotesize\ttfamily \#define E\+I\+N\+TR~25}
+
+System call interrupted 
+
+Definition at line 99 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a2d1678d5a7cc8ce499643f3b8957def4}\label{errno_8h_a2d1678d5a7cc8ce499643f3b8957def4}} 
+\index{errno.h@{errno.h}!EINVAL@{EINVAL}}
+\index{EINVAL@{EINVAL}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EINVAL}{EINVAL}}
+{\footnotesize\ttfamily \#define E\+I\+N\+V\+AL~10}
+
+Invalid argument 
+
+Definition at line 54 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a70979f50f9c83e5aebab3d6a1bd4cf35}\label{errno_8h_a70979f50f9c83e5aebab3d6a1bd4cf35}} 
+\index{errno.h@{errno.h}!EIO@{EIO}}
+\index{EIO@{EIO}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EIO}{EIO}}
+{\footnotesize\ttfamily \#define E\+IO~12}
+
+I/O error 
+
+Definition at line 60 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a164ca8549da7a385e2fe1cba823b9eaf}\label{errno_8h_a164ca8549da7a385e2fe1cba823b9eaf}} 
+\index{errno.h@{errno.h}!EISCONN@{EISCONN}}
+\index{EISCONN@{EISCONN}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EISCONN}{EISCONN}}
+{\footnotesize\ttfamily \#define E\+I\+S\+C\+O\+NN~103}
+
+
+
+Definition at line 123 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ae22c3a1e0a38f3896de238cc30d0e19b}\label{errno_8h_ae22c3a1e0a38f3896de238cc30d0e19b}} 
+\index{errno.h@{errno.h}!EISDIR@{EISDIR}}
+\index{EISDIR@{EISDIR}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EISDIR}{EISDIR}}
+{\footnotesize\ttfamily \#define E\+I\+S\+D\+IR~14}
+
+Is a directory 
+
+Definition at line 66 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a2f78c246352d2bf2f19dc5d43da2f0c9}\label{errno_8h_a2f78c246352d2bf2f19dc5d43da2f0c9}} 
+\index{errno.h@{errno.h}!ELOOP@{ELOOP}}
+\index{ELOOP@{ELOOP}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ELOOP}{ELOOP}}
+{\footnotesize\ttfamily \#define E\+L\+O\+OP~55}
+
+
+
+Definition at line 115 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a64a75c174882ddbfa726c7fd040f87a1}\label{errno_8h_a64a75c174882ddbfa726c7fd040f87a1}} 
+\index{errno.h@{errno.h}!EMFILE@{EMFILE}}
+\index{EMFILE@{EMFILE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EMFILE}{EMFILE}}
+{\footnotesize\ttfamily \#define E\+M\+F\+I\+LE~11}
+
+Too many open files 
+
+Definition at line 57 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a97f59fa1a5a2f61b792c1b9dfc218072}\label{errno_8h_a97f59fa1a5a2f61b792c1b9dfc218072}} 
+\index{errno.h@{errno.h}!EMLINK@{EMLINK}}
+\index{EMLINK@{EMLINK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EMLINK}{EMLINK}}
+{\footnotesize\ttfamily \#define E\+M\+L\+I\+NK~54}
+
+
+
+Definition at line 114 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ae37becfaa095a9df5c5c788bce5aa06f}\label{errno_8h_ae37becfaa095a9df5c5c788bce5aa06f}} 
+\index{errno.h@{errno.h}!EMSGSIZE@{EMSGSIZE}}
+\index{EMSGSIZE@{EMSGSIZE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EMSGSIZE}{EMSGSIZE}}
+{\footnotesize\ttfamily \#define E\+M\+S\+G\+S\+I\+ZE~109}
+
+
+
+Definition at line 129 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a41d5ab3a8a05f9c5eab536c9cfba305b}\label{errno_8h_a41d5ab3a8a05f9c5eab536c9cfba305b}} 
+\index{errno.h@{errno.h}!ENAMETOOLONG@{ENAMETOOLONG}}
+\index{ENAMETOOLONG@{ENAMETOOLONG}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENAMETOOLONG}{ENAMETOOLONG}}
+{\footnotesize\ttfamily \#define E\+N\+A\+M\+E\+T\+O\+O\+L\+O\+NG~18}
+
+File or path name too long 
+
+Definition at line 78 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_aac51995026fa19cdd0ad84a272304af0}\label{errno_8h_aac51995026fa19cdd0ad84a272304af0}} 
+\index{errno.h@{errno.h}!ENETDOWN@{ENETDOWN}}
+\index{ENETDOWN@{ENETDOWN}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENETDOWN}{ENETDOWN}}
+{\footnotesize\ttfamily \#define E\+N\+E\+T\+D\+O\+WN~112}
+
+
+
+Definition at line 132 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a92750db73ff8e83591c977bbb3a5bea1}\label{errno_8h_a92750db73ff8e83591c977bbb3a5bea1}} 
+\index{errno.h@{errno.h}!ENETRESET@{ENETRESET}}
+\index{ENETRESET@{ENETRESET}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENETRESET}{ENETRESET}}
+{\footnotesize\ttfamily \#define E\+N\+E\+T\+R\+E\+S\+ET~113}
+
+
+
+Definition at line 133 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a3f91f1ad503432783c7a5d1481b45419}\label{errno_8h_a3f91f1ad503432783c7a5d1481b45419}} 
+\index{errno.h@{errno.h}!ENETUNREACH@{ENETUNREACH}}
+\index{ENETUNREACH@{ENETUNREACH}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENETUNREACH}{ENETUNREACH}}
+{\footnotesize\ttfamily \#define E\+N\+E\+T\+U\+N\+R\+E\+A\+CH~114}
+
+
+
+Definition at line 134 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a5554094b3fb4bb6ebeb0157cb3f82a55}\label{errno_8h_a5554094b3fb4bb6ebeb0157cb3f82a55}} 
+\index{errno.h@{errno.h}!ENFILE@{ENFILE}}
+\index{ENFILE@{ENFILE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENFILE}{ENFILE}}
+{\footnotesize\ttfamily \#define E\+N\+F\+I\+LE~27}
+
+
+
+Definition at line 102 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a9e655f47bfd914a1174f281fc31cf63d}\label{errno_8h_a9e655f47bfd914a1174f281fc31cf63d}} 
+\index{errno.h@{errno.h}!ENOBUFS@{ENOBUFS}}
+\index{ENOBUFS@{ENOBUFS}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOBUFS}{ENOBUFS}}
+{\footnotesize\ttfamily \#define E\+N\+O\+B\+U\+FS~50}
+
+
+
+Definition at line 110 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ab9b8cc17d1947160d13faaba7a18d6d1}\label{errno_8h_ab9b8cc17d1947160d13faaba7a18d6d1}} 
+\index{errno.h@{errno.h}!ENODEV@{ENODEV}}
+\index{ENODEV@{ENODEV}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENODEV}{ENODEV}}
+{\footnotesize\ttfamily \#define E\+N\+O\+D\+EV~26}
+
+
+
+Definition at line 101 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a03e689f378f643d16ea7537918528a48}\label{errno_8h_a03e689f378f643d16ea7537918528a48}} 
+\index{errno.h@{errno.h}!ENOENT@{ENOENT}}
+\index{ENOENT@{ENOENT}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOENT}{ENOENT}}
+{\footnotesize\ttfamily \#define E\+N\+O\+E\+NT~4}
+
+No such file or directory 
+
+Definition at line 36 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a4d0b1b435ec441e7d50a430b83df5832}\label{errno_8h_a4d0b1b435ec441e7d50a430b83df5832}} 
+\index{errno.h@{errno.h}!ENOEXEC@{ENOEXEC}}
+\index{ENOEXEC@{ENOEXEC}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOEXEC}{ENOEXEC}}
+{\footnotesize\ttfamily \#define E\+N\+O\+E\+X\+EC~\mbox{\hyperlink{errno_8h_a43785b9969e0bd1af532dbde06c5540b}{E\+N\+O\+S\+YS}}}
+
+Function not implemented 
+
+Definition at line 152 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a65e1a7bda392be276a701988d0604e63}\label{errno_8h_a65e1a7bda392be276a701988d0604e63}} 
+\index{errno.h@{errno.h}!ENOLCK@{ENOLCK}}
+\index{ENOLCK@{ENOLCK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOLCK}{ENOLCK}}
+{\footnotesize\ttfamily \#define E\+N\+O\+L\+CK~52}
+
+
+
+Definition at line 112 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}\label{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}} 
+\index{errno.h@{errno.h}!ENOMEM@{ENOMEM}}
+\index{ENOMEM@{ENOMEM}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOMEM}{ENOMEM}}
+{\footnotesize\ttfamily \#define E\+N\+O\+M\+EM~7}
+
+Not enough core 
+
+Definition at line 45 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ae40596feaa3f66f5440b485bf7c1c2d1}\label{errno_8h_ae40596feaa3f66f5440b485bf7c1c2d1}} 
+\index{errno.h@{errno.h}!ENOMSG@{ENOMSG}}
+\index{ENOMSG@{ENOMSG}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOMSG}{ENOMSG}}
+{\footnotesize\ttfamily \#define E\+N\+O\+M\+SG~110}
+
+
+
+Definition at line 130 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_acd570f8ab92198653b4459773dc3bca3}\label{errno_8h_acd570f8ab92198653b4459773dc3bca3}} 
+\index{errno.h@{errno.h}!ENOPROTOOPT@{ENOPROTOOPT}}
+\index{ENOPROTOOPT@{ENOPROTOOPT}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOPROTOOPT}{ENOPROTOOPT}}
+{\footnotesize\ttfamily \#define E\+N\+O\+P\+R\+O\+T\+O\+O\+PT~111}
+
+
+
+Definition at line 131 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_abece363a30f36127f6e54e9878767d94}\label{errno_8h_abece363a30f36127f6e54e9878767d94}} 
+\index{errno.h@{errno.h}!ENOSEEK@{ENOSEEK}}
+\index{ENOSEEK@{ENOSEEK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOSEEK}{ENOSEEK}}
+{\footnotesize\ttfamily \#define E\+N\+O\+S\+E\+EK~19}
+
+Device not seekable 
+
+Definition at line 81 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a088abe8bad2df798edad3053d719b937}\label{errno_8h_a088abe8bad2df798edad3053d719b937}} 
+\index{errno.h@{errno.h}!ENOSPC@{ENOSPC}}
+\index{ENOSPC@{ENOSPC}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOSPC}{ENOSPC}}
+{\footnotesize\ttfamily \#define E\+N\+O\+S\+PC~24}
+
+No space on device 
+
+Definition at line 96 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a43785b9969e0bd1af532dbde06c5540b}\label{errno_8h_a43785b9969e0bd1af532dbde06c5540b}} 
+\index{errno.h@{errno.h}!ENOSYS@{ENOSYS}}
+\index{ENOSYS@{ENOSYS}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOSYS}{ENOSYS}}
+{\footnotesize\ttfamily \#define E\+N\+O\+S\+YS~16}
+
+Function not implemented 
+
+Definition at line 72 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_af23e48762a0676f49d480db91cfd5e4b}\label{errno_8h_af23e48762a0676f49d480db91cfd5e4b}} 
+\index{errno.h@{errno.h}!ENOTCONN@{ENOTCONN}}
+\index{ENOTCONN@{ENOTCONN}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOTCONN}{ENOTCONN}}
+{\footnotesize\ttfamily \#define E\+N\+O\+T\+C\+O\+NN~118}
+
+
+
+Definition at line 138 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a9262fb92f7ef662d0bdd577912a5b101}\label{errno_8h_a9262fb92f7ef662d0bdd577912a5b101}} 
+\index{errno.h@{errno.h}!ENOTDIR@{ENOTDIR}}
+\index{ENOTDIR@{ENOTDIR}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOTDIR}{ENOTDIR}}
+{\footnotesize\ttfamily \#define E\+N\+O\+T\+D\+IR~13}
+
+Not a directory 
+
+Definition at line 63 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_aa0f602f3fd369a6fede82190710b9c5c}\label{errno_8h_aa0f602f3fd369a6fede82190710b9c5c}} 
+\index{errno.h@{errno.h}!ENOTEMPTY@{ENOTEMPTY}}
+\index{ENOTEMPTY@{ENOTEMPTY}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOTEMPTY}{ENOTEMPTY}}
+{\footnotesize\ttfamily \#define E\+N\+O\+T\+E\+M\+P\+TY~17}
+
+Directory not empty 
+
+Definition at line 75 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ae34fa7a550ac1c415daa2e114a1c0f38}\label{errno_8h_ae34fa7a550ac1c415daa2e114a1c0f38}} 
+\index{errno.h@{errno.h}!ENOTSOCK@{ENOTSOCK}}
+\index{ENOTSOCK@{ENOTSOCK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOTSOCK}{ENOTSOCK}}
+{\footnotesize\ttfamily \#define E\+N\+O\+T\+S\+O\+CK~115}
+
+
+
+Definition at line 135 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ac3daf409082bb528032f4452a81e1034}\label{errno_8h_ac3daf409082bb528032f4452a81e1034}} 
+\index{errno.h@{errno.h}!ENOTTY@{ENOTTY}}
+\index{ENOTTY@{ENOTTY}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENOTTY}{ENOTTY}}
+{\footnotesize\ttfamily \#define E\+N\+O\+T\+TY~\mbox{\hyperlink{errno_8h_abece363a30f36127f6e54e9878767d94}{E\+N\+O\+S\+E\+EK}}}
+
+Device not seekable 
+
+Definition at line 161 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a2b3884b11e4932bd372bb6d899d6fbfe}\label{errno_8h_a2b3884b11e4932bd372bb6d899d6fbfe}} 
+\index{errno.h@{errno.h}!ENXIO@{ENXIO}}
+\index{ENXIO@{ENXIO}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ENXIO}{ENXIO}}
+{\footnotesize\ttfamily \#define E\+N\+X\+IO~57}
+
+
+
+Definition at line 117 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_acf2e4414e0bf0d331a111e70f9317434}\label{errno_8h_acf2e4414e0bf0d331a111e70f9317434}} 
+\index{errno.h@{errno.h}!EOK@{EOK}}
+\index{EOK@{EOK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EOK}{EOK}}
+{\footnotesize\ttfamily \#define E\+OK~0}
+
+Undefined error 
+
+Definition at line 24 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a4b807895c74cea4d0302bf27725d4b9d}\label{errno_8h_a4b807895c74cea4d0302bf27725d4b9d}} 
+\index{errno.h@{errno.h}!EOPNOTSUPP@{EOPNOTSUPP}}
+\index{EOPNOTSUPP@{EOPNOTSUPP}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EOPNOTSUPP}{EOPNOTSUPP}}
+{\footnotesize\ttfamily \#define E\+O\+P\+N\+O\+T\+S\+U\+PP~\mbox{\hyperlink{errno_8h_a43785b9969e0bd1af532dbde06c5540b}{E\+N\+O\+S\+YS}}}
+
+Function not implemented 
+
+Definition at line 158 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_add669d31505a077f769cff8e66c780b3}\label{errno_8h_add669d31505a077f769cff8e66c780b3}} 
+\index{errno.h@{errno.h}!EPERM@{EPERM}}
+\index{EPERM@{EPERM}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EPERM}{EPERM}}
+{\footnotesize\ttfamily \#define E\+P\+E\+RM~\mbox{\hyperlink{errno_8h_ac2a2e9fa555401f94478f74e01868032}{E\+A\+C\+C\+ES}}}
+
+Permission denied 
+
+Definition at line 164 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a5f8d33deb08fa27c04897b278ac7f965}\label{errno_8h_a5f8d33deb08fa27c04897b278ac7f965}} 
+\index{errno.h@{errno.h}!EPIPE@{EPIPE}}
+\index{EPIPE@{EPIPE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EPIPE}{EPIPE}}
+{\footnotesize\ttfamily \#define E\+P\+I\+PE~21}
+
+Broken pipe 
+
+Definition at line 87 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ad581c46fdd4dee9419f60eaff40415e7}\label{errno_8h_ad581c46fdd4dee9419f60eaff40415e7}} 
+\index{errno.h@{errno.h}!EPROTONOSUPPORT@{EPROTONOSUPPORT}}
+\index{EPROTONOSUPPORT@{EPROTONOSUPPORT}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EPROTONOSUPPORT}{EPROTONOSUPPORT}}
+{\footnotesize\ttfamily \#define E\+P\+R\+O\+T\+O\+N\+O\+S\+U\+P\+P\+O\+RT~117}
+
+
+
+Definition at line 137 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ae6014faa948366b8321d755204acf755}\label{errno_8h_ae6014faa948366b8321d755204acf755}} 
+\index{errno.h@{errno.h}!EPROTOTYPE@{EPROTOTYPE}}
+\index{EPROTOTYPE@{EPROTOTYPE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EPROTOTYPE}{EPROTOTYPE}}
+{\footnotesize\ttfamily \#define E\+P\+R\+O\+T\+O\+T\+Y\+PE~56}
+
+
+
+Definition at line 116 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_aa1591a4f3a86360108de5b9ba34980ca}\label{errno_8h_aa1591a4f3a86360108de5b9ba34980ca}} 
+\index{errno.h@{errno.h}!ERANGE@{ERANGE}}
+\index{ERANGE@{ERANGE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ERANGE}{ERANGE}}
+{\footnotesize\ttfamily \#define E\+R\+A\+N\+GE~2}
+
+Math result not representable 
+
+Definition at line 30 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_acb02bb67dddd7ca8cf82634a0781d58d}\label{errno_8h_acb02bb67dddd7ca8cf82634a0781d58d}} 
+\index{errno.h@{errno.h}!EROFS@{EROFS}}
+\index{EROFS@{EROFS}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EROFS}{EROFS}}
+{\footnotesize\ttfamily \#define E\+R\+O\+FS~15}
+
+Read only file system 
+
+Definition at line 69 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_ab03f640d90fbc5bcb75285d08a0f25ed}\label{errno_8h_ab03f640d90fbc5bcb75285d08a0f25ed}} 
+\index{errno.h@{errno.h}!errno@{errno}}
+\index{errno@{errno}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{errno}{errno}}
+{\footnotesize\ttfamily \#define errno~(\+\_\+\+T\+LS-\/$>$errno)}
+
+
+
+Definition at line 21 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a0e42d4f9fecdcf5fcca2b333252173c3}\label{errno_8h_a0e42d4f9fecdcf5fcca2b333252173c3}} 
+\index{errno.h@{errno.h}!ESPIPE@{ESPIPE}}
+\index{ESPIPE@{ESPIPE}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ESPIPE}{ESPIPE}}
+{\footnotesize\ttfamily \#define E\+S\+P\+I\+PE~\mbox{\hyperlink{errno_8h_a5f8d33deb08fa27c04897b278ac7f965}{E\+P\+I\+PE}}}
+
+Broken pipe 
+
+Definition at line 149 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a462e47a8af6288232a5df548221ada4c}\label{errno_8h_a462e47a8af6288232a5df548221ada4c}} 
+\index{errno.h@{errno.h}!ESRCH@{ESRCH}}
+\index{ESRCH@{ESRCH}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ESRCH}{ESRCH}}
+{\footnotesize\ttfamily \#define E\+S\+R\+CH~53}
+
+
+
+Definition at line 113 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a597718e59a8fc9c4d4ab63f5a34e28b1}\label{errno_8h_a597718e59a8fc9c4d4ab63f5a34e28b1}} 
+\index{errno.h@{errno.h}!ETIMEDOUT@{ETIMEDOUT}}
+\index{ETIMEDOUT@{ETIMEDOUT}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{ETIMEDOUT}{ETIMEDOUT}}
+{\footnotesize\ttfamily \#define E\+T\+I\+M\+E\+D\+O\+UT~121}
+
+
+
+Definition at line 141 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a4a3a0b3605fd3b2336455062ee8e25f0}\label{errno_8h_a4a3a0b3605fd3b2336455062ee8e25f0}} 
+\index{errno.h@{errno.h}!EWOULDBLOCK@{EWOULDBLOCK}}
+\index{EWOULDBLOCK@{EWOULDBLOCK}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EWOULDBLOCK}{EWOULDBLOCK}}
+{\footnotesize\ttfamily \#define E\+W\+O\+U\+L\+D\+B\+L\+O\+CK~\mbox{\hyperlink{errno_8h_af0fac1cea1165b4debec7f686edf3313}{E\+A\+G\+A\+IN}}}
+
+Temporary failure 
+
+Definition at line 146 of file errno.\+h.
+
+\mbox{\Hypertarget{errno_8h_a3396cf9fb0ff5af3a18dd2a2bbdb21e1}\label{errno_8h_a3396cf9fb0ff5af3a18dd2a2bbdb21e1}} 
+\index{errno.h@{errno.h}!EXDEV@{EXDEV}}
+\index{EXDEV@{EXDEV}!errno.h@{errno.h}}
+\subsubsection{\texorpdfstring{EXDEV}{EXDEV}}
+{\footnotesize\ttfamily \#define E\+X\+D\+EV~23}
+
+Cross device link 
+
+Definition at line 93 of file errno.\+h.
+

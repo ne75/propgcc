@@ -1,5 +1,6 @@
 
-CUAir's Updates:
+
+Nikita's Updates:
 
 So far, this seems to work on Mac OS and Linux.
 
@@ -31,6 +32,11 @@ If compiling on Mac, run ```source fix-xcode-warnings.sh```.
 5. Wait.
 
 6. GDB currently fails to build on Linux, thats okay, it's not needed.
+
+lib:
+
+- changed i2c driver to support clock stretching.
+- changed terminal.c driver to require cooked mode to convert \n to \r\n
 
 ------------------------------------------------------------------
 

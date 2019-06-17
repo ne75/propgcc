@@ -1,0 +1,413 @@
+\hypertarget{structlconv}{}\section{lconv Struct Reference}
+\label{structlconv}\index{lconv@{lconv}}
+
+
+lconv contains members related to the formatting of numeric values.  
+
+
+
+
+{\ttfamily \#include $<$locale.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a445e27fc7f797c8cca97b381f062fb60}{decimal\+\_\+point}}
+\begin{DoxyCompactList}\small\item\em The decimal-\/point character used to format non-\/monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_aede8dfaac91d7b4e6b7fb0d96184d74d}{thousands\+\_\+sep}}
+\begin{DoxyCompactList}\small\item\em The character used to separate groups of digits in non-\/monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a46e468755a823be50de20f36be5ff2be}{grouping}}
+\begin{DoxyCompactList}\small\item\em A string that indicates the size of each group of digits in non-\/monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a1aa08afe707c1d5d40b4d01369176480}{mon\+\_\+decimal\+\_\+point}}
+\begin{DoxyCompactList}\small\item\em The decimal-\/point used to format monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a4f04f4fd9ea670d21fc76fb5c77c032d}{mon\+\_\+thousands\+\_\+sep}}
+\begin{DoxyCompactList}\small\item\em The separator for groups of digits before the decimal-\/point in monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a12ecf5d2f7ceb0cfe0f66fd3200eef54}{mon\+\_\+grouping}}
+\begin{DoxyCompactList}\small\item\em A string that indicates the size of each group of digits in monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a74bf5f6f32624be629f7de0dabd58a96}{positive\+\_\+sign}}
+\begin{DoxyCompactList}\small\item\em A string that indicates a non-\/negative formatted value in monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_a40dbb1b1d7fdf4926145138f5d8f6f5f}{negative\+\_\+sign}}
+\begin{DoxyCompactList}\small\item\em A string that indicates a negative formatted value in monetary quantities. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_af3657bb8bf2a83a868cdeb0b108ab921}{currency\+\_\+symbol}}
+\begin{DoxyCompactList}\small\item\em The currency symbol applicable in the current locale. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_aa16e32ff4dcc95445742b5b165ffb071}{frac\+\_\+digits}}
+\begin{DoxyCompactList}\small\item\em The number of fractional digits to be displayed in a locally formatted monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_af0651922c77fc926609bdd8746784e63}{p\+\_\+cs\+\_\+precedes}}
+\begin{DoxyCompactList}\small\item\em Set to 1 or 0 if currency\+\_\+symbol preceeds or succeeds respectively the non-\/negative value of monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_ad118b68a229527f7e96538ac875169ad}{n\+\_\+cs\+\_\+precedes}}
+\begin{DoxyCompactList}\small\item\em Set to 1 or 0 if currency\+\_\+symbol preceeds or succeeds respectively the negative value of monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a3ae3cb36f4426158e4ab2ea6dc4278ad}{p\+\_\+sep\+\_\+by\+\_\+space}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the separation of the currency\+\_\+symbol, the sign, and the value for non-\/negative monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_ab7ac20ce034900155183b32fc3c6d9a3}{n\+\_\+sep\+\_\+by\+\_\+space}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the separation of the currency\+\_\+symbol, the sign, and the value for negative monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a1fdead36abe5c2ca673142ea401478e8}{p\+\_\+sign\+\_\+posn}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the position of the positive\+\_\+sign for non-\/negative monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_ae0bbe6f545952daef5a8cbdd054a184e}{n\+\_\+sign\+\_\+posn}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the position of the positive\+\_\+sign for negative monetary quantity. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structlconv_abaeeafb02b68ba58c549458b196b9325}{int\+\_\+curr\+\_\+symbol}}
+\begin{DoxyCompactList}\small\item\em The international currency symbol applicable to the current locale. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a6b652f28cafc3092258b47c8099fe905}{int\+\_\+frac\+\_\+digits}}
+\begin{DoxyCompactList}\small\item\em The number of fractional digits to be displayed in a monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a1a78cbc82f07601c2acb643f8dffdf64}{int\+\_\+p\+\_\+cs\+\_\+precedes}}
+\begin{DoxyCompactList}\small\item\em Set to 1 or 0 if the int\+\_\+currency\+\_\+symbol precedes or succeeds respectively the value for a non-\/negative internationally formatted monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a36121c68c5571e40145365dd1edecbb7}{int\+\_\+n\+\_\+cs\+\_\+precedes}}
+\begin{DoxyCompactList}\small\item\em Set to 1 or 0 if the int\+\_\+currency\+\_\+symbol precedes or succeeds respectively the value for a negative internationally formatted monetary quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_ae77e798ef92e86d58100b16fb8163443}{int\+\_\+p\+\_\+sep\+\_\+by\+\_\+space}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the separation of the int\+\_\+currency\+\_\+symbol the sign string, and the value for non-\/negative international monetary formatted quantities. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_ad9cfa63e25f4a2aa02f6c7ca540177a2}{int\+\_\+n\+\_\+sep\+\_\+by\+\_\+space}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the separation of the int\+\_\+currency\+\_\+symbol the sign string, and the value for negative international monetary formatted quantities. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a266ed42f4bb087d1efac551940c42f6f}{int\+\_\+p\+\_\+sign\+\_\+posn}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the position of the positive\+\_\+sign for non-\/negative international monetary formatted quantity. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlconv_a642a9096f724fad40fe9f1711e92b323}{int\+\_\+n\+\_\+sign\+\_\+posn}}
+\begin{DoxyCompactList}\small\item\em Set to a value indicating the position of the positive\+\_\+sign for negative international monetary formatted quantity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lconv contains members related to the formatting of numeric values. 
+
+Definition at line 59 of file locale.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structlconv_af3657bb8bf2a83a868cdeb0b108ab921}\label{structlconv_af3657bb8bf2a83a868cdeb0b108ab921}} 
+\index{lconv@{lconv}!currency\_symbol@{currency\_symbol}}
+\index{currency\_symbol@{currency\_symbol}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{currency\_symbol}{currency\_symbol}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::currency\+\_\+symbol}
+
+
+
+The currency symbol applicable in the current locale. 
+
+
+
+Definition at line 102 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a445e27fc7f797c8cca97b381f062fb60}\label{structlconv_a445e27fc7f797c8cca97b381f062fb60}} 
+\index{lconv@{lconv}!decimal\_point@{decimal\_point}}
+\index{decimal\_point@{decimal\_point}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{decimal\_point}{decimal\_point}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::decimal\+\_\+point}
+
+
+
+The decimal-\/point character used to format non-\/monetary quantities. 
+
+
+
+Definition at line 64 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_aa16e32ff4dcc95445742b5b165ffb071}\label{structlconv_aa16e32ff4dcc95445742b5b165ffb071}} 
+\index{lconv@{lconv}!frac\_digits@{frac\_digits}}
+\index{frac\_digits@{frac\_digits}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{frac\_digits}{frac\_digits}}
+{\footnotesize\ttfamily char lconv\+::frac\+\_\+digits}
+
+
+
+The number of fractional digits to be displayed in a locally formatted monetary quantity. 
+
+
+
+Definition at line 108 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a46e468755a823be50de20f36be5ff2be}\label{structlconv_a46e468755a823be50de20f36be5ff2be}} 
+\index{lconv@{lconv}!grouping@{grouping}}
+\index{grouping@{grouping}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{grouping}{grouping}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::grouping}
+
+
+
+A string that indicates the size of each group of digits in non-\/monetary quantities. 
+
+
+
+Definition at line 74 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_abaeeafb02b68ba58c549458b196b9325}\label{structlconv_abaeeafb02b68ba58c549458b196b9325}} 
+\index{lconv@{lconv}!int\_curr\_symbol@{int\_curr\_symbol}}
+\index{int\_curr\_symbol@{int\_curr\_symbol}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_curr\_symbol}{int\_curr\_symbol}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::int\+\_\+curr\+\_\+symbol}
+
+
+
+The international currency symbol applicable to the current locale. 
+
+The first three characters contain the alphabetic international currency symbol in accordance with those specified in I\+SO 4217\+:1995. The fourth character (immediately preceding the null character) is the character used to separate the international currency symbol from the monetary quantity. 
+
+Definition at line 149 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a6b652f28cafc3092258b47c8099fe905}\label{structlconv_a6b652f28cafc3092258b47c8099fe905}} 
+\index{lconv@{lconv}!int\_frac\_digits@{int\_frac\_digits}}
+\index{int\_frac\_digits@{int\_frac\_digits}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_frac\_digits}{int\_frac\_digits}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+frac\+\_\+digits}
+
+
+
+The number of fractional digits to be displayed in a monetary quantity. 
+
+
+
+Definition at line 154 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a36121c68c5571e40145365dd1edecbb7}\label{structlconv_a36121c68c5571e40145365dd1edecbb7}} 
+\index{lconv@{lconv}!int\_n\_cs\_precedes@{int\_n\_cs\_precedes}}
+\index{int\_n\_cs\_precedes@{int\_n\_cs\_precedes}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_n\_cs\_precedes}{int\_n\_cs\_precedes}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+n\+\_\+cs\+\_\+precedes}
+
+
+
+Set to 1 or 0 if the int\+\_\+currency\+\_\+symbol precedes or succeeds respectively the value for a negative internationally formatted monetary quantity. 
+
+
+
+Definition at line 166 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_ad9cfa63e25f4a2aa02f6c7ca540177a2}\label{structlconv_ad9cfa63e25f4a2aa02f6c7ca540177a2}} 
+\index{lconv@{lconv}!int\_n\_sep\_by\_space@{int\_n\_sep\_by\_space}}
+\index{int\_n\_sep\_by\_space@{int\_n\_sep\_by\_space}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_n\_sep\_by\_space}{int\_n\_sep\_by\_space}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+n\+\_\+sep\+\_\+by\+\_\+space}
+
+
+
+Set to a value indicating the separation of the int\+\_\+currency\+\_\+symbol the sign string, and the value for negative international monetary formatted quantities. 
+
+
+
+Definition at line 178 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a642a9096f724fad40fe9f1711e92b323}\label{structlconv_a642a9096f724fad40fe9f1711e92b323}} 
+\index{lconv@{lconv}!int\_n\_sign\_posn@{int\_n\_sign\_posn}}
+\index{int\_n\_sign\_posn@{int\_n\_sign\_posn}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_n\_sign\_posn}{int\_n\_sign\_posn}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+n\+\_\+sign\+\_\+posn}
+
+
+
+Set to a value indicating the position of the positive\+\_\+sign for negative international monetary formatted quantity. 
+
+
+
+Definition at line 188 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a1a78cbc82f07601c2acb643f8dffdf64}\label{structlconv_a1a78cbc82f07601c2acb643f8dffdf64}} 
+\index{lconv@{lconv}!int\_p\_cs\_precedes@{int\_p\_cs\_precedes}}
+\index{int\_p\_cs\_precedes@{int\_p\_cs\_precedes}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_p\_cs\_precedes}{int\_p\_cs\_precedes}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+p\+\_\+cs\+\_\+precedes}
+
+
+
+Set to 1 or 0 if the int\+\_\+currency\+\_\+symbol precedes or succeeds respectively the value for a non-\/negative internationally formatted monetary quantity. 
+
+
+
+Definition at line 160 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_ae77e798ef92e86d58100b16fb8163443}\label{structlconv_ae77e798ef92e86d58100b16fb8163443}} 
+\index{lconv@{lconv}!int\_p\_sep\_by\_space@{int\_p\_sep\_by\_space}}
+\index{int\_p\_sep\_by\_space@{int\_p\_sep\_by\_space}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_p\_sep\_by\_space}{int\_p\_sep\_by\_space}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+p\+\_\+sep\+\_\+by\+\_\+space}
+
+
+
+Set to a value indicating the separation of the int\+\_\+currency\+\_\+symbol the sign string, and the value for non-\/negative international monetary formatted quantities. 
+
+
+
+Definition at line 172 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a266ed42f4bb087d1efac551940c42f6f}\label{structlconv_a266ed42f4bb087d1efac551940c42f6f}} 
+\index{lconv@{lconv}!int\_p\_sign\_posn@{int\_p\_sign\_posn}}
+\index{int\_p\_sign\_posn@{int\_p\_sign\_posn}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{int\_p\_sign\_posn}{int\_p\_sign\_posn}}
+{\footnotesize\ttfamily char lconv\+::int\+\_\+p\+\_\+sign\+\_\+posn}
+
+
+
+Set to a value indicating the position of the positive\+\_\+sign for non-\/negative international monetary formatted quantity. 
+
+
+
+Definition at line 183 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a1aa08afe707c1d5d40b4d01369176480}\label{structlconv_a1aa08afe707c1d5d40b4d01369176480}} 
+\index{lconv@{lconv}!mon\_decimal\_point@{mon\_decimal\_point}}
+\index{mon\_decimal\_point@{mon\_decimal\_point}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{mon\_decimal\_point}{mon\_decimal\_point}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::mon\+\_\+decimal\+\_\+point}
+
+
+
+The decimal-\/point used to format monetary quantities. 
+
+
+
+Definition at line 78 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a12ecf5d2f7ceb0cfe0f66fd3200eef54}\label{structlconv_a12ecf5d2f7ceb0cfe0f66fd3200eef54}} 
+\index{lconv@{lconv}!mon\_grouping@{mon\_grouping}}
+\index{mon\_grouping@{mon\_grouping}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{mon\_grouping}{mon\_grouping}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::mon\+\_\+grouping}
+
+
+
+A string that indicates the size of each group of digits in monetary quantities. 
+
+
+
+Definition at line 88 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a4f04f4fd9ea670d21fc76fb5c77c032d}\label{structlconv_a4f04f4fd9ea670d21fc76fb5c77c032d}} 
+\index{lconv@{lconv}!mon\_thousands\_sep@{mon\_thousands\_sep}}
+\index{mon\_thousands\_sep@{mon\_thousands\_sep}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{mon\_thousands\_sep}{mon\_thousands\_sep}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::mon\+\_\+thousands\+\_\+sep}
+
+
+
+The separator for groups of digits before the decimal-\/point in monetary quantities. 
+
+
+
+Definition at line 83 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_ad118b68a229527f7e96538ac875169ad}\label{structlconv_ad118b68a229527f7e96538ac875169ad}} 
+\index{lconv@{lconv}!n\_cs\_precedes@{n\_cs\_precedes}}
+\index{n\_cs\_precedes@{n\_cs\_precedes}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{n\_cs\_precedes}{n\_cs\_precedes}}
+{\footnotesize\ttfamily char lconv\+::n\+\_\+cs\+\_\+precedes}
+
+
+
+Set to 1 or 0 if currency\+\_\+symbol preceeds or succeeds respectively the negative value of monetary quantity. 
+
+
+
+Definition at line 118 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_ab7ac20ce034900155183b32fc3c6d9a3}\label{structlconv_ab7ac20ce034900155183b32fc3c6d9a3}} 
+\index{lconv@{lconv}!n\_sep\_by\_space@{n\_sep\_by\_space}}
+\index{n\_sep\_by\_space@{n\_sep\_by\_space}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{n\_sep\_by\_space}{n\_sep\_by\_space}}
+{\footnotesize\ttfamily char lconv\+::n\+\_\+sep\+\_\+by\+\_\+space}
+
+
+
+Set to a value indicating the separation of the currency\+\_\+symbol, the sign, and the value for negative monetary quantity. 
+
+
+
+Definition at line 128 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_ae0bbe6f545952daef5a8cbdd054a184e}\label{structlconv_ae0bbe6f545952daef5a8cbdd054a184e}} 
+\index{lconv@{lconv}!n\_sign\_posn@{n\_sign\_posn}}
+\index{n\_sign\_posn@{n\_sign\_posn}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{n\_sign\_posn}{n\_sign\_posn}}
+{\footnotesize\ttfamily char lconv\+::n\+\_\+sign\+\_\+posn}
+
+
+
+Set to a value indicating the position of the positive\+\_\+sign for negative monetary quantity. 
+
+
+
+Definition at line 138 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a40dbb1b1d7fdf4926145138f5d8f6f5f}\label{structlconv_a40dbb1b1d7fdf4926145138f5d8f6f5f}} 
+\index{lconv@{lconv}!negative\_sign@{negative\_sign}}
+\index{negative\_sign@{negative\_sign}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{negative\_sign}{negative\_sign}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::negative\+\_\+sign}
+
+
+
+A string that indicates a negative formatted value in monetary quantities. 
+
+
+
+Definition at line 98 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_af0651922c77fc926609bdd8746784e63}\label{structlconv_af0651922c77fc926609bdd8746784e63}} 
+\index{lconv@{lconv}!p\_cs\_precedes@{p\_cs\_precedes}}
+\index{p\_cs\_precedes@{p\_cs\_precedes}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{p\_cs\_precedes}{p\_cs\_precedes}}
+{\footnotesize\ttfamily char lconv\+::p\+\_\+cs\+\_\+precedes}
+
+
+
+Set to 1 or 0 if currency\+\_\+symbol preceeds or succeeds respectively the non-\/negative value of monetary quantity. 
+
+
+
+Definition at line 113 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a3ae3cb36f4426158e4ab2ea6dc4278ad}\label{structlconv_a3ae3cb36f4426158e4ab2ea6dc4278ad}} 
+\index{lconv@{lconv}!p\_sep\_by\_space@{p\_sep\_by\_space}}
+\index{p\_sep\_by\_space@{p\_sep\_by\_space}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{p\_sep\_by\_space}{p\_sep\_by\_space}}
+{\footnotesize\ttfamily char lconv\+::p\+\_\+sep\+\_\+by\+\_\+space}
+
+
+
+Set to a value indicating the separation of the currency\+\_\+symbol, the sign, and the value for non-\/negative monetary quantity. 
+
+
+
+Definition at line 123 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a1fdead36abe5c2ca673142ea401478e8}\label{structlconv_a1fdead36abe5c2ca673142ea401478e8}} 
+\index{lconv@{lconv}!p\_sign\_posn@{p\_sign\_posn}}
+\index{p\_sign\_posn@{p\_sign\_posn}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{p\_sign\_posn}{p\_sign\_posn}}
+{\footnotesize\ttfamily char lconv\+::p\+\_\+sign\+\_\+posn}
+
+
+
+Set to a value indicating the position of the positive\+\_\+sign for non-\/negative monetary quantity. 
+
+
+
+Definition at line 133 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_a74bf5f6f32624be629f7de0dabd58a96}\label{structlconv_a74bf5f6f32624be629f7de0dabd58a96}} 
+\index{lconv@{lconv}!positive\_sign@{positive\_sign}}
+\index{positive\_sign@{positive\_sign}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{positive\_sign}{positive\_sign}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::positive\+\_\+sign}
+
+
+
+A string that indicates a non-\/negative formatted value in monetary quantities. 
+
+
+
+Definition at line 93 of file locale.\+h.
+
+\mbox{\Hypertarget{structlconv_aede8dfaac91d7b4e6b7fb0d96184d74d}\label{structlconv_aede8dfaac91d7b4e6b7fb0d96184d74d}} 
+\index{lconv@{lconv}!thousands\_sep@{thousands\_sep}}
+\index{thousands\_sep@{thousands\_sep}!lconv@{lconv}}
+\subsubsection{\texorpdfstring{thousands\_sep}{thousands\_sep}}
+{\footnotesize\ttfamily char$\ast$ lconv\+::thousands\+\_\+sep}
+
+
+
+The character used to separate groups of digits in non-\/monetary quantities. 
+
+
+
+Definition at line 69 of file locale.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{locale_8h}{locale.\+h}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-/* nothing like the original from
+ /* nothing like the original from
  * from Dale Schumacher's dLibs
  */
 

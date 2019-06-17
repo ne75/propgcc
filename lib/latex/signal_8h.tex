@@ -1,0 +1,301 @@
+\hypertarget{signal_8h}{}\section{include/signal.h File Reference}
+\label{signal_8h}\index{include/signal.h@{include/signal.h}}
+{\ttfamily \#include $<$sys/thread.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{signal_8h_a27d5dc561093d6243542e6a2465bc0f8}{S\+I\+G\+\_\+\+D\+FL}}~((\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}})0)
+\item 
+\#define \mbox{\hyperlink{signal_8h_acf0e499b0ac946b366b4f47a3b3e8b9e}{S\+I\+G\+\_\+\+I\+GN}}~((\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}})1)
+\item 
+\#define \mbox{\hyperlink{signal_8h_a3c330fbddd84bf34e65af370b11998d6}{S\+I\+G\+\_\+\+E\+RR}}~((\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}})-\/1)
+\item 
+\#define \mbox{\hyperlink{signal_8h_a98390ddb391832019493bb871ca095fc}{S\+I\+G\+N\+U\+LL}}~0
+\item 
+\#define \mbox{\hyperlink{signal_8h_a136c64ec2d1306de745e39d6aee362ca}{S\+I\+G\+H\+UP}}~1
+\item 
+\#define \mbox{\hyperlink{signal_8h_a487309e3e9e0527535644115204a639a}{S\+I\+G\+I\+NT}}~2
+\item 
+\#define \mbox{\hyperlink{signal_8h_a62045b465be11891160d53c10861b16c}{S\+I\+G\+Q\+U\+IT}}~3
+\item 
+\#define \mbox{\hyperlink{signal_8h_a4c9c5284f8c8d146bd7a93d25017fc62}{S\+I\+G\+I\+LL}}~4
+\item 
+\#define \mbox{\hyperlink{signal_8h_aa2beb906ab1b46676e63823f4e773c38}{S\+I\+G\+T\+R\+AP}}~5
+\item 
+\#define \mbox{\hyperlink{signal_8h_aa86c630133e5b5174ac970227b273446}{S\+I\+G\+A\+B\+RT}}~6
+\item 
+\#define \mbox{\hyperlink{signal_8h_a7371187a780d5a28eea94bc69fe583e8}{S\+I\+G\+P\+R\+IV}}~7
+\item 
+\#define \mbox{\hyperlink{signal_8h_a7fbba29aec3e4a8daae12935299df92d}{S\+I\+G\+F\+PE}}~8
+\item 
+\#define \mbox{\hyperlink{signal_8h_addd8dcd406ce514ab3b4f576a5343d42}{S\+I\+G\+K\+I\+LL}}~9
+\item 
+\#define \mbox{\hyperlink{signal_8h_aead3d488474201acf18c4b63d91edc3c}{S\+I\+G\+B\+US}}~10
+\item 
+\#define \mbox{\hyperlink{signal_8h_ae20b4f7171a09516ea73c9d2745bd596}{S\+I\+G\+S\+E\+GV}}~11
+\item 
+\#define \mbox{\hyperlink{signal_8h_a8bacf9eb18fd539099c1bb4666c45d60}{S\+I\+G\+S\+YS}}~12
+\item 
+\#define \mbox{\hyperlink{signal_8h_a57e9c8c5fa13bf86bc779a9f6f408b7c}{S\+I\+G\+P\+I\+PE}}~13
+\item 
+\#define \mbox{\hyperlink{signal_8h_aa6946723c6b7a86ec3c33caaf832840b}{S\+I\+G\+A\+L\+RM}}~14
+\item 
+\#define \mbox{\hyperlink{signal_8h_a682182a5e5f38fd61f4311501e9dac5d}{S\+I\+G\+T\+E\+RM}}~15
+\item 
+\#define \mbox{\hyperlink{signal_8h_ad20f770a7b601810e52c309a51e549ff}{\+\_\+\+N\+S\+I\+GS}}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}}) (int)
+\item 
+typedef \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}} \mbox{\hyperlink{signal_8h_a09a3bbc30eee7567725926fdefe7f593}{sig\+\_\+atomic\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}} \mbox{\hyperlink{signal_8h_a5d326f119f87d0facaa662520f8c322a}{signal}} (int sig, \mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}} handler)
+\item 
+int \mbox{\hyperlink{signal_8h_a08ba0dd26a850108a1746412faba2b21}{raise}} (int sig)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{signal_8h_ad20f770a7b601810e52c309a51e549ff}\label{signal_8h_ad20f770a7b601810e52c309a51e549ff}} 
+\index{signal.h@{signal.h}!\_NSIGS@{\_NSIGS}}
+\index{\_NSIGS@{\_NSIGS}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{\_NSIGS}{\_NSIGS}}
+{\footnotesize\ttfamily \#define \+\_\+\+N\+S\+I\+GS~16}
+
+
+
+Definition at line 34 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a27d5dc561093d6243542e6a2465bc0f8}\label{signal_8h_a27d5dc561093d6243542e6a2465bc0f8}} 
+\index{signal.h@{signal.h}!SIG\_DFL@{SIG\_DFL}}
+\index{SIG\_DFL@{SIG\_DFL}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIG\_DFL}{SIG\_DFL}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+D\+FL~((\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}})0)}
+
+
+
+Definition at line 13 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a3c330fbddd84bf34e65af370b11998d6}\label{signal_8h_a3c330fbddd84bf34e65af370b11998d6}} 
+\index{signal.h@{signal.h}!SIG\_ERR@{SIG\_ERR}}
+\index{SIG\_ERR@{SIG\_ERR}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIG\_ERR}{SIG\_ERR}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+E\+RR~((\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}})-\/1)}
+
+
+
+Definition at line 15 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_acf0e499b0ac946b366b4f47a3b3e8b9e}\label{signal_8h_acf0e499b0ac946b366b4f47a3b3e8b9e}} 
+\index{signal.h@{signal.h}!SIG\_IGN@{SIG\_IGN}}
+\index{SIG\_IGN@{SIG\_IGN}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIG\_IGN}{SIG\_IGN}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+I\+GN~((\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}})1)}
+
+
+
+Definition at line 14 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_aa86c630133e5b5174ac970227b273446}\label{signal_8h_aa86c630133e5b5174ac970227b273446}} 
+\index{signal.h@{signal.h}!SIGABRT@{SIGABRT}}
+\index{SIGABRT@{SIGABRT}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGABRT}{SIGABRT}}
+{\footnotesize\ttfamily \#define S\+I\+G\+A\+B\+RT~6}
+
+
+
+Definition at line 23 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_aa6946723c6b7a86ec3c33caaf832840b}\label{signal_8h_aa6946723c6b7a86ec3c33caaf832840b}} 
+\index{signal.h@{signal.h}!SIGALRM@{SIGALRM}}
+\index{SIGALRM@{SIGALRM}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGALRM}{SIGALRM}}
+{\footnotesize\ttfamily \#define S\+I\+G\+A\+L\+RM~14}
+
+
+
+Definition at line 31 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_aead3d488474201acf18c4b63d91edc3c}\label{signal_8h_aead3d488474201acf18c4b63d91edc3c}} 
+\index{signal.h@{signal.h}!SIGBUS@{SIGBUS}}
+\index{SIGBUS@{SIGBUS}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGBUS}{SIGBUS}}
+{\footnotesize\ttfamily \#define S\+I\+G\+B\+US~10}
+
+
+
+Definition at line 27 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a7fbba29aec3e4a8daae12935299df92d}\label{signal_8h_a7fbba29aec3e4a8daae12935299df92d}} 
+\index{signal.h@{signal.h}!SIGFPE@{SIGFPE}}
+\index{SIGFPE@{SIGFPE}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGFPE}{SIGFPE}}
+{\footnotesize\ttfamily \#define S\+I\+G\+F\+PE~8}
+
+
+
+Definition at line 25 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a136c64ec2d1306de745e39d6aee362ca}\label{signal_8h_a136c64ec2d1306de745e39d6aee362ca}} 
+\index{signal.h@{signal.h}!SIGHUP@{SIGHUP}}
+\index{SIGHUP@{SIGHUP}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGHUP}{SIGHUP}}
+{\footnotesize\ttfamily \#define S\+I\+G\+H\+UP~1}
+
+
+
+Definition at line 18 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a4c9c5284f8c8d146bd7a93d25017fc62}\label{signal_8h_a4c9c5284f8c8d146bd7a93d25017fc62}} 
+\index{signal.h@{signal.h}!SIGILL@{SIGILL}}
+\index{SIGILL@{SIGILL}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGILL}{SIGILL}}
+{\footnotesize\ttfamily \#define S\+I\+G\+I\+LL~4}
+
+
+
+Definition at line 21 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a487309e3e9e0527535644115204a639a}\label{signal_8h_a487309e3e9e0527535644115204a639a}} 
+\index{signal.h@{signal.h}!SIGINT@{SIGINT}}
+\index{SIGINT@{SIGINT}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGINT}{SIGINT}}
+{\footnotesize\ttfamily \#define S\+I\+G\+I\+NT~2}
+
+
+
+Definition at line 19 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_addd8dcd406ce514ab3b4f576a5343d42}\label{signal_8h_addd8dcd406ce514ab3b4f576a5343d42}} 
+\index{signal.h@{signal.h}!SIGKILL@{SIGKILL}}
+\index{SIGKILL@{SIGKILL}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGKILL}{SIGKILL}}
+{\footnotesize\ttfamily \#define S\+I\+G\+K\+I\+LL~9}
+
+
+
+Definition at line 26 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a98390ddb391832019493bb871ca095fc}\label{signal_8h_a98390ddb391832019493bb871ca095fc}} 
+\index{signal.h@{signal.h}!SIGNULL@{SIGNULL}}
+\index{SIGNULL@{SIGNULL}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGNULL}{SIGNULL}}
+{\footnotesize\ttfamily \#define S\+I\+G\+N\+U\+LL~0}
+
+
+
+Definition at line 17 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a57e9c8c5fa13bf86bc779a9f6f408b7c}\label{signal_8h_a57e9c8c5fa13bf86bc779a9f6f408b7c}} 
+\index{signal.h@{signal.h}!SIGPIPE@{SIGPIPE}}
+\index{SIGPIPE@{SIGPIPE}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGPIPE}{SIGPIPE}}
+{\footnotesize\ttfamily \#define S\+I\+G\+P\+I\+PE~13}
+
+
+
+Definition at line 30 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a7371187a780d5a28eea94bc69fe583e8}\label{signal_8h_a7371187a780d5a28eea94bc69fe583e8}} 
+\index{signal.h@{signal.h}!SIGPRIV@{SIGPRIV}}
+\index{SIGPRIV@{SIGPRIV}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGPRIV}{SIGPRIV}}
+{\footnotesize\ttfamily \#define S\+I\+G\+P\+R\+IV~7}
+
+
+
+Definition at line 24 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a62045b465be11891160d53c10861b16c}\label{signal_8h_a62045b465be11891160d53c10861b16c}} 
+\index{signal.h@{signal.h}!SIGQUIT@{SIGQUIT}}
+\index{SIGQUIT@{SIGQUIT}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGQUIT}{SIGQUIT}}
+{\footnotesize\ttfamily \#define S\+I\+G\+Q\+U\+IT~3}
+
+
+
+Definition at line 20 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_ae20b4f7171a09516ea73c9d2745bd596}\label{signal_8h_ae20b4f7171a09516ea73c9d2745bd596}} 
+\index{signal.h@{signal.h}!SIGSEGV@{SIGSEGV}}
+\index{SIGSEGV@{SIGSEGV}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGSEGV}{SIGSEGV}}
+{\footnotesize\ttfamily \#define S\+I\+G\+S\+E\+GV~11}
+
+
+
+Definition at line 28 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a8bacf9eb18fd539099c1bb4666c45d60}\label{signal_8h_a8bacf9eb18fd539099c1bb4666c45d60}} 
+\index{signal.h@{signal.h}!SIGSYS@{SIGSYS}}
+\index{SIGSYS@{SIGSYS}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGSYS}{SIGSYS}}
+{\footnotesize\ttfamily \#define S\+I\+G\+S\+YS~12}
+
+
+
+Definition at line 29 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a682182a5e5f38fd61f4311501e9dac5d}\label{signal_8h_a682182a5e5f38fd61f4311501e9dac5d}} 
+\index{signal.h@{signal.h}!SIGTERM@{SIGTERM}}
+\index{SIGTERM@{SIGTERM}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGTERM}{SIGTERM}}
+{\footnotesize\ttfamily \#define S\+I\+G\+T\+E\+RM~15}
+
+
+
+Definition at line 32 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_aa2beb906ab1b46676e63823f4e773c38}\label{signal_8h_aa2beb906ab1b46676e63823f4e773c38}} 
+\index{signal.h@{signal.h}!SIGTRAP@{SIGTRAP}}
+\index{SIGTRAP@{SIGTRAP}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{SIGTRAP}{SIGTRAP}}
+{\footnotesize\ttfamily \#define S\+I\+G\+T\+R\+AP~5}
+
+
+
+Definition at line 22 of file signal.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{signal_8h_a09a3bbc30eee7567725926fdefe7f593}\label{signal_8h_a09a3bbc30eee7567725926fdefe7f593}} 
+\index{signal.h@{signal.h}!sig\_atomic\_t@{sig\_atomic\_t}}
+\index{sig\_atomic\_t@{sig\_atomic\_t}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{sig\_atomic\_t}{sig\_atomic\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}} \mbox{\hyperlink{signal_8h_a09a3bbc30eee7567725926fdefe7f593}{sig\+\_\+atomic\+\_\+t}}}
+
+
+
+Definition at line 11 of file signal.\+h.
+
+\mbox{\Hypertarget{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}\label{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}} 
+\index{signal.h@{signal.h}!sighandler\_t@{sighandler\_t}}
+\index{sighandler\_t@{sighandler\_t}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{sighandler\_t}{sighandler\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ sighandler\+\_\+t) (int)}
+
+
+
+Definition at line 10 of file signal.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{signal_8h_a08ba0dd26a850108a1746412faba2b21}\label{signal_8h_a08ba0dd26a850108a1746412faba2b21}} 
+\index{signal.h@{signal.h}!raise@{raise}}
+\index{raise@{raise}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{raise()}{raise()}}
+{\footnotesize\ttfamily int raise (\begin{DoxyParamCaption}\item[{int}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{signal_8h_a5d326f119f87d0facaa662520f8c322a}\label{signal_8h_a5d326f119f87d0facaa662520f8c322a}} 
+\index{signal.h@{signal.h}!signal@{signal}}
+\index{signal@{signal}!signal.h@{signal.h}}
+\subsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}} signal (\begin{DoxyParamCaption}\item[{int}]{sig,  }\item[{\mbox{\hyperlink{signal_8h_a754cdc0bcfffe07baa426dc252c9101a}{sighandler\+\_\+t}}}]{handler }\end{DoxyParamCaption})}
+

@@ -1,0 +1,48 @@
+\hypertarget{sys_2time_8h}{}\section{include/sys/time.h File Reference}
+\label{sys_2time_8h}\index{include/sys/time.h@{include/sys/time.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtimeval}{timeval}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{sys_2time_8h_a909167c659c8a090775b22285c2b8519}{suseconds\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sys_2time_8h_a53a45fa24484595c349f6ce0e872974a}{gettimeofday}} (struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$tv, void $\ast$unused)
+\item 
+int \mbox{\hyperlink{sys_2time_8h_a2dd677e3e98d2ef6d9c98e99f1788add}{settimeofday}} (const struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$tv, const void $\ast$unused)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sys_2time_8h_a909167c659c8a090775b22285c2b8519}\label{sys_2time_8h_a909167c659c8a090775b22285c2b8519}} 
+\index{time.h@{time.h}!suseconds\_t@{suseconds\_t}}
+\index{suseconds\_t@{suseconds\_t}!time.h@{time.h}}
+\subsubsection{\texorpdfstring{suseconds\_t}{suseconds\_t}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{sys_2time_8h_a909167c659c8a090775b22285c2b8519}{suseconds\+\_\+t}}}
+
+
+
+Definition at line 6 of file time.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys_2time_8h_a53a45fa24484595c349f6ce0e872974a}\label{sys_2time_8h_a53a45fa24484595c349f6ce0e872974a}} 
+\index{time.h@{time.h}!gettimeofday@{gettimeofday}}
+\index{gettimeofday@{gettimeofday}!time.h@{time.h}}
+\subsubsection{\texorpdfstring{gettimeofday()}{gettimeofday()}}
+{\footnotesize\ttfamily int gettimeofday (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$}]{tv,  }\item[{void $\ast$}]{unused }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2time_8h_a2dd677e3e98d2ef6d9c98e99f1788add}\label{sys_2time_8h_a2dd677e3e98d2ef6d9c98e99f1788add}} 
+\index{time.h@{time.h}!settimeofday@{settimeofday}}
+\index{settimeofday@{settimeofday}!time.h@{time.h}}
+\subsubsection{\texorpdfstring{settimeofday()}{settimeofday()}}
+{\footnotesize\ttfamily int settimeofday (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$}]{tv,  }\item[{const void $\ast$}]{unused }\end{DoxyParamCaption})}
+

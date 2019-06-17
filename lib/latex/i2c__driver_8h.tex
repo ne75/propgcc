@@ -1,0 +1,151 @@
+\hypertarget{i2c__driver_8h}{}\section{include/i2c\+\_\+driver.h File Reference}
+\label{i2c__driver_8h}\index{include/i2c\_driver.h@{include/i2c\_driver.h}}
+
+
+Declarations here are not meant as public A\+PI.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structI2C__MAILBOX}{I2\+C\+\_\+\+M\+A\+I\+L\+B\+OX}}
+\item 
+struct \mbox{\hyperlink{structI2C__INIT}{I2\+C\+\_\+\+I\+N\+IT}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{i2c__driver_8h_ab5c0fbe837494c5f9130a5914854250d}{I2\+C\+\_\+\+R\+E\+AD}}~1
+\item 
+\#define \mbox{\hyperlink{i2c__driver_8h_a9536bf85bced4f4e549a82fb18eb6140}{I2\+C\+\_\+\+W\+R\+I\+TE}}~0
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943}{I2\+C\+\_\+\+C\+MD}} \{ \newline
+\mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943ac950bdda952c9666e9f4400d598e61ed}{I2\+C\+\_\+\+C\+M\+D\+\_\+\+I\+D\+LE}}, 
+\mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a6b8e5f3267410f59909d956ed4913b48}{I2\+C\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT}}, 
+\mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943ab27393410ab8094eeee8247677867d06}{I2\+C\+\_\+\+C\+M\+D\+\_\+\+S\+E\+ND}}, 
+\mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a67257786a9fd99dde03fcb5331b3bdd6}{I2\+C\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+M\+O\+RE}}, 
+\newline
+\mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a2e56100a3732569f204a848c70643819}{I2\+C\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+I\+VE}}, 
+\mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a41d1d1e8f4d4f8e0822e09fa3f7355fc}{I2\+C\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+M\+O\+RE}}
+ \}
+\item 
+enum \mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466}{I2\+C\+\_\+\+R\+E\+S\+U\+LT}} \{ \newline
+\mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466aeceba296bdda2b90e8835c431fe7a72a}{I2\+C\+\_\+\+OK}} = 0, 
+\mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a606962a757635b166eee9be344ad0fc0}{I2\+C\+\_\+\+E\+R\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+MD}}, 
+\mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a9db840eb4ad97ffe0ed31478299ea456}{I2\+C\+\_\+\+E\+R\+R\+\_\+\+S\+E\+N\+D\+\_\+\+H\+DR}}, 
+\mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a258fe4a785bcd0458d15bad047d2c1c0}{I2\+C\+\_\+\+E\+R\+R\+\_\+\+S\+E\+ND}}, 
+\newline
+\mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a1e9864a77d93b161eead37b82485cb17}{I2\+C\+\_\+\+E\+R\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+H\+DR}}, 
+\mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466ab1a684b068ae0e60d40c3137f24381f4}{I2\+C\+\_\+\+E\+R\+R\+\_\+\+R\+E\+C\+E\+I\+VE}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declarations here are not meant as public A\+PI. 
+
+
+\begin{DoxyItemize}
+\item i2c single master driver definitions 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{i2c__driver_8h_ab5c0fbe837494c5f9130a5914854250d}\label{i2c__driver_8h_ab5c0fbe837494c5f9130a5914854250d}} 
+\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_READ@{I2C\_READ}}
+\index{I2C\_READ@{I2C\_READ}!i2c\_driver.h@{i2c\_driver.h}}
+\subsubsection{\texorpdfstring{I2C\_READ}{I2C\_READ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+R\+E\+AD~1}
+
+
+
+Definition at line 65 of file i2c\+\_\+driver.\+h.
+
+\mbox{\Hypertarget{i2c__driver_8h_a9536bf85bced4f4e549a82fb18eb6140}\label{i2c__driver_8h_a9536bf85bced4f4e549a82fb18eb6140}} 
+\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_WRITE@{I2C\_WRITE}}
+\index{I2C\_WRITE@{I2C\_WRITE}!i2c\_driver.h@{i2c\_driver.h}}
+\subsubsection{\texorpdfstring{I2C\_WRITE}{I2C\_WRITE}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+W\+R\+I\+TE~0}
+
+
+
+Definition at line 66 of file i2c\+\_\+driver.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943}} 
+\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD@{I2C\_CMD}}
+\index{I2C\_CMD@{I2C\_CMD}!i2c\_driver.h@{i2c\_driver.h}}
+\subsubsection{\texorpdfstring{I2C\_CMD}{I2C\_CMD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943}{I2\+C\+\_\+\+C\+MD}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_CMD\_IDLE@{I2C\_CMD\_IDLE}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD\_IDLE@{I2C\_CMD\_IDLE}}}\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943ac950bdda952c9666e9f4400d598e61ed}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943ac950bdda952c9666e9f4400d598e61ed}} 
+I2\+C\+\_\+\+C\+M\+D\+\_\+\+I\+D\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_CMD\_INIT@{I2C\_CMD\_INIT}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD\_INIT@{I2C\_CMD\_INIT}}}\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a6b8e5f3267410f59909d956ed4913b48}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a6b8e5f3267410f59909d956ed4913b48}} 
+I2\+C\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_CMD\_SEND@{I2C\_CMD\_SEND}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD\_SEND@{I2C\_CMD\_SEND}}}\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943ab27393410ab8094eeee8247677867d06}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943ab27393410ab8094eeee8247677867d06}} 
+I2\+C\+\_\+\+C\+M\+D\+\_\+\+S\+E\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_CMD\_SEND\_MORE@{I2C\_CMD\_SEND\_MORE}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD\_SEND\_MORE@{I2C\_CMD\_SEND\_MORE}}}\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a67257786a9fd99dde03fcb5331b3bdd6}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a67257786a9fd99dde03fcb5331b3bdd6}} 
+I2\+C\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+M\+O\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_CMD\_RECEIVE@{I2C\_CMD\_RECEIVE}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD\_RECEIVE@{I2C\_CMD\_RECEIVE}}}\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a2e56100a3732569f204a848c70643819}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a2e56100a3732569f204a848c70643819}} 
+I2\+C\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+I\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_CMD\_RECEIVE\_MORE@{I2C\_CMD\_RECEIVE\_MORE}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_CMD\_RECEIVE\_MORE@{I2C\_CMD\_RECEIVE\_MORE}}}\mbox{\Hypertarget{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a41d1d1e8f4d4f8e0822e09fa3f7355fc}\label{i2c__driver_8h_a1c045b940ed702700b2f8420610c3943a41d1d1e8f4d4f8e0822e09fa3f7355fc}} 
+I2\+C\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+M\+O\+RE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 31 of file i2c\+\_\+driver.\+h.
+
+\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466}} 
+\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_RESULT@{I2C\_RESULT}}
+\index{I2C\_RESULT@{I2C\_RESULT}!i2c\_driver.h@{i2c\_driver.h}}
+\subsubsection{\texorpdfstring{I2C\_RESULT}{I2C\_RESULT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466}{I2\+C\+\_\+\+R\+E\+S\+U\+LT}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_OK@{I2C\_OK}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_OK@{I2C\_OK}}}\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466aeceba296bdda2b90e8835c431fe7a72a}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466aeceba296bdda2b90e8835c431fe7a72a}} 
+I2\+C\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_ERR\_UNKNOWN\_CMD@{I2C\_ERR\_UNKNOWN\_CMD}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_ERR\_UNKNOWN\_CMD@{I2C\_ERR\_UNKNOWN\_CMD}}}\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a606962a757635b166eee9be344ad0fc0}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a606962a757635b166eee9be344ad0fc0}} 
+I2\+C\+\_\+\+E\+R\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+MD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_ERR\_SEND\_HDR@{I2C\_ERR\_SEND\_HDR}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_ERR\_SEND\_HDR@{I2C\_ERR\_SEND\_HDR}}}\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a9db840eb4ad97ffe0ed31478299ea456}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a9db840eb4ad97ffe0ed31478299ea456}} 
+I2\+C\+\_\+\+E\+R\+R\+\_\+\+S\+E\+N\+D\+\_\+\+H\+DR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_ERR\_SEND@{I2C\_ERR\_SEND}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_ERR\_SEND@{I2C\_ERR\_SEND}}}\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a258fe4a785bcd0458d15bad047d2c1c0}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a258fe4a785bcd0458d15bad047d2c1c0}} 
+I2\+C\+\_\+\+E\+R\+R\+\_\+\+S\+E\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_ERR\_RECEIVE\_HDR@{I2C\_ERR\_RECEIVE\_HDR}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_ERR\_RECEIVE\_HDR@{I2C\_ERR\_RECEIVE\_HDR}}}\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a1e9864a77d93b161eead37b82485cb17}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466a1e9864a77d93b161eead37b82485cb17}} 
+I2\+C\+\_\+\+E\+R\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+H\+DR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C\_ERR\_RECEIVE@{I2C\_ERR\_RECEIVE}!i2c\_driver.h@{i2c\_driver.h}}\index{i2c\_driver.h@{i2c\_driver.h}!I2C\_ERR\_RECEIVE@{I2C\_ERR\_RECEIVE}}}\mbox{\Hypertarget{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466ab1a684b068ae0e60d40c3137f24381f4}\label{i2c__driver_8h_ad1c44f3b55fa89ba29f7088c9f1b5466ab1a684b068ae0e60d40c3137f24381f4}} 
+I2\+C\+\_\+\+E\+R\+R\+\_\+\+R\+E\+C\+E\+I\+VE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file i2c\+\_\+driver.\+h.
+

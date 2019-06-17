@@ -1,0 +1,168 @@
+\hypertarget{locale_8h}{}\section{include/locale.h File Reference}
+\label{locale_8h}\index{include/locale.h@{include/locale.h}}
+
+
+Provides multi-\/lingual localization A\+PI functions.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\newline
+{\ttfamily \#include $<$sys/null.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlconv}{lconv}}
+\begin{DoxyCompactList}\small\item\em lconv contains members related to the formatting of numeric values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{locale_8h_a9cc5213b5dca4f8e48e64586ee444c33}{L\+C\+\_\+\+A\+LL}}~0x001F
+\begin{DoxyCompactList}\small\item\em Selects category names for the entire locale. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{locale_8h_aab9cf7b1a206fb75e5884934c8d676db}{L\+C\+\_\+\+C\+O\+L\+L\+A\+TE}}~0x0001
+\begin{DoxyCompactList}\small\item\em Affects the behavior of strcoll and strxfrm functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{locale_8h_a07c66689961056725d7f50231d740ba9}{L\+C\+\_\+\+C\+T\+Y\+PE}}~0x0002
+\begin{DoxyCompactList}\small\item\em Affects the behavior of the character handling and multibyte functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{locale_8h_a6d033a83772ef6e6c10dbf13a6a58fb7}{L\+C\+\_\+\+M\+O\+N\+E\+T\+A\+RY}}~0x0004
+\begin{DoxyCompactList}\small\item\em Affects the monetary format information returned by localeconv. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{locale_8h_a158abb82c565096465ade138c98970d0}{L\+C\+\_\+\+N\+U\+M\+E\+R\+IC}}~0x0008
+\begin{DoxyCompactList}\small\item\em Affects the decimal point character and other information for formatted I/O. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{locale_8h_aa652c62b53b6bf728d592bfbdc7d5852}{L\+C\+\_\+\+T\+I\+ME}}~0x0010
+\begin{DoxyCompactList}\small\item\em Affects the behavior of the strftime and strfxtime functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{locale_8h_afe784c4f5d12b74272740c5211c960c5}{setlocale}} (int category, const char $\ast$locale)
+\item 
+struct \mbox{\hyperlink{structlconv}{lconv}} $\ast$ \mbox{\hyperlink{locale_8h_a69b40f71a20a7c8bd67b9eeeae7f40c9}{localeconv}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides multi-\/lingual localization A\+PI functions. 
+
+C localization functions are used in multilingual programs to adapt to the specific locale for displaying numbers and currency. Functions affect the C Standard Library I/O function behavior.
+
+The only locales supported is \char`\"{}\+C\char`\"{} and a C.\+U\+TF-\/8 locale which is the same as C but supports U\+T\+F-\/8 multibyte character encoding. Things like currency and so forth are hard coded to the C locale. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{locale_8h_a9cc5213b5dca4f8e48e64586ee444c33}\label{locale_8h_a9cc5213b5dca4f8e48e64586ee444c33}} 
+\index{locale.h@{locale.h}!LC\_ALL@{LC\_ALL}}
+\index{LC\_ALL@{LC\_ALL}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{LC\_ALL}{LC\_ALL}}
+{\footnotesize\ttfamily \#define L\+C\+\_\+\+A\+LL~0x001F}
+
+
+
+Selects category names for the entire locale. 
+
+
+
+Definition at line 30 of file locale.\+h.
+
+\mbox{\Hypertarget{locale_8h_aab9cf7b1a206fb75e5884934c8d676db}\label{locale_8h_aab9cf7b1a206fb75e5884934c8d676db}} 
+\index{locale.h@{locale.h}!LC\_COLLATE@{LC\_COLLATE}}
+\index{LC\_COLLATE@{LC\_COLLATE}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{LC\_COLLATE}{LC\_COLLATE}}
+{\footnotesize\ttfamily \#define L\+C\+\_\+\+C\+O\+L\+L\+A\+TE~0x0001}
+
+
+
+Affects the behavior of strcoll and strxfrm functions. 
+
+
+
+Definition at line 34 of file locale.\+h.
+
+\mbox{\Hypertarget{locale_8h_a07c66689961056725d7f50231d740ba9}\label{locale_8h_a07c66689961056725d7f50231d740ba9}} 
+\index{locale.h@{locale.h}!LC\_CTYPE@{LC\_CTYPE}}
+\index{LC\_CTYPE@{LC\_CTYPE}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{LC\_CTYPE}{LC\_CTYPE}}
+{\footnotesize\ttfamily \#define L\+C\+\_\+\+C\+T\+Y\+PE~0x0002}
+
+
+
+Affects the behavior of the character handling and multibyte functions. 
+
+
+
+Definition at line 38 of file locale.\+h.
+
+\mbox{\Hypertarget{locale_8h_a6d033a83772ef6e6c10dbf13a6a58fb7}\label{locale_8h_a6d033a83772ef6e6c10dbf13a6a58fb7}} 
+\index{locale.h@{locale.h}!LC\_MONETARY@{LC\_MONETARY}}
+\index{LC\_MONETARY@{LC\_MONETARY}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{LC\_MONETARY}{LC\_MONETARY}}
+{\footnotesize\ttfamily \#define L\+C\+\_\+\+M\+O\+N\+E\+T\+A\+RY~0x0004}
+
+
+
+Affects the monetary format information returned by localeconv. 
+
+
+
+Definition at line 42 of file locale.\+h.
+
+\mbox{\Hypertarget{locale_8h_a158abb82c565096465ade138c98970d0}\label{locale_8h_a158abb82c565096465ade138c98970d0}} 
+\index{locale.h@{locale.h}!LC\_NUMERIC@{LC\_NUMERIC}}
+\index{LC\_NUMERIC@{LC\_NUMERIC}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{LC\_NUMERIC}{LC\_NUMERIC}}
+{\footnotesize\ttfamily \#define L\+C\+\_\+\+N\+U\+M\+E\+R\+IC~0x0008}
+
+
+
+Affects the decimal point character and other information for formatted I/O. 
+
+
+
+Definition at line 46 of file locale.\+h.
+
+\mbox{\Hypertarget{locale_8h_aa652c62b53b6bf728d592bfbdc7d5852}\label{locale_8h_aa652c62b53b6bf728d592bfbdc7d5852}} 
+\index{locale.h@{locale.h}!LC\_TIME@{LC\_TIME}}
+\index{LC\_TIME@{LC\_TIME}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{LC\_TIME}{LC\_TIME}}
+{\footnotesize\ttfamily \#define L\+C\+\_\+\+T\+I\+ME~0x0010}
+
+
+
+Affects the behavior of the strftime and strfxtime functions. 
+
+
+
+Definition at line 50 of file locale.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{locale_8h_a69b40f71a20a7c8bd67b9eeeae7f40c9}\label{locale_8h_a69b40f71a20a7c8bd67b9eeeae7f40c9}} 
+\index{locale.h@{locale.h}!localeconv@{localeconv}}
+\index{localeconv@{localeconv}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{localeconv()}{localeconv()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlconv}{lconv}}$\ast$ localeconv (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+An object of type struct lconv according to the current locale. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{locale_8h_afe784c4f5d12b74272740c5211c960c5}\label{locale_8h_afe784c4f5d12b74272740c5211c960c5}} 
+\index{locale.h@{locale.h}!setlocale@{setlocale}}
+\index{setlocale@{setlocale}!locale.h@{locale.h}}
+\subsubsection{\texorpdfstring{setlocale()}{setlocale()}}
+{\footnotesize\ttfamily char$\ast$ setlocale (\begin{DoxyParamCaption}\item[{int}]{category,  }\item[{const char $\ast$}]{locale }\end{DoxyParamCaption})}
+
+Select the part of the program\textquotesingle{}s locale as specified by the category and locale parameters. The function can be used to change or query the program\textquotesingle{}s current locale.
+
+The default is supposed to be setlocale(L\+C\+\_\+\+A\+LL, \char`\"{}\+C\char`\"{});
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & A macro to select the Locale portion to select. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{locale_8h_a9cc5213b5dca4f8e48e64586ee444c33}{L\+C\+\_\+\+A\+LL}}, etc... 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em locale} & A string specifying the locale environment. Normally \char`\"{}\+C\char`\"{} for our use. If locale is N\+U\+LL, setlocale will return the category of the current locale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a string associated with the category for the locale, or 0 on error. 
+\end{DoxyReturn}

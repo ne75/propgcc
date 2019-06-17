@@ -1,0 +1,55 @@
+\hypertarget{driver_8h}{}\section{include/driver.h File Reference}
+\label{driver_8h}\index{include/driver.h@{include/driver.h}}
+
+
+Provides driver A\+PI functions for initializing devices.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sys/driver.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{driver_8h_a46505b2ff4d7499b96c554bf6addedef}{I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+R\+I\+V\+ER}}(x)~extern \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}} x; \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}} $\ast$x \#\# \+\_\+fp = \&x;
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{driver_8h_adbf07ea45760d1ad007a2c7be8102336}{\+\_\+\+Init\+IO}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides driver A\+PI functions for initializing devices. 
+
+Copyright (c) 2011-\/2012 by Parallax, Inc. All rights M\+IT Licensed.
+
+The \mbox{\hyperlink{driver_8h_adbf07ea45760d1ad007a2c7be8102336}{\+\_\+\+Init\+I\+O()}} function is called at program startup before main().
+
+It initializes stdio devices as defined in \mbox{\hyperlink{sys_2driver_8h}{include/sys/driver.\+h}}
+
+New devices having stdio interfaces can be added to the driver table. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver_8h_a46505b2ff4d7499b96c554bf6addedef}\label{driver_8h_a46505b2ff4d7499b96c554bf6addedef}} 
+\index{driver.h@{driver.h}!INCLUDE\_DRIVER@{INCLUDE\_DRIVER}}
+\index{INCLUDE\_DRIVER@{INCLUDE\_DRIVER}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{INCLUDE\_DRIVER}{INCLUDE\_DRIVER}}
+{\footnotesize\ttfamily \#define I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+R\+I\+V\+ER(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~extern \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}} x; \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}} $\ast$x \#\# \+\_\+fp = \&x;}
+
+
+
+Definition at line 29 of file driver.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver_8h_adbf07ea45760d1ad007a2c7be8102336}\label{driver_8h_adbf07ea45760d1ad007a2c7be8102336}} 
+\index{driver.h@{driver.h}!\_InitIO@{\_InitIO}}
+\index{\_InitIO@{\_InitIO}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_InitIO()}{\_InitIO()}}
+{\footnotesize\ttfamily void \+\_\+\+Init\+IO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+Details above 
+\end{DoxySeeAlso}

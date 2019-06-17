@@ -1,0 +1,63 @@
+\hypertarget{rtc_8h}{}\section{include/sys/rtc.h File Reference}
+\label{rtc_8h}\index{include/sys/rtc.h@{include/sys/rtc.h}}
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rtc_8h_af9f57b371659880fe6a4c21712f21cbf}{\+\_\+rtc\+\_\+start\+\_\+timekeeping\+\_\+cog}} (void)
+\item 
+void \mbox{\hyperlink{rtc_8h_a4e979053c88a710fede0bfd897657757}{\+\_\+default\+\_\+update\+\_\+ticks}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int($\ast$ \mbox{\hyperlink{rtc_8h_a9f229b2c84be95431697ba4952969f69}{\+\_\+rtc\+\_\+gettime}} )(struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$tv)
+\item 
+int($\ast$ \mbox{\hyperlink{rtc_8h_ad918972c6383fa34cc5c1be17bc8b27e}{\+\_\+rtc\+\_\+settime}} )(const struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$tv)
+\item 
+int \mbox{\hyperlink{rtc_8h_af25a7958e884c13045385a1de75dff2e}{\+\_\+default\+\_\+ticks\+\_\+updated}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8h_a4e979053c88a710fede0bfd897657757}\label{rtc_8h_a4e979053c88a710fede0bfd897657757}} 
+\index{rtc.h@{rtc.h}!\_default\_update\_ticks@{\_default\_update\_ticks}}
+\index{\_default\_update\_ticks@{\_default\_update\_ticks}!rtc.h@{rtc.h}}
+\subsubsection{\texorpdfstring{\_default\_update\_ticks()}{\_default\_update\_ticks()}}
+{\footnotesize\ttfamily void \+\_\+default\+\_\+update\+\_\+ticks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rtc_8h_af9f57b371659880fe6a4c21712f21cbf}\label{rtc_8h_af9f57b371659880fe6a4c21712f21cbf}} 
+\index{rtc.h@{rtc.h}!\_rtc\_start\_timekeeping\_cog@{\_rtc\_start\_timekeeping\_cog}}
+\index{\_rtc\_start\_timekeeping\_cog@{\_rtc\_start\_timekeeping\_cog}!rtc.h@{rtc.h}}
+\subsubsection{\texorpdfstring{\_rtc\_start\_timekeeping\_cog()}{\_rtc\_start\_timekeeping\_cog()}}
+{\footnotesize\ttfamily void \+\_\+rtc\+\_\+start\+\_\+timekeeping\+\_\+cog (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8h_af25a7958e884c13045385a1de75dff2e}\label{rtc_8h_af25a7958e884c13045385a1de75dff2e}} 
+\index{rtc.h@{rtc.h}!\_default\_ticks\_updated@{\_default\_ticks\_updated}}
+\index{\_default\_ticks\_updated@{\_default\_ticks\_updated}!rtc.h@{rtc.h}}
+\subsubsection{\texorpdfstring{\_default\_ticks\_updated}{\_default\_ticks\_updated}}
+{\footnotesize\ttfamily int \+\_\+default\+\_\+ticks\+\_\+updated}
+
+\mbox{\Hypertarget{rtc_8h_a9f229b2c84be95431697ba4952969f69}\label{rtc_8h_a9f229b2c84be95431697ba4952969f69}} 
+\index{rtc.h@{rtc.h}!\_rtc\_gettime@{\_rtc\_gettime}}
+\index{\_rtc\_gettime@{\_rtc\_gettime}!rtc.h@{rtc.h}}
+\subsubsection{\texorpdfstring{\_rtc\_gettime}{\_rtc\_gettime}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+rtc\+\_\+gettime) (struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$tv)}
+
+
+
+Definition at line 10 of file rtc.\+h.
+
+\mbox{\Hypertarget{rtc_8h_ad918972c6383fa34cc5c1be17bc8b27e}\label{rtc_8h_ad918972c6383fa34cc5c1be17bc8b27e}} 
+\index{rtc.h@{rtc.h}!\_rtc\_settime@{\_rtc\_settime}}
+\index{\_rtc\_settime@{\_rtc\_settime}!rtc.h@{rtc.h}}
+\subsubsection{\texorpdfstring{\_rtc\_settime}{\_rtc\_settime}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+rtc\+\_\+settime) (const struct \mbox{\hyperlink{structtimeval}{timeval}} $\ast$tv)}
+
+
+
+Definition at line 11 of file rtc.\+h.
+

@@ -1,0 +1,928 @@
+\hypertarget{stdio_8h}{}\section{include/stdio.h File Reference}
+\label{stdio_8h}\index{include/stdio.h@{include/stdio.h}}
+{\ttfamily \#include $<$sys/size\+\_\+t.\+h$>$}\newline
+{\ttfamily \#include $<$sys/va\+\_\+list.\+h$>$}\newline
+{\ttfamily \#include $<$sys/driver.\+h$>$}\newline
+{\ttfamily \#include $<$sys/null.\+h$>$}\newline
+{\ttfamily \#include $<$sys/thread.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__FILE}{\+\_\+\+F\+I\+LE}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a7011e24637bda1176626b4c99e055d19}{\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+U\+NC}}
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a06d68340c3c669f22827df77fece98b4}{\+\_\+\+F\+P\+R\+I\+N\+T\+F\+\_\+\+F\+U\+NC}}
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a59adc4c82490d23754cd39c2fb99b0da}{E\+OF}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a72a591cf0a96cf23c63df5c78712dabe}{B\+U\+F\+S\+IZ}}~512
+\item 
+\#define \mbox{\hyperlink{stdio_8h_aa188a2e288c10a684622814c51337465}{F\+O\+P\+E\+N\+\_\+\+M\+AX}}~8
+\item 
+\#define \mbox{\hyperlink{stdio_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}}~256
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a0d112bae8fd35be772185b6ec6bcbe64}{S\+E\+E\+K\+\_\+\+S\+ET}}~0
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a4c8d0b76b470ba65a43ca46a88320f39}{S\+E\+E\+K\+\_\+\+C\+UR}}~1
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ad2a2e6c114780c3071efd24f16c7f7d8}{S\+E\+E\+K\+\_\+\+E\+ND}}~2
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a7262cef78990598bbace8871ffa05314}{\+\_\+\+I\+O\+R\+E\+AD}}~0x0001		/$\ast$ file may be read from $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a47ec54dd9ca148452505d19160495e37}{\+\_\+\+I\+O\+W\+RT}}~0x0002		/$\ast$ file may be written to $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a7385e36af7b76e1f25864bd7c83908d0}{\+\_\+\+I\+O\+B\+IN}}~0x0004		/$\ast$ file is in \char`\"{}binary\char`\"{} mode $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ae7d84aa504894830334565e5e9488124}{\+\_\+\+I\+O\+D\+EV}}~0x0008		/$\ast$ file is a character device $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a2a705c682c0721355134f95153d270c6}{\+\_\+\+I\+O\+C\+O\+O\+K\+ED}}~0x0010          /$\ast$ do terminal input processing $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a740a30a7a19a361848f4e510483ff4ea}{\+\_\+\+I\+O\+RW}}~0x0080		/$\ast$ file is open for update (r+w) $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_af7475971eb93ce0184379e71fe7626e9}{\+\_\+\+I\+O\+F\+BF}}~0x0100		/$\ast$ i/o is fully buffered $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_aca9e52813bd224e4519e0b1289abbce9}{\+\_\+\+I\+O\+L\+BF}}~0x0200		/$\ast$ i/o is line buffered $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a8661edb6b53e3104bef089bef02d0508}{\+\_\+\+I\+O\+N\+BF}}~0x0400		/$\ast$ i/o is not buffered $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a8bdcb18f85d0368697918c2699b149cf}{\+\_\+\+I\+O\+F\+R\+E\+E\+B\+UF}}~0x0800		/$\ast$ buffer needs freeing $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a719aebb4b0418c96798465c28867987e}{\+\_\+\+I\+O\+E\+OF}}~0x1000		/$\ast$ E\+O\+F has been reached $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ae5b324e6ee43bc6d90b874a7babc6d60}{\+\_\+\+I\+O\+E\+RR}}~0x2000		/$\ast$ an error has occured $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ad1ac6e71cd1defe668ca1cb3b4a68dc0}{\+\_\+\+I\+O\+A\+P\+P\+E\+ND}}~0x4000          /$\ast$ data should be appended to file $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a45bdd9b6193796da147e99323aca5b32}{\+\_\+\+I\+O\+N\+O\+N\+B\+L\+O\+CK}}~0x8000          /$\ast$ i/o should be non-\/blocking $\ast$/
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a9a061eceee5e1799e31f1c8419f57f2c}{\+\_\+\+S\+M\+A\+L\+L\+\_\+\+B\+U\+F\+S\+IZ}}~8
+\item 
+\#define \mbox{\hyperlink{stdio_8h_aaca70138f0cb63ddb026921afc635179}{stdin}}~(\&\mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}}\mbox{[}0\mbox{]})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a0c0ef221f95f64e8632451312fd18cc8}{stdout}}~(\&\mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}}\mbox{[}1\mbox{]})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a5ce35bd5ba5021fd3b2e951e8f497656}{stderr}}~(\&\mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}}\mbox{[}2\mbox{]})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_adc545a45572750d324854ea54d8159e9}{fileno}}(x)~(x -\/ \mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a09ceb74f0162424b6ceb823a4c702b85}{P\+\_\+tmpdir}}~\char`\"{}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ad2560a07a7528c4975660f391320faca}{L\+\_\+tmpnam}}~16
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ada7e63a6fb078a062192145950369d09}{T\+M\+P\+\_\+\+M\+AX}}~0xffffff
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a95e5c154982387fbeb71e1a7e24a7e9c}{putc}}(x,  stream)~\mbox{\hyperlink{stdio_8h_a6c5e38aab87163991979364e82b53650}{fputc}}(x, stream)
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ae87b2002fe2dcaefe5db787e71db2327}{putchar}}(x)~\mbox{\hyperlink{stdio_8h_a6c5e38aab87163991979364e82b53650}{fputc}}(x, \mbox{\hyperlink{stdio_8h_a0c0ef221f95f64e8632451312fd18cc8}{stdout}})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_a39ae32b25ab00f0ae78b934422a0bff2}{getc}}(stream)~\mbox{\hyperlink{stdio_8h_a5972ac73ba11086858f08a1ccd846333}{fgetc}}(stream)
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ac45fdeab51c3197c1e7c4ec7beabaca9}{getchar}}()~\mbox{\hyperlink{stdio_8h_a5972ac73ba11086858f08a1ccd846333}{fgetc}}(\mbox{\hyperlink{stdio_8h_aaca70138f0cb63ddb026921afc635179}{stdin}})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_ac028c9f56c16e806b1273c3870295493}{\+\_\+\+\_\+lock\+\_\+stdio}}()~\mbox{\hyperlink{thread_8h_aac2b35a75f8ff779459102e506bddf27}{\+\_\+\+\_\+lock}}(\&\mbox{\hyperlink{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}{\+\_\+\+\_\+stdio\+\_\+lock}})
+\item 
+\#define \mbox{\hyperlink{stdio_8h_aedca261055fa85229d29869fc20aa8f3}{\+\_\+\+\_\+unlock\+\_\+stdio}}()~\mbox{\hyperlink{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}{\+\_\+\+\_\+unlock}}(\&\mbox{\hyperlink{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}{\+\_\+\+\_\+stdio\+\_\+lock}})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__FILE}{\+\_\+\+F\+I\+LE}} \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}
+\item 
+typedef unsigned long \mbox{\hyperlink{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}{fpos\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_a043ecd1fa571a0e4f3835a0f19570cfd}{fopen}} (const char $\ast$name, const char $\ast$mode)
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_a5d1f6f352864f6774871dd7cf586b723}{freopen}} (const char $\ast$name, const char $\ast$mode, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_a3abd78c220b4b49d1b088f0dfe40bf23}{fclose}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_ae4459e830d3e2abcf428337a661d9456}{fflush}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_ab13b5edcd6e585f41214da079623b209}{fdopen}} (int fd, const char $\ast$mode)
+\item 
+void \mbox{\hyperlink{stdio_8h_ae8e33f44c01a9015fb9b9a16053efd2d}{setbuf}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, char $\ast$buf)
+\item 
+int \mbox{\hyperlink{stdio_8h_a44f9ccfb7b5e8bb308918b194ec0102d}{setvbuf}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, char $\ast$buf, int mode, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size)
+\item 
+int \mbox{\hyperlink{stdio_8h_a6c5e38aab87163991979364e82b53650}{fputc}} (int c, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_a365b15135fac34c613879b173000ec42}{fputs}} (const char $\ast$s, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_ad41876f99f190c7488e64ef39c50a23f}{puts}} (const char $\ast$s)
+\item 
+int \mbox{\hyperlink{stdio_8h_acf51cf517b71cc654bfe9e2a5927ccf8}{putc}} (int c, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_af4de2514b7778805db3815e8dd6cf09a}{putchar}} (int c)
+\item 
+int \mbox{\hyperlink{stdio_8h_a5972ac73ba11086858f08a1ccd846333}{fgetc}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+char $\ast$ \mbox{\hyperlink{stdio_8h_aeee1718c60d2d297acd7b85f0fa085f2}{fgets}} (char $\ast$s, int size, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+char $\ast$ \mbox{\hyperlink{stdio_8h_a5dee04c912798047e379b0e5bb8c52de}{gets}} (char $\ast$buf)
+\item 
+int \mbox{\hyperlink{stdio_8h_a8d664302d91f60c249c9705d1198fb6b}{ungetc}} (int c, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_a6c8d403fb133a4eb82a146df500a9a49}{getc}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{stdio_8h_a5b469d58e0c0ca8ec8bf9b9e4c3ee808}{fread}} (void $\ast$ptr, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} nmeb, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{stdio_8h_a9de5969c36eab7f18a1966d6d43aba78}{fwrite}} (const void $\ast$ptr, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} nmeb, \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_a55f3d956bb2ba20b5059e9e25484a47f}{printf}} (const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_a499e5a929d53712a6a65d1c7636f68bb}{fprintf}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_a3082155ec11e7229f7a20439b31a169e}{sprintf}} (char $\ast$str, const char $\ast$format,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_ad76145a6edfc98981ded8815a760e0cd}{snprintf}} (char $\ast$str, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size, const char $\ast$format,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_a2203ddeff1ea7eed6c9cb138fd742c80}{\+\_\+\+\_\+simple\+\_\+printf}} (const char $\ast$fmt,...) \mbox{\hyperlink{stdio_8h_a7011e24637bda1176626b4c99e055d19}{\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+U\+NC}}
+\item 
+int \mbox{\hyperlink{stdio_8h_ab91fc5eb2614caa5fadec0cf9bae5894}{\+\_\+\+\_\+simple\+\_\+float\+\_\+printf}} (const char $\ast$fmt,...) \mbox{\hyperlink{stdio_8h_a7011e24637bda1176626b4c99e055d19}{\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+U\+NC}}
+\item 
+void \mbox{\hyperlink{stdio_8h_a80b37b56a5a42139dccaef56da4bf82a}{perror}} (const char $\ast$msg)
+\item 
+int \mbox{\hyperlink{stdio_8h_a7184c7daa6251cdbae832d7c6511564e}{vprintf}} (const char $\ast$fmt, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_a39a87cb9885552dc8e1e9afa3636a3cf}{vfprintf}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, const char $\ast$fmt, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_a76e0544f4b1db86562c894a6e5119479}{vsprintf}} (char $\ast$str, const char $\ast$format, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_ab190ed953d50f96a7060f48807fef7d3}{vsnprintf}} (char $\ast$str, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size, const char $\ast$format, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_a3c102ad968f1eaed75040463be07ffc9}{scanf}} (const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_afac05ff9e76b913b71439f60274370a7}{fscanf}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_a5f0b0bfa0933e03124596ac5cda16860}{sscanf}} (const char $\ast$str, const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{stdio_8h_a9fc2145b5e87faa75f6316839b860daf}{vscanf}} (const char $\ast$fmt, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_acb41c9d080a1376367c4493750b3c9a5}{vfscanf}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, const char $\ast$fmt, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_a0e000966b1b33c03fee1e189561da751}{vsscanf}} (const char $\ast$str, const char $\ast$fmt, \+\_\+\+\_\+va\+\_\+list ap)
+\item 
+int \mbox{\hyperlink{stdio_8h_a2ff9908f035aec76a33f9792faf9d402}{remove}} (const char $\ast$filename)
+\item 
+int \mbox{\hyperlink{stdio_8h_affd46c92931ef1c646e1a78ab880a00e}{rename}} (const char $\ast$oldname, const char $\ast$newname)
+\item 
+void \mbox{\hyperlink{stdio_8h_a81202d6a15259fbceb71a961a878b01a}{clearerr}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_afb95de1535a5a185954819539f3c6ca5}{feof}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_a587758f1a95ea048585c9f6204560a80}{ferror}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_aece5d6e00c239ffd0847d8d2ef65bd57}{fseek}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, long offset, int whence)
+\item 
+long \mbox{\hyperlink{stdio_8h_aae4231ac8066eb54ea1d9d12d551605c}{ftell}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+void \mbox{\hyperlink{stdio_8h_aa80d4a24b6cff3710ba651545166afa4}{rewind}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{stdio_8h_a486dbfe7376588fec0f05f9b842871e9}{fgetpos}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, \mbox{\hyperlink{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}{fpos\+\_\+t}} $\ast$pos)
+\item 
+int \mbox{\hyperlink{stdio_8h_a3beb62581b0d73a41bfc96edd5e4a537}{fsetpos}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, \mbox{\hyperlink{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}{fpos\+\_\+t}} $\ast$pos)
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_aa415204f66d1e605f41738e448208467}{tmpfile}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{stdio_8h_a40fed8025e330ff3106a087d3268a975}{tmpnam}} (char $\ast$s)
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_a65a55237449676091ce9b0687903415c}{\+\_\+\+\_\+fopen\+\_\+driver}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} $\ast$drv, const char $\ast$name, const char $\ast$mode)
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_a3005825ed33bb7aeb4b3ea382af11855}{\+\_\+\+\_\+fopen\+\_\+findslot}} (struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} $\ast$drv)
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$ \mbox{\hyperlink{stdio_8h_a331f15d4cdc4c57ee1beb6c77f453401}{\+\_\+\+\_\+string\+\_\+file}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, char $\ast$str, const char $\ast$mode, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} \mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}} \mbox{\hyperlink{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}{\+\_\+\+\_\+stdio\+\_\+lock}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stdio_8h_ac028c9f56c16e806b1273c3870295493}\label{stdio_8h_ac028c9f56c16e806b1273c3870295493}} 
+\index{stdio.h@{stdio.h}!\_\_lock\_stdio@{\_\_lock\_stdio}}
+\index{\_\_lock\_stdio@{\_\_lock\_stdio}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_lock\_stdio}{\_\_lock\_stdio}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+lock\+\_\+stdio(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{thread_8h_aac2b35a75f8ff779459102e506bddf27}{\+\_\+\+\_\+lock}}(\&\mbox{\hyperlink{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}{\+\_\+\+\_\+stdio\+\_\+lock}})}
+
+
+
+Definition at line 202 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_aedca261055fa85229d29869fc20aa8f3}\label{stdio_8h_aedca261055fa85229d29869fc20aa8f3}} 
+\index{stdio.h@{stdio.h}!\_\_unlock\_stdio@{\_\_unlock\_stdio}}
+\index{\_\_unlock\_stdio@{\_\_unlock\_stdio}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_unlock\_stdio}{\_\_unlock\_stdio}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+unlock\+\_\+stdio(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}{\+\_\+\+\_\+unlock}}(\&\mbox{\hyperlink{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}{\+\_\+\+\_\+stdio\+\_\+lock}})}
+
+
+
+Definition at line 203 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a06d68340c3c669f22827df77fece98b4}\label{stdio_8h_a06d68340c3c669f22827df77fece98b4}} 
+\index{stdio.h@{stdio.h}!\_FPRINTF\_FUNC@{\_FPRINTF\_FUNC}}
+\index{\_FPRINTF\_FUNC@{\_FPRINTF\_FUNC}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_FPRINTF\_FUNC}{\_FPRINTF\_FUNC}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+P\+R\+I\+N\+T\+F\+\_\+\+F\+U\+NC}
+
+
+
+Definition at line 47 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ad1ac6e71cd1defe668ca1cb3b4a68dc0}\label{stdio_8h_ad1ac6e71cd1defe668ca1cb3b4a68dc0}} 
+\index{stdio.h@{stdio.h}!\_IOAPPEND@{\_IOAPPEND}}
+\index{\_IOAPPEND@{\_IOAPPEND}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOAPPEND}{\_IOAPPEND}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+A\+P\+P\+E\+ND~0x4000          /$\ast$ data should be appended to file $\ast$/}
+
+
+
+Definition at line 76 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a7385e36af7b76e1f25864bd7c83908d0}\label{stdio_8h_a7385e36af7b76e1f25864bd7c83908d0}} 
+\index{stdio.h@{stdio.h}!\_IOBIN@{\_IOBIN}}
+\index{\_IOBIN@{\_IOBIN}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOBIN}{\_IOBIN}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+B\+IN~0x0004		/$\ast$ file is in \char`\"{}binary\char`\"{} mode $\ast$/}
+
+
+
+Definition at line 66 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a2a705c682c0721355134f95153d270c6}\label{stdio_8h_a2a705c682c0721355134f95153d270c6}} 
+\index{stdio.h@{stdio.h}!\_IOCOOKED@{\_IOCOOKED}}
+\index{\_IOCOOKED@{\_IOCOOKED}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOCOOKED}{\_IOCOOKED}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+C\+O\+O\+K\+ED~0x0010          /$\ast$ do terminal input processing $\ast$/}
+
+
+
+Definition at line 68 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ae7d84aa504894830334565e5e9488124}\label{stdio_8h_ae7d84aa504894830334565e5e9488124}} 
+\index{stdio.h@{stdio.h}!\_IODEV@{\_IODEV}}
+\index{\_IODEV@{\_IODEV}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IODEV}{\_IODEV}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+D\+EV~0x0008		/$\ast$ file is a character device $\ast$/}
+
+
+
+Definition at line 67 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a719aebb4b0418c96798465c28867987e}\label{stdio_8h_a719aebb4b0418c96798465c28867987e}} 
+\index{stdio.h@{stdio.h}!\_IOEOF@{\_IOEOF}}
+\index{\_IOEOF@{\_IOEOF}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOEOF}{\_IOEOF}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+E\+OF~0x1000		/$\ast$ E\+O\+F has been reached $\ast$/}
+
+
+
+Definition at line 74 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ae5b324e6ee43bc6d90b874a7babc6d60}\label{stdio_8h_ae5b324e6ee43bc6d90b874a7babc6d60}} 
+\index{stdio.h@{stdio.h}!\_IOERR@{\_IOERR}}
+\index{\_IOERR@{\_IOERR}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOERR}{\_IOERR}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+E\+RR~0x2000		/$\ast$ an error has occured $\ast$/}
+
+
+
+Definition at line 75 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_af7475971eb93ce0184379e71fe7626e9}\label{stdio_8h_af7475971eb93ce0184379e71fe7626e9}} 
+\index{stdio.h@{stdio.h}!\_IOFBF@{\_IOFBF}}
+\index{\_IOFBF@{\_IOFBF}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOFBF}{\_IOFBF}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+F\+BF~0x0100		/$\ast$ i/o is fully buffered $\ast$/}
+
+
+
+Definition at line 70 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a8bdcb18f85d0368697918c2699b149cf}\label{stdio_8h_a8bdcb18f85d0368697918c2699b149cf}} 
+\index{stdio.h@{stdio.h}!\_IOFREEBUF@{\_IOFREEBUF}}
+\index{\_IOFREEBUF@{\_IOFREEBUF}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOFREEBUF}{\_IOFREEBUF}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+F\+R\+E\+E\+B\+UF~0x0800		/$\ast$ buffer needs freeing $\ast$/}
+
+
+
+Definition at line 73 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_aca9e52813bd224e4519e0b1289abbce9}\label{stdio_8h_aca9e52813bd224e4519e0b1289abbce9}} 
+\index{stdio.h@{stdio.h}!\_IOLBF@{\_IOLBF}}
+\index{\_IOLBF@{\_IOLBF}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOLBF}{\_IOLBF}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+L\+BF~0x0200		/$\ast$ i/o is line buffered $\ast$/}
+
+
+
+Definition at line 71 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a8661edb6b53e3104bef089bef02d0508}\label{stdio_8h_a8661edb6b53e3104bef089bef02d0508}} 
+\index{stdio.h@{stdio.h}!\_IONBF@{\_IONBF}}
+\index{\_IONBF@{\_IONBF}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IONBF}{\_IONBF}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+N\+BF~0x0400		/$\ast$ i/o is not buffered $\ast$/}
+
+
+
+Definition at line 72 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a45bdd9b6193796da147e99323aca5b32}\label{stdio_8h_a45bdd9b6193796da147e99323aca5b32}} 
+\index{stdio.h@{stdio.h}!\_IONONBLOCK@{\_IONONBLOCK}}
+\index{\_IONONBLOCK@{\_IONONBLOCK}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IONONBLOCK}{\_IONONBLOCK}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+N\+O\+N\+B\+L\+O\+CK~0x8000          /$\ast$ i/o should be non-\/blocking $\ast$/}
+
+
+
+Definition at line 77 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a7262cef78990598bbace8871ffa05314}\label{stdio_8h_a7262cef78990598bbace8871ffa05314}} 
+\index{stdio.h@{stdio.h}!\_IOREAD@{\_IOREAD}}
+\index{\_IOREAD@{\_IOREAD}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOREAD}{\_IOREAD}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+R\+E\+AD~0x0001		/$\ast$ file may be read from $\ast$/}
+
+
+
+Definition at line 64 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a740a30a7a19a361848f4e510483ff4ea}\label{stdio_8h_a740a30a7a19a361848f4e510483ff4ea}} 
+\index{stdio.h@{stdio.h}!\_IORW@{\_IORW}}
+\index{\_IORW@{\_IORW}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IORW}{\_IORW}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+RW~0x0080		/$\ast$ file is open for update (r+w) $\ast$/}
+
+
+
+Definition at line 69 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a47ec54dd9ca148452505d19160495e37}\label{stdio_8h_a47ec54dd9ca148452505d19160495e37}} 
+\index{stdio.h@{stdio.h}!\_IOWRT@{\_IOWRT}}
+\index{\_IOWRT@{\_IOWRT}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_IOWRT}{\_IOWRT}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+O\+W\+RT~0x0002		/$\ast$ file may be written to $\ast$/}
+
+
+
+Definition at line 65 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a7011e24637bda1176626b4c99e055d19}\label{stdio_8h_a7011e24637bda1176626b4c99e055d19}} 
+\index{stdio.h@{stdio.h}!\_PRINTF\_FUNC@{\_PRINTF\_FUNC}}
+\index{\_PRINTF\_FUNC@{\_PRINTF\_FUNC}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_PRINTF\_FUNC}{\_PRINTF\_FUNC}}
+{\footnotesize\ttfamily \#define \+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+U\+NC}
+
+
+
+Definition at line 46 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a9a061eceee5e1799e31f1c8419f57f2c}\label{stdio_8h_a9a061eceee5e1799e31f1c8419f57f2c}} 
+\index{stdio.h@{stdio.h}!\_SMALL\_BUFSIZ@{\_SMALL\_BUFSIZ}}
+\index{\_SMALL\_BUFSIZ@{\_SMALL\_BUFSIZ}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_SMALL\_BUFSIZ}{\_SMALL\_BUFSIZ}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+M\+A\+L\+L\+\_\+\+B\+U\+F\+S\+IZ~8}
+
+
+
+Definition at line 91 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a72a591cf0a96cf23c63df5c78712dabe}\label{stdio_8h_a72a591cf0a96cf23c63df5c78712dabe}} 
+\index{stdio.h@{stdio.h}!BUFSIZ@{BUFSIZ}}
+\index{BUFSIZ@{BUFSIZ}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{BUFSIZ}{BUFSIZ}}
+{\footnotesize\ttfamily \#define B\+U\+F\+S\+IZ~512}
+
+
+
+Definition at line 51 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a59adc4c82490d23754cd39c2fb99b0da}\label{stdio_8h_a59adc4c82490d23754cd39c2fb99b0da}} 
+\index{stdio.h@{stdio.h}!EOF@{EOF}}
+\index{EOF@{EOF}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{EOF}{EOF}}
+{\footnotesize\ttfamily \#define E\+OF~(-\/1)}
+
+
+
+Definition at line 50 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}\label{stdio_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}} 
+\index{stdio.h@{stdio.h}!FILENAME\_MAX@{FILENAME\_MAX}}
+\index{FILENAME\_MAX@{FILENAME\_MAX}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{FILENAME\_MAX}{FILENAME\_MAX}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX~256}
+
+
+
+Definition at line 53 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_adc545a45572750d324854ea54d8159e9}\label{stdio_8h_adc545a45572750d324854ea54d8159e9}} 
+\index{stdio.h@{stdio.h}!fileno@{fileno}}
+\index{fileno@{fileno}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fileno}{fileno}}
+{\footnotesize\ttfamily \#define fileno(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x -\/ \mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}})}
+
+
+
+Definition at line 104 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_aa188a2e288c10a684622814c51337465}\label{stdio_8h_aa188a2e288c10a684622814c51337465}} 
+\index{stdio.h@{stdio.h}!FOPEN\_MAX@{FOPEN\_MAX}}
+\index{FOPEN\_MAX@{FOPEN\_MAX}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{FOPEN\_MAX}{FOPEN\_MAX}}
+{\footnotesize\ttfamily \#define F\+O\+P\+E\+N\+\_\+\+M\+AX~8}
+
+
+
+Definition at line 52 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a39ae32b25ab00f0ae78b934422a0bff2}\label{stdio_8h_a39ae32b25ab00f0ae78b934422a0bff2}} 
+\index{stdio.h@{stdio.h}!getc@{getc}}
+\index{getc@{getc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{getc}{getc}}
+{\footnotesize\ttfamily \#define getc(\begin{DoxyParamCaption}\item[{}]{stream }\end{DoxyParamCaption})~\mbox{\hyperlink{stdio_8h_a5972ac73ba11086858f08a1ccd846333}{fgetc}}(stream)}
+
+
+
+Definition at line 187 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ac45fdeab51c3197c1e7c4ec7beabaca9}\label{stdio_8h_ac45fdeab51c3197c1e7c4ec7beabaca9}} 
+\index{stdio.h@{stdio.h}!getchar@{getchar}}
+\index{getchar@{getchar}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{getchar}{getchar}}
+{\footnotesize\ttfamily int getchar(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{stdio_8h_a5972ac73ba11086858f08a1ccd846333}{fgetc}}(\mbox{\hyperlink{stdio_8h_aaca70138f0cb63ddb026921afc635179}{stdin}})}
+
+
+
+Definition at line 188 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ad2560a07a7528c4975660f391320faca}\label{stdio_8h_ad2560a07a7528c4975660f391320faca}} 
+\index{stdio.h@{stdio.h}!L\_tmpnam@{L\_tmpnam}}
+\index{L\_tmpnam@{L\_tmpnam}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{L\_tmpnam}{L\_tmpnam}}
+{\footnotesize\ttfamily \#define L\+\_\+tmpnam~16}
+
+
+
+Definition at line 177 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a09ceb74f0162424b6ceb823a4c702b85}\label{stdio_8h_a09ceb74f0162424b6ceb823a4c702b85}} 
+\index{stdio.h@{stdio.h}!P\_tmpdir@{P\_tmpdir}}
+\index{P\_tmpdir@{P\_tmpdir}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{P\_tmpdir}{P\_tmpdir}}
+{\footnotesize\ttfamily \#define P\+\_\+tmpdir~\char`\"{}\char`\"{}}
+
+
+
+Definition at line 175 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a95e5c154982387fbeb71e1a7e24a7e9c}\label{stdio_8h_a95e5c154982387fbeb71e1a7e24a7e9c}} 
+\index{stdio.h@{stdio.h}!putc@{putc}}
+\index{putc@{putc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{putc}{putc}}
+{\footnotesize\ttfamily \#define putc(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{stream }\end{DoxyParamCaption})~\mbox{\hyperlink{stdio_8h_a6c5e38aab87163991979364e82b53650}{fputc}}(x, stream)}
+
+
+
+Definition at line 185 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ae87b2002fe2dcaefe5db787e71db2327}\label{stdio_8h_ae87b2002fe2dcaefe5db787e71db2327}} 
+\index{stdio.h@{stdio.h}!putchar@{putchar}}
+\index{putchar@{putchar}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{putchar}{putchar}}
+{\footnotesize\ttfamily \#define putchar(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{stdio_8h_a6c5e38aab87163991979364e82b53650}{fputc}}(x, \mbox{\hyperlink{stdio_8h_a0c0ef221f95f64e8632451312fd18cc8}{stdout}})}
+
+
+
+Definition at line 186 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a4c8d0b76b470ba65a43ca46a88320f39}\label{stdio_8h_a4c8d0b76b470ba65a43ca46a88320f39}} 
+\index{stdio.h@{stdio.h}!SEEK\_CUR@{SEEK\_CUR}}
+\index{SEEK\_CUR@{SEEK\_CUR}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{SEEK\_CUR}{SEEK\_CUR}}
+{\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+C\+UR~1}
+
+
+
+Definition at line 56 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ad2a2e6c114780c3071efd24f16c7f7d8}\label{stdio_8h_ad2a2e6c114780c3071efd24f16c7f7d8}} 
+\index{stdio.h@{stdio.h}!SEEK\_END@{SEEK\_END}}
+\index{SEEK\_END@{SEEK\_END}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{SEEK\_END}{SEEK\_END}}
+{\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+E\+ND~2}
+
+
+
+Definition at line 57 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a0d112bae8fd35be772185b6ec6bcbe64}\label{stdio_8h_a0d112bae8fd35be772185b6ec6bcbe64}} 
+\index{stdio.h@{stdio.h}!SEEK\_SET@{SEEK\_SET}}
+\index{SEEK\_SET@{SEEK\_SET}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{SEEK\_SET}{SEEK\_SET}}
+{\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+S\+ET~0}
+
+
+
+Definition at line 55 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a5ce35bd5ba5021fd3b2e951e8f497656}\label{stdio_8h_a5ce35bd5ba5021fd3b2e951e8f497656}} 
+\index{stdio.h@{stdio.h}!stderr@{stderr}}
+\index{stderr@{stderr}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{stderr}{stderr}}
+{\footnotesize\ttfamily \#define stderr~(\&\mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}}\mbox{[}2\mbox{]})}
+
+
+
+Definition at line 103 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_aaca70138f0cb63ddb026921afc635179}\label{stdio_8h_aaca70138f0cb63ddb026921afc635179}} 
+\index{stdio.h@{stdio.h}!stdin@{stdin}}
+\index{stdin@{stdin}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{stdin}{stdin}}
+{\footnotesize\ttfamily \#define stdin~(\&\mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}}\mbox{[}0\mbox{]})}
+
+
+
+Definition at line 101 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a0c0ef221f95f64e8632451312fd18cc8}\label{stdio_8h_a0c0ef221f95f64e8632451312fd18cc8}} 
+\index{stdio.h@{stdio.h}!stdout@{stdout}}
+\index{stdout@{stdout}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{stdout}{stdout}}
+{\footnotesize\ttfamily \#define stdout~(\&\mbox{\hyperlink{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}{\+\_\+\+\_\+files}}\mbox{[}1\mbox{]})}
+
+
+
+Definition at line 102 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_ada7e63a6fb078a062192145950369d09}\label{stdio_8h_ada7e63a6fb078a062192145950369d09}} 
+\index{stdio.h@{stdio.h}!TMP\_MAX@{TMP\_MAX}}
+\index{TMP\_MAX@{TMP\_MAX}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{TMP\_MAX}{TMP\_MAX}}
+{\footnotesize\ttfamily \#define T\+M\+P\+\_\+\+M\+AX~0xffffff}
+
+
+
+Definition at line 179 of file stdio.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{stdio_8h_a175abb747ea3b78aa8da87355dcec473}\label{stdio_8h_a175abb747ea3b78aa8da87355dcec473}} 
+\index{stdio.h@{stdio.h}!FILE@{FILE}}
+\index{FILE@{FILE}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{FILE}{FILE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__FILE}{\+\_\+\+F\+I\+LE}} \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}}
+
+
+
+Definition at line 34 of file stdio.\+h.
+
+\mbox{\Hypertarget{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}\label{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}} 
+\index{stdio.h@{stdio.h}!fpos\_t@{fpos\_t}}
+\index{fpos\_t@{fpos\_t}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fpos\_t}{fpos\_t}}
+{\footnotesize\ttfamily typedef unsigned long \mbox{\hyperlink{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}{fpos\+\_\+t}}}
+
+
+
+Definition at line 59 of file stdio.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{stdio_8h_a65a55237449676091ce9b0687903415c}\label{stdio_8h_a65a55237449676091ce9b0687903415c}} 
+\index{stdio.h@{stdio.h}!\_\_fopen\_driver@{\_\_fopen\_driver}}
+\index{\_\_fopen\_driver@{\_\_fopen\_driver}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_fopen\_driver()}{\_\_fopen\_driver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ \+\_\+\+\_\+fopen\+\_\+driver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} $\ast$}]{drv,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a3005825ed33bb7aeb4b3ea382af11855}\label{stdio_8h_a3005825ed33bb7aeb4b3ea382af11855}} 
+\index{stdio.h@{stdio.h}!\_\_fopen\_findslot@{\_\_fopen\_findslot}}
+\index{\_\_fopen\_findslot@{\_\_fopen\_findslot}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_fopen\_findslot()}{\_\_fopen\_findslot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ \+\_\+\+\_\+fopen\+\_\+findslot (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} $\ast$}]{drv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ab91fc5eb2614caa5fadec0cf9bae5894}\label{stdio_8h_ab91fc5eb2614caa5fadec0cf9bae5894}} 
+\index{stdio.h@{stdio.h}!\_\_simple\_float\_printf@{\_\_simple\_float\_printf}}
+\index{\_\_simple\_float\_printf@{\_\_simple\_float\_printf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_simple\_float\_printf()}{\_\_simple\_float\_printf()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+simple\+\_\+float\+\_\+printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a2203ddeff1ea7eed6c9cb138fd742c80}\label{stdio_8h_a2203ddeff1ea7eed6c9cb138fd742c80}} 
+\index{stdio.h@{stdio.h}!\_\_simple\_printf@{\_\_simple\_printf}}
+\index{\_\_simple\_printf@{\_\_simple\_printf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_simple\_printf()}{\_\_simple\_printf()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+simple\+\_\+printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a331f15d4cdc4c57ee1beb6c77f453401}\label{stdio_8h_a331f15d4cdc4c57ee1beb6c77f453401}} 
+\index{stdio.h@{stdio.h}!\_\_string\_file@{\_\_string\_file}}
+\index{\_\_string\_file@{\_\_string\_file}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_string\_file()}{\_\_string\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ \+\_\+\+\_\+string\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{char $\ast$}]{str,  }\item[{const char $\ast$}]{mode,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a81202d6a15259fbceb71a961a878b01a}\label{stdio_8h_a81202d6a15259fbceb71a961a878b01a}} 
+\index{stdio.h@{stdio.h}!clearerr@{clearerr}}
+\index{clearerr@{clearerr}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{clearerr()}{clearerr()}}
+{\footnotesize\ttfamily void clearerr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a3abd78c220b4b49d1b088f0dfe40bf23}\label{stdio_8h_a3abd78c220b4b49d1b088f0dfe40bf23}} 
+\index{stdio.h@{stdio.h}!fclose@{fclose}}
+\index{fclose@{fclose}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fclose()}{fclose()}}
+{\footnotesize\ttfamily int fclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ab13b5edcd6e585f41214da079623b209}\label{stdio_8h_ab13b5edcd6e585f41214da079623b209}} 
+\index{stdio.h@{stdio.h}!fdopen@{fdopen}}
+\index{fdopen@{fdopen}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fdopen()}{fdopen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ fdopen (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_afb95de1535a5a185954819539f3c6ca5}\label{stdio_8h_afb95de1535a5a185954819539f3c6ca5}} 
+\index{stdio.h@{stdio.h}!feof@{feof}}
+\index{feof@{feof}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{feof()}{feof()}}
+{\footnotesize\ttfamily int feof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a587758f1a95ea048585c9f6204560a80}\label{stdio_8h_a587758f1a95ea048585c9f6204560a80}} 
+\index{stdio.h@{stdio.h}!ferror@{ferror}}
+\index{ferror@{ferror}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{ferror()}{ferror()}}
+{\footnotesize\ttfamily int ferror (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ae4459e830d3e2abcf428337a661d9456}\label{stdio_8h_ae4459e830d3e2abcf428337a661d9456}} 
+\index{stdio.h@{stdio.h}!fflush@{fflush}}
+\index{fflush@{fflush}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fflush()}{fflush()}}
+{\footnotesize\ttfamily int fflush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a5972ac73ba11086858f08a1ccd846333}\label{stdio_8h_a5972ac73ba11086858f08a1ccd846333}} 
+\index{stdio.h@{stdio.h}!fgetc@{fgetc}}
+\index{fgetc@{fgetc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fgetc()}{fgetc()}}
+{\footnotesize\ttfamily int fgetc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a486dbfe7376588fec0f05f9b842871e9}\label{stdio_8h_a486dbfe7376588fec0f05f9b842871e9}} 
+\index{stdio.h@{stdio.h}!fgetpos@{fgetpos}}
+\index{fgetpos@{fgetpos}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fgetpos()}{fgetpos()}}
+{\footnotesize\ttfamily int fgetpos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{\mbox{\hyperlink{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}{fpos\+\_\+t}} $\ast$}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_aeee1718c60d2d297acd7b85f0fa085f2}\label{stdio_8h_aeee1718c60d2d297acd7b85f0fa085f2}} 
+\index{stdio.h@{stdio.h}!fgets@{fgets}}
+\index{fgets@{fgets}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fgets()}{fgets()}}
+{\footnotesize\ttfamily char$\ast$ fgets (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{int}]{size,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a043ecd1fa571a0e4f3835a0f19570cfd}\label{stdio_8h_a043ecd1fa571a0e4f3835a0f19570cfd}} 
+\index{stdio.h@{stdio.h}!fopen@{fopen}}
+\index{fopen@{fopen}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fopen()}{fopen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ fopen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a499e5a929d53712a6a65d1c7636f68bb}\label{stdio_8h_a499e5a929d53712a6a65d1c7636f68bb}} 
+\index{stdio.h@{stdio.h}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fprintf()}{fprintf()}}
+{\footnotesize\ttfamily int fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a6c5e38aab87163991979364e82b53650}\label{stdio_8h_a6c5e38aab87163991979364e82b53650}} 
+\index{stdio.h@{stdio.h}!fputc@{fputc}}
+\index{fputc@{fputc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fputc()}{fputc()}}
+{\footnotesize\ttfamily int fputc (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a365b15135fac34c613879b173000ec42}\label{stdio_8h_a365b15135fac34c613879b173000ec42}} 
+\index{stdio.h@{stdio.h}!fputs@{fputs}}
+\index{fputs@{fputs}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fputs()}{fputs()}}
+{\footnotesize\ttfamily int fputs (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a5b469d58e0c0ca8ec8bf9b9e4c3ee808}\label{stdio_8h_a5b469d58e0c0ca8ec8bf9b9e4c3ee808}} 
+\index{stdio.h@{stdio.h}!fread@{fread}}
+\index{fread@{fread}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fread()}{fread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} fread (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{nmeb,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a5d1f6f352864f6774871dd7cf586b723}\label{stdio_8h_a5d1f6f352864f6774871dd7cf586b723}} 
+\index{stdio.h@{stdio.h}!freopen@{freopen}}
+\index{freopen@{freopen}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{freopen()}{freopen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ freopen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{mode,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_afac05ff9e76b913b71439f60274370a7}\label{stdio_8h_afac05ff9e76b913b71439f60274370a7}} 
+\index{stdio.h@{stdio.h}!fscanf@{fscanf}}
+\index{fscanf@{fscanf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fscanf()}{fscanf()}}
+{\footnotesize\ttfamily int fscanf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_aece5d6e00c239ffd0847d8d2ef65bd57}\label{stdio_8h_aece5d6e00c239ffd0847d8d2ef65bd57}} 
+\index{stdio.h@{stdio.h}!fseek@{fseek}}
+\index{fseek@{fseek}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fseek()}{fseek()}}
+{\footnotesize\ttfamily int fseek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{long}]{offset,  }\item[{int}]{whence }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a3beb62581b0d73a41bfc96edd5e4a537}\label{stdio_8h_a3beb62581b0d73a41bfc96edd5e4a537}} 
+\index{stdio.h@{stdio.h}!fsetpos@{fsetpos}}
+\index{fsetpos@{fsetpos}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fsetpos()}{fsetpos()}}
+{\footnotesize\ttfamily int fsetpos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{\mbox{\hyperlink{stdio_8h_a73d349137ad7b51aabc6598fcd6efa64}{fpos\+\_\+t}} $\ast$}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_aae4231ac8066eb54ea1d9d12d551605c}\label{stdio_8h_aae4231ac8066eb54ea1d9d12d551605c}} 
+\index{stdio.h@{stdio.h}!ftell@{ftell}}
+\index{ftell@{ftell}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{ftell()}{ftell()}}
+{\footnotesize\ttfamily long ftell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a9de5969c36eab7f18a1966d6d43aba78}\label{stdio_8h_a9de5969c36eab7f18a1966d6d43aba78}} 
+\index{stdio.h@{stdio.h}!fwrite@{fwrite}}
+\index{fwrite@{fwrite}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{fwrite()}{fwrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} fwrite (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{nmeb,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a6c8d403fb133a4eb82a146df500a9a49}\label{stdio_8h_a6c8d403fb133a4eb82a146df500a9a49}} 
+\index{stdio.h@{stdio.h}!getc@{getc}}
+\index{getc@{getc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{getc()}{getc()}}
+{\footnotesize\ttfamily int getc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a5dee04c912798047e379b0e5bb8c52de}\label{stdio_8h_a5dee04c912798047e379b0e5bb8c52de}} 
+\index{stdio.h@{stdio.h}!gets@{gets}}
+\index{gets@{gets}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{gets()}{gets()}}
+{\footnotesize\ttfamily char$\ast$ gets (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a80b37b56a5a42139dccaef56da4bf82a}\label{stdio_8h_a80b37b56a5a42139dccaef56da4bf82a}} 
+\index{stdio.h@{stdio.h}!perror@{perror}}
+\index{perror@{perror}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{perror()}{perror()}}
+{\footnotesize\ttfamily void perror (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a55f3d956bb2ba20b5059e9e25484a47f}\label{stdio_8h_a55f3d956bb2ba20b5059e9e25484a47f}} 
+\index{stdio.h@{stdio.h}!printf@{printf}}
+\index{printf@{printf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{printf()}{printf()}}
+{\footnotesize\ttfamily int printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_acf51cf517b71cc654bfe9e2a5927ccf8}\label{stdio_8h_acf51cf517b71cc654bfe9e2a5927ccf8}} 
+\index{stdio.h@{stdio.h}!putc@{putc}}
+\index{putc@{putc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{putc()}{putc()}}
+{\footnotesize\ttfamily int putc (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_af4de2514b7778805db3815e8dd6cf09a}\label{stdio_8h_af4de2514b7778805db3815e8dd6cf09a}} 
+\index{stdio.h@{stdio.h}!putchar@{putchar}}
+\index{putchar@{putchar}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{putchar()}{putchar()}}
+{\footnotesize\ttfamily int putchar (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ad41876f99f190c7488e64ef39c50a23f}\label{stdio_8h_ad41876f99f190c7488e64ef39c50a23f}} 
+\index{stdio.h@{stdio.h}!puts@{puts}}
+\index{puts@{puts}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{puts()}{puts()}}
+{\footnotesize\ttfamily int puts (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a2ff9908f035aec76a33f9792faf9d402}\label{stdio_8h_a2ff9908f035aec76a33f9792faf9d402}} 
+\index{stdio.h@{stdio.h}!remove@{remove}}
+\index{remove@{remove}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily int remove (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_affd46c92931ef1c646e1a78ab880a00e}\label{stdio_8h_affd46c92931ef1c646e1a78ab880a00e}} 
+\index{stdio.h@{stdio.h}!rename@{rename}}
+\index{rename@{rename}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{rename()}{rename()}}
+{\footnotesize\ttfamily int rename (\begin{DoxyParamCaption}\item[{const char $\ast$}]{oldname,  }\item[{const char $\ast$}]{newname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_aa80d4a24b6cff3710ba651545166afa4}\label{stdio_8h_aa80d4a24b6cff3710ba651545166afa4}} 
+\index{stdio.h@{stdio.h}!rewind@{rewind}}
+\index{rewind@{rewind}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{rewind()}{rewind()}}
+{\footnotesize\ttfamily void rewind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a3c102ad968f1eaed75040463be07ffc9}\label{stdio_8h_a3c102ad968f1eaed75040463be07ffc9}} 
+\index{stdio.h@{stdio.h}!scanf@{scanf}}
+\index{scanf@{scanf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{scanf()}{scanf()}}
+{\footnotesize\ttfamily int scanf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ae8e33f44c01a9015fb9b9a16053efd2d}\label{stdio_8h_ae8e33f44c01a9015fb9b9a16053efd2d}} 
+\index{stdio.h@{stdio.h}!setbuf@{setbuf}}
+\index{setbuf@{setbuf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{setbuf()}{setbuf()}}
+{\footnotesize\ttfamily void setbuf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a44f9ccfb7b5e8bb308918b194ec0102d}\label{stdio_8h_a44f9ccfb7b5e8bb308918b194ec0102d}} 
+\index{stdio.h@{stdio.h}!setvbuf@{setvbuf}}
+\index{setvbuf@{setvbuf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{setvbuf()}{setvbuf()}}
+{\footnotesize\ttfamily int setvbuf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{char $\ast$}]{buf,  }\item[{int}]{mode,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ad76145a6edfc98981ded8815a760e0cd}\label{stdio_8h_ad76145a6edfc98981ded8815a760e0cd}} 
+\index{stdio.h@{stdio.h}!snprintf@{snprintf}}
+\index{snprintf@{snprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{snprintf()}{snprintf()}}
+{\footnotesize\ttfamily int snprintf (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a3082155ec11e7229f7a20439b31a169e}\label{stdio_8h_a3082155ec11e7229f7a20439b31a169e}} 
+\index{stdio.h@{stdio.h}!sprintf@{sprintf}}
+\index{sprintf@{sprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{sprintf()}{sprintf()}}
+{\footnotesize\ttfamily int sprintf (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a5f0b0bfa0933e03124596ac5cda16860}\label{stdio_8h_a5f0b0bfa0933e03124596ac5cda16860}} 
+\index{stdio.h@{stdio.h}!sscanf@{sscanf}}
+\index{sscanf@{sscanf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{sscanf()}{sscanf()}}
+{\footnotesize\ttfamily int sscanf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_aa415204f66d1e605f41738e448208467}\label{stdio_8h_aa415204f66d1e605f41738e448208467}} 
+\index{stdio.h@{stdio.h}!tmpfile@{tmpfile}}
+\index{tmpfile@{tmpfile}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{tmpfile()}{tmpfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}}$\ast$ tmpfile (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a40fed8025e330ff3106a087d3268a975}\label{stdio_8h_a40fed8025e330ff3106a087d3268a975}} 
+\index{stdio.h@{stdio.h}!tmpnam@{tmpnam}}
+\index{tmpnam@{tmpnam}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{tmpnam()}{tmpnam()}}
+{\footnotesize\ttfamily char$\ast$ tmpnam (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a8d664302d91f60c249c9705d1198fb6b}\label{stdio_8h_a8d664302d91f60c249c9705d1198fb6b}} 
+\index{stdio.h@{stdio.h}!ungetc@{ungetc}}
+\index{ungetc@{ungetc}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{ungetc()}{ungetc()}}
+{\footnotesize\ttfamily int ungetc (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a39a87cb9885552dc8e1e9afa3636a3cf}\label{stdio_8h_a39a87cb9885552dc8e1e9afa3636a3cf}} 
+\index{stdio.h@{stdio.h}!vfprintf@{vfprintf}}
+\index{vfprintf@{vfprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vfprintf()}{vfprintf()}}
+{\footnotesize\ttfamily int vfprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{const char $\ast$}]{fmt,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_acb41c9d080a1376367c4493750b3c9a5}\label{stdio_8h_acb41c9d080a1376367c4493750b3c9a5}} 
+\index{stdio.h@{stdio.h}!vfscanf@{vfscanf}}
+\index{vfscanf@{vfscanf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vfscanf()}{vfscanf()}}
+{\footnotesize\ttfamily int vfscanf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{const char $\ast$}]{fmt,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a7184c7daa6251cdbae832d7c6511564e}\label{stdio_8h_a7184c7daa6251cdbae832d7c6511564e}} 
+\index{stdio.h@{stdio.h}!vprintf@{vprintf}}
+\index{vprintf@{vprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vprintf()}{vprintf()}}
+{\footnotesize\ttfamily int vprintf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a9fc2145b5e87faa75f6316839b860daf}\label{stdio_8h_a9fc2145b5e87faa75f6316839b860daf}} 
+\index{stdio.h@{stdio.h}!vscanf@{vscanf}}
+\index{vscanf@{vscanf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vscanf()}{vscanf()}}
+{\footnotesize\ttfamily int vscanf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_ab190ed953d50f96a7060f48807fef7d3}\label{stdio_8h_ab190ed953d50f96a7060f48807fef7d3}} 
+\index{stdio.h@{stdio.h}!vsnprintf@{vsnprintf}}
+\index{vsnprintf@{vsnprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vsnprintf()}{vsnprintf()}}
+{\footnotesize\ttfamily int vsnprintf (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size,  }\item[{const char $\ast$}]{format,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a76e0544f4b1db86562c894a6e5119479}\label{stdio_8h_a76e0544f4b1db86562c894a6e5119479}} 
+\index{stdio.h@{stdio.h}!vsprintf@{vsprintf}}
+\index{vsprintf@{vsprintf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vsprintf()}{vsprintf()}}
+{\footnotesize\ttfamily int vsprintf (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{const char $\ast$}]{format,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdio_8h_a0e000966b1b33c03fee1e189561da751}\label{stdio_8h_a0e000966b1b33c03fee1e189561da751}} 
+\index{stdio.h@{stdio.h}!vsscanf@{vsscanf}}
+\index{vsscanf@{vsscanf}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{vsscanf()}{vsscanf()}}
+{\footnotesize\ttfamily int vsscanf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{fmt,  }\item[{\+\_\+\+\_\+va\+\_\+list}]{ap }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}\label{stdio_8h_ac4d39549500dd4e26b86194d4eff7487}} 
+\index{stdio.h@{stdio.h}!\_\_files@{\_\_files}}
+\index{\_\_files@{\_\_files}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_files}{\_\_files}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} \+\_\+\+\_\+files\mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}\label{stdio_8h_a2ff5062d2faa1292eb7e9a0f485cf358}} 
+\index{stdio.h@{stdio.h}!\_\_stdio\_lock@{\_\_stdio\_lock}}
+\index{\_\_stdio\_lock@{\_\_stdio\_lock}!stdio.h@{stdio.h}}
+\subsubsection{\texorpdfstring{\_\_stdio\_lock}{\_\_stdio\_lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}} \+\_\+\+\_\+stdio\+\_\+lock}
+

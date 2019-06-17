@@ -39,8 +39,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 #else
 
 /* set high by allowing the pin to float high, set low by forcing it low */
-#define i2c_set_scl_high() (DIRA &= ~scl_mask)
-#define i2c_set_scl_low()    (DIRA |= scl_mask)
+/* clock stretching support: before driving the clock low, the following must be true:
+    1. the clock pin must be high
+    2. the clock must be an input
+   the second is such that if set low is called twice in a row, it doesn't block (though that should never happen in this code)
+
+   and after releasing the clock, wait for it to actually go high.
+*/
+
+#define i2c_set_scl_high()  DIRA &= ~scl_mask; \
+                            while(!(INA & scl_mask));
+
+#define i2c_set_scl_low()   (DIRA |= scl_mask)
 #define i2c_set_sda_high() (DIRA &= ~sda_mask)
 #define i2c_set_sda_low()    (DIRA |= sda_mask)
 
@@ -59,24 +69,25 @@ static _NATIVE uint8_t i2cReceiveByte(int acknowledge);
 
 _NAKED int main(void)
 {
+
     I2C_INIT *init = (I2C_INIT *)PAR;
     I2C_CMD cmd;
     uint8_t *p;
     uint32_t count;
-    
+
     /* get the COG initialization parameters */
     scl_mask = 1 << init->scl;
     sda_mask = 1 << init->sda;
     half_cycle = init->ticks_per_cycle >> 1;
     mailbox = init->mailbox;
-    
+
     /* make sure the delta doesn't get too small */
     if (half_cycle > MINIMUM_OVERHEAD)
         half_cycle -= MINIMUM_OVERHEAD;
-    
+
     /* tell the caller that we're done with initialization */
     mailbox->cmd = I2C_CMD_IDLE;
-    
+
 #ifdef PARALLAX_I2C_BUS
 
     /* initialize the i2c pins */
@@ -84,9 +95,9 @@ _NAKED int main(void)
     OUTA &= ~sda_mask;
     DIRA |= scl_mask;
     DIRA &= ~sda_mask;
-    
+
 #else
-    
+
     /* initialize the i2c pins */
     DIRA &= ~scl_mask;
     DIRA &= ~sda_mask;
@@ -98,11 +109,11 @@ _NAKED int main(void)
     /* handle requests */
     for (;;) {
         uint32_t sts;
-    
+
         /* wait for the next request */
         while ((cmd = mailbox->cmd) == I2C_CMD_IDLE)
             ;
-        
+
         /* dispatch on the command code */
         switch (cmd) {
         case I2C_CMD_SEND:
@@ -155,11 +166,11 @@ _NAKED int main(void)
             sts = I2C_ERR_UNKNOWN_CMD;
             break;
         }
-        
+
         mailbox->sts = sts;
         mailbox->cmd = I2C_CMD_IDLE;
     }
-    
+
     return 0;
 }
 
@@ -184,7 +195,7 @@ static _NATIVE void i2cStop(void)
 static _NATIVE int i2cSendByte(uint8_t byte)
 {
     int count, result;
-    
+
     /* send the byte, high bit first */
     for (count = 8; --count >= 0; ) {
         if (byte & 0x80)
@@ -197,7 +208,7 @@ static _NATIVE int i2cSendByte(uint8_t byte)
         i2c_set_scl_low();
         byte <<= 1;
     }
-    
+
     /* receive the acknowledgement from the slave */
     i2c_set_sda_high();
     waitcnt(CNT + half_cycle);
@@ -206,7 +217,7 @@ static _NATIVE int i2cSendByte(uint8_t byte)
     waitcnt(CNT + half_cycle);
     i2c_set_scl_low();
     i2c_set_sda_low();
-    
+
     return result;
 }
 
@@ -214,9 +225,9 @@ static _NATIVE uint8_t i2cReceiveByte(int acknowledge)
 {
     uint8_t byte = 0;
     int count;
-    
+
     i2c_set_sda_high();
-    
+
     for (count = 8; --count >= 0; ) {
         byte <<= 1;
         waitcnt(CNT + half_cycle);
@@ -225,7 +236,7 @@ static _NATIVE uint8_t i2cReceiveByte(int acknowledge)
         waitcnt(CNT + half_cycle);
         i2c_set_scl_low();
     }
-    
+
     // acknowledge
     if (acknowledge)
         i2c_set_sda_low();
@@ -236,7 +247,7 @@ static _NATIVE uint8_t i2cReceiveByte(int acknowledge)
     waitcnt(CNT + half_cycle);
     i2c_set_scl_low();
     i2c_set_sda_low();
-    
+
     return byte;
 }
 

@@ -1,0 +1,203 @@
+\hypertarget{dirent_8h}{}\section{include/dirent.h File Reference}
+\label{dirent_8h}\index{include/dirent.h@{include/dirent.h}}
+
+
+Provides directory operations A\+PI declarations.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDIRstruct}{D\+I\+Rstruct}}
+\begin{DoxyCompactList}\small\item\em Defines the \mbox{\hyperlink{dirent_8h}{dirent.\+h}} D\+IR struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirent}{dirent}}
+\begin{DoxyCompactList}\small\item\em Defines the \mbox{\hyperlink{dirent_8h}{dirent.\+h}} dirent struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dirent_8h_aef018487342a3344aa32ee15ddcb4410}{A\+T\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+O\+N\+LY}}~0x01
+\item 
+\#define \mbox{\hyperlink{dirent_8h_a42249a182dc832d4647b67281c2ffc90}{A\+T\+T\+R\+\_\+\+H\+I\+D\+D\+EN}}~0x02
+\item 
+\#define \mbox{\hyperlink{dirent_8h_a1c1250075cd2ca065a67a44fc9fc3222}{A\+T\+T\+R\+\_\+\+S\+Y\+S\+T\+EM}}~0x04
+\item 
+\#define \mbox{\hyperlink{dirent_8h_ab14d118689e61ffb3e29f83d38f1f135}{A\+T\+T\+R\+\_\+\+V\+O\+L\+U\+M\+E\+\_\+\+ID}}~0x08
+\item 
+\#define \mbox{\hyperlink{dirent_8h_afa13d3c1c60925f7b1e639233a799860}{A\+T\+T\+R\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY}}~0x10
+\item 
+\#define \mbox{\hyperlink{dirent_8h_a1b257aa7e0fdd8b11372edf885302176}{A\+T\+T\+R\+\_\+\+A\+R\+C\+H\+I\+VE}}~0x20
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structDIRstruct}{D\+I\+Rstruct}} \mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}}
+\begin{DoxyCompactList}\small\item\em Defines the \mbox{\hyperlink{dirent_8h}{dirent.\+h}} D\+IR struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}} $\ast$ \mbox{\hyperlink{dirent_8h_afa648ff43ec9eba592716a334f243111}{opendir}} (const char $\ast$path)
+\item 
+struct \mbox{\hyperlink{structdirent}{dirent}} $\ast$ \mbox{\hyperlink{dirent_8h_a58257faf8b13b3f14558613c632b2373}{readdir}} (\mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}} $\ast$dirp)
+\item 
+int \mbox{\hyperlink{dirent_8h_aaeac2b41e8c2c3a5f91c9bd511a8c0a6}{closedir}} (\mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}} $\ast$dirp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides directory operations A\+PI declarations. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dirent_8h_a1b257aa7e0fdd8b11372edf885302176}\label{dirent_8h_a1b257aa7e0fdd8b11372edf885302176}} 
+\index{dirent.h@{dirent.h}!ATTR\_ARCHIVE@{ATTR\_ARCHIVE}}
+\index{ATTR\_ARCHIVE@{ATTR\_ARCHIVE}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{ATTR\_ARCHIVE}{ATTR\_ARCHIVE}}
+{\footnotesize\ttfamily \#define A\+T\+T\+R\+\_\+\+A\+R\+C\+H\+I\+VE~0x20}
+
+
+
+Definition at line 17 of file dirent.\+h.
+
+\mbox{\Hypertarget{dirent_8h_afa13d3c1c60925f7b1e639233a799860}\label{dirent_8h_afa13d3c1c60925f7b1e639233a799860}} 
+\index{dirent.h@{dirent.h}!ATTR\_DIRECTORY@{ATTR\_DIRECTORY}}
+\index{ATTR\_DIRECTORY@{ATTR\_DIRECTORY}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{ATTR\_DIRECTORY}{ATTR\_DIRECTORY}}
+{\footnotesize\ttfamily \#define A\+T\+T\+R\+\_\+\+D\+I\+R\+E\+C\+T\+O\+RY~0x10}
+
+
+
+Definition at line 16 of file dirent.\+h.
+
+\mbox{\Hypertarget{dirent_8h_a42249a182dc832d4647b67281c2ffc90}\label{dirent_8h_a42249a182dc832d4647b67281c2ffc90}} 
+\index{dirent.h@{dirent.h}!ATTR\_HIDDEN@{ATTR\_HIDDEN}}
+\index{ATTR\_HIDDEN@{ATTR\_HIDDEN}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{ATTR\_HIDDEN}{ATTR\_HIDDEN}}
+{\footnotesize\ttfamily \#define A\+T\+T\+R\+\_\+\+H\+I\+D\+D\+EN~0x02}
+
+
+
+Definition at line 13 of file dirent.\+h.
+
+\mbox{\Hypertarget{dirent_8h_aef018487342a3344aa32ee15ddcb4410}\label{dirent_8h_aef018487342a3344aa32ee15ddcb4410}} 
+\index{dirent.h@{dirent.h}!ATTR\_READ\_ONLY@{ATTR\_READ\_ONLY}}
+\index{ATTR\_READ\_ONLY@{ATTR\_READ\_ONLY}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{ATTR\_READ\_ONLY}{ATTR\_READ\_ONLY}}
+{\footnotesize\ttfamily \#define A\+T\+T\+R\+\_\+\+R\+E\+A\+D\+\_\+\+O\+N\+LY~0x01}
+
+
+
+Definition at line 12 of file dirent.\+h.
+
+\mbox{\Hypertarget{dirent_8h_a1c1250075cd2ca065a67a44fc9fc3222}\label{dirent_8h_a1c1250075cd2ca065a67a44fc9fc3222}} 
+\index{dirent.h@{dirent.h}!ATTR\_SYSTEM@{ATTR\_SYSTEM}}
+\index{ATTR\_SYSTEM@{ATTR\_SYSTEM}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{ATTR\_SYSTEM}{ATTR\_SYSTEM}}
+{\footnotesize\ttfamily \#define A\+T\+T\+R\+\_\+\+S\+Y\+S\+T\+EM~0x04}
+
+
+
+Definition at line 14 of file dirent.\+h.
+
+\mbox{\Hypertarget{dirent_8h_ab14d118689e61ffb3e29f83d38f1f135}\label{dirent_8h_ab14d118689e61ffb3e29f83d38f1f135}} 
+\index{dirent.h@{dirent.h}!ATTR\_VOLUME\_ID@{ATTR\_VOLUME\_ID}}
+\index{ATTR\_VOLUME\_ID@{ATTR\_VOLUME\_ID}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{ATTR\_VOLUME\_ID}{ATTR\_VOLUME\_ID}}
+{\footnotesize\ttfamily \#define A\+T\+T\+R\+\_\+\+V\+O\+L\+U\+M\+E\+\_\+\+ID~0x08}
+
+
+
+Definition at line 15 of file dirent.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}\label{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}} 
+\index{dirent.h@{dirent.h}!DIR@{DIR}}
+\index{DIR@{DIR}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{DIR}{DIR}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structDIRstruct}{D\+I\+Rstruct}}  \mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}}}
+
+
+
+Defines the \mbox{\hyperlink{dirent_8h}{dirent.\+h}} D\+IR struct. 
+
+D\+IR fields\+: \begin{DoxyItemize}
+\item uint32\+\_\+t currentcluster; // current cluster in dir \item uint8\+\_\+t currentsector; // current sector in cluster \item uint8\+\_\+t currententry; // current dir entry in sector \item uint8\+\_\+t $\ast$scratch; // ptr to user-\/supplied sector buffer \item uint8\+\_\+t flags; // internal D\+O\+S\+FS flags \end{DoxyItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dirent_8h_aaeac2b41e8c2c3a5f91c9bd511a8c0a6}\label{dirent_8h_aaeac2b41e8c2c3a5f91c9bd511a8c0a6}} 
+\index{dirent.h@{dirent.h}!closedir@{closedir}}
+\index{closedir@{closedir}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{closedir()}{closedir()}}
+{\footnotesize\ttfamily int closedir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}} $\ast$}]{dirp }\end{DoxyParamCaption})}
+
+Closes a directory.
+
+The \mbox{\hyperlink{dirent_8h_aaeac2b41e8c2c3a5f91c9bd511a8c0a6}{closedir()}} function closes the named directory stream and frees the structure associated with the dirp pointer, returning 0 on success. On failure, -\/1 is returned and the global variable errno is set to indicate the error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirp} & Pointer to directory to close. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero on success or -\/1 on failure and sets errno. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirent_8h_afa648ff43ec9eba592716a334f243111}\label{dirent_8h_afa648ff43ec9eba592716a334f243111}} 
+\index{dirent.h@{dirent.h}!opendir@{opendir}}
+\index{opendir@{opendir}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{opendir()}{opendir()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}}$\ast$ opendir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Opens a directory.
+
+The \mbox{\hyperlink{dirent_8h_afa648ff43ec9eba592716a334f243111}{opendir()}} function opens the directory named by dirname, associates a directory stream with it, and returns a pointer to be used to identify the directory stream in subsequent operations. The pointer N\+U\+LL is returned if dirname cannot be accessed or if it cannot malloc(3) enough memory to hold the whole thing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The directory to be opened. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+IR struct pointer to be used in subsequent operations. Returns N\+U\+LL on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirent_8h_a58257faf8b13b3f14558613c632b2373}\label{dirent_8h_a58257faf8b13b3f14558613c632b2373}} 
+\index{dirent.h@{dirent.h}!readdir@{readdir}}
+\index{readdir@{readdir}!dirent.h@{dirent.h}}
+\subsubsection{\texorpdfstring{readdir()}{readdir()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdirent}{dirent}}$\ast$ readdir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirent_8h_a6a185ebae195e04c9d31c2bdfa30d4f2}{D\+IR}} $\ast$}]{dirp }\end{DoxyParamCaption})}
+
+Returns pointer to the next directory entry.
+
+The \mbox{\hyperlink{dirent_8h_a58257faf8b13b3f14558613c632b2373}{readdir()}} function returns a pointer to the next directory entry. It returns N\+U\+LL upon reaching the end of the directory or detecting an invalid seekdir() operation.
+
+Sample code searches a directory for entry \char`\"{}name\char`\"{}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{len = \mbox{\hyperlink{string_8h_aa383452fe445bfae989358c9d7d96f4f}{strlen}}(name);}
+\DoxyCodeLine{dirp = \mbox{\hyperlink{dirent_8h_afa648ff43ec9eba592716a334f243111}{opendir}}(\textcolor{stringliteral}{"."});}
+\DoxyCodeLine{\textcolor{keywordflow}{while} ((dp = \mbox{\hyperlink{dirent_8h_a58257faf8b13b3f14558613c632b2373}{readdir}}(dirp)) != \mbox{\hyperlink{null_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (!\mbox{\hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp}}(dp->d\_name, name)) \{}
+\DoxyCodeLine{    \mbox{\hyperlink{dirent_8h_aaeac2b41e8c2c3a5f91c9bd511a8c0a6}{closedir}}(dirp);}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} FOUND;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{(void)\mbox{\hyperlink{dirent_8h_aaeac2b41e8c2c3a5f91c9bd511a8c0a6}{closedir}}(dirp);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} NOT\_FOUND;}
+\end{DoxyCode}
+
+
+\begin{DoxyPrecond}{Precondition}
+Parameter dirp must be successfully opened by opendir.
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em dirp} & Pointer to the D\+IR struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the next directory entry, or N\+U\+LL if end of directory. 
+\end{DoxyReturn}

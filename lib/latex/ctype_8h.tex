@@ -1,0 +1,327 @@
+\hypertarget{ctype_8h}{}\section{include/ctype.h File Reference}
+\label{ctype_8h}\index{include/ctype.h@{include/ctype.h}}
+
+
+Provides character class check A\+PI macros.  
+
+
+{\ttfamily \#include $<$sys/ctype.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c,  x)~(\mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c) \& x)
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a83e2b484ed4b9ab8a47bdd39ffbe9d78}{isalnum}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a68c471dab1573135d5978b7e2b895673}{\+\_\+\+C\+Talnum}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a4451ade7a13a6e430e8ee323a5ee188f}{isalpha}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a68d2a745b7ac89f174c6d293d3361434}{\+\_\+\+C\+Talpha}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a8953d6a09200454cf6c0c8500441ca19}{isblank}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_ad814f5c25dbd6c303946fb9ef3219a2c}{\+\_\+\+C\+Tb}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a98ba3bac90df123d61d1b1ace55e9fa4}{iscntrl}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a80e33e966a7ec3facaf0b2b4afaf5be5}{isdigit}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}{\+\_\+\+C\+Td}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a0978cfb08be61589543e97a001cc97ba}{isgraph}}(c)~(!\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, (\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}})) \&\& (\mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c) != 0))
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a348a42f50b81be72be7b41de74c3dd5a}{islower}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a889820984b313e4f379d998ce05892ec}{isprint}}(c)~(!\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, (\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}})) \&\& (\mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c) != 0))
+\item 
+\#define \mbox{\hyperlink{ctype_8h_aee9a4844ae7479dd5259573826b2cfef}{ispunct}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_ae6d7987887cc0427af27b67dee86bc29}{\+\_\+\+C\+Tp}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a0c009fd6c0f22a1da6995c59b701a58f}{isspace}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_abbadb54760a50f72da7a7a96d3cc3cb2}{isupper}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}})
+\item 
+\#define \mbox{\hyperlink{ctype_8h_a992d0bf21267653eb2ea35a78816c09b}{isxdigit}}(c)~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_aaedc66f863772e2df78b776a7090f8e3}{\+\_\+\+C\+Tx}})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ctype_8h_adf38e126f73a010f30af76db2a28c6e1}{isalnum}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a25908ae63aac2df990634e1ae5bd14d9}{isalpha}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_aea4929b1b41f1a6d723e0312b1f050ed}{isblank}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a0008a4e8e7889734dc1d83297de07158}{iscntrl}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a3fa45b35c8abf67a950b6d3d4063dede}{isdigit}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a49f40fd869fd0c90e4497fda08c89561}{isgraph}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a7b8f652a0423a80922dd89d8829db5f2}{islower}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a99355d8f0fb41ec43effb95189db0ed4}{isprint}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_af29554b3ec04ea7684482bffed5dbce6}{ispunct}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a56be4166e4673843042a548a7f513dbc}{isspace}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_adadd6582d46775aab6a51e29d16d9f77}{isupper}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_adaf3aadefe3fc4fb07b6be0d7b880f53}{isxdigit}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_ac79d6114c9df7350cedcd8cf921a6ea4}{tolower}} (int c)
+\item 
+int \mbox{\hyperlink{ctype_8h_a9c2f57ac3865af9006fdbfd5db9fd517}{toupper}} (int c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides character class check A\+PI macros. 
+
+These functions check whether c, which must have the value of an unsigned char or E\+OF, falls into a certain character class according to the current locale.
+
+Conforms to C99, 4.\+3\+B\+SD. C89 specifies all of these functions except isascii() and \mbox{\hyperlink{ctype_8h_a8953d6a09200454cf6c0c8500441ca19}{isblank()}}. isascii() is a B\+SD extension and is also an S\+Vr4 extension. \mbox{\hyperlink{ctype_8h_a8953d6a09200454cf6c0c8500441ca19}{isblank()}} conforms to P\+O\+S\+I\+X.\+1-\/2001 and C99 7.\+4.\+1.\+3. P\+O\+S\+I\+X.\+1-\/2008 marks isascii() as obsolete, noting that it cannot be used portably in a localized application. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}\label{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}} 
+\index{ctype.h@{ctype.h}!\_\_isctype@{\_\_isctype}}
+\index{\_\_isctype@{\_\_isctype}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_\_isctype}{\_\_isctype}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+isctype(\begin{DoxyParamCaption}\item[{}]{c,  }\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c) \& x)}
+
+
+
+Definition at line 52 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a83e2b484ed4b9ab8a47bdd39ffbe9d78}\label{ctype_8h_a83e2b484ed4b9ab8a47bdd39ffbe9d78}} 
+\index{ctype.h@{ctype.h}!isalnum@{isalnum}}
+\index{isalnum@{isalnum}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isalnum}{isalnum}}
+{\footnotesize\ttfamily \#define isalnum(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a68c471dab1573135d5978b7e2b895673}{\+\_\+\+C\+Talnum}})}
+
+Checks for an alphanumeric class character. 
+
+Definition at line 57 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a4451ade7a13a6e430e8ee323a5ee188f}\label{ctype_8h_a4451ade7a13a6e430e8ee323a5ee188f}} 
+\index{ctype.h@{ctype.h}!isalpha@{isalpha}}
+\index{isalpha@{isalpha}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isalpha}{isalpha}}
+{\footnotesize\ttfamily \#define isalpha(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a68d2a745b7ac89f174c6d293d3361434}{\+\_\+\+C\+Talpha}})}
+
+Checks for an alphabetic class character.
+
+The isalpha function tests for any character for which isupper or islower is true, or any character that is one of a locale-\/specific set of alphabetic characters for which none of iscntrl, isdigit, ispunct, or isspace is true.\+156) In the \char`\"{}\+C\char`\"{} locale, isalpha returns true only for the characters for which isupper or islower is true. 
+
+Definition at line 67 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a8953d6a09200454cf6c0c8500441ca19}\label{ctype_8h_a8953d6a09200454cf6c0c8500441ca19}} 
+\index{ctype.h@{ctype.h}!isblank@{isblank}}
+\index{isblank@{isblank}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isblank}{isblank}}
+{\footnotesize\ttfamily \#define isblank(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_ad814f5c25dbd6c303946fb9ef3219a2c}{\+\_\+\+C\+Tb}})}
+
+Checks for a blank (space or tab) character. 
+
+Definition at line 71 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a98ba3bac90df123d61d1b1ace55e9fa4}\label{ctype_8h_a98ba3bac90df123d61d1b1ace55e9fa4}} 
+\index{ctype.h@{ctype.h}!iscntrl@{iscntrl}}
+\index{iscntrl@{iscntrl}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{iscntrl}{iscntrl}}
+{\footnotesize\ttfamily \#define iscntrl(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}})}
+
+Checks for a control character. 
+
+Definition at line 75 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a80e33e966a7ec3facaf0b2b4afaf5be5}\label{ctype_8h_a80e33e966a7ec3facaf0b2b4afaf5be5}} 
+\index{ctype.h@{ctype.h}!isdigit@{isdigit}}
+\index{isdigit@{isdigit}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isdigit}{isdigit}}
+{\footnotesize\ttfamily \#define isdigit(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}{\+\_\+\+C\+Td}})}
+
+Checks for a digit (0 through 9) character. 
+
+Definition at line 79 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a0978cfb08be61589543e97a001cc97ba}\label{ctype_8h_a0978cfb08be61589543e97a001cc97ba}} 
+\index{ctype.h@{ctype.h}!isgraph@{isgraph}}
+\index{isgraph@{isgraph}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isgraph}{isgraph}}
+{\footnotesize\ttfamily \#define isgraph(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(!\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, (\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}})) \&\& (\mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c) != 0))}
+
+Checks for a any printable character except for space. 
+
+Definition at line 83 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a348a42f50b81be72be7b41de74c3dd5a}\label{ctype_8h_a348a42f50b81be72be7b41de74c3dd5a}} 
+\index{ctype.h@{ctype.h}!islower@{islower}}
+\index{islower@{islower}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{islower}{islower}}
+{\footnotesize\ttfamily \#define islower(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}})}
+
+Checks for a lower-\/case character.
+
+The islower function tests for any character that is a lowercase letter or is one of a locale-\/specific set of characters for which none of iscntrl, isdigit, ispunct, or isspace is true. In the $\ast$ \char`\"{}\+C\char`\"{} locale, islower returns true only for the characters defined as lowercase letters. 
+
+Definition at line 93 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a889820984b313e4f379d998ce05892ec}\label{ctype_8h_a889820984b313e4f379d998ce05892ec}} 
+\index{ctype.h@{ctype.h}!isprint@{isprint}}
+\index{isprint@{isprint}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isprint}{isprint}}
+{\footnotesize\ttfamily \#define isprint(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(!\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, (\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}})) \&\& (\mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c) != 0))}
+
+Checks for any printable character including space. 
+
+Definition at line 97 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_aee9a4844ae7479dd5259573826b2cfef}\label{ctype_8h_aee9a4844ae7479dd5259573826b2cfef}} 
+\index{ctype.h@{ctype.h}!ispunct@{ispunct}}
+\index{ispunct@{ispunct}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{ispunct}{ispunct}}
+{\footnotesize\ttfamily \#define ispunct(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_ae6d7987887cc0427af27b67dee86bc29}{\+\_\+\+C\+Tp}})}
+
+Checks for any printable character that is not a space or alphanumeric character.
+
+The ispunct function tests for any printing character that is one of a locale-\/specific set of punctuation characters for which neither isspace nor isalnum is true. 
+
+Definition at line 105 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a0c009fd6c0f22a1da6995c59b701a58f}\label{ctype_8h_a0c009fd6c0f22a1da6995c59b701a58f}} 
+\index{ctype.h@{ctype.h}!isspace@{isspace}}
+\index{isspace@{isspace}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isspace}{isspace}}
+{\footnotesize\ttfamily \#define isspace(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}})}
+
+Checks for a white space character\+: space, \textbackslash{}f, \textbackslash{}n, \textbackslash{}r, \textbackslash{}t, \textbackslash{}v in \char`\"{}\+C\char`\"{} locales. 
+
+Definition at line 109 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_abbadb54760a50f72da7a7a96d3cc3cb2}\label{ctype_8h_abbadb54760a50f72da7a7a96d3cc3cb2}} 
+\index{ctype.h@{ctype.h}!isupper@{isupper}}
+\index{isupper@{isupper}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isupper}{isupper}}
+{\footnotesize\ttfamily \#define isupper(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}})}
+
+Checks for an upper-\/case character.
+
+The isupper function tests for any character that is an uppercase letter or is one of a locale-\/specific set of characters for which none of iscntrl, isdigit, ispunct, or isspace is true. In the \char`\"{}\+C\char`\"{} locale, isupper returns true only for the characters defined as uppercase letters. 
+
+Definition at line 119 of file ctype.\+h.
+
+\mbox{\Hypertarget{ctype_8h_a992d0bf21267653eb2ea35a78816c09b}\label{ctype_8h_a992d0bf21267653eb2ea35a78816c09b}} 
+\index{ctype.h@{ctype.h}!isxdigit@{isxdigit}}
+\index{isxdigit@{isxdigit}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isxdigit}{isxdigit}}
+{\footnotesize\ttfamily \#define isxdigit(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{ctype_8h_abb1e7112473edef73cab02d0047ad5b3}{\+\_\+\+\_\+isctype}}(c, \mbox{\hyperlink{sys_2ctype_8h_aaedc66f863772e2df78b776a7090f8e3}{\+\_\+\+C\+Tx}})}
+
+Checks for a hexadecimal digit\+: 0 through 9, a through f, or A through F. 
+
+Definition at line 123 of file ctype.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ctype_8h_adf38e126f73a010f30af76db2a28c6e1}\label{ctype_8h_adf38e126f73a010f30af76db2a28c6e1}} 
+\index{ctype.h@{ctype.h}!isalnum@{isalnum}}
+\index{isalnum@{isalnum}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isalnum()}{isalnum()}}
+{\footnotesize\ttfamily int isalnum (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a25908ae63aac2df990634e1ae5bd14d9}\label{ctype_8h_a25908ae63aac2df990634e1ae5bd14d9}} 
+\index{ctype.h@{ctype.h}!isalpha@{isalpha}}
+\index{isalpha@{isalpha}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isalpha()}{isalpha()}}
+{\footnotesize\ttfamily int isalpha (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_aea4929b1b41f1a6d723e0312b1f050ed}\label{ctype_8h_aea4929b1b41f1a6d723e0312b1f050ed}} 
+\index{ctype.h@{ctype.h}!isblank@{isblank}}
+\index{isblank@{isblank}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isblank()}{isblank()}}
+{\footnotesize\ttfamily int isblank (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a0008a4e8e7889734dc1d83297de07158}\label{ctype_8h_a0008a4e8e7889734dc1d83297de07158}} 
+\index{ctype.h@{ctype.h}!iscntrl@{iscntrl}}
+\index{iscntrl@{iscntrl}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{iscntrl()}{iscntrl()}}
+{\footnotesize\ttfamily int iscntrl (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a3fa45b35c8abf67a950b6d3d4063dede}\label{ctype_8h_a3fa45b35c8abf67a950b6d3d4063dede}} 
+\index{ctype.h@{ctype.h}!isdigit@{isdigit}}
+\index{isdigit@{isdigit}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isdigit()}{isdigit()}}
+{\footnotesize\ttfamily int isdigit (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a49f40fd869fd0c90e4497fda08c89561}\label{ctype_8h_a49f40fd869fd0c90e4497fda08c89561}} 
+\index{ctype.h@{ctype.h}!isgraph@{isgraph}}
+\index{isgraph@{isgraph}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isgraph()}{isgraph()}}
+{\footnotesize\ttfamily int isgraph (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a7b8f652a0423a80922dd89d8829db5f2}\label{ctype_8h_a7b8f652a0423a80922dd89d8829db5f2}} 
+\index{ctype.h@{ctype.h}!islower@{islower}}
+\index{islower@{islower}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{islower()}{islower()}}
+{\footnotesize\ttfamily int islower (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a99355d8f0fb41ec43effb95189db0ed4}\label{ctype_8h_a99355d8f0fb41ec43effb95189db0ed4}} 
+\index{ctype.h@{ctype.h}!isprint@{isprint}}
+\index{isprint@{isprint}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isprint()}{isprint()}}
+{\footnotesize\ttfamily int isprint (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_af29554b3ec04ea7684482bffed5dbce6}\label{ctype_8h_af29554b3ec04ea7684482bffed5dbce6}} 
+\index{ctype.h@{ctype.h}!ispunct@{ispunct}}
+\index{ispunct@{ispunct}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{ispunct()}{ispunct()}}
+{\footnotesize\ttfamily int ispunct (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_a56be4166e4673843042a548a7f513dbc}\label{ctype_8h_a56be4166e4673843042a548a7f513dbc}} 
+\index{ctype.h@{ctype.h}!isspace@{isspace}}
+\index{isspace@{isspace}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isspace()}{isspace()}}
+{\footnotesize\ttfamily int isspace (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_adadd6582d46775aab6a51e29d16d9f77}\label{ctype_8h_adadd6582d46775aab6a51e29d16d9f77}} 
+\index{ctype.h@{ctype.h}!isupper@{isupper}}
+\index{isupper@{isupper}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isupper()}{isupper()}}
+{\footnotesize\ttfamily int isupper (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_adaf3aadefe3fc4fb07b6be0d7b880f53}\label{ctype_8h_adaf3aadefe3fc4fb07b6be0d7b880f53}} 
+\index{ctype.h@{ctype.h}!isxdigit@{isxdigit}}
+\index{isxdigit@{isxdigit}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{isxdigit()}{isxdigit()}}
+{\footnotesize\ttfamily int isxdigit (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ctype_8h_ac79d6114c9df7350cedcd8cf921a6ea4}\label{ctype_8h_ac79d6114c9df7350cedcd8cf921a6ea4}} 
+\index{ctype.h@{ctype.h}!tolower@{tolower}}
+\index{tolower@{tolower}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{tolower()}{tolower()}}
+{\footnotesize\ttfamily int tolower (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Converts an uppercase letter to a corresponding lowercase letter.
+
+If the argument is a character for which isupper is true and there are one or more corresponding characters, as specified by the current locale, for which islower is true, the tolower function returns one of the corresponding characters (always the same one for any given locale); otherwise, the argument is returned unchanged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Letter to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uppercase version of c according to locale. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctype_8h_a9c2f57ac3865af9006fdbfd5db9fd517}\label{ctype_8h_a9c2f57ac3865af9006fdbfd5db9fd517}} 
+\index{ctype.h@{ctype.h}!toupper@{toupper}}
+\index{toupper@{toupper}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{toupper()}{toupper()}}
+{\footnotesize\ttfamily int toupper (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Converts a lowercase letter to a corresponding uppercase letter.
+
+If the argument is a character for which islower is true and there are one or more corresponding characters, as specified by the current locale, for which isupper is true, the toupper function returns one of the corresponding characters (always the same one for any given locale); otherwise, the argument is returned unchanged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Letter to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lowercase version of c according to locale. 
+\end{DoxyReturn}

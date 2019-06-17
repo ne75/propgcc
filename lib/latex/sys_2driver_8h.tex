@@ -1,0 +1,104 @@
+\hypertarget{sys_2driver_8h}{}\section{include/sys/driver.h File Reference}
+\label{sys_2driver_8h}\index{include/sys/driver.h@{include/sys/driver.h}}
+
+
+Contains driver A\+PI for stdio devices.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}}
+\begin{DoxyCompactList}\small\item\em Generic and customizable driver struct for stdio devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sys_2driver_8h_ac0d208e99335bcf4a5f013fdf1953259}{\+\_\+null\+\_\+read}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)
+\item 
+int \mbox{\hyperlink{sys_2driver_8h_ad34a907aa06cef1f86600faaaf5296ac}{\+\_\+null\+\_\+write}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)
+\item 
+int \mbox{\hyperlink{sys_2driver_8h_ae02c9a5dc830e0a721a08aefa0a0c98a}{\+\_\+term\+\_\+read}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)
+\item 
+int \mbox{\hyperlink{sys_2driver_8h_af067b2271e5cbaf11cb11962e67ec244}{\+\_\+term\+\_\+write}} (\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$fp, unsigned char $\ast$buf, int size)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}} $\ast$ \mbox{\hyperlink{sys_2driver_8h_a2441ca27ce980407bc56d011b443da61}{\+\_\+driverlist}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Device driver array of \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} structs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains driver A\+PI for stdio devices. 
+
+Copyright (c) 2011-\/2012 by Parallax, Inc. All rights M\+IT Licensed. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}\label{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}} 
+\index{driver.h@{driver.h}!\_Driver@{\_Driver}}
+\index{\_Driver@{\_Driver}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_Driver}{\_Driver}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}}}
+
+Typedef for the \+\_\+\+Driver struct
+
+This struct is used by stdio. It lets a program define custom devices.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} for more information on custom devices.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This structure is included by $<$\mbox{\hyperlink{stdio_8h}{stdio.\+h}}$>$, so we cannot pollute the namespace with definitions; use underscores in front of names 
+\end{DoxyNote}
+
+
+Definition at line 24 of file driver.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys_2driver_8h_ac0d208e99335bcf4a5f013fdf1953259}\label{sys_2driver_8h_ac0d208e99335bcf4a5f013fdf1953259}} 
+\index{driver.h@{driver.h}!\_null\_read@{\_null\_read}}
+\index{\_null\_read@{\_null\_read}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_null\_read()}{\_null\_read()}}
+{\footnotesize\ttfamily int \+\_\+null\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Use this when no other read function is applicable \mbox{\Hypertarget{sys_2driver_8h_ad34a907aa06cef1f86600faaaf5296ac}\label{sys_2driver_8h_ad34a907aa06cef1f86600faaaf5296ac}} 
+\index{driver.h@{driver.h}!\_null\_write@{\_null\_write}}
+\index{\_null\_write@{\_null\_write}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_null\_write()}{\_null\_write()}}
+{\footnotesize\ttfamily int \+\_\+null\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Use this when no other write function is applicable \mbox{\Hypertarget{sys_2driver_8h_ae02c9a5dc830e0a721a08aefa0a0c98a}\label{sys_2driver_8h_ae02c9a5dc830e0a721a08aefa0a0c98a}} 
+\index{driver.h@{driver.h}!\_term\_read@{\_term\_read}}
+\index{\_term\_read@{\_term\_read}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_term\_read()}{\_term\_read()}}
+{\footnotesize\ttfamily int \+\_\+term\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Uses getbyte function to do cooked I/O input \mbox{\Hypertarget{sys_2driver_8h_af067b2271e5cbaf11cb11962e67ec244}\label{sys_2driver_8h_af067b2271e5cbaf11cb11962e67ec244}} 
+\index{driver.h@{driver.h}!\_term\_write@{\_term\_write}}
+\index{\_term\_write@{\_term\_write}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_term\_write()}{\_term\_write()}}
+{\footnotesize\ttfamily int \+\_\+term\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdio_8h_a175abb747ea3b78aa8da87355dcec473}{F\+I\+LE}} $\ast$}]{fp,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Uses putbyte function to do cooked I/O output 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{sys_2driver_8h_a2441ca27ce980407bc56d011b443da61}\label{sys_2driver_8h_a2441ca27ce980407bc56d011b443da61}} 
+\index{driver.h@{driver.h}!\_driverlist@{\_driverlist}}
+\index{\_driverlist@{\_driverlist}!driver.h@{driver.h}}
+\subsubsection{\texorpdfstring{\_driverlist}{\_driverlist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sys_2driver_8h_ac40428096f38ffa54a86e680fccd9318}{\+\_\+\+Driver}}$\ast$ \+\_\+driverlist\mbox{[}$\,$\mbox{]}}
+
+
+
+Device driver array of \mbox{\hyperlink{struct____driver}{\+\_\+\+\_\+driver}} structs. 
+
+\begin{DoxySeeAlso}{See also}
+Detailed Description in \mbox{\hyperlink{sys_2driver_8h}{include/sys/driver.\+h}} 
+\end{DoxySeeAlso}

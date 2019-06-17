@@ -1,0 +1,159 @@
+\hypertarget{fcntl_8h}{}\section{include/fcntl.h File Reference}
+\label{fcntl_8h}\index{include/fcntl.h@{include/fcntl.h}}
+
+
+Provides fcntl() interface A\+PI macros.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_a7a68c9ffaac7dbcd652225dd7c06a54b}{O\+\_\+\+R\+D\+O\+N\+LY}}~0
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_a11b644a8526139c4cc1850dac1271ced}{O\+\_\+\+W\+R\+O\+N\+LY}}~1
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_abb0586253488ee61072b73557eeb873b}{O\+\_\+\+R\+D\+WR}}~2
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_a4dc4d45e07d2abc899bcaf04b2846a87}{O\+\_\+\+A\+C\+C\+M\+O\+DE}}~(\mbox{\hyperlink{fcntl_8h_abb0586253488ee61072b73557eeb873b}{O\+\_\+\+R\+D\+WR}}$\vert$\mbox{\hyperlink{fcntl_8h_a11b644a8526139c4cc1850dac1271ced}{O\+\_\+\+W\+R\+O\+N\+LY}})
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_a1cf6b1de1fffedaa1d26b189e9a8d2cc}{O\+\_\+\+C\+R\+E\+AT}}~4
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_ad1d67e453fb3031f40f8cd3403773813}{O\+\_\+\+T\+R\+U\+NC}}~8
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_a9f5acfe79fafe14b6694447bd0e9f10b}{O\+\_\+\+E\+X\+CL}}~16
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_ae036f789407d21f07b211552d67b3214}{O\+\_\+\+A\+P\+P\+E\+ND}}~32
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_a7e7a00c884ea124bb9f687b16cb5db9b}{F\+D\+\_\+\+C\+L\+O\+E\+X\+EC}}~0x100
+\item 
+\#define \mbox{\hyperlink{fcntl_8h_ad27227e8d87b844648f07d66da38bb3f}{F\+\_\+\+S\+E\+T\+FD}}~0x200
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fcntl_8h_a807ae45e9a43b1557502353424804fc5}{open}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides fcntl() interface A\+PI macros. 
+
+The fcntl() function is only provided in this library to support libstdc++ std namespace.
+
+The fcntl() function is not really useful as Propeller-\/\+G\+CC does not implement fcntl(). 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fcntl_8h_ad27227e8d87b844648f07d66da38bb3f}\label{fcntl_8h_ad27227e8d87b844648f07d66da38bb3f}} 
+\index{fcntl.h@{fcntl.h}!F\_SETFD@{F\_SETFD}}
+\index{F\_SETFD@{F\_SETFD}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{F\_SETFD}{F\_SETFD}}
+{\footnotesize\ttfamily \#define F\+\_\+\+S\+E\+T\+FD~0x200}
+
+Definition provided for convenience and libstdc++ build only. Propeller-\/\+G\+CC does not implement fcntl().
+
+Set the file descriptor flags to the value specified by arg. 
+
+Definition at line 53 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_a7e7a00c884ea124bb9f687b16cb5db9b}\label{fcntl_8h_a7e7a00c884ea124bb9f687b16cb5db9b}} 
+\index{fcntl.h@{fcntl.h}!FD\_CLOEXEC@{FD\_CLOEXEC}}
+\index{FD\_CLOEXEC@{FD\_CLOEXEC}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{FD\_CLOEXEC}{FD\_CLOEXEC}}
+{\footnotesize\ttfamily \#define F\+D\+\_\+\+C\+L\+O\+E\+X\+EC~0x100}
+
+Definition provided for convenience and libstdc++ build only. Propeller-\/\+G\+CC does not allow forking applications.
+
+If bit is 0, the file descriptor will remain open across execve(2), otherwise it will be closed. 
+
+Definition at line 45 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_a4dc4d45e07d2abc899bcaf04b2846a87}\label{fcntl_8h_a4dc4d45e07d2abc899bcaf04b2846a87}} 
+\index{fcntl.h@{fcntl.h}!O\_ACCMODE@{O\_ACCMODE}}
+\index{O\_ACCMODE@{O\_ACCMODE}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_ACCMODE}{O\_ACCMODE}}
+{\footnotesize\ttfamily \#define O\+\_\+\+A\+C\+C\+M\+O\+DE~(\mbox{\hyperlink{fcntl_8h_abb0586253488ee61072b73557eeb873b}{O\+\_\+\+R\+D\+WR}}$\vert$\mbox{\hyperlink{fcntl_8h_a11b644a8526139c4cc1850dac1271ced}{O\+\_\+\+W\+R\+O\+N\+LY}})}
+
+Mask for access modes 
+
+Definition at line 24 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_ae036f789407d21f07b211552d67b3214}\label{fcntl_8h_ae036f789407d21f07b211552d67b3214}} 
+\index{fcntl.h@{fcntl.h}!O\_APPEND@{O\_APPEND}}
+\index{O\_APPEND@{O\_APPEND}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_APPEND}{O\_APPEND}}
+{\footnotesize\ttfamily \#define O\+\_\+\+A\+P\+P\+E\+ND~32}
+
+Set open file to append 
+
+Definition at line 36 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_a1cf6b1de1fffedaa1d26b189e9a8d2cc}\label{fcntl_8h_a1cf6b1de1fffedaa1d26b189e9a8d2cc}} 
+\index{fcntl.h@{fcntl.h}!O\_CREAT@{O\_CREAT}}
+\index{O\_CREAT@{O\_CREAT}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_CREAT}{O\_CREAT}}
+{\footnotesize\ttfamily \#define O\+\_\+\+C\+R\+E\+AT~4}
+
+Set open file mode to create 
+
+Definition at line 27 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_a9f5acfe79fafe14b6694447bd0e9f10b}\label{fcntl_8h_a9f5acfe79fafe14b6694447bd0e9f10b}} 
+\index{fcntl.h@{fcntl.h}!O\_EXCL@{O\_EXCL}}
+\index{O\_EXCL@{O\_EXCL}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_EXCL}{O\_EXCL}}
+{\footnotesize\ttfamily \#define O\+\_\+\+E\+X\+CL~16}
+
+Set open file mode to exclusive 
+
+Definition at line 33 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_a7a68c9ffaac7dbcd652225dd7c06a54b}\label{fcntl_8h_a7a68c9ffaac7dbcd652225dd7c06a54b}} 
+\index{fcntl.h@{fcntl.h}!O\_RDONLY@{O\_RDONLY}}
+\index{O\_RDONLY@{O\_RDONLY}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_RDONLY}{O\_RDONLY}}
+{\footnotesize\ttfamily \#define O\+\_\+\+R\+D\+O\+N\+LY~0}
+
+Set open file status to read only 
+
+Definition at line 15 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_abb0586253488ee61072b73557eeb873b}\label{fcntl_8h_abb0586253488ee61072b73557eeb873b}} 
+\index{fcntl.h@{fcntl.h}!O\_RDWR@{O\_RDWR}}
+\index{O\_RDWR@{O\_RDWR}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_RDWR}{O\_RDWR}}
+{\footnotesize\ttfamily \#define O\+\_\+\+R\+D\+WR~2}
+
+Set open file status to read-\/write 
+
+Definition at line 21 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_ad1d67e453fb3031f40f8cd3403773813}\label{fcntl_8h_ad1d67e453fb3031f40f8cd3403773813}} 
+\index{fcntl.h@{fcntl.h}!O\_TRUNC@{O\_TRUNC}}
+\index{O\_TRUNC@{O\_TRUNC}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_TRUNC}{O\_TRUNC}}
+{\footnotesize\ttfamily \#define O\+\_\+\+T\+R\+U\+NC~8}
+
+Set open file mode to truncate 
+
+Definition at line 30 of file fcntl.\+h.
+
+\mbox{\Hypertarget{fcntl_8h_a11b644a8526139c4cc1850dac1271ced}\label{fcntl_8h_a11b644a8526139c4cc1850dac1271ced}} 
+\index{fcntl.h@{fcntl.h}!O\_WRONLY@{O\_WRONLY}}
+\index{O\_WRONLY@{O\_WRONLY}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{O\_WRONLY}{O\_WRONLY}}
+{\footnotesize\ttfamily \#define O\+\_\+\+W\+R\+O\+N\+LY~1}
+
+Set open file status to write only 
+
+Definition at line 18 of file fcntl.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fcntl_8h_a807ae45e9a43b1557502353424804fc5}\label{fcntl_8h_a807ae45e9a43b1557502353424804fc5}} 
+\index{fcntl.h@{fcntl.h}!open@{open}}
+\index{open@{open}!fcntl.h@{fcntl.h}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily int open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Open a file; this translates into a call to fopen. Note that open may be declared with either 2 or 3 arguments, and many legacy applications do not declare it with the modern ... notation for variable number of arguments, so we deliberately make its declaration old-\/style and without prototypes. 

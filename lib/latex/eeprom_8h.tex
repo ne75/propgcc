@@ -1,0 +1,200 @@
+\hypertarget{eeprom_8h}{}\section{include/eeprom.h File Reference}
+\label{eeprom_8h}\index{include/eeprom.h@{include/eeprom.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$i2c.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}
+\item 
+struct \mbox{\hyperlink{structEEPROM__COGDRIVER}{E\+E\+P\+R\+O\+M\+\_\+\+C\+O\+G\+D\+R\+I\+V\+ER}}
+\item 
+struct \mbox{\hyperlink{structEEPROM__SIMPLE}{E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+M\+P\+LE}}
+\item 
+struct \mbox{\hyperlink{structEEPROM__BOOT}{E\+E\+P\+R\+O\+M\+\_\+\+B\+O\+OT}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$ \mbox{\hyperlink{eeprom_8h_a2b1e7c8bb0e44e339583b55f12a3a814}{eeprom\+Open}} (\mbox{\hyperlink{structEEPROM__COGDRIVER}{E\+E\+P\+R\+O\+M\+\_\+\+C\+O\+G\+D\+R\+I\+V\+ER}} $\ast$eeprom, int scl, int sda, int freq, int address)
+\begin{DoxyCompactList}\small\item\em Open an i2c \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$ \mbox{\hyperlink{eeprom_8h_a7dd2f0cdf6c1c30a92f6abf8925a2d51}{simple\+\_\+eeprom\+Open}} (\mbox{\hyperlink{structEEPROM__SIMPLE}{E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+M\+P\+LE}} $\ast$eeprom, int scl, int sda, int address)
+\begin{DoxyCompactList}\small\item\em Open an \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$ \mbox{\hyperlink{eeprom_8h_a94725ca006db61e2d041a4e488c043a3}{eeprom\+Boot\+Open}} (\mbox{\hyperlink{structEEPROM__BOOT}{E\+E\+P\+R\+O\+M\+\_\+\+B\+O\+OT}} $\ast$eeprom, int address)
+\begin{DoxyCompactList}\small\item\em Open an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} on the boot i2c bus on Propeller pins 28/29. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eeprom_8h_ab3b9404dd4f9dd6579583db384e26850}{eeprom\+Init}} (\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$eeprom, \mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address)
+\begin{DoxyCompactList}\small\item\em Initialize an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{eeprom_8h_a5a1e57657587fdf7895350f70e774b5b}{eeprom\+Read}} (\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$eeprom, uint32\+\_\+t address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count)
+\begin{DoxyCompactList}\small\item\em Read from an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{eeprom_8h_a151746d16e4c590e4d45876713f7b937}{eeprom\+Write}} (\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$eeprom, uint32\+\_\+t address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count)
+\begin{DoxyCompactList}\small\item\em Write to an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{eeprom_8h_abec747ef88dcf2f3704dbf979b11b03a}{eeprom\+Close}} (\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$eeprom)
+\begin{DoxyCompactList}\small\item\em Close an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{eeprom_8h_a94725ca006db61e2d041a4e488c043a3}\label{eeprom_8h_a94725ca006db61e2d041a4e488c043a3}} 
+\index{eeprom.h@{eeprom.h}!eepromBootOpen@{eepromBootOpen}}
+\index{eepromBootOpen@{eepromBootOpen}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{eepromBootOpen()}{eepromBootOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}$\ast$ eeprom\+Boot\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM__BOOT}{E\+E\+P\+R\+O\+M\+\_\+\+B\+O\+OT}} $\ast$}]{eeprom,  }\item[{int}]{address }\end{DoxyParamCaption})}
+
+
+
+Open an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} on the boot i2c bus on Propeller pins 28/29. 
+
+Use this function to open an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} the i2c bus on pins 28/29 used by the Propeller to boot from \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} address in bits 7\+:1, zero in bit 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} structure or N\+U\+LL on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eeprom_8h_abec747ef88dcf2f3704dbf979b11b03a}\label{eeprom_8h_abec747ef88dcf2f3704dbf979b11b03a}} 
+\index{eeprom.h@{eeprom.h}!eepromClose@{eepromClose}}
+\index{eepromClose@{eepromClose}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{eepromClose()}{eepromClose()}}
+{\footnotesize\ttfamily int eeprom\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$}]{eeprom }\end{DoxyParamCaption})}
+
+
+
+Close an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+Close an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em eeprom} & Initialized \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eeprom_8h_ab3b9404dd4f9dd6579583db384e26850}\label{eeprom_8h_ab3b9404dd4f9dd6579583db384e26850}} 
+\index{eeprom.h@{eeprom.h}!eepromInit@{eepromInit}}
+\index{eepromInit@{eepromInit}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{eepromInit()}{eepromInit()}}
+{\footnotesize\ttfamily void eeprom\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$}]{eeprom,  }\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{int}]{address }\end{DoxyParamCaption})}
+
+
+
+Initialize an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure. 
+
+Initialize an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure with an open i2c device and an i2c address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em eeprom} & \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure to initialize \\
+\hline
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} address in bits 7\+:1, zero in bit 0 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{eeprom_8h_a2b1e7c8bb0e44e339583b55f12a3a814}\label{eeprom_8h_a2b1e7c8bb0e44e339583b55f12a3a814}} 
+\index{eeprom.h@{eeprom.h}!eepromOpen@{eepromOpen}}
+\index{eepromOpen@{eepromOpen}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{eepromOpen()}{eepromOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}$\ast$ eeprom\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM__COGDRIVER}{E\+E\+P\+R\+O\+M\+\_\+\+C\+O\+G\+D\+R\+I\+V\+ER}} $\ast$}]{eeprom,  }\item[{int}]{scl,  }\item[{int}]{sda,  }\item[{int}]{freq,  }\item[{int}]{address }\end{DoxyParamCaption})}
+
+
+
+Open an i2c \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device. 
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device using a C\+OG driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device structure to initialize \\
+\hline
+{\em scl} & S\+CL pin number \\
+\hline
+{\em sda} & S\+DA pin number \\
+\hline
+{\em freq} & Bus frequency \\
+\hline
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} address in bits 7\+:1, zero in bit 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} structure on success, N\+U\+LL on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eeprom_8h_a5a1e57657587fdf7895350f70e774b5b}\label{eeprom_8h_a5a1e57657587fdf7895350f70e774b5b}} 
+\index{eeprom.h@{eeprom.h}!eepromRead@{eepromRead}}
+\index{eepromRead@{eepromRead}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{eepromRead()}{eepromRead()}}
+{\footnotesize\ttfamily int eeprom\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$}]{eeprom,  }\item[{uint32\+\_\+t}]{address,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Read from an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+Read data from an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em eeprom} & Initialized \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure \\
+\hline
+{\em address} & \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} address to read \\
+\hline
+{\em buffer} & Address of the buffer to receive data \\
+\hline
+{\em count} & Number of bytes of data to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eeprom_8h_a151746d16e4c590e4d45876713f7b937}\label{eeprom_8h_a151746d16e4c590e4d45876713f7b937}} 
+\index{eeprom.h@{eeprom.h}!eepromWrite@{eepromWrite}}
+\index{eepromWrite@{eepromWrite}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{eepromWrite()}{eepromWrite()}}
+{\footnotesize\ttfamily int eeprom\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} $\ast$}]{eeprom,  }\item[{uint32\+\_\+t}]{address,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Write to an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+Write data to an \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em eeprom} & Initialized \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} state structure \\
+\hline
+{\em address} & \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} address to write \\
+\hline
+{\em buffer} & Address of the buffer containing data to write \\
+\hline
+{\em count} & Number of bytes of data to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eeprom_8h_a7dd2f0cdf6c1c30a92f6abf8925a2d51}\label{eeprom_8h_a7dd2f0cdf6c1c30a92f6abf8925a2d51}} 
+\index{eeprom.h@{eeprom.h}!simple\_eepromOpen@{simple\_eepromOpen}}
+\index{simple\_eepromOpen@{simple\_eepromOpen}!eeprom.h@{eeprom.h}}
+\subsubsection{\texorpdfstring{simple\_eepromOpen()}{simple\_eepromOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}$\ast$ simple\+\_\+eeprom\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEEPROM__SIMPLE}{E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+M\+P\+LE}} $\ast$}]{eeprom,  }\item[{int}]{scl,  }\item[{int}]{sda,  }\item[{int}]{address }\end{DoxyParamCaption})}
+
+
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device. 
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device using a simple driver that runs on the C\+OG of the caller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} device structure to initialize \\
+\hline
+{\em scl} & S\+CL pin number \\
+\hline
+{\em sda} & S\+DA pin number \\
+\hline
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} address in bits 7\+:1, zero in bit 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} structure on success, N\+U\+LL on failure. 
+\end{DoxyReturn}

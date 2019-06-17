@@ -1,0 +1,214 @@
+\hypertarget{wctype_8h}{}\section{include/wctype.h File Reference}
+\label{wctype_8h}\index{include/wctype.h@{include/wctype.h}}
+{\ttfamily \#include $<$sys/wchar\+\_\+t.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ctype.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wctype_8h_ac3ca5383e5e05a6c5e40a0602fd9fee9}{\+\_\+\+N\+E\+E\+D\+\_\+\+W\+I\+N\+T\+\_\+T}}
+\item 
+\#define \mbox{\hyperlink{wctype_8h_a00d21696ad5bdb60d9aec03e3e5d9086}{W\+E\+OF}}~((wint\+\_\+t)-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}{wctrans\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{sys_2ctype_8h_aeb6133051a52e080c166cffdd966f801}{\+\_\+\+C\+T\+Y\+P\+E\+\_\+T}} \mbox{\hyperlink{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}{wctype\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{wctype_8h_adafb512a79ac9274486d6ddbbbd9d9ba}{iswalnum}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a72477b4f142de340164deb7bf5a7ae7b}{iswalpha}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a934cbdaad02f3df1b03e566103a5a118}{iswblank}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a35f4bb15841d36c759ab271aa8033ba8}{iswcntrl}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a972fbaff0c1d4b4e612c789b8532e9af}{iswdigit}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a27b090b588b25bacca79bd11926ce308}{iswgraph}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a92c2a9aad2bf7e6c56a7c01597f59649}{iswlower}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a3eef94f4b2065e786f96e231e871d521}{iswprint}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_acf0bab8aa20334835ea1b55f715ddd64}{iswpunct}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_afb90e73f1be310ac1fe22f0d652838bc}{iswspace}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_af9d04695802b960ca3765c72d73ddb7c}{iswupper}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_a4f1c74cab8bd862ddac6ad81a4e23f72}{iswxdigit}} (wint\+\_\+t wc)
+\item 
+int \mbox{\hyperlink{wctype_8h_ae7bade1da794a7950ad25da75e43ad39}{iswctype}} (wint\+\_\+t wc, \mbox{\hyperlink{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}{wctype\+\_\+t}} desc)
+\item 
+\mbox{\hyperlink{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}{wctype\+\_\+t}} \mbox{\hyperlink{wctype_8h_a8757d3ad7c77d2ca173011fe686b7aec}{wctype}} (const char $\ast$property)
+\item 
+wint\+\_\+t \mbox{\hyperlink{wctype_8h_ab9cd9fba7f8437d2ad5242baa25fd176}{towlower}} (wint\+\_\+t wc)
+\item 
+wint\+\_\+t \mbox{\hyperlink{wctype_8h_aaf8d2b2d230df873695d41757d5889f9}{towupper}} (wint\+\_\+t wc)
+\item 
+wint\+\_\+t \mbox{\hyperlink{wctype_8h_ac1d7671abe2a106b481d5bb24717fd11}{towctrans}} (wint\+\_\+t wc, \mbox{\hyperlink{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}{wctrans\+\_\+t}} desc)
+\item 
+\mbox{\hyperlink{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}{wctrans\+\_\+t}} \mbox{\hyperlink{wctype_8h_a8b08cb35c2bbaa23c6ef17c6c9687572}{wctrans}} (const char $\ast$property)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wctype_8h_ac3ca5383e5e05a6c5e40a0602fd9fee9}\label{wctype_8h_ac3ca5383e5e05a6c5e40a0602fd9fee9}} 
+\index{wctype.h@{wctype.h}!\_NEED\_WINT\_T@{\_NEED\_WINT\_T}}
+\index{\_NEED\_WINT\_T@{\_NEED\_WINT\_T}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{\_NEED\_WINT\_T}{\_NEED\_WINT\_T}}
+{\footnotesize\ttfamily \#define \+\_\+\+N\+E\+E\+D\+\_\+\+W\+I\+N\+T\+\_\+T}
+
+
+
+Definition at line 4 of file wctype.\+h.
+
+\mbox{\Hypertarget{wctype_8h_a00d21696ad5bdb60d9aec03e3e5d9086}\label{wctype_8h_a00d21696ad5bdb60d9aec03e3e5d9086}} 
+\index{wctype.h@{wctype.h}!WEOF@{WEOF}}
+\index{WEOF@{WEOF}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{WEOF}{WEOF}}
+{\footnotesize\ttfamily \#define W\+E\+OF~((wint\+\_\+t)-\/1)}
+
+
+
+Definition at line 8 of file wctype.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}\label{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}} 
+\index{wctype.h@{wctype.h}!wctrans\_t@{wctrans\_t}}
+\index{wctrans\_t@{wctrans\_t}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{wctrans\_t}{wctrans\_t}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}{wctrans\+\_\+t}}}
+
+
+
+Definition at line 11 of file wctype.\+h.
+
+\mbox{\Hypertarget{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}\label{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}} 
+\index{wctype.h@{wctype.h}!wctype\_t@{wctype\_t}}
+\index{wctype\_t@{wctype\_t}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{wctype\_t}{wctype\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{sys_2ctype_8h_aeb6133051a52e080c166cffdd966f801}{\+\_\+\+C\+T\+Y\+P\+E\+\_\+T}} \mbox{\hyperlink{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}{wctype\+\_\+t}}}
+
+
+
+Definition at line 19 of file wctype.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{wctype_8h_adafb512a79ac9274486d6ddbbbd9d9ba}\label{wctype_8h_adafb512a79ac9274486d6ddbbbd9d9ba}} 
+\index{wctype.h@{wctype.h}!iswalnum@{iswalnum}}
+\index{iswalnum@{iswalnum}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswalnum()}{iswalnum()}}
+{\footnotesize\ttfamily int iswalnum (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a72477b4f142de340164deb7bf5a7ae7b}\label{wctype_8h_a72477b4f142de340164deb7bf5a7ae7b}} 
+\index{wctype.h@{wctype.h}!iswalpha@{iswalpha}}
+\index{iswalpha@{iswalpha}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswalpha()}{iswalpha()}}
+{\footnotesize\ttfamily int iswalpha (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a934cbdaad02f3df1b03e566103a5a118}\label{wctype_8h_a934cbdaad02f3df1b03e566103a5a118}} 
+\index{wctype.h@{wctype.h}!iswblank@{iswblank}}
+\index{iswblank@{iswblank}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswblank()}{iswblank()}}
+{\footnotesize\ttfamily int iswblank (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a35f4bb15841d36c759ab271aa8033ba8}\label{wctype_8h_a35f4bb15841d36c759ab271aa8033ba8}} 
+\index{wctype.h@{wctype.h}!iswcntrl@{iswcntrl}}
+\index{iswcntrl@{iswcntrl}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswcntrl()}{iswcntrl()}}
+{\footnotesize\ttfamily int iswcntrl (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_ae7bade1da794a7950ad25da75e43ad39}\label{wctype_8h_ae7bade1da794a7950ad25da75e43ad39}} 
+\index{wctype.h@{wctype.h}!iswctype@{iswctype}}
+\index{iswctype@{iswctype}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswctype()}{iswctype()}}
+{\footnotesize\ttfamily int iswctype (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc,  }\item[{\mbox{\hyperlink{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}{wctype\+\_\+t}}}]{desc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a972fbaff0c1d4b4e612c789b8532e9af}\label{wctype_8h_a972fbaff0c1d4b4e612c789b8532e9af}} 
+\index{wctype.h@{wctype.h}!iswdigit@{iswdigit}}
+\index{iswdigit@{iswdigit}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswdigit()}{iswdigit()}}
+{\footnotesize\ttfamily int iswdigit (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a27b090b588b25bacca79bd11926ce308}\label{wctype_8h_a27b090b588b25bacca79bd11926ce308}} 
+\index{wctype.h@{wctype.h}!iswgraph@{iswgraph}}
+\index{iswgraph@{iswgraph}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswgraph()}{iswgraph()}}
+{\footnotesize\ttfamily int iswgraph (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a92c2a9aad2bf7e6c56a7c01597f59649}\label{wctype_8h_a92c2a9aad2bf7e6c56a7c01597f59649}} 
+\index{wctype.h@{wctype.h}!iswlower@{iswlower}}
+\index{iswlower@{iswlower}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswlower()}{iswlower()}}
+{\footnotesize\ttfamily int iswlower (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a3eef94f4b2065e786f96e231e871d521}\label{wctype_8h_a3eef94f4b2065e786f96e231e871d521}} 
+\index{wctype.h@{wctype.h}!iswprint@{iswprint}}
+\index{iswprint@{iswprint}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswprint()}{iswprint()}}
+{\footnotesize\ttfamily int iswprint (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_acf0bab8aa20334835ea1b55f715ddd64}\label{wctype_8h_acf0bab8aa20334835ea1b55f715ddd64}} 
+\index{wctype.h@{wctype.h}!iswpunct@{iswpunct}}
+\index{iswpunct@{iswpunct}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswpunct()}{iswpunct()}}
+{\footnotesize\ttfamily int iswpunct (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_afb90e73f1be310ac1fe22f0d652838bc}\label{wctype_8h_afb90e73f1be310ac1fe22f0d652838bc}} 
+\index{wctype.h@{wctype.h}!iswspace@{iswspace}}
+\index{iswspace@{iswspace}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswspace()}{iswspace()}}
+{\footnotesize\ttfamily int iswspace (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_af9d04695802b960ca3765c72d73ddb7c}\label{wctype_8h_af9d04695802b960ca3765c72d73ddb7c}} 
+\index{wctype.h@{wctype.h}!iswupper@{iswupper}}
+\index{iswupper@{iswupper}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswupper()}{iswupper()}}
+{\footnotesize\ttfamily int iswupper (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a4f1c74cab8bd862ddac6ad81a4e23f72}\label{wctype_8h_a4f1c74cab8bd862ddac6ad81a4e23f72}} 
+\index{wctype.h@{wctype.h}!iswxdigit@{iswxdigit}}
+\index{iswxdigit@{iswxdigit}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{iswxdigit()}{iswxdigit()}}
+{\footnotesize\ttfamily int iswxdigit (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_ac1d7671abe2a106b481d5bb24717fd11}\label{wctype_8h_ac1d7671abe2a106b481d5bb24717fd11}} 
+\index{wctype.h@{wctype.h}!towctrans@{towctrans}}
+\index{towctrans@{towctrans}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{towctrans()}{towctrans()}}
+{\footnotesize\ttfamily wint\+\_\+t towctrans (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc,  }\item[{\mbox{\hyperlink{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}{wctrans\+\_\+t}}}]{desc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_ab9cd9fba7f8437d2ad5242baa25fd176}\label{wctype_8h_ab9cd9fba7f8437d2ad5242baa25fd176}} 
+\index{wctype.h@{wctype.h}!towlower@{towlower}}
+\index{towlower@{towlower}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{towlower()}{towlower()}}
+{\footnotesize\ttfamily wint\+\_\+t towlower (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_aaf8d2b2d230df873695d41757d5889f9}\label{wctype_8h_aaf8d2b2d230df873695d41757d5889f9}} 
+\index{wctype.h@{wctype.h}!towupper@{towupper}}
+\index{towupper@{towupper}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{towupper()}{towupper()}}
+{\footnotesize\ttfamily wint\+\_\+t towupper (\begin{DoxyParamCaption}\item[{wint\+\_\+t}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a8b08cb35c2bbaa23c6ef17c6c9687572}\label{wctype_8h_a8b08cb35c2bbaa23c6ef17c6c9687572}} 
+\index{wctype.h@{wctype.h}!wctrans@{wctrans}}
+\index{wctrans@{wctrans}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{wctrans()}{wctrans()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{wctype_8h_a824e69dad4c0f3a2533f31e0e820552a}{wctrans\+\_\+t}} wctrans (\begin{DoxyParamCaption}\item[{const char $\ast$}]{property }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{wctype_8h_a8757d3ad7c77d2ca173011fe686b7aec}\label{wctype_8h_a8757d3ad7c77d2ca173011fe686b7aec}} 
+\index{wctype.h@{wctype.h}!wctype@{wctype}}
+\index{wctype@{wctype}!wctype.h@{wctype.h}}
+\subsubsection{\texorpdfstring{wctype()}{wctype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{wctype_8h_aa1e83e5a23ae1557a41f5cbf790a1aa1}{wctype\+\_\+t}} wctype (\begin{DoxyParamCaption}\item[{const char $\ast$}]{property }\end{DoxyParamCaption})}
+

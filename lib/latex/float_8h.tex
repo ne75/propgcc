@@ -1,0 +1,366 @@
+\hypertarget{float_8h}{}\section{include/float.h File Reference}
+\label{float_8h}\index{include/float.h@{include/float.h}}
+
+
+Provides characteristics of floating types.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{float_8h_a566d8859d1a43f73f0e76619833d4d98}{F\+L\+T\+\_\+\+R\+A\+D\+IX}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+R\+A\+D\+I\+X\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a0c22779a3c997aa03c16f2d8a7e3128e}{F\+L\+T\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+N\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_aeb343417fe0051b641fc7921022c7b0d}{D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a513bd4a3bcb7f4b47764c9a5a39b88e7}{L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a4d726a1a38b8eda9abfbc72fb27d06be}{F\+L\+T\+\_\+\+D\+IG}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_ab51e57479919fd1978d19ccbb3e5b167}{D\+B\+L\+\_\+\+D\+IG}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+D\+I\+G\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a25b71c5f0e4816b77932b6a698a870c5}{L\+D\+B\+L\+\_\+\+D\+IG}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+D\+I\+G\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a5dc4d8732ed5c714cb9d70043e46c7d2}{F\+L\+T\+\_\+\+M\+I\+N\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+I\+N\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a0a7be8bc5288d5fe9f56aae3a8684167}{D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a8187966fc5af61ae31d0b37c20ef2f0f}{L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a8ea779c525f88153114854fe27c7383f}{F\+L\+T\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a5b731624df926496f4fc19001447d3e7}{D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_ac828a1866b4be2f1e63ef64ab5fa6ac8}{L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_afcbc8f81f213d358c2aba21a4bcf943b}{F\+L\+T\+\_\+\+M\+A\+X\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a539f2dd258b96fac8f4dc9bc139d75c9}{D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a5077b78b9874e19004e4eee4200e12c3}{L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a86b561ae1011c3624b21b05fb83f61b8}{F\+L\+T\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a75425646ce3c79cbc0a8e9613f3d9c17}{D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a6f580fc0a54173c273d0f7db483c34b6}{L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+XP}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a7fbf1534f9e0f0bfdb86fb928902474c}{F\+L\+T\+\_\+\+M\+AX}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+X\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_af78670ee54c1203d613f8fb0e022d214}{D\+B\+L\+\_\+\+M\+AX}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_aeb98d41033af9fca2c3e41f49751feda}{L\+D\+B\+L\+\_\+\+M\+AX}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_aafe5d2c4dc0edd9840f20e885dcae6ad}{F\+L\+T\+\_\+\+E\+P\+S\+I\+L\+ON}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+E\+P\+S\+I\+L\+O\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_ab701824136346377b44fc3adb8050b29}{D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+O\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_acb139798eaff6b11e334384af8dd3644}{L\+D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+O\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a890322b63a2fab56b8ff916c08368df6}{F\+L\+T\+\_\+\+M\+IN}}~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+I\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_ab5f2d2630bc132bca0a4c9733164e91a}{D\+B\+L\+\_\+\+M\+IN}}~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a09bb9651b2aabffc8394998c835e3ad2}{L\+D\+B\+L\+\_\+\+M\+IN}}~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{float_8h_a744ae7c1870e42f6b620ccd8f1911895}{F\+L\+T\+\_\+\+R\+O\+U\+N\+DS}}~1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides characteristics of floating types. 
+
+Please see source for comments. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{float_8h_ab51e57479919fd1978d19ccbb3e5b167}\label{float_8h_ab51e57479919fd1978d19ccbb3e5b167}} 
+\index{float.h@{float.h}!DBL\_DIG@{DBL\_DIG}}
+\index{DBL\_DIG@{DBL\_DIG}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_DIG}{DBL\_DIG}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+D\+IG~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+D\+I\+G\+\_\+\+\_\+}
+
+
+
+Definition at line 62 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_ab701824136346377b44fc3adb8050b29}\label{float_8h_ab701824136346377b44fc3adb8050b29}} 
+\index{float.h@{float.h}!DBL\_EPSILON@{DBL\_EPSILON}}
+\index{DBL\_EPSILON@{DBL\_EPSILON}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_EPSILON}{DBL\_EPSILON}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+O\+N\+\_\+\+\_\+}
+
+
+
+Definition at line 122 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_aeb343417fe0051b641fc7921022c7b0d}\label{float_8h_aeb343417fe0051b641fc7921022c7b0d}} 
+\index{float.h@{float.h}!DBL\_MANT\_DIG@{DBL\_MANT\_DIG}}
+\index{DBL\_MANT\_DIG@{DBL\_MANT\_DIG}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MANT\_DIG}{DBL\_MANT\_DIG}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+}
+
+
+
+Definition at line 48 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_af78670ee54c1203d613f8fb0e022d214}\label{float_8h_af78670ee54c1203d613f8fb0e022d214}} 
+\index{float.h@{float.h}!DBL\_MAX@{DBL\_MAX}}
+\index{DBL\_MAX@{DBL\_MAX}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MAX}{DBL\_MAX}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+AX~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+\_\+}
+
+
+
+Definition at line 113 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a75425646ce3c79cbc0a8e9613f3d9c17}\label{float_8h_a75425646ce3c79cbc0a8e9613f3d9c17}} 
+\index{float.h@{float.h}!DBL\_MAX\_10\_EXP@{DBL\_MAX\_10\_EXP}}
+\index{DBL\_MAX\_10\_EXP@{DBL\_MAX\_10\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MAX\_10\_EXP}{DBL\_MAX\_10\_EXP}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+XP~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 102 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a539f2dd258b96fac8f4dc9bc139d75c9}\label{float_8h_a539f2dd258b96fac8f4dc9bc139d75c9}} 
+\index{float.h@{float.h}!DBL\_MAX\_EXP@{DBL\_MAX\_EXP}}
+\index{DBL\_MAX\_EXP@{DBL\_MAX\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MAX\_EXP}{DBL\_MAX\_EXP}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+XP~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 90 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_ab5f2d2630bc132bca0a4c9733164e91a}\label{float_8h_ab5f2d2630bc132bca0a4c9733164e91a}} 
+\index{float.h@{float.h}!DBL\_MIN@{DBL\_MIN}}
+\index{DBL\_MIN@{DBL\_MIN}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MIN}{DBL\_MIN}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+IN~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+\_\+}
+
+
+
+Definition at line 130 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a5b731624df926496f4fc19001447d3e7}\label{float_8h_a5b731624df926496f4fc19001447d3e7}} 
+\index{float.h@{float.h}!DBL\_MIN\_10\_EXP@{DBL\_MIN\_10\_EXP}}
+\index{DBL\_MIN\_10\_EXP@{DBL\_MIN\_10\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MIN\_10\_EXP}{DBL\_MIN\_10\_EXP}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+XP~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 82 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a0a7be8bc5288d5fe9f56aae3a8684167}\label{float_8h_a0a7be8bc5288d5fe9f56aae3a8684167}} 
+\index{float.h@{float.h}!DBL\_MIN\_EXP@{DBL\_MIN\_EXP}}
+\index{DBL\_MIN\_EXP@{DBL\_MIN\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{DBL\_MIN\_EXP}{DBL\_MIN\_EXP}}
+{\footnotesize\ttfamily \#define D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+XP~\+\_\+\+\_\+\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 70 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a4d726a1a38b8eda9abfbc72fb27d06be}\label{float_8h_a4d726a1a38b8eda9abfbc72fb27d06be}} 
+\index{float.h@{float.h}!FLT\_DIG@{FLT\_DIG}}
+\index{FLT\_DIG@{FLT\_DIG}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_DIG}{FLT\_DIG}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+D\+IG~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+}
+
+
+
+Definition at line 61 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_aafe5d2c4dc0edd9840f20e885dcae6ad}\label{float_8h_aafe5d2c4dc0edd9840f20e885dcae6ad}} 
+\index{float.h@{float.h}!FLT\_EPSILON@{FLT\_EPSILON}}
+\index{FLT\_EPSILON@{FLT\_EPSILON}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_EPSILON}{FLT\_EPSILON}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+E\+P\+S\+I\+L\+ON~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+E\+P\+S\+I\+L\+O\+N\+\_\+\+\_\+}
+
+
+
+Definition at line 121 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a0c22779a3c997aa03c16f2d8a7e3128e}\label{float_8h_a0c22779a3c997aa03c16f2d8a7e3128e}} 
+\index{float.h@{float.h}!FLT\_MANT\_DIG@{FLT\_MANT\_DIG}}
+\index{FLT\_MANT\_DIG@{FLT\_MANT\_DIG}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MANT\_DIG}{FLT\_MANT\_DIG}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+N\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+}
+
+
+
+Definition at line 47 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a7fbf1534f9e0f0bfdb86fb928902474c}\label{float_8h_a7fbf1534f9e0f0bfdb86fb928902474c}} 
+\index{float.h@{float.h}!FLT\_MAX@{FLT\_MAX}}
+\index{FLT\_MAX@{FLT\_MAX}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MAX}{FLT\_MAX}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+AX~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+X\+\_\+\+\_\+}
+
+
+
+Definition at line 112 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a86b561ae1011c3624b21b05fb83f61b8}\label{float_8h_a86b561ae1011c3624b21b05fb83f61b8}} 
+\index{float.h@{float.h}!FLT\_MAX\_10\_EXP@{FLT\_MAX\_10\_EXP}}
+\index{FLT\_MAX\_10\_EXP@{FLT\_MAX\_10\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MAX\_10\_EXP}{FLT\_MAX\_10\_EXP}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+XP~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 101 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_afcbc8f81f213d358c2aba21a4bcf943b}\label{float_8h_afcbc8f81f213d358c2aba21a4bcf943b}} 
+\index{float.h@{float.h}!FLT\_MAX\_EXP@{FLT\_MAX\_EXP}}
+\index{FLT\_MAX\_EXP@{FLT\_MAX\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MAX\_EXP}{FLT\_MAX\_EXP}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+A\+X\+\_\+\+E\+XP~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 89 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a890322b63a2fab56b8ff916c08368df6}\label{float_8h_a890322b63a2fab56b8ff916c08368df6}} 
+\index{float.h@{float.h}!FLT\_MIN@{FLT\_MIN}}
+\index{FLT\_MIN@{FLT\_MIN}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MIN}{FLT\_MIN}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+IN~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+I\+N\+\_\+\+\_\+}
+
+
+
+Definition at line 129 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a8ea779c525f88153114854fe27c7383f}\label{float_8h_a8ea779c525f88153114854fe27c7383f}} 
+\index{float.h@{float.h}!FLT\_MIN\_10\_EXP@{FLT\_MIN\_10\_EXP}}
+\index{FLT\_MIN\_10\_EXP@{FLT\_MIN\_10\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MIN\_10\_EXP}{FLT\_MIN\_10\_EXP}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+XP~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 81 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a5dc4d8732ed5c714cb9d70043e46c7d2}\label{float_8h_a5dc4d8732ed5c714cb9d70043e46c7d2}} 
+\index{float.h@{float.h}!FLT\_MIN\_EXP@{FLT\_MIN\_EXP}}
+\index{FLT\_MIN\_EXP@{FLT\_MIN\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_MIN\_EXP}{FLT\_MIN\_EXP}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+M\+I\+N\+\_\+\+E\+XP~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+M\+I\+N\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 69 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a566d8859d1a43f73f0e76619833d4d98}\label{float_8h_a566d8859d1a43f73f0e76619833d4d98}} 
+\index{float.h@{float.h}!FLT\_RADIX@{FLT\_RADIX}}
+\index{FLT\_RADIX@{FLT\_RADIX}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_RADIX}{FLT\_RADIX}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+R\+A\+D\+IX~\+\_\+\+\_\+\+F\+L\+T\+\_\+\+R\+A\+D\+I\+X\+\_\+\+\_\+}
+
+
+
+Definition at line 41 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a744ae7c1870e42f6b620ccd8f1911895}\label{float_8h_a744ae7c1870e42f6b620ccd8f1911895}} 
+\index{float.h@{float.h}!FLT\_ROUNDS@{FLT\_ROUNDS}}
+\index{FLT\_ROUNDS@{FLT\_ROUNDS}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{FLT\_ROUNDS}{FLT\_ROUNDS}}
+{\footnotesize\ttfamily \#define F\+L\+T\+\_\+\+R\+O\+U\+N\+DS~1}
+
+
+
+Definition at line 136 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a25b71c5f0e4816b77932b6a698a870c5}\label{float_8h_a25b71c5f0e4816b77932b6a698a870c5}} 
+\index{float.h@{float.h}!LDBL\_DIG@{LDBL\_DIG}}
+\index{LDBL\_DIG@{LDBL\_DIG}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_DIG}{LDBL\_DIG}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+D\+IG~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+D\+I\+G\+\_\+\+\_\+}
+
+
+
+Definition at line 63 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_acb139798eaff6b11e334384af8dd3644}\label{float_8h_acb139798eaff6b11e334384af8dd3644}} 
+\index{float.h@{float.h}!LDBL\_EPSILON@{LDBL\_EPSILON}}
+\index{LDBL\_EPSILON@{LDBL\_EPSILON}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_EPSILON}{LDBL\_EPSILON}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+O\+N\+\_\+\+\_\+}
+
+
+
+Definition at line 123 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a513bd4a3bcb7f4b47764c9a5a39b88e7}\label{float_8h_a513bd4a3bcb7f4b47764c9a5a39b88e7}} 
+\index{float.h@{float.h}!LDBL\_MANT\_DIG@{LDBL\_MANT\_DIG}}
+\index{LDBL\_MANT\_DIG@{LDBL\_MANT\_DIG}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MANT\_DIG}{LDBL\_MANT\_DIG}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+I\+G\+\_\+\+\_\+}
+
+
+
+Definition at line 49 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_aeb98d41033af9fca2c3e41f49751feda}\label{float_8h_aeb98d41033af9fca2c3e41f49751feda}} 
+\index{float.h@{float.h}!LDBL\_MAX@{LDBL\_MAX}}
+\index{LDBL\_MAX@{LDBL\_MAX}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MAX}{LDBL\_MAX}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+AX~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+\_\+}
+
+
+
+Definition at line 114 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a6f580fc0a54173c273d0f7db483c34b6}\label{float_8h_a6f580fc0a54173c273d0f7db483c34b6}} 
+\index{float.h@{float.h}!LDBL\_MAX\_10\_EXP@{LDBL\_MAX\_10\_EXP}}
+\index{LDBL\_MAX\_10\_EXP@{LDBL\_MAX\_10\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MAX\_10\_EXP}{LDBL\_MAX\_10\_EXP}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+XP~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 103 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a5077b78b9874e19004e4eee4200e12c3}\label{float_8h_a5077b78b9874e19004e4eee4200e12c3}} 
+\index{float.h@{float.h}!LDBL\_MAX\_EXP@{LDBL\_MAX\_EXP}}
+\index{LDBL\_MAX\_EXP@{LDBL\_MAX\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MAX\_EXP}{LDBL\_MAX\_EXP}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+XP~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 91 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a09bb9651b2aabffc8394998c835e3ad2}\label{float_8h_a09bb9651b2aabffc8394998c835e3ad2}} 
+\index{float.h@{float.h}!LDBL\_MIN@{LDBL\_MIN}}
+\index{LDBL\_MIN@{LDBL\_MIN}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MIN}{LDBL\_MIN}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+IN~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+\_\+}
+
+
+
+Definition at line 131 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_ac828a1866b4be2f1e63ef64ab5fa6ac8}\label{float_8h_ac828a1866b4be2f1e63ef64ab5fa6ac8}} 
+\index{float.h@{float.h}!LDBL\_MIN\_10\_EXP@{LDBL\_MIN\_10\_EXP}}
+\index{LDBL\_MIN\_10\_EXP@{LDBL\_MIN\_10\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MIN\_10\_EXP}{LDBL\_MIN\_10\_EXP}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+XP~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+10\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 83 of file float.\+h.
+
+\mbox{\Hypertarget{float_8h_a8187966fc5af61ae31d0b37c20ef2f0f}\label{float_8h_a8187966fc5af61ae31d0b37c20ef2f0f}} 
+\index{float.h@{float.h}!LDBL\_MIN\_EXP@{LDBL\_MIN\_EXP}}
+\index{LDBL\_MIN\_EXP@{LDBL\_MIN\_EXP}!float.h@{float.h}}
+\subsubsection{\texorpdfstring{LDBL\_MIN\_EXP}{LDBL\_MIN\_EXP}}
+{\footnotesize\ttfamily \#define L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+XP~\+\_\+\+\_\+\+L\+D\+B\+L\+\_\+\+M\+I\+N\+\_\+\+E\+X\+P\+\_\+\+\_\+}
+
+
+
+Definition at line 71 of file float.\+h.
+

@@ -1,0 +1,236 @@
+\hypertarget{sys_2ctype_8h}{}\section{include/sys/ctype.h File Reference}
+\label{sys_2ctype_8h}\index{include/sys/ctype.h@{include/sys/ctype.h}}
+
+
+Defines macros and types used by \mbox{\hyperlink{ctype_8h}{include/ctype.\+h}}.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}{\+\_\+\+\_\+ctype\+\_\+get}}(c)~\mbox{\hyperlink{sys_2ctype_8h_a357d2646b694d05dab140f86aeb37df6}{\+\_\+\+\_\+ctype}}\mbox{[}((unsigned int)(c) $>$ 128 ? 128 \+: (c))\mbox{]}
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}}~0x01            /$\ast$ control character $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}{\+\_\+\+C\+Td}}~0x02            /$\ast$ numeric digit $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}}~0x04            /$\ast$ upper case $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}}~0x08            /$\ast$ lower case $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}}~0x10            /$\ast$ whitespace $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_ae6d7987887cc0427af27b67dee86bc29}{\+\_\+\+C\+Tp}}~0x20            /$\ast$ punctuation $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_aaedc66f863772e2df78b776a7090f8e3}{\+\_\+\+C\+Tx}}~0x40            /$\ast$ hexadecimal $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_ad814f5c25dbd6c303946fb9ef3219a2c}{\+\_\+\+C\+Tb}}~0x80            /$\ast$ \char`\"{}blank\char`\"{} (space or horizontal tab) $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_aeb6133051a52e080c166cffdd966f801}{\+\_\+\+C\+T\+Y\+P\+E\+\_\+T}}~unsigned short
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a8dd731ae71a0ff5a650847c59ab4a6b2}{\+\_\+\+C\+Tmask}}~0x00ff
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}{\+\_\+\+C\+Tanybut}}~0x4000        /$\ast$ character has some bit set other than the ones specified in the lower 8 bits $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a598450e0056ccbbb9b621786c30b8a90}{\+\_\+\+C\+Tnot}}~0x8000        /$\ast$ invert condition in the remaining bits $\ast$/
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a68c471dab1573135d5978b7e2b895673}{\+\_\+\+C\+Talnum}}~(\mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}{\+\_\+\+C\+Td}})
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a68d2a745b7ac89f174c6d293d3361434}{\+\_\+\+C\+Talpha}}~(\mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}})
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_abcc38966003c6e21b42ca8c54af9f755}{\+\_\+\+C\+Tgraph}}~(\mbox{\hyperlink{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}{\+\_\+\+C\+Tanybut}}$\vert$(\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}}))
+\item 
+\#define \mbox{\hyperlink{sys_2ctype_8h_a2282a56ea428f4bceeef5ffb88baf0c5}{\+\_\+\+C\+Tprint}}~(\mbox{\hyperlink{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}{\+\_\+\+C\+Tanybut}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{sys_2ctype_8h_a357d2646b694d05dab140f86aeb37df6}{\+\_\+\+\_\+ctype}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines macros and types used by \mbox{\hyperlink{ctype_8h}{include/ctype.\+h}}. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}\label{sys_2ctype_8h_aad81d087783a5c2779fa4643f1224bee}} 
+\index{ctype.h@{ctype.h}!\_\_ctype\_get@{\_\_ctype\_get}}
+\index{\_\_ctype\_get@{\_\_ctype\_get}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_\_ctype\_get}{\_\_ctype\_get}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+ctype\+\_\+get(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{sys_2ctype_8h_a357d2646b694d05dab140f86aeb37df6}{\+\_\+\+\_\+ctype}}\mbox{[}((unsigned int)(c) $>$ 128 ? 128 \+: (c))\mbox{]}}
+
+
+
+Definition at line 20 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a68c471dab1573135d5978b7e2b895673}\label{sys_2ctype_8h_a68c471dab1573135d5978b7e2b895673}} 
+\index{ctype.h@{ctype.h}!\_CTalnum@{\_CTalnum}}
+\index{\_CTalnum@{\_CTalnum}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTalnum}{\_CTalnum}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Talnum~(\mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}{\+\_\+\+C\+Td}})}
+
+
+
+Definition at line 43 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a68d2a745b7ac89f174c6d293d3361434}\label{sys_2ctype_8h_a68d2a745b7ac89f174c6d293d3361434}} 
+\index{ctype.h@{ctype.h}!\_CTalpha@{\_CTalpha}}
+\index{\_CTalpha@{\_CTalpha}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTalpha}{\_CTalpha}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Talpha~(\mbox{\hyperlink{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}{\+\_\+\+C\+Tu}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}{\+\_\+\+C\+Tl}})}
+
+
+
+Definition at line 44 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}\label{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}} 
+\index{ctype.h@{ctype.h}!\_CTanybut@{\_CTanybut}}
+\index{\_CTanybut@{\_CTanybut}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTanybut}{\_CTanybut}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tanybut~0x4000        /$\ast$ character has some bit set other than the ones specified in the lower 8 bits $\ast$/}
+
+
+
+Definition at line 39 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_ad814f5c25dbd6c303946fb9ef3219a2c}\label{sys_2ctype_8h_ad814f5c25dbd6c303946fb9ef3219a2c}} 
+\index{ctype.h@{ctype.h}!\_CTb@{\_CTb}}
+\index{\_CTb@{\_CTb}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTb}{\_CTb}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tb~0x80            /$\ast$ \char`\"{}blank\char`\"{} (space or horizontal tab) $\ast$/}
+
+
+
+Definition at line 30 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}\label{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}} 
+\index{ctype.h@{ctype.h}!\_CTc@{\_CTc}}
+\index{\_CTc@{\_CTc}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTc}{\_CTc}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tc~0x01            /$\ast$ control character $\ast$/}
+
+
+
+Definition at line 23 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}\label{sys_2ctype_8h_ae065cc5c2509da1b89baa8d94feaac6a}} 
+\index{ctype.h@{ctype.h}!\_CTd@{\_CTd}}
+\index{\_CTd@{\_CTd}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTd}{\_CTd}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Td~0x02            /$\ast$ numeric digit $\ast$/}
+
+
+
+Definition at line 24 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_abcc38966003c6e21b42ca8c54af9f755}\label{sys_2ctype_8h_abcc38966003c6e21b42ca8c54af9f755}} 
+\index{ctype.h@{ctype.h}!\_CTgraph@{\_CTgraph}}
+\index{\_CTgraph@{\_CTgraph}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTgraph}{\_CTgraph}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tgraph~(\mbox{\hyperlink{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}{\+\_\+\+C\+Tanybut}}$\vert$(\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}{\+\_\+\+C\+Ts}}))}
+
+
+
+Definition at line 45 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}\label{sys_2ctype_8h_a70ac4ab324e2c6e2fd8fea5c21d70de5}} 
+\index{ctype.h@{ctype.h}!\_CTl@{\_CTl}}
+\index{\_CTl@{\_CTl}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTl}{\_CTl}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tl~0x08            /$\ast$ lower case $\ast$/}
+
+
+
+Definition at line 26 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a8dd731ae71a0ff5a650847c59ab4a6b2}\label{sys_2ctype_8h_a8dd731ae71a0ff5a650847c59ab4a6b2}} 
+\index{ctype.h@{ctype.h}!\_CTmask@{\_CTmask}}
+\index{\_CTmask@{\_CTmask}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTmask}{\_CTmask}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tmask~0x00ff}
+
+
+
+Definition at line 37 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a598450e0056ccbbb9b621786c30b8a90}\label{sys_2ctype_8h_a598450e0056ccbbb9b621786c30b8a90}} 
+\index{ctype.h@{ctype.h}!\_CTnot@{\_CTnot}}
+\index{\_CTnot@{\_CTnot}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTnot}{\_CTnot}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tnot~0x8000        /$\ast$ invert condition in the remaining bits $\ast$/}
+
+
+
+Definition at line 40 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_ae6d7987887cc0427af27b67dee86bc29}\label{sys_2ctype_8h_ae6d7987887cc0427af27b67dee86bc29}} 
+\index{ctype.h@{ctype.h}!\_CTp@{\_CTp}}
+\index{\_CTp@{\_CTp}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTp}{\_CTp}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tp~0x20            /$\ast$ punctuation $\ast$/}
+
+
+
+Definition at line 28 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a2282a56ea428f4bceeef5ffb88baf0c5}\label{sys_2ctype_8h_a2282a56ea428f4bceeef5ffb88baf0c5}} 
+\index{ctype.h@{ctype.h}!\_CTprint@{\_CTprint}}
+\index{\_CTprint@{\_CTprint}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTprint}{\_CTprint}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tprint~(\mbox{\hyperlink{sys_2ctype_8h_a3caab882a9dc262c7c18f91c14e6226b}{\+\_\+\+C\+Tanybut}}$\vert$\mbox{\hyperlink{sys_2ctype_8h_aa9d82711a00bc7cac0221b2604cd76dd}{\+\_\+\+C\+Tc}})}
+
+
+
+Definition at line 46 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}\label{sys_2ctype_8h_a1bb42e2e10cab5a3a450ce16aa38f347}} 
+\index{ctype.h@{ctype.h}!\_CTs@{\_CTs}}
+\index{\_CTs@{\_CTs}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTs}{\_CTs}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Ts~0x10            /$\ast$ whitespace $\ast$/}
+
+
+
+Definition at line 27 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}\label{sys_2ctype_8h_af11902da04f93f431b72b93c52474b1a}} 
+\index{ctype.h@{ctype.h}!\_CTu@{\_CTu}}
+\index{\_CTu@{\_CTu}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTu}{\_CTu}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tu~0x04            /$\ast$ upper case $\ast$/}
+
+
+
+Definition at line 25 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_aaedc66f863772e2df78b776a7090f8e3}\label{sys_2ctype_8h_aaedc66f863772e2df78b776a7090f8e3}} 
+\index{ctype.h@{ctype.h}!\_CTx@{\_CTx}}
+\index{\_CTx@{\_CTx}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTx}{\_CTx}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+Tx~0x40            /$\ast$ hexadecimal $\ast$/}
+
+
+
+Definition at line 29 of file ctype.\+h.
+
+\mbox{\Hypertarget{sys_2ctype_8h_aeb6133051a52e080c166cffdd966f801}\label{sys_2ctype_8h_aeb6133051a52e080c166cffdd966f801}} 
+\index{ctype.h@{ctype.h}!\_CTYPE\_T@{\_CTYPE\_T}}
+\index{\_CTYPE\_T@{\_CTYPE\_T}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_CTYPE\_T}{\_CTYPE\_T}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+T\+Y\+P\+E\+\_\+T~unsigned short}
+
+
+
+Definition at line 32 of file ctype.\+h.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{sys_2ctype_8h_a357d2646b694d05dab140f86aeb37df6}\label{sys_2ctype_8h_a357d2646b694d05dab140f86aeb37df6}} 
+\index{ctype.h@{ctype.h}!\_\_ctype@{\_\_ctype}}
+\index{\_\_ctype@{\_\_ctype}!ctype.h@{ctype.h}}
+\subsubsection{\texorpdfstring{\_\_ctype}{\_\_ctype}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+ctype\mbox{[}$\,$\mbox{]}}
+

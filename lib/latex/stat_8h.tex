@@ -1,0 +1,255 @@
+\hypertarget{stat_8h}{}\section{include/sys/stat.h File Reference}
+\label{stat_8h}\index{include/sys/stat.h@{include/sys/stat.h}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stat_8h_ad70001754261c15a1bdc8e876c6d09d7}{S\+\_\+\+I\+W\+U\+SR}}~0400
+\item 
+\#define \mbox{\hyperlink{stat_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}{S\+\_\+\+I\+R\+U\+SR}}~0200
+\item 
+\#define \mbox{\hyperlink{stat_8h_af10a35e3950795d6ee4e07157d000131}{S\+\_\+\+I\+X\+U\+SR}}~0100
+\item 
+\#define \mbox{\hyperlink{stat_8h_a40eb4ad4bcc675d265615042657c37b7}{S\+\_\+\+I\+W\+R\+I\+TE}}~\mbox{\hyperlink{stat_8h_ad70001754261c15a1bdc8e876c6d09d7}{S\+\_\+\+I\+W\+U\+SR}}
+\item 
+\#define \mbox{\hyperlink{stat_8h_a96c6486aa02a821aa4199525f5e79f60}{S\+\_\+\+I\+R\+E\+AD}}~\mbox{\hyperlink{stat_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}{S\+\_\+\+I\+R\+U\+SR}}
+\item 
+\#define \mbox{\hyperlink{stat_8h_a49a6665b56f38f52ee9b157cefcf4d68}{S\+\_\+\+I\+E\+X\+EC}}~\mbox{\hyperlink{stat_8h_af10a35e3950795d6ee4e07157d000131}{S\+\_\+\+I\+X\+U\+SR}}
+\item 
+\#define \mbox{\hyperlink{stat_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}~07000
+\item 
+\#define \mbox{\hyperlink{stat_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}}~00000
+\item 
+\#define \mbox{\hyperlink{stat_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}}~01000
+\item 
+\#define \mbox{\hyperlink{stat_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}}~02000
+\item 
+\#define \mbox{\hyperlink{stat_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}}~03000
+\item 
+\#define \mbox{\hyperlink{stat_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}}~04000
+\item 
+\#define \mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode,  type)~(((mode) \& \mbox{\hyperlink{stat_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == (type))
+\item 
+\#define \mbox{\hyperlink{stat_8h_aad0f32c2c182238f2ff71c83e6ab65a0}{S\+\_\+\+I\+S\+R\+EG}}(mode)~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}})
+\item 
+\#define \mbox{\hyperlink{stat_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}{S\+\_\+\+I\+S\+D\+IR}}(mode)~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}})
+\item 
+\#define \mbox{\hyperlink{stat_8h_aae33be85d242a1317f972cf2b189f03d}{S\+\_\+\+I\+S\+C\+HR}}(mode)~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}})
+\item 
+\#define \mbox{\hyperlink{stat_8h_a8b86a24d84c3cfce39cc832a017656ba}{S\+\_\+\+I\+S\+B\+LK}}(mode)~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}})
+\item 
+\#define \mbox{\hyperlink{stat_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}{S\+\_\+\+I\+S\+F\+I\+FO}}(mode)~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{stat_8h_adf4c31955ac0c171a9915399cf0fb3a3}{mkdir}} (const char $\ast$path, int mode)
+\item 
+int \mbox{\hyperlink{stat_8h_a3dc1b07404b646712a144e2057359876}{stat}} (const char $\ast$path, struct \mbox{\hyperlink{structstat}{stat}} $\ast$buf)
+\item 
+int \mbox{\hyperlink{stat_8h_a198a57e185e8a036ad06345623b84521}{fstat}} (int fd, struct \mbox{\hyperlink{structstat}{stat}} $\ast$buf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}\label{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}} 
+\index{stat.h@{stat.h}!\_\_S\_ISFMT@{\_\_S\_ISFMT}}
+\index{\_\_S\_ISFMT@{\_\_S\_ISFMT}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{\_\_S\_ISFMT}{\_\_S\_ISFMT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT(\begin{DoxyParamCaption}\item[{}]{mode,  }\item[{}]{type }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{stat_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == (type))}
+
+
+
+Definition at line 25 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a49a6665b56f38f52ee9b157cefcf4d68}\label{stat_8h_a49a6665b56f38f52ee9b157cefcf4d68}} 
+\index{stat.h@{stat.h}!S\_IEXEC@{S\_IEXEC}}
+\index{S\_IEXEC@{S\_IEXEC}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IEXEC}{S\_IEXEC}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+E\+X\+EC~\mbox{\hyperlink{stat_8h_af10a35e3950795d6ee4e07157d000131}{S\+\_\+\+I\+X\+U\+SR}}}
+
+
+
+Definition at line 16 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a5c5b74a1cb1a1ae83572500b94e1938f}\label{stat_8h_a5c5b74a1cb1a1ae83572500b94e1938f}} 
+\index{stat.h@{stat.h}!S\_IFBLK@{S\_IFBLK}}
+\index{S\_IFBLK@{S\_IFBLK}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IFBLK}{S\_IFBLK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+B\+LK~03000}
+
+
+
+Definition at line 22 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}\label{stat_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}} 
+\index{stat.h@{stat.h}!S\_IFCHR@{S\_IFCHR}}
+\index{S\_IFCHR@{S\_IFCHR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IFCHR}{S\_IFCHR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+C\+HR~02000}
+
+
+
+Definition at line 21 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a11fb0652b963a735f3377eb1c9239f2d}\label{stat_8h_a11fb0652b963a735f3377eb1c9239f2d}} 
+\index{stat.h@{stat.h}!S\_IFDIR@{S\_IFDIR}}
+\index{S\_IFDIR@{S\_IFDIR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IFDIR}{S\_IFDIR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+D\+IR~01000}
+
+
+
+Definition at line 20 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a4966f25d9f03a7a06bc47ac729fd86cf}\label{stat_8h_a4966f25d9f03a7a06bc47ac729fd86cf}} 
+\index{stat.h@{stat.h}!S\_IFIFO@{S\_IFIFO}}
+\index{S\_IFIFO@{S\_IFIFO}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IFIFO}{S\_IFIFO}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+I\+FO~04000}
+
+
+
+Definition at line 23 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_ab5bee51e9ee68b83ab11d4b340f7200b}\label{stat_8h_ab5bee51e9ee68b83ab11d4b340f7200b}} 
+\index{stat.h@{stat.h}!S\_IFMT@{S\_IFMT}}
+\index{S\_IFMT@{S\_IFMT}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IFMT}{S\_IFMT}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+MT~07000}
+
+
+
+Definition at line 18 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}\label{stat_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}} 
+\index{stat.h@{stat.h}!S\_IFREG@{S\_IFREG}}
+\index{S\_IFREG@{S\_IFREG}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IFREG}{S\_IFREG}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+R\+EG~00000}
+
+
+
+Definition at line 19 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a96c6486aa02a821aa4199525f5e79f60}\label{stat_8h_a96c6486aa02a821aa4199525f5e79f60}} 
+\index{stat.h@{stat.h}!S\_IREAD@{S\_IREAD}}
+\index{S\_IREAD@{S\_IREAD}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IREAD}{S\_IREAD}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+R\+E\+AD~\mbox{\hyperlink{stat_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}{S\+\_\+\+I\+R\+U\+SR}}}
+
+
+
+Definition at line 15 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}\label{stat_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}} 
+\index{stat.h@{stat.h}!S\_IRUSR@{S\_IRUSR}}
+\index{S\_IRUSR@{S\_IRUSR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IRUSR}{S\_IRUSR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+R\+U\+SR~0200}
+
+
+
+Definition at line 11 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a8b86a24d84c3cfce39cc832a017656ba}\label{stat_8h_a8b86a24d84c3cfce39cc832a017656ba}} 
+\index{stat.h@{stat.h}!S\_ISBLK@{S\_ISBLK}}
+\index{S\_ISBLK@{S\_ISBLK}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_ISBLK}{S\_ISBLK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+B\+LK(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}})}
+
+
+
+Definition at line 29 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_aae33be85d242a1317f972cf2b189f03d}\label{stat_8h_aae33be85d242a1317f972cf2b189f03d}} 
+\index{stat.h@{stat.h}!S\_ISCHR@{S\_ISCHR}}
+\index{S\_ISCHR@{S\_ISCHR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_ISCHR}{S\_ISCHR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+C\+HR(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}})}
+
+
+
+Definition at line 28 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}\label{stat_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}} 
+\index{stat.h@{stat.h}!S\_ISDIR@{S\_ISDIR}}
+\index{S\_ISDIR@{S\_ISDIR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_ISDIR}{S\_ISDIR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+D\+IR(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}})}
+
+
+
+Definition at line 27 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}\label{stat_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}} 
+\index{stat.h@{stat.h}!S\_ISFIFO@{S\_ISFIFO}}
+\index{S\_ISFIFO@{S\_ISFIFO}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_ISFIFO}{S\_ISFIFO}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+F\+I\+FO(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}})}
+
+
+
+Definition at line 30 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_aad0f32c2c182238f2ff71c83e6ab65a0}\label{stat_8h_aad0f32c2c182238f2ff71c83e6ab65a0}} 
+\index{stat.h@{stat.h}!S\_ISREG@{S\_ISREG}}
+\index{S\_ISREG@{S\_ISREG}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_ISREG}{S\_ISREG}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+R\+EG(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~\mbox{\hyperlink{stat_8h_ad30b53bb0aced3d67ea7b8331f037c65}{\+\_\+\+\_\+\+S\+\_\+\+I\+S\+F\+MT}}(mode, \mbox{\hyperlink{stat_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}})}
+
+
+
+Definition at line 26 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_a40eb4ad4bcc675d265615042657c37b7}\label{stat_8h_a40eb4ad4bcc675d265615042657c37b7}} 
+\index{stat.h@{stat.h}!S\_IWRITE@{S\_IWRITE}}
+\index{S\_IWRITE@{S\_IWRITE}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IWRITE}{S\_IWRITE}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+W\+R\+I\+TE~\mbox{\hyperlink{stat_8h_ad70001754261c15a1bdc8e876c6d09d7}{S\+\_\+\+I\+W\+U\+SR}}}
+
+
+
+Definition at line 14 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_ad70001754261c15a1bdc8e876c6d09d7}\label{stat_8h_ad70001754261c15a1bdc8e876c6d09d7}} 
+\index{stat.h@{stat.h}!S\_IWUSR@{S\_IWUSR}}
+\index{S\_IWUSR@{S\_IWUSR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IWUSR}{S\_IWUSR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+W\+U\+SR~0400}
+
+
+
+Definition at line 10 of file stat.\+h.
+
+\mbox{\Hypertarget{stat_8h_af10a35e3950795d6ee4e07157d000131}\label{stat_8h_af10a35e3950795d6ee4e07157d000131}} 
+\index{stat.h@{stat.h}!S\_IXUSR@{S\_IXUSR}}
+\index{S\_IXUSR@{S\_IXUSR}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{S\_IXUSR}{S\_IXUSR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+X\+U\+SR~0100}
+
+
+
+Definition at line 12 of file stat.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{stat_8h_a198a57e185e8a036ad06345623b84521}\label{stat_8h_a198a57e185e8a036ad06345623b84521}} 
+\index{stat.h@{stat.h}!fstat@{fstat}}
+\index{fstat@{fstat}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{fstat()}{fstat()}}
+{\footnotesize\ttfamily int fstat (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{struct \mbox{\hyperlink{structstat}{stat}} $\ast$}]{buf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stat_8h_adf4c31955ac0c171a9915399cf0fb3a3}\label{stat_8h_adf4c31955ac0c171a9915399cf0fb3a3}} 
+\index{stat.h@{stat.h}!mkdir@{mkdir}}
+\index{mkdir@{mkdir}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{mkdir()}{mkdir()}}
+{\footnotesize\ttfamily int mkdir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stat_8h_a3dc1b07404b646712a144e2057359876}\label{stat_8h_a3dc1b07404b646712a144e2057359876}} 
+\index{stat.h@{stat.h}!stat@{stat}}
+\index{stat@{stat}!stat.h@{stat.h}}
+\subsubsection{\texorpdfstring{stat()}{stat()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{structstat}{stat}} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{struct \mbox{\hyperlink{structstat}{stat}} $\ast$}]{buf }\end{DoxyParamCaption})}
+

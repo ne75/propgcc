@@ -1,0 +1,366 @@
+\hypertarget{i2c_8h}{}\section{include/i2c.h File Reference}
+\label{i2c_8h}\index{include/i2c.h@{include/i2c.h}}
+
+
+Provides Propeller specific functions for \mbox{\hyperlink{structI2C}{I2C}}.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i2c\+\_\+driver.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structI2C__OPS}{I2\+C\+\_\+\+O\+PS}}
+\item 
+struct \mbox{\hyperlink{structI2C}{I2C}}
+\item 
+struct \mbox{\hyperlink{structI2C__COGDRIVER}{I2\+C\+\_\+\+C\+O\+G\+D\+R\+I\+V\+ER}}
+\item 
+struct \mbox{\hyperlink{structI2C__SIMPLE}{I2\+C\+\_\+\+S\+I\+M\+P\+LE}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{i2c_8h_a11fc462d06f4a1b3faa9ee895758cdcc}{I2C}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structI2C}{I2C}} $\ast$ \mbox{\hyperlink{i2c_8h_a70e3e5d423a4edc79e89d0dc381512d8}{i2c\+Open}} (\mbox{\hyperlink{structI2C__COGDRIVER}{I2\+C\+\_\+\+C\+O\+G\+D\+R\+I\+V\+ER}} $\ast$dev, int scl, int sda, int freq)
+\begin{DoxyCompactList}\small\item\em Open an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{i2c_8h_a9dea08ff9d4844d0e318f29507b0a4c5}{i2c\+Get\+Cog\+Buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \mbox{\hyperlink{structI2C}{I2C}} C\+OG driver image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structI2C}{I2C}} $\ast$ \mbox{\hyperlink{i2c_8h_a8d0ba494465f15e8178e1cb89a7dbba8}{simple\+\_\+i2c\+Open}} (\mbox{\hyperlink{structI2C__SIMPLE}{I2\+C\+\_\+\+S\+I\+M\+P\+LE}} $\ast$dev, int scl, int sda)
+\begin{DoxyCompactList}\small\item\em Open an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structI2C}{I2C}} $\ast$ \mbox{\hyperlink{i2c_8h_aac96c97bb7121aceb0d8e57a59c74791}{i2c\+Boot\+Open}} (void)
+\begin{DoxyCompactList}\small\item\em Open the boot i2c bus on Propeller pins 28/29. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{i2c_8h_ac9a5cbbb9cb07eee7ac2f2b0d941f320}{i2c\+Boot\+Buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Get the address of the boot i2c bus C\+OG driver. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{i2c_8h_aeba528f527a0071504bd1685921f3b8c}{i2c\+Close}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Close an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{i2c_8h_a8f61a4856854040bb6aed8c6ac184747}{i2c\+Write}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\begin{DoxyCompactList}\small\item\em Write to an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{i2c_8h_a3a7220ed522f839bd2c7ecefbe8e6681}{i2c\+Write\+More}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\begin{DoxyCompactList}\small\item\em Write more to an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{i2c_8h_ae43814d8c79cb2cd54d53c7b0ce85d34}{i2c\+Read}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\begin{DoxyCompactList}\small\item\em Read from an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{i2c_8h_ac351a3c391f0a5aaff10ad8c766c6456}{i2c\+Read\+More}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\begin{DoxyCompactList}\small\item\em Read more from an \mbox{\hyperlink{structI2C}{I2C}} device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{i2c_8h_a32a605fdc2b5955ded7072b8a69d7838}{cog\+\_\+i2c\+Read}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\item 
+int \mbox{\hyperlink{i2c_8h_a09fe6daac63717dd33b0e4667bd77b88}{cog\+\_\+i2c\+Read\+More}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\item 
+int \mbox{\hyperlink{i2c_8h_a38fb0d7dc23bfd1fc8f6bcd898f2e257}{cog\+\_\+i2c\+Write}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\item 
+int \mbox{\hyperlink{i2c_8h_aee80be9197e531b17a720624d2010069}{cog\+\_\+i2c\+Write\+More}} (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides Propeller specific functions for \mbox{\hyperlink{structI2C}{I2C}}. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{i2c_8h_a11fc462d06f4a1b3faa9ee895758cdcc}\label{i2c_8h_a11fc462d06f4a1b3faa9ee895758cdcc}} 
+\index{i2c.h@{i2c.h}!I2C@{I2C}}
+\index{I2C@{I2C}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{I2C}{I2C}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structI2C}{I2C}} \mbox{\hyperlink{structI2C}{I2C}}}
+
+forward type declarations 
+
+Definition at line 38 of file i2c.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{i2c_8h_a32a605fdc2b5955ded7072b8a69d7838}\label{i2c_8h_a32a605fdc2b5955ded7072b8a69d7838}} 
+\index{i2c.h@{i2c.h}!cog\_i2cRead@{cog\_i2cRead}}
+\index{cog\_i2cRead@{cog\_i2cRead}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{cog\_i2cRead()}{cog\_i2cRead()}}
+{\footnotesize\ttfamily int cog\+\_\+i2c\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{int}]{address,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i2c_8h_a09fe6daac63717dd33b0e4667bd77b88}\label{i2c_8h_a09fe6daac63717dd33b0e4667bd77b88}} 
+\index{i2c.h@{i2c.h}!cog\_i2cReadMore@{cog\_i2cReadMore}}
+\index{cog\_i2cReadMore@{cog\_i2cReadMore}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{cog\_i2cReadMore()}{cog\_i2cReadMore()}}
+{\footnotesize\ttfamily int cog\+\_\+i2c\+Read\+More (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i2c_8h_a38fb0d7dc23bfd1fc8f6bcd898f2e257}\label{i2c_8h_a38fb0d7dc23bfd1fc8f6bcd898f2e257}} 
+\index{i2c.h@{i2c.h}!cog\_i2cWrite@{cog\_i2cWrite}}
+\index{cog\_i2cWrite@{cog\_i2cWrite}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{cog\_i2cWrite()}{cog\_i2cWrite()}}
+{\footnotesize\ttfamily int cog\+\_\+i2c\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{int}]{address,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i2c_8h_aee80be9197e531b17a720624d2010069}\label{i2c_8h_aee80be9197e531b17a720624d2010069}} 
+\index{i2c.h@{i2c.h}!cog\_i2cWriteMore@{cog\_i2cWriteMore}}
+\index{cog\_i2cWriteMore@{cog\_i2cWriteMore}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{cog\_i2cWriteMore()}{cog\_i2cWriteMore()}}
+{\footnotesize\ttfamily int cog\+\_\+i2c\+Write\+More (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i2c_8h_ac9a5cbbb9cb07eee7ac2f2b0d941f320}\label{i2c_8h_ac9a5cbbb9cb07eee7ac2f2b0d941f320}} 
+\index{i2c.h@{i2c.h}!i2cBootBuffer@{i2cBootBuffer}}
+\index{i2cBootBuffer@{i2cBootBuffer}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cBootBuffer()}{i2cBootBuffer()}}
+{\footnotesize\ttfamily void$\ast$ i2c\+Boot\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the address of the boot i2c bus C\+OG driver. 
+
+Once the boot i2c bus has been opened with i2c\+Boot\+Open, by loading a C\+OG using either cognew\+From\+Boot\+Eeprom or coginit\+From\+Boot\+Eeprom, or calling read\+Boot\+Eeprom or write\+Boot\+Eeprom, it is possible to reuse the hub memory space used by the boot i2c driver. However, once this is done it will no longer be possible to load the boot i2c driver again so after closing the boot i2c buss, calls to i2c\+Boot\+Open, cognew\+From\+Boot\+Eeprom, or coginit\+From\+Boot\+Eeprom will fail.
+
+\begin{DoxyReturn}{Returns}
+a pointer to the boot i2c driver C\+OG image for use as a buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{i2c_8h_aac96c97bb7121aceb0d8e57a59c74791}\label{i2c_8h_aac96c97bb7121aceb0d8e57a59c74791}} 
+\index{i2c.h@{i2c.h}!i2cBootOpen@{i2cBootOpen}}
+\index{i2cBootOpen@{i2cBootOpen}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cBootOpen()}{i2cBootOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structI2C}{I2C}}$\ast$ i2c\+Boot\+Open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Open the boot i2c bus on Propeller pins 28/29. 
+
+Use this function to open the i2c bus on pins 28/29 used by the Propeller to boot from \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+\begin{DoxyReturn}{Returns}
+a pointer to an \mbox{\hyperlink{structI2C}{I2C}} structure for the bus or N\+U\+LL on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{i2c_8h_aeba528f527a0071504bd1685921f3b8c}\label{i2c_8h_aeba528f527a0071504bd1685921f3b8c}} 
+\index{i2c.h@{i2c.h}!i2cClose@{i2cClose}}
+\index{i2cClose@{i2cClose}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cClose()}{i2cClose()}}
+{\footnotesize\ttfamily static int i2c\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Close an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Close an \mbox{\hyperlink{structI2C}{I2C}} device that was opened with either i2c\+Open or simple\+\_\+i2c\+Open.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device to close\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file i2c.\+h.
+
+
+
+References I2\+C\+\_\+\+O\+P\+S\+::close, and I2\+C\+::ops.
+
+\mbox{\Hypertarget{i2c_8h_a9dea08ff9d4844d0e318f29507b0a4c5}\label{i2c_8h_a9dea08ff9d4844d0e318f29507b0a4c5}} 
+\index{i2c.h@{i2c.h}!i2cGetCogBuffer@{i2cGetCogBuffer}}
+\index{i2cGetCogBuffer@{i2cGetCogBuffer}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cGetCogBuffer()}{i2cGetCogBuffer()}}
+{\footnotesize\ttfamily void$\ast$ i2c\+Get\+Cog\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return a pointer to the \mbox{\hyperlink{structI2C}{I2C}} C\+OG driver image. 
+
+Returns a pointer to the \mbox{\hyperlink{structI2C}{I2C}} C\+OG driver image. This allows the space that was occupied by the C\+OG driver to be reused after the driver has been loaded. Call this only after the final call to i2c\+Open.
+
+\begin{DoxyReturn}{Returns}
+a pointer to the \mbox{\hyperlink{structI2C}{I2C}} C\+OG driver image. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{i2c_8h_a70e3e5d423a4edc79e89d0dc381512d8}\label{i2c_8h_a70e3e5d423a4edc79e89d0dc381512d8}} 
+\index{i2c.h@{i2c.h}!i2cOpen@{i2cOpen}}
+\index{i2cOpen@{i2cOpen}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cOpen()}{i2cOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structI2C}{I2C}}$\ast$ i2c\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C__COGDRIVER}{I2\+C\+\_\+\+C\+O\+G\+D\+R\+I\+V\+ER}} $\ast$}]{dev,  }\item[{int}]{scl,  }\item[{int}]{sda,  }\item[{int}]{freq }\end{DoxyParamCaption})}
+
+
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} device using a C\+OG driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device structure to initialize \\
+\hline
+{\em scl} & S\+CL pin number \\
+\hline
+{\em sda} & S\+DA pin number \\
+\hline
+{\em freq} & Bus frequency\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the device on success, N\+U\+LL on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{i2c_8h_ae43814d8c79cb2cd54d53c7b0ce85d34}\label{i2c_8h_ae43814d8c79cb2cd54d53c7b0ce85d34}} 
+\index{i2c.h@{i2c.h}!i2cRead@{i2cRead}}
+\index{i2cRead@{i2cRead}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cRead()}{i2cRead()}}
+{\footnotesize\ttfamily static int i2c\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{int}]{address,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Read from an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Read from an \mbox{\hyperlink{structI2C}{I2C}} device at the specified address. The address should be the device address in bits 7\+:1 and a zero in bit 0. Set the stop parameter to T\+R\+UE to cause an \mbox{\hyperlink{structI2C}{I2C}} stop sequence to be emitted after the data. Setting it to F\+A\+L\+SE omits the stop sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device to read from \\
+\hline
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} address in bits 7\+:1, zero in bit 0 \\
+\hline
+{\em buffer} & Address of the buffer to receive data \\
+\hline
+{\em count} & Number of bytes of data to receive \\
+\hline
+{\em stop} & T\+R\+UE to send a stop sequence after the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 214 of file i2c.\+h.
+
+
+
+References I2\+C\+::ops, and I2\+C\+\_\+\+O\+P\+S\+::read.
+
+\mbox{\Hypertarget{i2c_8h_ac351a3c391f0a5aaff10ad8c766c6456}\label{i2c_8h_ac351a3c391f0a5aaff10ad8c766c6456}} 
+\index{i2c.h@{i2c.h}!i2cReadMore@{i2cReadMore}}
+\index{i2cReadMore@{i2cReadMore}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cReadMore()}{i2cReadMore()}}
+{\footnotesize\ttfamily static int i2c\+Read\+More (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Read more from an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Read more from an \mbox{\hyperlink{structI2C}{I2C}} device. This can only be used following a call to i2c\+Read that specifies F\+A\+L\+SE for the stop parameter. Set the stop parameter to T\+R\+UE to cause an \mbox{\hyperlink{structI2C}{I2C}} stop sequence to be emitted after the data. Setting it to F\+A\+L\+SE omits the stop sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device to read from \\
+\hline
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} address in bits 7\+:1, zero in bit 0 \\
+\hline
+{\em buffer} & Address of the buffer to receive data \\
+\hline
+{\em count} & Number of bytes of data to receive \\
+\hline
+{\em stop} & T\+R\+UE to send a stop sequence after the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 237 of file i2c.\+h.
+
+
+
+References I2\+C\+::ops, and I2\+C\+\_\+\+O\+P\+S\+::read\+More.
+
+\mbox{\Hypertarget{i2c_8h_a8f61a4856854040bb6aed8c6ac184747}\label{i2c_8h_a8f61a4856854040bb6aed8c6ac184747}} 
+\index{i2c.h@{i2c.h}!i2cWrite@{i2cWrite}}
+\index{i2cWrite@{i2cWrite}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cWrite()}{i2cWrite()}}
+{\footnotesize\ttfamily static int i2c\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{int}]{address,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Write to an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Write to an \mbox{\hyperlink{structI2C}{I2C}} device at the specified address. The address should be the device address in bits 7\+:1 and a zero in bit 0. If count is zero only the address byte will be sent. Set the stop parameter to T\+R\+UE to cause an \mbox{\hyperlink{structI2C}{I2C}} stop sequence to be emitted after the data. Setting it to F\+A\+L\+SE omits the stop sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device to write to \\
+\hline
+{\em address} & \mbox{\hyperlink{structI2C}{I2C}} address in bits 7\+:1, zero in bit 0 \\
+\hline
+{\em buffer} & Address of the buffer containing data to write \\
+\hline
+{\em count} & Number of bytes of data to write \\
+\hline
+{\em stop} & T\+R\+UE to send a stop sequence after the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file i2c.\+h.
+
+
+
+References I2\+C\+::ops, and I2\+C\+\_\+\+O\+P\+S\+::write.
+
+\mbox{\Hypertarget{i2c_8h_a3a7220ed522f839bd2c7ecefbe8e6681}\label{i2c_8h_a3a7220ed522f839bd2c7ecefbe8e6681}} 
+\index{i2c.h@{i2c.h}!i2cWriteMore@{i2cWriteMore}}
+\index{i2cWriteMore@{i2cWriteMore}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{i2cWriteMore()}{i2cWriteMore()}}
+{\footnotesize\ttfamily static int i2c\+Write\+More (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C}{I2C}} $\ast$}]{dev,  }\item[{\mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$}]{buffer,  }\item[{int}]{count,  }\item[{int}]{stop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Write more to an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Write more to an \mbox{\hyperlink{structI2C}{I2C}} device. This can only be used following a call to i2c\+Write that specifies F\+A\+L\+SE for the stop parameter. Set the stop parameter to T\+R\+UE to cause an \mbox{\hyperlink{structI2C}{I2C}} stop sequence to be emitted after the data. Setting it to F\+A\+L\+SE omits the stop sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device to write to \\
+\hline
+{\em buffer} & Address of the buffer containing data to write \\
+\hline
+{\em count} & Number of bytes of data to write \\
+\hline
+{\em stop} & T\+R\+UE to send a stop sequence after the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 191 of file i2c.\+h.
+
+
+
+References I2\+C\+::ops, and I2\+C\+\_\+\+O\+P\+S\+::write\+More.
+
+\mbox{\Hypertarget{i2c_8h_a8d0ba494465f15e8178e1cb89a7dbba8}\label{i2c_8h_a8d0ba494465f15e8178e1cb89a7dbba8}} 
+\index{i2c.h@{i2c.h}!simple\_i2cOpen@{simple\_i2cOpen}}
+\index{simple\_i2cOpen@{simple\_i2cOpen}!i2c.h@{i2c.h}}
+\subsubsection{\texorpdfstring{simple\_i2cOpen()}{simple\_i2cOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structI2C}{I2C}}$\ast$ simple\+\_\+i2c\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structI2C__SIMPLE}{I2\+C\+\_\+\+S\+I\+M\+P\+LE}} $\ast$}]{dev,  }\item[{int}]{scl,  }\item[{int}]{sda }\end{DoxyParamCaption})}
+
+
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} device. 
+
+Open an \mbox{\hyperlink{structI2C}{I2C}} device using a simple driver that runs on the C\+OG of the caller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & \mbox{\hyperlink{structI2C}{I2C}} device structure to initialize \\
+\hline
+{\em scl} & S\+CL pin number \\
+\hline
+{\em sda} & S\+DA pin number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the device on success, N\+U\+LL on failure. 
+\end{DoxyReturn}

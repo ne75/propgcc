@@ -1,0 +1,1915 @@
+\hypertarget{inttypes_8h}{}\section{include/inttypes.h File Reference}
+\label{inttypes_8h}\index{include/inttypes.h@{include/inttypes.h}}
+
+
+Provides A\+PI for format conversion of integer types.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structimaxdiv__t}{imaxdiv\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}{P\+R\+Id8}}~\char`\"{}\%hhd\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}{P\+R\+Ii8}}~\char`\"{}\%hhi\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}{P\+R\+Id16}}~\char`\"{}\%hd\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}{P\+R\+Ii16}}~\char`\"{}\%hd\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}{P\+R\+Id64}}~\char`\"{}\%lld\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}{P\+R\+Ii64}}~\char`\"{}\%lli\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}{P\+R\+Id\+P\+TR}}~\char`\"{}\%td\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac2d52bf83b783f530f02fa2eeabe703a}{P\+R\+Ii\+P\+TR}}~\char`\"{}\%td\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}{P\+R\+Id\+M\+AX}}~\char`\"{}\%jd\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a0f30e8063c747a19c86574a1f61c0ad5}{P\+R\+Ii\+M\+AX}}~\char`\"{}\%ji\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a404fd01f0b890cb8fac8641aaa704b57}{P\+R\+Id\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}{P\+R\+Id8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a526151b1725956030b501d9dd506f2e1}{P\+R\+Ii\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}{P\+R\+Ii8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae90ab00cb4417081dc68e9fd6c0e129a}{P\+R\+Id\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}{P\+R\+Id16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a96945864cb2d1f7de861ccaf639af02e}{P\+R\+Ii\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}{P\+R\+Ii16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad36a6b276bd808d713cc5603ba008c58}{P\+R\+Id\+L\+E\+A\+S\+T32}}~P\+R\+Id32
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad7a1bae7ca12c7b5415fae1b3f258207}{P\+R\+Ii\+L\+E\+A\+S\+T32}}~P\+R\+Ii32
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a6e7b87b6cb5b8298e0c7471f19d8321f}{P\+R\+Id\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}{P\+R\+Id64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a0fb9f5cdca16045cc30b72d9174cdbfb}{P\+R\+Ii\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}{P\+R\+Ii64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a943961b7e7e564388dd743593db5bbbb}{P\+R\+Id\+F\+A\+S\+T8}}~\char`\"{}\%d\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a58cdfb02574b8c23d964a6e88a268782}{P\+R\+Id\+F\+A\+S\+T16}}~\char`\"{}\%d\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aef5a98227a6af5fde95353ed303cfd1e}{P\+R\+Id\+F\+A\+S\+T32}}~\char`\"{}\%d\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a9c63f907b68bfa374778aa59b3a360f5}{P\+R\+Id\+F\+A\+S\+T64}}~\char`\"{}\%lld\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a64fb4e44c3ff09179fc445979b7fdad1}{P\+R\+Ii\+F\+A\+S\+T8}}~\char`\"{}\%i\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac273fb2a05215962fbeae76abaaf0131}{P\+R\+Ii\+F\+A\+S\+T16}}~\char`\"{}\%i\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a192a69a2e6e63ed8393d306b4078d63f}{P\+R\+Ii\+F\+A\+S\+T32}}~\char`\"{}\%i\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_af27d75f27f8038693a36c3dd14a82516}{P\+R\+Ii\+F\+A\+S\+T64}}~\char`\"{}\%lli\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}{P\+R\+Io8}}~\char`\"{}\%hho\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}{P\+R\+Iu8}}~\char`\"{}\%hhu\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}{P\+R\+Ix8}}~\char`\"{}\%hhx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4e9b835c85ffa875e8304e2b852b4c86}{P\+R\+I\+X8}}~\char`\"{}\%hhX\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}{P\+R\+Io16}}~\char`\"{}\%ho\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}{P\+R\+Iu16}}~\char`\"{}\%hu\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}{P\+R\+Ix16}}~\char`\"{}\%hx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a570ca9af5087023f75fc8a1a602d26ab}{P\+R\+I\+X16}}~\char`\"{}\%hX\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}~\char`\"{}\%lo\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}~\char`\"{}\%lu\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}~\char`\"{}\%lx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}{P\+R\+I\+X32}}~\char`\"{}\%lX\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}~\char`\"{}\%llo\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}~\char`\"{}\%llu\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}~\char`\"{}\%llx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}{P\+R\+I\+X64}}~\char`\"{}\%llX\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa5b3ca8091f4ed7d43f5eb971ce11114}{P\+R\+Io\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}{P\+R\+Io8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a74cb15b101649124009c010a9055e885}{P\+R\+Iu\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}{P\+R\+Iu8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a45d80a42b6cd25f3ed57b0e800e6e398}{P\+R\+Ix\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}{P\+R\+Ix8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a70aa3faf72084587fb18d03aa033a212}{P\+R\+I\+X\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_a4e9b835c85ffa875e8304e2b852b4c86}{P\+R\+I\+X8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1ecbd31333b358c22423a541fffbd122}{P\+R\+Io\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}{P\+R\+Io16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa3ba696eef7c107c76c26eea76dcb4b4}{P\+R\+Iu\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}{P\+R\+Iu16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad00e2a12b813425800cad731f61497ae}{P\+R\+Ix\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}{P\+R\+Ix16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_afa4303b077ae4c6c58686178e4b90d18}{P\+R\+I\+X\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a570ca9af5087023f75fc8a1a602d26ab}{P\+R\+I\+X16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1e5c50a1ca71da7ff8c4f3f007411be8}{P\+R\+Io\+L\+E\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aab353a2898377162c1829f1a9708352e}{P\+R\+Iu\+L\+E\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1d766603a3524c9e03effbbece9c2118}{P\+R\+Ix\+L\+E\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aaf100a10f9cd73d46294fd0e8db5246d}{P\+R\+I\+X\+L\+E\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}{P\+R\+I\+X32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a9540a0a3ff33b4f6a0feee15f3066984}{P\+R\+Io\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a20b768c89c8693bdc3df5f2e76fe018c}{P\+R\+Iu\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4df46377b2a3292ce6c7fd6724a045ab}{P\+R\+Ix\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4d1806a4ea59b88a7bd00d88b7e1747d}{P\+R\+I\+X\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}{P\+R\+I\+X64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a37f93445f1795033c9ba577661da6a91}{P\+R\+Io\+F\+A\+S\+T8}}~\char`\"{}\%o\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a0b0c7ad693c391e3e353e8f2d1df2ec3}{P\+R\+Iu\+F\+A\+S\+T8}}~\char`\"{}\%u\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae7e1780719eb0e4b2826a0da06255780}{P\+R\+Ix\+F\+A\+S\+T8}}~\char`\"{}\%x\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab153efc9e6547ca56f42de767cde2595}{P\+R\+I\+X\+F\+A\+S\+T8}}~\char`\"{}\%X\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a3eda49c829de683e701eaed3cbaf0e73}{P\+R\+Io\+F\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a37f93445f1795033c9ba577661da6a91}{P\+R\+Io\+F\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa82e218a186691ebf7149b36746c12e7}{P\+R\+Iu\+F\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a0b0c7ad693c391e3e353e8f2d1df2ec3}{P\+R\+Iu\+F\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a6f66e34285ab57a86aeb2f0f4895417d}{P\+R\+Ix\+F\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_ae7e1780719eb0e4b2826a0da06255780}{P\+R\+Ix\+F\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a785eabe6337a2fa85874ae99300abb66}{P\+R\+I\+X\+F\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_ab153efc9e6547ca56f42de767cde2595}{P\+R\+I\+X\+F\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a6ac7e3111d008785ddf3b29dcd088732}{P\+R\+Io\+F\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_accc383115328197264988682edfcb72c}{P\+R\+Iu\+F\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a22caa684d44725e1e6e638983380f68e}{P\+R\+Ix\+F\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ace7057a6fa96ac7e2a05946ee96cf2d9}{P\+R\+I\+X\+F\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}{P\+R\+I\+X32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aba7ffd10c01ee7e1264300568ade319e}{P\+R\+Io\+F\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac1fdefbae4d6c8dcef5b91ef5b778a1c}{P\+R\+Iu\+F\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a73fe58317ae146f316ddb0736d9ed9a4}{P\+R\+Ix\+F\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab94e8153da1da9e2762277c6b1cf21d7}{P\+R\+I\+X\+F\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}{P\+R\+I\+X64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a73ec9b744a867844fb1cbf5d600e15da}{P\+R\+Io\+M\+AX}}~\char`\"{}\%jo\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a5231235fbdc84d556db88609b469982b}{P\+R\+Iu\+M\+AX}}~\char`\"{}\%ju\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1cb5f16ab28d09fa5fe07068bb8e2cea}{P\+R\+Ix\+M\+AX}}~\char`\"{}\%jx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa7e1f0c8df36d801c81f6db762ec67ec}{P\+R\+I\+X\+M\+AX}}~\char`\"{}\%jX\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1468793ce960b477922ef92b36a6c802}{P\+R\+Io\+P\+TR}}~\char`\"{}\%to\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa1ca3a85113e897b5cf7ed6b92d74de2}{P\+R\+Iu\+P\+TR}}~\char`\"{}\%tu\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a9c3c25e6145e629e4c9fabddc6061c30}{P\+R\+Ix\+P\+TR}}~\char`\"{}\%tx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a65d9856517198cfc21558c0d6df64207}{P\+R\+I\+X\+P\+TR}}~\char`\"{}\%tX\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_abf98c3a9ad120b11ec2911b9398e3f2f}{S\+C\+Nd8}}~\mbox{\hyperlink{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}{P\+R\+Id8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a535485ea35661ff75a8d2bc0d2ebe807}{S\+C\+Ni8}}~\mbox{\hyperlink{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}{P\+R\+Ii8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a35974d44b5dcebcb222b8e2c1384241d}{S\+C\+Nd16}}~\mbox{\hyperlink{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}{P\+R\+Id16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a7b8508989273ad152f9b3b7cd4db6eee}{S\+C\+Ni16}}~\mbox{\hyperlink{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}{P\+R\+Ii16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a2b7ab77ff6ede9c3c285b714496f77e2}{S\+C\+Nd32}}~P\+R\+Id32
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a52cfc41a1e5ad73788faebbfeb9c14b0}{S\+C\+Ni32}}~P\+R\+Ii32
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae7044b3fb4cc5cde22155d59437c348f}{S\+C\+Nd64}}~\mbox{\hyperlink{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}{P\+R\+Id64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_adafb1dac927decf0b5f00125a84036fb}{S\+C\+Ni64}}~\mbox{\hyperlink{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}{P\+R\+Ii64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab0af8c396d9c885950d423f8dee54164}{S\+C\+Nd\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_a404fd01f0b890cb8fac8641aaa704b57}{P\+R\+Id\+L\+E\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1a0b88bf6f131db927f2e7f1f6abb644}{S\+C\+Ni\+L\+E\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_a526151b1725956030b501d9dd506f2e1}{P\+R\+Ii\+L\+E\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a10db5de9c84ccfa6dc0e487dd72051f3}{S\+C\+Nd\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_ae90ab00cb4417081dc68e9fd6c0e129a}{P\+R\+Id\+L\+E\+A\+S\+T16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a14ec2649667b53ff91a1103c02975837}{S\+C\+Ni\+L\+E\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a96945864cb2d1f7de861ccaf639af02e}{P\+R\+Ii\+L\+E\+A\+S\+T16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae36c293972a5b770349d74f2c0cfa52f}{S\+C\+Nd\+L\+E\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_ad36a6b276bd808d713cc5603ba008c58}{P\+R\+Id\+L\+E\+A\+S\+T32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a39be8ffb41be80bc951e955f111e4121}{S\+C\+Ni\+L\+E\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_ad7a1bae7ca12c7b5415fae1b3f258207}{P\+R\+Ii\+L\+E\+A\+S\+T32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a2009d29e47fedd5cb286d81c83596737}{S\+C\+Nd\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_a6e7b87b6cb5b8298e0c7471f19d8321f}{P\+R\+Id\+L\+E\+A\+S\+T64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a9ff978b502f6296f8a5364143eee7f7a}{S\+C\+Ni\+L\+E\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_a0fb9f5cdca16045cc30b72d9174cdbfb}{P\+R\+Ii\+L\+E\+A\+S\+T64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a6dc7d2f030d25e79ae8398088161b860}{S\+C\+Nd\+F\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_a943961b7e7e564388dd743593db5bbbb}{P\+R\+Id\+F\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac864120101e01707ca52c0976b4e539a}{S\+C\+Ni\+F\+A\+S\+T8}}~\mbox{\hyperlink{inttypes_8h_a64fb4e44c3ff09179fc445979b7fdad1}{P\+R\+Ii\+F\+A\+S\+T8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a09c9f36f654aa50a548d7820421cdc57}{S\+C\+Nd\+F\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_a58cdfb02574b8c23d964a6e88a268782}{P\+R\+Id\+F\+A\+S\+T16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aad333b5bea32321b312a3b4967ff357f}{S\+C\+Ni\+F\+A\+S\+T16}}~\mbox{\hyperlink{inttypes_8h_ac273fb2a05215962fbeae76abaaf0131}{P\+R\+Ii\+F\+A\+S\+T16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_add733be35bef9dcef225edc99ade9e33}{S\+C\+Nd\+F\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_aef5a98227a6af5fde95353ed303cfd1e}{P\+R\+Id\+F\+A\+S\+T32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4739f89fa519cd77097677bf33320091}{S\+C\+Ni\+F\+A\+S\+T32}}~\mbox{\hyperlink{inttypes_8h_a192a69a2e6e63ed8393d306b4078d63f}{P\+R\+Ii\+F\+A\+S\+T32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a2a2d9ca0555230eab89e52e442bea64c}{S\+C\+Nd\+F\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_a9c63f907b68bfa374778aa59b3a360f5}{P\+R\+Id\+F\+A\+S\+T64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_afa93802b919daecccd6f989cd1750eba}{S\+C\+Ni\+F\+A\+S\+T64}}~\mbox{\hyperlink{inttypes_8h_af27d75f27f8038693a36c3dd14a82516}{P\+R\+Ii\+F\+A\+S\+T64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_abf657ee6bd4b009b5b072840a3d7364f}{S\+C\+Nd\+P\+TR}}~\mbox{\hyperlink{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}{P\+R\+Id\+P\+TR}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a9c632ab51b24b93cc315b27a883be9eb}{S\+C\+Ni\+P\+TR}}~\mbox{\hyperlink{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}{P\+R\+Id\+P\+TR}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a3ef7335ee669df2a387707816a45f3ed}{S\+C\+Nd\+M\+AX}}~\mbox{\hyperlink{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}{P\+R\+Id\+M\+AX}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a2f7190d383e2382085b27ffc8ac5a089}{S\+C\+Ni\+M\+AX}}~\mbox{\hyperlink{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}{P\+R\+Id\+M\+AX}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4e274a339187359a91963d22f8e6faa6}{S\+C\+No8}}~\mbox{\hyperlink{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}{P\+R\+Io8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae0d5458bfaf4c45083b1e92013d77f51}{S\+C\+Nu8}}~\mbox{\hyperlink{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}{P\+R\+Iu8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a79b1f201c12273510e1fdebfb3a66e9d}{S\+C\+Nx8}}~\mbox{\hyperlink{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}{P\+R\+Ix8}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a9bc6b517c0117327e832824ff2d6a6b5}{S\+C\+No16}}~\mbox{\hyperlink{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}{P\+R\+Io16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a37bbde0e3f124b7f482d54adb13b0248}{S\+C\+Nu16}}~\mbox{\hyperlink{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}{P\+R\+Iu16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a12dbc2ac6a36b893ef1c25c357f90a9f}{S\+C\+Nx16}}~\mbox{\hyperlink{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}{P\+R\+Ix16}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab561c947d62a3c7cd396d4aeef553f3c}{S\+C\+No32}}~\mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_abd19a83130f8d1bd2f77b765ad804f75}{S\+C\+Nu32}}~\mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4c5370556f793ac7b2c3abe896dba8e2}{S\+C\+Nx32}}~\mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a359197f54f7db4ae57ab7c9ff4b74456}{S\+C\+No64}}~\mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_af085b9f73207a4b3b4a133ab05fd7eef}{S\+C\+Nu64}}~\mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4c454faacb996aa020efeb312379af4e}{S\+C\+Nx64}}~\mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a1df299ee25967f8ef1f495de62d360a0}{S\+C\+No8\+L\+E\+A\+ST}}~P\+R\+Io8\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab2774a823c101dd5c4bb1c5a77a4e8fd}{S\+C\+Nu8\+L\+E\+A\+ST}}~P\+R\+Iu8\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a922f1359df7cdc6556a39c153834c728}{S\+C\+Nx8\+L\+E\+A\+ST}}~P\+R\+Ix8\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad3d7a25f0502ef36ddec1ecb96034d31}{S\+C\+No16\+L\+E\+A\+ST}}~P\+R\+Io16\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a6b4bf4c9ca45a449d920846b35fce47f}{S\+C\+Nu16\+L\+E\+A\+ST}}~P\+R\+Iu16\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a8afcae2f58e18e7426d298d585b37505}{S\+C\+Nx16\+L\+E\+A\+ST}}~P\+R\+Ix16\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a46c6c22943d2b8887198e672d04b5a6b}{S\+C\+No32\+L\+E\+A\+ST}}~P\+R\+Io32\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a46884fe1c6bb48d043bb95c408ef789a}{S\+C\+Nu32\+L\+E\+A\+ST}}~P\+R\+Iu32\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a7f03c18d4a0f477719a4cf04b6e752b3}{S\+C\+Nx32\+L\+E\+A\+ST}}~P\+R\+Ix32\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_afb044453719643398a92ca9e20a3d67f}{S\+C\+No64\+L\+E\+A\+ST}}~P\+R\+Io64\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a34d4658cd60658181ce37082c580804f}{S\+C\+Nu64\+L\+E\+A\+ST}}~P\+R\+Iu64\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac6ade7a743ce1bc0d700f84f79b7e5ea}{S\+C\+Nx64\+L\+E\+A\+ST}}~P\+R\+Ix64\+L\+E\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a30050a39d34969026bb882010228ccda}{S\+C\+No8\+F\+A\+ST}}~P\+R\+Io8\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a36f9059596a36d7a9bb05a1f9707ab4f}{S\+C\+Nu8\+F\+A\+ST}}~P\+R\+Iu8\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad06f03d3504325ab891035846b923360}{S\+C\+Nx8\+F\+A\+ST}}~P\+R\+Ix8\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa95118e2a451e875c27c4aeb3ff7f738}{S\+C\+No16\+F\+A\+ST}}~P\+R\+Io16\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a00b4d0128862380570a2399d7ea8606f}{S\+C\+Nu16\+F\+A\+ST}}~P\+R\+Iu16\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ae399afd38fc162d65835b7904faefb3c}{S\+C\+Nx16\+F\+A\+ST}}~P\+R\+Ix16\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ad0ad1b81f26fb658040eb9cb65f9dc1a}{S\+C\+No32\+F\+A\+ST}}~P\+R\+Io32\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a2e87c54d281bcbbf46e246e67df5bf1a}{S\+C\+Nu32\+F\+A\+ST}}~P\+R\+Iu32\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ac46560e5194f8529a3bff8f6a4df75ca}{S\+C\+Nx32\+F\+A\+ST}}~P\+R\+Ix32\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a70a0d6abef99225537f0e76a1c83fade}{S\+C\+No64\+F\+A\+ST}}~P\+R\+Io64\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a3bb3c1e16d5051a70e3493277aa4a561}{S\+C\+Nu64\+F\+A\+ST}}~P\+R\+Iu64\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a10adec00940f6906f7b954df4ccc2869}{S\+C\+Nx64\+F\+A\+ST}}~P\+R\+Ix64\+F\+A\+ST
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a73bc0bffd329a5dac0f2433171aa432d}{S\+C\+No\+M\+AX}}~\mbox{\hyperlink{inttypes_8h_a73ec9b744a867844fb1cbf5d600e15da}{P\+R\+Io\+M\+AX}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aef1bb910dd38372698c9b94919db652a}{S\+C\+Nu\+M\+AX}}~\mbox{\hyperlink{inttypes_8h_a5231235fbdc84d556db88609b469982b}{P\+R\+Iu\+M\+AX}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_acdb85fa86d6d76bc7a2e16ec0cc3ae58}{S\+C\+Nx\+M\+AX}}~\mbox{\hyperlink{inttypes_8h_a1cb5f16ab28d09fa5fe07068bb8e2cea}{P\+R\+Ix\+M\+AX}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_a4a30d36e06018d8e13046079098905a0}{S\+C\+No\+P\+TR}}~\mbox{\hyperlink{inttypes_8h_a1468793ce960b477922ef92b36a6c802}{P\+R\+Io\+P\+TR}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_ab7dbf5d0ea41679dface5855896e4273}{S\+C\+Nu\+P\+TR}}~\mbox{\hyperlink{inttypes_8h_aa1ca3a85113e897b5cf7ed6b92d74de2}{P\+R\+Iu\+P\+TR}}
+\item 
+\#define \mbox{\hyperlink{inttypes_8h_aa58d290d968643862aec7a8a56e1c8e9}{S\+C\+Nx\+P\+TR}}~\mbox{\hyperlink{inttypes_8h_a9c3c25e6145e629e4c9fabddc6061c30}{P\+R\+Ix\+P\+TR}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}} \mbox{\hyperlink{inttypes_8h_a662339ac9368a94ba0233c1780d71936}{imaxabs}} (\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}})
+\item 
+\mbox{\hyperlink{structimaxdiv__t}{imaxdiv\+\_\+t}} \mbox{\hyperlink{inttypes_8h_abd7522a20e74084750ca68f24be1e02f}{imaxdiv}} (\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}}, \mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}})
+\item 
+\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}} \mbox{\hyperlink{inttypes_8h_adfc58733cdac633c96a7fd7f993cf90e}{strtoimax}} (const char $\ast$\+\_\+\+\_\+restrict, char $\ast$$\ast$\+\_\+\+\_\+restrict, int)
+\item 
+\mbox{\hyperlink{stdint_8h_a2ba5f6c0633401558d277b2c0e4f758d}{uintmax\+\_\+t}} \mbox{\hyperlink{inttypes_8h_aad85de485708df684bc8c5b51bfe90cf}{strtouimax}} (const char $\ast$\+\_\+\+\_\+restrict, char $\ast$$\ast$\+\_\+\+\_\+restrict, int)
+\item 
+\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}} \mbox{\hyperlink{inttypes_8h_a80eceb9c4442282324d75fef981e7b0b}{wcstoimax}} (const \mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$\+\_\+\+\_\+restrict, \mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$$\ast$\+\_\+\+\_\+restrict, int)
+\item 
+\mbox{\hyperlink{stdint_8h_a2ba5f6c0633401558d277b2c0e4f758d}{uintmax\+\_\+t}} \mbox{\hyperlink{inttypes_8h_a5cc99c455a0d487e3675319240a15d1a}{wcstouimax}} (const \mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$\+\_\+\+\_\+restrict, \mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$$\ast$\+\_\+\+\_\+restrict, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides A\+PI for format conversion of integer types. 
+
+It declares four functions for converting numeric character strings to greatest-\/width integers and, for each type declared in $<$\mbox{\hyperlink{stdint_8h}{stdint.\+h}}$>$, it defines corresponding macros for conversion specifiers for use with the formatted input/output functions.
+
+These macros are provided mainly in support of fprintf and fscanf. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}\label{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}} 
+\index{inttypes.h@{inttypes.h}!PRId16@{PRId16}}
+\index{PRId16@{PRId16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRId16}{PRId16}}
+{\footnotesize\ttfamily \#define P\+R\+Id16~\char`\"{}\%hd\char`\"{}}
+
+
+
+Definition at line 30 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}\label{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}} 
+\index{inttypes.h@{inttypes.h}!PRId64@{PRId64}}
+\index{PRId64@{PRId64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRId64}{PRId64}}
+{\footnotesize\ttfamily \#define P\+R\+Id64~\char`\"{}\%lld\char`\"{}}
+
+
+
+Definition at line 41 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}\label{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}} 
+\index{inttypes.h@{inttypes.h}!PRId8@{PRId8}}
+\index{PRId8@{PRId8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRId8}{PRId8}}
+{\footnotesize\ttfamily \#define P\+R\+Id8~\char`\"{}\%hhd\char`\"{}}
+
+
+
+Definition at line 27 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a58cdfb02574b8c23d964a6e88a268782}\label{inttypes_8h_a58cdfb02574b8c23d964a6e88a268782}} 
+\index{inttypes.h@{inttypes.h}!PRIdFAST16@{PRIdFAST16}}
+\index{PRIdFAST16@{PRIdFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdFAST16}{PRIdFAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+F\+A\+S\+T16~\char`\"{}\%d\char`\"{}}
+
+
+
+Definition at line 59 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aef5a98227a6af5fde95353ed303cfd1e}\label{inttypes_8h_aef5a98227a6af5fde95353ed303cfd1e}} 
+\index{inttypes.h@{inttypes.h}!PRIdFAST32@{PRIdFAST32}}
+\index{PRIdFAST32@{PRIdFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdFAST32}{PRIdFAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+F\+A\+S\+T32~\char`\"{}\%d\char`\"{}}
+
+
+
+Definition at line 60 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a9c63f907b68bfa374778aa59b3a360f5}\label{inttypes_8h_a9c63f907b68bfa374778aa59b3a360f5}} 
+\index{inttypes.h@{inttypes.h}!PRIdFAST64@{PRIdFAST64}}
+\index{PRIdFAST64@{PRIdFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdFAST64}{PRIdFAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+F\+A\+S\+T64~\char`\"{}\%lld\char`\"{}}
+
+
+
+Definition at line 61 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a943961b7e7e564388dd743593db5bbbb}\label{inttypes_8h_a943961b7e7e564388dd743593db5bbbb}} 
+\index{inttypes.h@{inttypes.h}!PRIdFAST8@{PRIdFAST8}}
+\index{PRIdFAST8@{PRIdFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdFAST8}{PRIdFAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+F\+A\+S\+T8~\char`\"{}\%d\char`\"{}}
+
+
+
+Definition at line 58 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae90ab00cb4417081dc68e9fd6c0e129a}\label{inttypes_8h_ae90ab00cb4417081dc68e9fd6c0e129a}} 
+\index{inttypes.h@{inttypes.h}!PRIdLEAST16@{PRIdLEAST16}}
+\index{PRIdLEAST16@{PRIdLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdLEAST16}{PRIdLEAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}{P\+R\+Id16}}}
+
+
+
+Definition at line 51 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad36a6b276bd808d713cc5603ba008c58}\label{inttypes_8h_ad36a6b276bd808d713cc5603ba008c58}} 
+\index{inttypes.h@{inttypes.h}!PRIdLEAST32@{PRIdLEAST32}}
+\index{PRIdLEAST32@{PRIdLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdLEAST32}{PRIdLEAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+L\+E\+A\+S\+T32~P\+R\+Id32}
+
+
+
+Definition at line 53 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a6e7b87b6cb5b8298e0c7471f19d8321f}\label{inttypes_8h_a6e7b87b6cb5b8298e0c7471f19d8321f}} 
+\index{inttypes.h@{inttypes.h}!PRIdLEAST64@{PRIdLEAST64}}
+\index{PRIdLEAST64@{PRIdLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdLEAST64}{PRIdLEAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}{P\+R\+Id64}}}
+
+
+
+Definition at line 55 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a404fd01f0b890cb8fac8641aaa704b57}\label{inttypes_8h_a404fd01f0b890cb8fac8641aaa704b57}} 
+\index{inttypes.h@{inttypes.h}!PRIdLEAST8@{PRIdLEAST8}}
+\index{PRIdLEAST8@{PRIdLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdLEAST8}{PRIdLEAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}{P\+R\+Id8}}}
+
+
+
+Definition at line 49 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}\label{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}} 
+\index{inttypes.h@{inttypes.h}!PRIdMAX@{PRIdMAX}}
+\index{PRIdMAX@{PRIdMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdMAX}{PRIdMAX}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+M\+AX~\char`\"{}\%jd\char`\"{}}
+
+
+
+Definition at line 46 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}\label{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}} 
+\index{inttypes.h@{inttypes.h}!PRIdPTR@{PRIdPTR}}
+\index{PRIdPTR@{PRIdPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIdPTR}{PRIdPTR}}
+{\footnotesize\ttfamily \#define P\+R\+Id\+P\+TR~\char`\"{}\%td\char`\"{}}
+
+
+
+Definition at line 44 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}\label{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}} 
+\index{inttypes.h@{inttypes.h}!PRIi16@{PRIi16}}
+\index{PRIi16@{PRIi16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIi16}{PRIi16}}
+{\footnotesize\ttfamily \#define P\+R\+Ii16~\char`\"{}\%hd\char`\"{}}
+
+
+
+Definition at line 31 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}\label{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}} 
+\index{inttypes.h@{inttypes.h}!PRIi64@{PRIi64}}
+\index{PRIi64@{PRIi64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIi64}{PRIi64}}
+{\footnotesize\ttfamily \#define P\+R\+Ii64~\char`\"{}\%lli\char`\"{}}
+
+
+
+Definition at line 42 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}\label{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}} 
+\index{inttypes.h@{inttypes.h}!PRIi8@{PRIi8}}
+\index{PRIi8@{PRIi8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIi8}{PRIi8}}
+{\footnotesize\ttfamily \#define P\+R\+Ii8~\char`\"{}\%hhi\char`\"{}}
+
+
+
+Definition at line 28 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac273fb2a05215962fbeae76abaaf0131}\label{inttypes_8h_ac273fb2a05215962fbeae76abaaf0131}} 
+\index{inttypes.h@{inttypes.h}!PRIiFAST16@{PRIiFAST16}}
+\index{PRIiFAST16@{PRIiFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiFAST16}{PRIiFAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+F\+A\+S\+T16~\char`\"{}\%i\char`\"{}}
+
+
+
+Definition at line 63 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a192a69a2e6e63ed8393d306b4078d63f}\label{inttypes_8h_a192a69a2e6e63ed8393d306b4078d63f}} 
+\index{inttypes.h@{inttypes.h}!PRIiFAST32@{PRIiFAST32}}
+\index{PRIiFAST32@{PRIiFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiFAST32}{PRIiFAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+F\+A\+S\+T32~\char`\"{}\%i\char`\"{}}
+
+
+
+Definition at line 64 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_af27d75f27f8038693a36c3dd14a82516}\label{inttypes_8h_af27d75f27f8038693a36c3dd14a82516}} 
+\index{inttypes.h@{inttypes.h}!PRIiFAST64@{PRIiFAST64}}
+\index{PRIiFAST64@{PRIiFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiFAST64}{PRIiFAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+F\+A\+S\+T64~\char`\"{}\%lli\char`\"{}}
+
+
+
+Definition at line 65 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a64fb4e44c3ff09179fc445979b7fdad1}\label{inttypes_8h_a64fb4e44c3ff09179fc445979b7fdad1}} 
+\index{inttypes.h@{inttypes.h}!PRIiFAST8@{PRIiFAST8}}
+\index{PRIiFAST8@{PRIiFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiFAST8}{PRIiFAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+F\+A\+S\+T8~\char`\"{}\%i\char`\"{}}
+
+
+
+Definition at line 62 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a96945864cb2d1f7de861ccaf639af02e}\label{inttypes_8h_a96945864cb2d1f7de861ccaf639af02e}} 
+\index{inttypes.h@{inttypes.h}!PRIiLEAST16@{PRIiLEAST16}}
+\index{PRIiLEAST16@{PRIiLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiLEAST16}{PRIiLEAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}{P\+R\+Ii16}}}
+
+
+
+Definition at line 52 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad7a1bae7ca12c7b5415fae1b3f258207}\label{inttypes_8h_ad7a1bae7ca12c7b5415fae1b3f258207}} 
+\index{inttypes.h@{inttypes.h}!PRIiLEAST32@{PRIiLEAST32}}
+\index{PRIiLEAST32@{PRIiLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiLEAST32}{PRIiLEAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+L\+E\+A\+S\+T32~P\+R\+Ii32}
+
+
+
+Definition at line 54 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a0fb9f5cdca16045cc30b72d9174cdbfb}\label{inttypes_8h_a0fb9f5cdca16045cc30b72d9174cdbfb}} 
+\index{inttypes.h@{inttypes.h}!PRIiLEAST64@{PRIiLEAST64}}
+\index{PRIiLEAST64@{PRIiLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiLEAST64}{PRIiLEAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}{P\+R\+Ii64}}}
+
+
+
+Definition at line 56 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a526151b1725956030b501d9dd506f2e1}\label{inttypes_8h_a526151b1725956030b501d9dd506f2e1}} 
+\index{inttypes.h@{inttypes.h}!PRIiLEAST8@{PRIiLEAST8}}
+\index{PRIiLEAST8@{PRIiLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiLEAST8}{PRIiLEAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}{P\+R\+Ii8}}}
+
+
+
+Definition at line 50 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a0f30e8063c747a19c86574a1f61c0ad5}\label{inttypes_8h_a0f30e8063c747a19c86574a1f61c0ad5}} 
+\index{inttypes.h@{inttypes.h}!PRIiMAX@{PRIiMAX}}
+\index{PRIiMAX@{PRIiMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiMAX}{PRIiMAX}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+M\+AX~\char`\"{}\%ji\char`\"{}}
+
+
+
+Definition at line 47 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac2d52bf83b783f530f02fa2eeabe703a}\label{inttypes_8h_ac2d52bf83b783f530f02fa2eeabe703a}} 
+\index{inttypes.h@{inttypes.h}!PRIiPTR@{PRIiPTR}}
+\index{PRIiPTR@{PRIiPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIiPTR}{PRIiPTR}}
+{\footnotesize\ttfamily \#define P\+R\+Ii\+P\+TR~\char`\"{}\%td\char`\"{}}
+
+
+
+Definition at line 45 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}\label{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}} 
+\index{inttypes.h@{inttypes.h}!PRIo16@{PRIo16}}
+\index{PRIo16@{PRIo16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIo16}{PRIo16}}
+{\footnotesize\ttfamily \#define P\+R\+Io16~\char`\"{}\%ho\char`\"{}}
+
+
+
+Definition at line 73 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}\label{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}} 
+\index{inttypes.h@{inttypes.h}!PRIo32@{PRIo32}}
+\index{PRIo32@{PRIo32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIo32}{PRIo32}}
+{\footnotesize\ttfamily \#define P\+R\+Io32~\char`\"{}\%lo\char`\"{}}
+
+
+
+Definition at line 84 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a792491e417d837fc693122428460bcba}\label{inttypes_8h_a792491e417d837fc693122428460bcba}} 
+\index{inttypes.h@{inttypes.h}!PRIo64@{PRIo64}}
+\index{PRIo64@{PRIo64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIo64}{PRIo64}}
+{\footnotesize\ttfamily \#define P\+R\+Io64~\char`\"{}\%llo\char`\"{}}
+
+
+
+Definition at line 90 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}\label{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}} 
+\index{inttypes.h@{inttypes.h}!PRIo8@{PRIo8}}
+\index{PRIo8@{PRIo8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIo8}{PRIo8}}
+{\footnotesize\ttfamily \#define P\+R\+Io8~\char`\"{}\%hho\char`\"{}}
+
+
+
+Definition at line 68 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a3eda49c829de683e701eaed3cbaf0e73}\label{inttypes_8h_a3eda49c829de683e701eaed3cbaf0e73}} 
+\index{inttypes.h@{inttypes.h}!PRIoFAST16@{PRIoFAST16}}
+\index{PRIoFAST16@{PRIoFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoFAST16}{PRIoFAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+F\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a37f93445f1795033c9ba577661da6a91}{P\+R\+Io\+F\+A\+S\+T8}}}
+
+
+
+Definition at line 120 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a6ac7e3111d008785ddf3b29dcd088732}\label{inttypes_8h_a6ac7e3111d008785ddf3b29dcd088732}} 
+\index{inttypes.h@{inttypes.h}!PRIoFAST32@{PRIoFAST32}}
+\index{PRIoFAST32@{PRIoFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoFAST32}{PRIoFAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+F\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}}
+
+
+
+Definition at line 125 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aba7ffd10c01ee7e1264300568ade319e}\label{inttypes_8h_aba7ffd10c01ee7e1264300568ade319e}} 
+\index{inttypes.h@{inttypes.h}!PRIoFAST64@{PRIoFAST64}}
+\index{PRIoFAST64@{PRIoFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoFAST64}{PRIoFAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+F\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}}
+
+
+
+Definition at line 130 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a37f93445f1795033c9ba577661da6a91}\label{inttypes_8h_a37f93445f1795033c9ba577661da6a91}} 
+\index{inttypes.h@{inttypes.h}!PRIoFAST8@{PRIoFAST8}}
+\index{PRIoFAST8@{PRIoFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoFAST8}{PRIoFAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+F\+A\+S\+T8~\char`\"{}\%o\char`\"{}}
+
+
+
+Definition at line 115 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1ecbd31333b358c22423a541fffbd122}\label{inttypes_8h_a1ecbd31333b358c22423a541fffbd122}} 
+\index{inttypes.h@{inttypes.h}!PRIoLEAST16@{PRIoLEAST16}}
+\index{PRIoLEAST16@{PRIoLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoLEAST16}{PRIoLEAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}{P\+R\+Io16}}}
+
+
+
+Definition at line 100 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1e5c50a1ca71da7ff8c4f3f007411be8}\label{inttypes_8h_a1e5c50a1ca71da7ff8c4f3f007411be8}} 
+\index{inttypes.h@{inttypes.h}!PRIoLEAST32@{PRIoLEAST32}}
+\index{PRIoLEAST32@{PRIoLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoLEAST32}{PRIoLEAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+L\+E\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}}
+
+
+
+Definition at line 105 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a9540a0a3ff33b4f6a0feee15f3066984}\label{inttypes_8h_a9540a0a3ff33b4f6a0feee15f3066984}} 
+\index{inttypes.h@{inttypes.h}!PRIoLEAST64@{PRIoLEAST64}}
+\index{PRIoLEAST64@{PRIoLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoLEAST64}{PRIoLEAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}}
+
+
+
+Definition at line 110 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa5b3ca8091f4ed7d43f5eb971ce11114}\label{inttypes_8h_aa5b3ca8091f4ed7d43f5eb971ce11114}} 
+\index{inttypes.h@{inttypes.h}!PRIoLEAST8@{PRIoLEAST8}}
+\index{PRIoLEAST8@{PRIoLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoLEAST8}{PRIoLEAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}{P\+R\+Io8}}}
+
+
+
+Definition at line 95 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a73ec9b744a867844fb1cbf5d600e15da}\label{inttypes_8h_a73ec9b744a867844fb1cbf5d600e15da}} 
+\index{inttypes.h@{inttypes.h}!PRIoMAX@{PRIoMAX}}
+\index{PRIoMAX@{PRIoMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoMAX}{PRIoMAX}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+M\+AX~\char`\"{}\%jo\char`\"{}}
+
+
+
+Definition at line 135 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1468793ce960b477922ef92b36a6c802}\label{inttypes_8h_a1468793ce960b477922ef92b36a6c802}} 
+\index{inttypes.h@{inttypes.h}!PRIoPTR@{PRIoPTR}}
+\index{PRIoPTR@{PRIoPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIoPTR}{PRIoPTR}}
+{\footnotesize\ttfamily \#define P\+R\+Io\+P\+TR~\char`\"{}\%to\char`\"{}}
+
+
+
+Definition at line 140 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}\label{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}} 
+\index{inttypes.h@{inttypes.h}!PRIu16@{PRIu16}}
+\index{PRIu16@{PRIu16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIu16}{PRIu16}}
+{\footnotesize\ttfamily \#define P\+R\+Iu16~\char`\"{}\%hu\char`\"{}}
+
+
+
+Definition at line 74 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}\label{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}} 
+\index{inttypes.h@{inttypes.h}!PRIu32@{PRIu32}}
+\index{PRIu32@{PRIu32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIu32}{PRIu32}}
+{\footnotesize\ttfamily \#define P\+R\+Iu32~\char`\"{}\%lu\char`\"{}}
+
+
+
+Definition at line 85 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}\label{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}} 
+\index{inttypes.h@{inttypes.h}!PRIu64@{PRIu64}}
+\index{PRIu64@{PRIu64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIu64}{PRIu64}}
+{\footnotesize\ttfamily \#define P\+R\+Iu64~\char`\"{}\%llu\char`\"{}}
+
+
+
+Definition at line 91 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}\label{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}} 
+\index{inttypes.h@{inttypes.h}!PRIu8@{PRIu8}}
+\index{PRIu8@{PRIu8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIu8}{PRIu8}}
+{\footnotesize\ttfamily \#define P\+R\+Iu8~\char`\"{}\%hhu\char`\"{}}
+
+
+
+Definition at line 69 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa82e218a186691ebf7149b36746c12e7}\label{inttypes_8h_aa82e218a186691ebf7149b36746c12e7}} 
+\index{inttypes.h@{inttypes.h}!PRIuFAST16@{PRIuFAST16}}
+\index{PRIuFAST16@{PRIuFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuFAST16}{PRIuFAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+F\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a0b0c7ad693c391e3e353e8f2d1df2ec3}{P\+R\+Iu\+F\+A\+S\+T8}}}
+
+
+
+Definition at line 121 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_accc383115328197264988682edfcb72c}\label{inttypes_8h_accc383115328197264988682edfcb72c}} 
+\index{inttypes.h@{inttypes.h}!PRIuFAST32@{PRIuFAST32}}
+\index{PRIuFAST32@{PRIuFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuFAST32}{PRIuFAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+F\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}}
+
+
+
+Definition at line 126 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac1fdefbae4d6c8dcef5b91ef5b778a1c}\label{inttypes_8h_ac1fdefbae4d6c8dcef5b91ef5b778a1c}} 
+\index{inttypes.h@{inttypes.h}!PRIuFAST64@{PRIuFAST64}}
+\index{PRIuFAST64@{PRIuFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuFAST64}{PRIuFAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+F\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}}
+
+
+
+Definition at line 131 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a0b0c7ad693c391e3e353e8f2d1df2ec3}\label{inttypes_8h_a0b0c7ad693c391e3e353e8f2d1df2ec3}} 
+\index{inttypes.h@{inttypes.h}!PRIuFAST8@{PRIuFAST8}}
+\index{PRIuFAST8@{PRIuFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuFAST8}{PRIuFAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+F\+A\+S\+T8~\char`\"{}\%u\char`\"{}}
+
+
+
+Definition at line 116 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa3ba696eef7c107c76c26eea76dcb4b4}\label{inttypes_8h_aa3ba696eef7c107c76c26eea76dcb4b4}} 
+\index{inttypes.h@{inttypes.h}!PRIuLEAST16@{PRIuLEAST16}}
+\index{PRIuLEAST16@{PRIuLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuLEAST16}{PRIuLEAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}{P\+R\+Iu16}}}
+
+
+
+Definition at line 101 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aab353a2898377162c1829f1a9708352e}\label{inttypes_8h_aab353a2898377162c1829f1a9708352e}} 
+\index{inttypes.h@{inttypes.h}!PRIuLEAST32@{PRIuLEAST32}}
+\index{PRIuLEAST32@{PRIuLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuLEAST32}{PRIuLEAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+L\+E\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}}
+
+
+
+Definition at line 106 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a20b768c89c8693bdc3df5f2e76fe018c}\label{inttypes_8h_a20b768c89c8693bdc3df5f2e76fe018c}} 
+\index{inttypes.h@{inttypes.h}!PRIuLEAST64@{PRIuLEAST64}}
+\index{PRIuLEAST64@{PRIuLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuLEAST64}{PRIuLEAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}}
+
+
+
+Definition at line 111 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a74cb15b101649124009c010a9055e885}\label{inttypes_8h_a74cb15b101649124009c010a9055e885}} 
+\index{inttypes.h@{inttypes.h}!PRIuLEAST8@{PRIuLEAST8}}
+\index{PRIuLEAST8@{PRIuLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuLEAST8}{PRIuLEAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}{P\+R\+Iu8}}}
+
+
+
+Definition at line 96 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a5231235fbdc84d556db88609b469982b}\label{inttypes_8h_a5231235fbdc84d556db88609b469982b}} 
+\index{inttypes.h@{inttypes.h}!PRIuMAX@{PRIuMAX}}
+\index{PRIuMAX@{PRIuMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuMAX}{PRIuMAX}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+M\+AX~\char`\"{}\%ju\char`\"{}}
+
+
+
+Definition at line 136 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa1ca3a85113e897b5cf7ed6b92d74de2}\label{inttypes_8h_aa1ca3a85113e897b5cf7ed6b92d74de2}} 
+\index{inttypes.h@{inttypes.h}!PRIuPTR@{PRIuPTR}}
+\index{PRIuPTR@{PRIuPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIuPTR}{PRIuPTR}}
+{\footnotesize\ttfamily \#define P\+R\+Iu\+P\+TR~\char`\"{}\%tu\char`\"{}}
+
+
+
+Definition at line 141 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}\label{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}} 
+\index{inttypes.h@{inttypes.h}!PRIx16@{PRIx16}}
+\index{PRIx16@{PRIx16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIx16}{PRIx16}}
+{\footnotesize\ttfamily \#define P\+R\+Ix16~\char`\"{}\%hx\char`\"{}}
+
+
+
+Definition at line 75 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a570ca9af5087023f75fc8a1a602d26ab}\label{inttypes_8h_a570ca9af5087023f75fc8a1a602d26ab}} 
+\index{inttypes.h@{inttypes.h}!PRIX16@{PRIX16}}
+\index{PRIX16@{PRIX16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIX16}{PRIX16}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X16~\char`\"{}\%hX\char`\"{}}
+
+
+
+Definition at line 76 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}\label{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}} 
+\index{inttypes.h@{inttypes.h}!PRIx32@{PRIx32}}
+\index{PRIx32@{PRIx32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIx32}{PRIx32}}
+{\footnotesize\ttfamily \#define P\+R\+Ix32~\char`\"{}\%lx\char`\"{}}
+
+
+
+Definition at line 86 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}\label{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}} 
+\index{inttypes.h@{inttypes.h}!PRIX32@{PRIX32}}
+\index{PRIX32@{PRIX32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIX32}{PRIX32}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X32~\char`\"{}\%lX\char`\"{}}
+
+
+
+Definition at line 87 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aba38357387a474f439428dee1984fc5a}\label{inttypes_8h_aba38357387a474f439428dee1984fc5a}} 
+\index{inttypes.h@{inttypes.h}!PRIx64@{PRIx64}}
+\index{PRIx64@{PRIx64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIx64}{PRIx64}}
+{\footnotesize\ttfamily \#define P\+R\+Ix64~\char`\"{}\%llx\char`\"{}}
+
+
+
+Definition at line 92 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}\label{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}} 
+\index{inttypes.h@{inttypes.h}!PRIX64@{PRIX64}}
+\index{PRIX64@{PRIX64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIX64}{PRIX64}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X64~\char`\"{}\%llX\char`\"{}}
+
+
+
+Definition at line 93 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}\label{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}} 
+\index{inttypes.h@{inttypes.h}!PRIx8@{PRIx8}}
+\index{PRIx8@{PRIx8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIx8}{PRIx8}}
+{\footnotesize\ttfamily \#define P\+R\+Ix8~\char`\"{}\%hhx\char`\"{}}
+
+
+
+Definition at line 70 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4e9b835c85ffa875e8304e2b852b4c86}\label{inttypes_8h_a4e9b835c85ffa875e8304e2b852b4c86}} 
+\index{inttypes.h@{inttypes.h}!PRIX8@{PRIX8}}
+\index{PRIX8@{PRIX8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIX8}{PRIX8}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X8~\char`\"{}\%hhX\char`\"{}}
+
+
+
+Definition at line 71 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a6f66e34285ab57a86aeb2f0f4895417d}\label{inttypes_8h_a6f66e34285ab57a86aeb2f0f4895417d}} 
+\index{inttypes.h@{inttypes.h}!PRIxFAST16@{PRIxFAST16}}
+\index{PRIxFAST16@{PRIxFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxFAST16}{PRIxFAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+F\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_ae7e1780719eb0e4b2826a0da06255780}{P\+R\+Ix\+F\+A\+S\+T8}}}
+
+
+
+Definition at line 122 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a785eabe6337a2fa85874ae99300abb66}\label{inttypes_8h_a785eabe6337a2fa85874ae99300abb66}} 
+\index{inttypes.h@{inttypes.h}!PRIXFAST16@{PRIXFAST16}}
+\index{PRIXFAST16@{PRIXFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXFAST16}{PRIXFAST16}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+F\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_ab153efc9e6547ca56f42de767cde2595}{P\+R\+I\+X\+F\+A\+S\+T8}}}
+
+
+
+Definition at line 123 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a22caa684d44725e1e6e638983380f68e}\label{inttypes_8h_a22caa684d44725e1e6e638983380f68e}} 
+\index{inttypes.h@{inttypes.h}!PRIxFAST32@{PRIxFAST32}}
+\index{PRIxFAST32@{PRIxFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxFAST32}{PRIxFAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+F\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}}
+
+
+
+Definition at line 127 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ace7057a6fa96ac7e2a05946ee96cf2d9}\label{inttypes_8h_ace7057a6fa96ac7e2a05946ee96cf2d9}} 
+\index{inttypes.h@{inttypes.h}!PRIXFAST32@{PRIXFAST32}}
+\index{PRIXFAST32@{PRIXFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXFAST32}{PRIXFAST32}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+F\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}{P\+R\+I\+X32}}}
+
+
+
+Definition at line 128 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a73fe58317ae146f316ddb0736d9ed9a4}\label{inttypes_8h_a73fe58317ae146f316ddb0736d9ed9a4}} 
+\index{inttypes.h@{inttypes.h}!PRIxFAST64@{PRIxFAST64}}
+\index{PRIxFAST64@{PRIxFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxFAST64}{PRIxFAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+F\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}}
+
+
+
+Definition at line 132 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab94e8153da1da9e2762277c6b1cf21d7}\label{inttypes_8h_ab94e8153da1da9e2762277c6b1cf21d7}} 
+\index{inttypes.h@{inttypes.h}!PRIXFAST64@{PRIXFAST64}}
+\index{PRIXFAST64@{PRIXFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXFAST64}{PRIXFAST64}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+F\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}{P\+R\+I\+X64}}}
+
+
+
+Definition at line 133 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae7e1780719eb0e4b2826a0da06255780}\label{inttypes_8h_ae7e1780719eb0e4b2826a0da06255780}} 
+\index{inttypes.h@{inttypes.h}!PRIxFAST8@{PRIxFAST8}}
+\index{PRIxFAST8@{PRIxFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxFAST8}{PRIxFAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+F\+A\+S\+T8~\char`\"{}\%x\char`\"{}}
+
+
+
+Definition at line 117 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab153efc9e6547ca56f42de767cde2595}\label{inttypes_8h_ab153efc9e6547ca56f42de767cde2595}} 
+\index{inttypes.h@{inttypes.h}!PRIXFAST8@{PRIXFAST8}}
+\index{PRIXFAST8@{PRIXFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXFAST8}{PRIXFAST8}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+F\+A\+S\+T8~\char`\"{}\%X\char`\"{}}
+
+
+
+Definition at line 118 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad00e2a12b813425800cad731f61497ae}\label{inttypes_8h_ad00e2a12b813425800cad731f61497ae}} 
+\index{inttypes.h@{inttypes.h}!PRIxLEAST16@{PRIxLEAST16}}
+\index{PRIxLEAST16@{PRIxLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxLEAST16}{PRIxLEAST16}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}{P\+R\+Ix16}}}
+
+
+
+Definition at line 102 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_afa4303b077ae4c6c58686178e4b90d18}\label{inttypes_8h_afa4303b077ae4c6c58686178e4b90d18}} 
+\index{inttypes.h@{inttypes.h}!PRIXLEAST16@{PRIXLEAST16}}
+\index{PRIXLEAST16@{PRIXLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXLEAST16}{PRIXLEAST16}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a570ca9af5087023f75fc8a1a602d26ab}{P\+R\+I\+X16}}}
+
+
+
+Definition at line 103 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1d766603a3524c9e03effbbece9c2118}\label{inttypes_8h_a1d766603a3524c9e03effbbece9c2118}} 
+\index{inttypes.h@{inttypes.h}!PRIxLEAST32@{PRIxLEAST32}}
+\index{PRIxLEAST32@{PRIxLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxLEAST32}{PRIxLEAST32}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+L\+E\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}}
+
+
+
+Definition at line 107 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aaf100a10f9cd73d46294fd0e8db5246d}\label{inttypes_8h_aaf100a10f9cd73d46294fd0e8db5246d}} 
+\index{inttypes.h@{inttypes.h}!PRIXLEAST32@{PRIXLEAST32}}
+\index{PRIXLEAST32@{PRIXLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXLEAST32}{PRIXLEAST32}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+L\+E\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a32b0c8a04aae5d4454d15e6cbe109f64}{P\+R\+I\+X32}}}
+
+
+
+Definition at line 108 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4df46377b2a3292ce6c7fd6724a045ab}\label{inttypes_8h_a4df46377b2a3292ce6c7fd6724a045ab}} 
+\index{inttypes.h@{inttypes.h}!PRIxLEAST64@{PRIxLEAST64}}
+\index{PRIxLEAST64@{PRIxLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxLEAST64}{PRIxLEAST64}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}}
+
+
+
+Definition at line 112 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4d1806a4ea59b88a7bd00d88b7e1747d}\label{inttypes_8h_a4d1806a4ea59b88a7bd00d88b7e1747d}} 
+\index{inttypes.h@{inttypes.h}!PRIXLEAST64@{PRIXLEAST64}}
+\index{PRIXLEAST64@{PRIXLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXLEAST64}{PRIXLEAST64}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_af56fc48030ace2ec83125c0f5f42816c}{P\+R\+I\+X64}}}
+
+
+
+Definition at line 113 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a45d80a42b6cd25f3ed57b0e800e6e398}\label{inttypes_8h_a45d80a42b6cd25f3ed57b0e800e6e398}} 
+\index{inttypes.h@{inttypes.h}!PRIxLEAST8@{PRIxLEAST8}}
+\index{PRIxLEAST8@{PRIxLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxLEAST8}{PRIxLEAST8}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}{P\+R\+Ix8}}}
+
+
+
+Definition at line 97 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a70aa3faf72084587fb18d03aa033a212}\label{inttypes_8h_a70aa3faf72084587fb18d03aa033a212}} 
+\index{inttypes.h@{inttypes.h}!PRIXLEAST8@{PRIXLEAST8}}
+\index{PRIXLEAST8@{PRIXLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXLEAST8}{PRIXLEAST8}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_a4e9b835c85ffa875e8304e2b852b4c86}{P\+R\+I\+X8}}}
+
+
+
+Definition at line 98 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1cb5f16ab28d09fa5fe07068bb8e2cea}\label{inttypes_8h_a1cb5f16ab28d09fa5fe07068bb8e2cea}} 
+\index{inttypes.h@{inttypes.h}!PRIxMAX@{PRIxMAX}}
+\index{PRIxMAX@{PRIxMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxMAX}{PRIxMAX}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+M\+AX~\char`\"{}\%jx\char`\"{}}
+
+
+
+Definition at line 137 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa7e1f0c8df36d801c81f6db762ec67ec}\label{inttypes_8h_aa7e1f0c8df36d801c81f6db762ec67ec}} 
+\index{inttypes.h@{inttypes.h}!PRIXMAX@{PRIXMAX}}
+\index{PRIXMAX@{PRIXMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXMAX}{PRIXMAX}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+M\+AX~\char`\"{}\%jX\char`\"{}}
+
+
+
+Definition at line 138 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a9c3c25e6145e629e4c9fabddc6061c30}\label{inttypes_8h_a9c3c25e6145e629e4c9fabddc6061c30}} 
+\index{inttypes.h@{inttypes.h}!PRIxPTR@{PRIxPTR}}
+\index{PRIxPTR@{PRIxPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIxPTR}{PRIxPTR}}
+{\footnotesize\ttfamily \#define P\+R\+Ix\+P\+TR~\char`\"{}\%tx\char`\"{}}
+
+
+
+Definition at line 142 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a65d9856517198cfc21558c0d6df64207}\label{inttypes_8h_a65d9856517198cfc21558c0d6df64207}} 
+\index{inttypes.h@{inttypes.h}!PRIXPTR@{PRIXPTR}}
+\index{PRIXPTR@{PRIXPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{PRIXPTR}{PRIXPTR}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X\+P\+TR~\char`\"{}\%tX\char`\"{}}
+
+
+
+Definition at line 143 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a35974d44b5dcebcb222b8e2c1384241d}\label{inttypes_8h_a35974d44b5dcebcb222b8e2c1384241d}} 
+\index{inttypes.h@{inttypes.h}!SCNd16@{SCNd16}}
+\index{SCNd16@{SCNd16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNd16}{SCNd16}}
+{\footnotesize\ttfamily \#define S\+C\+Nd16~\mbox{\hyperlink{inttypes_8h_a087e50fe0283aacc71d7138d13e91939}{P\+R\+Id16}}}
+
+
+
+Definition at line 150 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a2b7ab77ff6ede9c3c285b714496f77e2}\label{inttypes_8h_a2b7ab77ff6ede9c3c285b714496f77e2}} 
+\index{inttypes.h@{inttypes.h}!SCNd32@{SCNd32}}
+\index{SCNd32@{SCNd32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNd32}{SCNd32}}
+{\footnotesize\ttfamily \#define S\+C\+Nd32~P\+R\+Id32}
+
+
+
+Definition at line 152 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae7044b3fb4cc5cde22155d59437c348f}\label{inttypes_8h_ae7044b3fb4cc5cde22155d59437c348f}} 
+\index{inttypes.h@{inttypes.h}!SCNd64@{SCNd64}}
+\index{SCNd64@{SCNd64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNd64}{SCNd64}}
+{\footnotesize\ttfamily \#define S\+C\+Nd64~\mbox{\hyperlink{inttypes_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}{P\+R\+Id64}}}
+
+
+
+Definition at line 154 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_abf98c3a9ad120b11ec2911b9398e3f2f}\label{inttypes_8h_abf98c3a9ad120b11ec2911b9398e3f2f}} 
+\index{inttypes.h@{inttypes.h}!SCNd8@{SCNd8}}
+\index{SCNd8@{SCNd8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNd8}{SCNd8}}
+{\footnotesize\ttfamily \#define S\+C\+Nd8~\mbox{\hyperlink{inttypes_8h_ae53c45f590033ad1f2f517faf3ab2f1b}{P\+R\+Id8}}}
+
+
+
+Definition at line 148 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a09c9f36f654aa50a548d7820421cdc57}\label{inttypes_8h_a09c9f36f654aa50a548d7820421cdc57}} 
+\index{inttypes.h@{inttypes.h}!SCNdFAST16@{SCNdFAST16}}
+\index{SCNdFAST16@{SCNdFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdFAST16}{SCNdFAST16}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+F\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a58cdfb02574b8c23d964a6e88a268782}{P\+R\+Id\+F\+A\+S\+T16}}}
+
+
+
+Definition at line 168 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_add733be35bef9dcef225edc99ade9e33}\label{inttypes_8h_add733be35bef9dcef225edc99ade9e33}} 
+\index{inttypes.h@{inttypes.h}!SCNdFAST32@{SCNdFAST32}}
+\index{SCNdFAST32@{SCNdFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdFAST32}{SCNdFAST32}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+F\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_aef5a98227a6af5fde95353ed303cfd1e}{P\+R\+Id\+F\+A\+S\+T32}}}
+
+
+
+Definition at line 170 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a2a2d9ca0555230eab89e52e442bea64c}\label{inttypes_8h_a2a2d9ca0555230eab89e52e442bea64c}} 
+\index{inttypes.h@{inttypes.h}!SCNdFAST64@{SCNdFAST64}}
+\index{SCNdFAST64@{SCNdFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdFAST64}{SCNdFAST64}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+F\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_a9c63f907b68bfa374778aa59b3a360f5}{P\+R\+Id\+F\+A\+S\+T64}}}
+
+
+
+Definition at line 172 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a6dc7d2f030d25e79ae8398088161b860}\label{inttypes_8h_a6dc7d2f030d25e79ae8398088161b860}} 
+\index{inttypes.h@{inttypes.h}!SCNdFAST8@{SCNdFAST8}}
+\index{SCNdFAST8@{SCNdFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdFAST8}{SCNdFAST8}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+F\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_a943961b7e7e564388dd743593db5bbbb}{P\+R\+Id\+F\+A\+S\+T8}}}
+
+
+
+Definition at line 166 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a10db5de9c84ccfa6dc0e487dd72051f3}\label{inttypes_8h_a10db5de9c84ccfa6dc0e487dd72051f3}} 
+\index{inttypes.h@{inttypes.h}!SCNdLEAST16@{SCNdLEAST16}}
+\index{SCNdLEAST16@{SCNdLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdLEAST16}{SCNdLEAST16}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_ae90ab00cb4417081dc68e9fd6c0e129a}{P\+R\+Id\+L\+E\+A\+S\+T16}}}
+
+
+
+Definition at line 159 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae36c293972a5b770349d74f2c0cfa52f}\label{inttypes_8h_ae36c293972a5b770349d74f2c0cfa52f}} 
+\index{inttypes.h@{inttypes.h}!SCNdLEAST32@{SCNdLEAST32}}
+\index{SCNdLEAST32@{SCNdLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdLEAST32}{SCNdLEAST32}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+L\+E\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_ad36a6b276bd808d713cc5603ba008c58}{P\+R\+Id\+L\+E\+A\+S\+T32}}}
+
+
+
+Definition at line 161 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a2009d29e47fedd5cb286d81c83596737}\label{inttypes_8h_a2009d29e47fedd5cb286d81c83596737}} 
+\index{inttypes.h@{inttypes.h}!SCNdLEAST64@{SCNdLEAST64}}
+\index{SCNdLEAST64@{SCNdLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdLEAST64}{SCNdLEAST64}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_a6e7b87b6cb5b8298e0c7471f19d8321f}{P\+R\+Id\+L\+E\+A\+S\+T64}}}
+
+
+
+Definition at line 163 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab0af8c396d9c885950d423f8dee54164}\label{inttypes_8h_ab0af8c396d9c885950d423f8dee54164}} 
+\index{inttypes.h@{inttypes.h}!SCNdLEAST8@{SCNdLEAST8}}
+\index{SCNdLEAST8@{SCNdLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdLEAST8}{SCNdLEAST8}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_a404fd01f0b890cb8fac8641aaa704b57}{P\+R\+Id\+L\+E\+A\+S\+T8}}}
+
+
+
+Definition at line 157 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a3ef7335ee669df2a387707816a45f3ed}\label{inttypes_8h_a3ef7335ee669df2a387707816a45f3ed}} 
+\index{inttypes.h@{inttypes.h}!SCNdMAX@{SCNdMAX}}
+\index{SCNdMAX@{SCNdMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdMAX}{SCNdMAX}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+M\+AX~\mbox{\hyperlink{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}{P\+R\+Id\+M\+AX}}}
+
+
+
+Definition at line 177 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_abf657ee6bd4b009b5b072840a3d7364f}\label{inttypes_8h_abf657ee6bd4b009b5b072840a3d7364f}} 
+\index{inttypes.h@{inttypes.h}!SCNdPTR@{SCNdPTR}}
+\index{SCNdPTR@{SCNdPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNdPTR}{SCNdPTR}}
+{\footnotesize\ttfamily \#define S\+C\+Nd\+P\+TR~\mbox{\hyperlink{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}{P\+R\+Id\+P\+TR}}}
+
+
+
+Definition at line 175 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a7b8508989273ad152f9b3b7cd4db6eee}\label{inttypes_8h_a7b8508989273ad152f9b3b7cd4db6eee}} 
+\index{inttypes.h@{inttypes.h}!SCNi16@{SCNi16}}
+\index{SCNi16@{SCNi16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNi16}{SCNi16}}
+{\footnotesize\ttfamily \#define S\+C\+Ni16~\mbox{\hyperlink{inttypes_8h_a655e9b358e0371a4bf5ff21cc08273e3}{P\+R\+Ii16}}}
+
+
+
+Definition at line 151 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a52cfc41a1e5ad73788faebbfeb9c14b0}\label{inttypes_8h_a52cfc41a1e5ad73788faebbfeb9c14b0}} 
+\index{inttypes.h@{inttypes.h}!SCNi32@{SCNi32}}
+\index{SCNi32@{SCNi32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNi32}{SCNi32}}
+{\footnotesize\ttfamily \#define S\+C\+Ni32~P\+R\+Ii32}
+
+
+
+Definition at line 153 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_adafb1dac927decf0b5f00125a84036fb}\label{inttypes_8h_adafb1dac927decf0b5f00125a84036fb}} 
+\index{inttypes.h@{inttypes.h}!SCNi64@{SCNi64}}
+\index{SCNi64@{SCNi64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNi64}{SCNi64}}
+{\footnotesize\ttfamily \#define S\+C\+Ni64~\mbox{\hyperlink{inttypes_8h_ab8d0c29be4a0623c3de58011991e86e9}{P\+R\+Ii64}}}
+
+
+
+Definition at line 155 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a535485ea35661ff75a8d2bc0d2ebe807}\label{inttypes_8h_a535485ea35661ff75a8d2bc0d2ebe807}} 
+\index{inttypes.h@{inttypes.h}!SCNi8@{SCNi8}}
+\index{SCNi8@{SCNi8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNi8}{SCNi8}}
+{\footnotesize\ttfamily \#define S\+C\+Ni8~\mbox{\hyperlink{inttypes_8h_adbe02b78cca747b2fe1a8f7fc5f5cd47}{P\+R\+Ii8}}}
+
+
+
+Definition at line 149 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aad333b5bea32321b312a3b4967ff357f}\label{inttypes_8h_aad333b5bea32321b312a3b4967ff357f}} 
+\index{inttypes.h@{inttypes.h}!SCNiFAST16@{SCNiFAST16}}
+\index{SCNiFAST16@{SCNiFAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiFAST16}{SCNiFAST16}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+F\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_ac273fb2a05215962fbeae76abaaf0131}{P\+R\+Ii\+F\+A\+S\+T16}}}
+
+
+
+Definition at line 169 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4739f89fa519cd77097677bf33320091}\label{inttypes_8h_a4739f89fa519cd77097677bf33320091}} 
+\index{inttypes.h@{inttypes.h}!SCNiFAST32@{SCNiFAST32}}
+\index{SCNiFAST32@{SCNiFAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiFAST32}{SCNiFAST32}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+F\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_a192a69a2e6e63ed8393d306b4078d63f}{P\+R\+Ii\+F\+A\+S\+T32}}}
+
+
+
+Definition at line 171 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_afa93802b919daecccd6f989cd1750eba}\label{inttypes_8h_afa93802b919daecccd6f989cd1750eba}} 
+\index{inttypes.h@{inttypes.h}!SCNiFAST64@{SCNiFAST64}}
+\index{SCNiFAST64@{SCNiFAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiFAST64}{SCNiFAST64}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+F\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_af27d75f27f8038693a36c3dd14a82516}{P\+R\+Ii\+F\+A\+S\+T64}}}
+
+
+
+Definition at line 173 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac864120101e01707ca52c0976b4e539a}\label{inttypes_8h_ac864120101e01707ca52c0976b4e539a}} 
+\index{inttypes.h@{inttypes.h}!SCNiFAST8@{SCNiFAST8}}
+\index{SCNiFAST8@{SCNiFAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiFAST8}{SCNiFAST8}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+F\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_a64fb4e44c3ff09179fc445979b7fdad1}{P\+R\+Ii\+F\+A\+S\+T8}}}
+
+
+
+Definition at line 167 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a14ec2649667b53ff91a1103c02975837}\label{inttypes_8h_a14ec2649667b53ff91a1103c02975837}} 
+\index{inttypes.h@{inttypes.h}!SCNiLEAST16@{SCNiLEAST16}}
+\index{SCNiLEAST16@{SCNiLEAST16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiLEAST16}{SCNiLEAST16}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+L\+E\+A\+S\+T16~\mbox{\hyperlink{inttypes_8h_a96945864cb2d1f7de861ccaf639af02e}{P\+R\+Ii\+L\+E\+A\+S\+T16}}}
+
+
+
+Definition at line 160 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a39be8ffb41be80bc951e955f111e4121}\label{inttypes_8h_a39be8ffb41be80bc951e955f111e4121}} 
+\index{inttypes.h@{inttypes.h}!SCNiLEAST32@{SCNiLEAST32}}
+\index{SCNiLEAST32@{SCNiLEAST32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiLEAST32}{SCNiLEAST32}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+L\+E\+A\+S\+T32~\mbox{\hyperlink{inttypes_8h_ad7a1bae7ca12c7b5415fae1b3f258207}{P\+R\+Ii\+L\+E\+A\+S\+T32}}}
+
+
+
+Definition at line 162 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a9ff978b502f6296f8a5364143eee7f7a}\label{inttypes_8h_a9ff978b502f6296f8a5364143eee7f7a}} 
+\index{inttypes.h@{inttypes.h}!SCNiLEAST64@{SCNiLEAST64}}
+\index{SCNiLEAST64@{SCNiLEAST64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiLEAST64}{SCNiLEAST64}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+L\+E\+A\+S\+T64~\mbox{\hyperlink{inttypes_8h_a0fb9f5cdca16045cc30b72d9174cdbfb}{P\+R\+Ii\+L\+E\+A\+S\+T64}}}
+
+
+
+Definition at line 164 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1a0b88bf6f131db927f2e7f1f6abb644}\label{inttypes_8h_a1a0b88bf6f131db927f2e7f1f6abb644}} 
+\index{inttypes.h@{inttypes.h}!SCNiLEAST8@{SCNiLEAST8}}
+\index{SCNiLEAST8@{SCNiLEAST8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiLEAST8}{SCNiLEAST8}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+L\+E\+A\+S\+T8~\mbox{\hyperlink{inttypes_8h_a526151b1725956030b501d9dd506f2e1}{P\+R\+Ii\+L\+E\+A\+S\+T8}}}
+
+
+
+Definition at line 158 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a2f7190d383e2382085b27ffc8ac5a089}\label{inttypes_8h_a2f7190d383e2382085b27ffc8ac5a089}} 
+\index{inttypes.h@{inttypes.h}!SCNiMAX@{SCNiMAX}}
+\index{SCNiMAX@{SCNiMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiMAX}{SCNiMAX}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+M\+AX~\mbox{\hyperlink{inttypes_8h_a11a8b311e64e0415db0d106fcebf6597}{P\+R\+Id\+M\+AX}}}
+
+
+
+Definition at line 178 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a9c632ab51b24b93cc315b27a883be9eb}\label{inttypes_8h_a9c632ab51b24b93cc315b27a883be9eb}} 
+\index{inttypes.h@{inttypes.h}!SCNiPTR@{SCNiPTR}}
+\index{SCNiPTR@{SCNiPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNiPTR}{SCNiPTR}}
+{\footnotesize\ttfamily \#define S\+C\+Ni\+P\+TR~\mbox{\hyperlink{inttypes_8h_a7c8a9ccd40bd2053ca588d1b15e76a30}{P\+R\+Id\+P\+TR}}}
+
+
+
+Definition at line 176 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a9bc6b517c0117327e832824ff2d6a6b5}\label{inttypes_8h_a9bc6b517c0117327e832824ff2d6a6b5}} 
+\index{inttypes.h@{inttypes.h}!SCNo16@{SCNo16}}
+\index{SCNo16@{SCNo16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo16}{SCNo16}}
+{\footnotesize\ttfamily \#define S\+C\+No16~\mbox{\hyperlink{inttypes_8h_a55494a16151668ea78e0b808ef38c8c1}{P\+R\+Io16}}}
+
+
+
+Definition at line 184 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa95118e2a451e875c27c4aeb3ff7f738}\label{inttypes_8h_aa95118e2a451e875c27c4aeb3ff7f738}} 
+\index{inttypes.h@{inttypes.h}!SCNo16FAST@{SCNo16FAST}}
+\index{SCNo16FAST@{SCNo16FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo16FAST}{SCNo16FAST}}
+{\footnotesize\ttfamily \#define S\+C\+No16\+F\+A\+ST~P\+R\+Io16\+F\+A\+ST}
+
+
+
+Definition at line 210 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad3d7a25f0502ef36ddec1ecb96034d31}\label{inttypes_8h_ad3d7a25f0502ef36ddec1ecb96034d31}} 
+\index{inttypes.h@{inttypes.h}!SCNo16LEAST@{SCNo16LEAST}}
+\index{SCNo16LEAST@{SCNo16LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo16LEAST}{SCNo16LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+No16\+L\+E\+A\+ST~P\+R\+Io16\+L\+E\+A\+ST}
+
+
+
+Definition at line 197 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab561c947d62a3c7cd396d4aeef553f3c}\label{inttypes_8h_ab561c947d62a3c7cd396d4aeef553f3c}} 
+\index{inttypes.h@{inttypes.h}!SCNo32@{SCNo32}}
+\index{SCNo32@{SCNo32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo32}{SCNo32}}
+{\footnotesize\ttfamily \#define S\+C\+No32~\mbox{\hyperlink{inttypes_8h_a7276f64276fd7223ca6f4cca0444239a}{P\+R\+Io32}}}
+
+
+
+Definition at line 187 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad0ad1b81f26fb658040eb9cb65f9dc1a}\label{inttypes_8h_ad0ad1b81f26fb658040eb9cb65f9dc1a}} 
+\index{inttypes.h@{inttypes.h}!SCNo32FAST@{SCNo32FAST}}
+\index{SCNo32FAST@{SCNo32FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo32FAST}{SCNo32FAST}}
+{\footnotesize\ttfamily \#define S\+C\+No32\+F\+A\+ST~P\+R\+Io32\+F\+A\+ST}
+
+
+
+Definition at line 213 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a46c6c22943d2b8887198e672d04b5a6b}\label{inttypes_8h_a46c6c22943d2b8887198e672d04b5a6b}} 
+\index{inttypes.h@{inttypes.h}!SCNo32LEAST@{SCNo32LEAST}}
+\index{SCNo32LEAST@{SCNo32LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo32LEAST}{SCNo32LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+No32\+L\+E\+A\+ST~P\+R\+Io32\+L\+E\+A\+ST}
+
+
+
+Definition at line 200 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a359197f54f7db4ae57ab7c9ff4b74456}\label{inttypes_8h_a359197f54f7db4ae57ab7c9ff4b74456}} 
+\index{inttypes.h@{inttypes.h}!SCNo64@{SCNo64}}
+\index{SCNo64@{SCNo64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo64}{SCNo64}}
+{\footnotesize\ttfamily \#define S\+C\+No64~\mbox{\hyperlink{inttypes_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}}
+
+
+
+Definition at line 190 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a70a0d6abef99225537f0e76a1c83fade}\label{inttypes_8h_a70a0d6abef99225537f0e76a1c83fade}} 
+\index{inttypes.h@{inttypes.h}!SCNo64FAST@{SCNo64FAST}}
+\index{SCNo64FAST@{SCNo64FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo64FAST}{SCNo64FAST}}
+{\footnotesize\ttfamily \#define S\+C\+No64\+F\+A\+ST~P\+R\+Io64\+F\+A\+ST}
+
+
+
+Definition at line 216 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_afb044453719643398a92ca9e20a3d67f}\label{inttypes_8h_afb044453719643398a92ca9e20a3d67f}} 
+\index{inttypes.h@{inttypes.h}!SCNo64LEAST@{SCNo64LEAST}}
+\index{SCNo64LEAST@{SCNo64LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo64LEAST}{SCNo64LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+No64\+L\+E\+A\+ST~P\+R\+Io64\+L\+E\+A\+ST}
+
+
+
+Definition at line 203 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4e274a339187359a91963d22f8e6faa6}\label{inttypes_8h_a4e274a339187359a91963d22f8e6faa6}} 
+\index{inttypes.h@{inttypes.h}!SCNo8@{SCNo8}}
+\index{SCNo8@{SCNo8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo8}{SCNo8}}
+{\footnotesize\ttfamily \#define S\+C\+No8~\mbox{\hyperlink{inttypes_8h_ad12493b9063f7b2630b90b7f9a7f3301}{P\+R\+Io8}}}
+
+
+
+Definition at line 181 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a30050a39d34969026bb882010228ccda}\label{inttypes_8h_a30050a39d34969026bb882010228ccda}} 
+\index{inttypes.h@{inttypes.h}!SCNo8FAST@{SCNo8FAST}}
+\index{SCNo8FAST@{SCNo8FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo8FAST}{SCNo8FAST}}
+{\footnotesize\ttfamily \#define S\+C\+No8\+F\+A\+ST~P\+R\+Io8\+F\+A\+ST}
+
+
+
+Definition at line 207 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a1df299ee25967f8ef1f495de62d360a0}\label{inttypes_8h_a1df299ee25967f8ef1f495de62d360a0}} 
+\index{inttypes.h@{inttypes.h}!SCNo8LEAST@{SCNo8LEAST}}
+\index{SCNo8LEAST@{SCNo8LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNo8LEAST}{SCNo8LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+No8\+L\+E\+A\+ST~P\+R\+Io8\+L\+E\+A\+ST}
+
+
+
+Definition at line 194 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a73bc0bffd329a5dac0f2433171aa432d}\label{inttypes_8h_a73bc0bffd329a5dac0f2433171aa432d}} 
+\index{inttypes.h@{inttypes.h}!SCNoMAX@{SCNoMAX}}
+\index{SCNoMAX@{SCNoMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNoMAX}{SCNoMAX}}
+{\footnotesize\ttfamily \#define S\+C\+No\+M\+AX~\mbox{\hyperlink{inttypes_8h_a73ec9b744a867844fb1cbf5d600e15da}{P\+R\+Io\+M\+AX}}}
+
+
+
+Definition at line 220 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4a30d36e06018d8e13046079098905a0}\label{inttypes_8h_a4a30d36e06018d8e13046079098905a0}} 
+\index{inttypes.h@{inttypes.h}!SCNoPTR@{SCNoPTR}}
+\index{SCNoPTR@{SCNoPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNoPTR}{SCNoPTR}}
+{\footnotesize\ttfamily \#define S\+C\+No\+P\+TR~\mbox{\hyperlink{inttypes_8h_a1468793ce960b477922ef92b36a6c802}{P\+R\+Io\+P\+TR}}}
+
+
+
+Definition at line 224 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a37bbde0e3f124b7f482d54adb13b0248}\label{inttypes_8h_a37bbde0e3f124b7f482d54adb13b0248}} 
+\index{inttypes.h@{inttypes.h}!SCNu16@{SCNu16}}
+\index{SCNu16@{SCNu16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu16}{SCNu16}}
+{\footnotesize\ttfamily \#define S\+C\+Nu16~\mbox{\hyperlink{inttypes_8h_a86bc00ee87e8e40787e0681fc34c576a}{P\+R\+Iu16}}}
+
+
+
+Definition at line 185 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a00b4d0128862380570a2399d7ea8606f}\label{inttypes_8h_a00b4d0128862380570a2399d7ea8606f}} 
+\index{inttypes.h@{inttypes.h}!SCNu16FAST@{SCNu16FAST}}
+\index{SCNu16FAST@{SCNu16FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu16FAST}{SCNu16FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu16\+F\+A\+ST~P\+R\+Iu16\+F\+A\+ST}
+
+
+
+Definition at line 211 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a6b4bf4c9ca45a449d920846b35fce47f}\label{inttypes_8h_a6b4bf4c9ca45a449d920846b35fce47f}} 
+\index{inttypes.h@{inttypes.h}!SCNu16LEAST@{SCNu16LEAST}}
+\index{SCNu16LEAST@{SCNu16LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu16LEAST}{SCNu16LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu16\+L\+E\+A\+ST~P\+R\+Iu16\+L\+E\+A\+ST}
+
+
+
+Definition at line 198 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_abd19a83130f8d1bd2f77b765ad804f75}\label{inttypes_8h_abd19a83130f8d1bd2f77b765ad804f75}} 
+\index{inttypes.h@{inttypes.h}!SCNu32@{SCNu32}}
+\index{SCNu32@{SCNu32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu32}{SCNu32}}
+{\footnotesize\ttfamily \#define S\+C\+Nu32~\mbox{\hyperlink{inttypes_8h_aaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}}}
+
+
+
+Definition at line 188 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a2e87c54d281bcbbf46e246e67df5bf1a}\label{inttypes_8h_a2e87c54d281bcbbf46e246e67df5bf1a}} 
+\index{inttypes.h@{inttypes.h}!SCNu32FAST@{SCNu32FAST}}
+\index{SCNu32FAST@{SCNu32FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu32FAST}{SCNu32FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu32\+F\+A\+ST~P\+R\+Iu32\+F\+A\+ST}
+
+
+
+Definition at line 214 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a46884fe1c6bb48d043bb95c408ef789a}\label{inttypes_8h_a46884fe1c6bb48d043bb95c408ef789a}} 
+\index{inttypes.h@{inttypes.h}!SCNu32LEAST@{SCNu32LEAST}}
+\index{SCNu32LEAST@{SCNu32LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu32LEAST}{SCNu32LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu32\+L\+E\+A\+ST~P\+R\+Iu32\+L\+E\+A\+ST}
+
+
+
+Definition at line 201 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_af085b9f73207a4b3b4a133ab05fd7eef}\label{inttypes_8h_af085b9f73207a4b3b4a133ab05fd7eef}} 
+\index{inttypes.h@{inttypes.h}!SCNu64@{SCNu64}}
+\index{SCNu64@{SCNu64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu64}{SCNu64}}
+{\footnotesize\ttfamily \#define S\+C\+Nu64~\mbox{\hyperlink{inttypes_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}}
+
+
+
+Definition at line 191 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a3bb3c1e16d5051a70e3493277aa4a561}\label{inttypes_8h_a3bb3c1e16d5051a70e3493277aa4a561}} 
+\index{inttypes.h@{inttypes.h}!SCNu64FAST@{SCNu64FAST}}
+\index{SCNu64FAST@{SCNu64FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu64FAST}{SCNu64FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu64\+F\+A\+ST~P\+R\+Iu64\+F\+A\+ST}
+
+
+
+Definition at line 217 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a34d4658cd60658181ce37082c580804f}\label{inttypes_8h_a34d4658cd60658181ce37082c580804f}} 
+\index{inttypes.h@{inttypes.h}!SCNu64LEAST@{SCNu64LEAST}}
+\index{SCNu64LEAST@{SCNu64LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu64LEAST}{SCNu64LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu64\+L\+E\+A\+ST~P\+R\+Iu64\+L\+E\+A\+ST}
+
+
+
+Definition at line 204 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae0d5458bfaf4c45083b1e92013d77f51}\label{inttypes_8h_ae0d5458bfaf4c45083b1e92013d77f51}} 
+\index{inttypes.h@{inttypes.h}!SCNu8@{SCNu8}}
+\index{SCNu8@{SCNu8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu8}{SCNu8}}
+{\footnotesize\ttfamily \#define S\+C\+Nu8~\mbox{\hyperlink{inttypes_8h_a8673208d2d48018fcce020ef59f8ec4f}{P\+R\+Iu8}}}
+
+
+
+Definition at line 182 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a36f9059596a36d7a9bb05a1f9707ab4f}\label{inttypes_8h_a36f9059596a36d7a9bb05a1f9707ab4f}} 
+\index{inttypes.h@{inttypes.h}!SCNu8FAST@{SCNu8FAST}}
+\index{SCNu8FAST@{SCNu8FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu8FAST}{SCNu8FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu8\+F\+A\+ST~P\+R\+Iu8\+F\+A\+ST}
+
+
+
+Definition at line 208 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab2774a823c101dd5c4bb1c5a77a4e8fd}\label{inttypes_8h_ab2774a823c101dd5c4bb1c5a77a4e8fd}} 
+\index{inttypes.h@{inttypes.h}!SCNu8LEAST@{SCNu8LEAST}}
+\index{SCNu8LEAST@{SCNu8LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNu8LEAST}{SCNu8LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nu8\+L\+E\+A\+ST~P\+R\+Iu8\+L\+E\+A\+ST}
+
+
+
+Definition at line 195 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aef1bb910dd38372698c9b94919db652a}\label{inttypes_8h_aef1bb910dd38372698c9b94919db652a}} 
+\index{inttypes.h@{inttypes.h}!SCNuMAX@{SCNuMAX}}
+\index{SCNuMAX@{SCNuMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNuMAX}{SCNuMAX}}
+{\footnotesize\ttfamily \#define S\+C\+Nu\+M\+AX~\mbox{\hyperlink{inttypes_8h_a5231235fbdc84d556db88609b469982b}{P\+R\+Iu\+M\+AX}}}
+
+
+
+Definition at line 221 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ab7dbf5d0ea41679dface5855896e4273}\label{inttypes_8h_ab7dbf5d0ea41679dface5855896e4273}} 
+\index{inttypes.h@{inttypes.h}!SCNuPTR@{SCNuPTR}}
+\index{SCNuPTR@{SCNuPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNuPTR}{SCNuPTR}}
+{\footnotesize\ttfamily \#define S\+C\+Nu\+P\+TR~\mbox{\hyperlink{inttypes_8h_aa1ca3a85113e897b5cf7ed6b92d74de2}{P\+R\+Iu\+P\+TR}}}
+
+
+
+Definition at line 225 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a12dbc2ac6a36b893ef1c25c357f90a9f}\label{inttypes_8h_a12dbc2ac6a36b893ef1c25c357f90a9f}} 
+\index{inttypes.h@{inttypes.h}!SCNx16@{SCNx16}}
+\index{SCNx16@{SCNx16}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx16}{SCNx16}}
+{\footnotesize\ttfamily \#define S\+C\+Nx16~\mbox{\hyperlink{inttypes_8h_a70f5e38b517f714518c970a4da37bef1}{P\+R\+Ix16}}}
+
+
+
+Definition at line 186 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ae399afd38fc162d65835b7904faefb3c}\label{inttypes_8h_ae399afd38fc162d65835b7904faefb3c}} 
+\index{inttypes.h@{inttypes.h}!SCNx16FAST@{SCNx16FAST}}
+\index{SCNx16FAST@{SCNx16FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx16FAST}{SCNx16FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx16\+F\+A\+ST~P\+R\+Ix16\+F\+A\+ST}
+
+
+
+Definition at line 212 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a8afcae2f58e18e7426d298d585b37505}\label{inttypes_8h_a8afcae2f58e18e7426d298d585b37505}} 
+\index{inttypes.h@{inttypes.h}!SCNx16LEAST@{SCNx16LEAST}}
+\index{SCNx16LEAST@{SCNx16LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx16LEAST}{SCNx16LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx16\+L\+E\+A\+ST~P\+R\+Ix16\+L\+E\+A\+ST}
+
+
+
+Definition at line 199 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4c5370556f793ac7b2c3abe896dba8e2}\label{inttypes_8h_a4c5370556f793ac7b2c3abe896dba8e2}} 
+\index{inttypes.h@{inttypes.h}!SCNx32@{SCNx32}}
+\index{SCNx32@{SCNx32}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx32}{SCNx32}}
+{\footnotesize\ttfamily \#define S\+C\+Nx32~\mbox{\hyperlink{inttypes_8h_a80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}}}
+
+
+
+Definition at line 189 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac46560e5194f8529a3bff8f6a4df75ca}\label{inttypes_8h_ac46560e5194f8529a3bff8f6a4df75ca}} 
+\index{inttypes.h@{inttypes.h}!SCNx32FAST@{SCNx32FAST}}
+\index{SCNx32FAST@{SCNx32FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx32FAST}{SCNx32FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx32\+F\+A\+ST~P\+R\+Ix32\+F\+A\+ST}
+
+
+
+Definition at line 215 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a7f03c18d4a0f477719a4cf04b6e752b3}\label{inttypes_8h_a7f03c18d4a0f477719a4cf04b6e752b3}} 
+\index{inttypes.h@{inttypes.h}!SCNx32LEAST@{SCNx32LEAST}}
+\index{SCNx32LEAST@{SCNx32LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx32LEAST}{SCNx32LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx32\+L\+E\+A\+ST~P\+R\+Ix32\+L\+E\+A\+ST}
+
+
+
+Definition at line 202 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a4c454faacb996aa020efeb312379af4e}\label{inttypes_8h_a4c454faacb996aa020efeb312379af4e}} 
+\index{inttypes.h@{inttypes.h}!SCNx64@{SCNx64}}
+\index{SCNx64@{SCNx64}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx64}{SCNx64}}
+{\footnotesize\ttfamily \#define S\+C\+Nx64~\mbox{\hyperlink{inttypes_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}}
+
+
+
+Definition at line 192 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a10adec00940f6906f7b954df4ccc2869}\label{inttypes_8h_a10adec00940f6906f7b954df4ccc2869}} 
+\index{inttypes.h@{inttypes.h}!SCNx64FAST@{SCNx64FAST}}
+\index{SCNx64FAST@{SCNx64FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx64FAST}{SCNx64FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx64\+F\+A\+ST~P\+R\+Ix64\+F\+A\+ST}
+
+
+
+Definition at line 218 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ac6ade7a743ce1bc0d700f84f79b7e5ea}\label{inttypes_8h_ac6ade7a743ce1bc0d700f84f79b7e5ea}} 
+\index{inttypes.h@{inttypes.h}!SCNx64LEAST@{SCNx64LEAST}}
+\index{SCNx64LEAST@{SCNx64LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx64LEAST}{SCNx64LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx64\+L\+E\+A\+ST~P\+R\+Ix64\+L\+E\+A\+ST}
+
+
+
+Definition at line 205 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a79b1f201c12273510e1fdebfb3a66e9d}\label{inttypes_8h_a79b1f201c12273510e1fdebfb3a66e9d}} 
+\index{inttypes.h@{inttypes.h}!SCNx8@{SCNx8}}
+\index{SCNx8@{SCNx8}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx8}{SCNx8}}
+{\footnotesize\ttfamily \#define S\+C\+Nx8~\mbox{\hyperlink{inttypes_8h_adac1acc1d24060aeee7791a99d1a3a8c}{P\+R\+Ix8}}}
+
+
+
+Definition at line 183 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_ad06f03d3504325ab891035846b923360}\label{inttypes_8h_ad06f03d3504325ab891035846b923360}} 
+\index{inttypes.h@{inttypes.h}!SCNx8FAST@{SCNx8FAST}}
+\index{SCNx8FAST@{SCNx8FAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx8FAST}{SCNx8FAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx8\+F\+A\+ST~P\+R\+Ix8\+F\+A\+ST}
+
+
+
+Definition at line 209 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_a922f1359df7cdc6556a39c153834c728}\label{inttypes_8h_a922f1359df7cdc6556a39c153834c728}} 
+\index{inttypes.h@{inttypes.h}!SCNx8LEAST@{SCNx8LEAST}}
+\index{SCNx8LEAST@{SCNx8LEAST}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNx8LEAST}{SCNx8LEAST}}
+{\footnotesize\ttfamily \#define S\+C\+Nx8\+L\+E\+A\+ST~P\+R\+Ix8\+L\+E\+A\+ST}
+
+
+
+Definition at line 196 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_acdb85fa86d6d76bc7a2e16ec0cc3ae58}\label{inttypes_8h_acdb85fa86d6d76bc7a2e16ec0cc3ae58}} 
+\index{inttypes.h@{inttypes.h}!SCNxMAX@{SCNxMAX}}
+\index{SCNxMAX@{SCNxMAX}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNxMAX}{SCNxMAX}}
+{\footnotesize\ttfamily \#define S\+C\+Nx\+M\+AX~\mbox{\hyperlink{inttypes_8h_a1cb5f16ab28d09fa5fe07068bb8e2cea}{P\+R\+Ix\+M\+AX}}}
+
+
+
+Definition at line 222 of file inttypes.\+h.
+
+\mbox{\Hypertarget{inttypes_8h_aa58d290d968643862aec7a8a56e1c8e9}\label{inttypes_8h_aa58d290d968643862aec7a8a56e1c8e9}} 
+\index{inttypes.h@{inttypes.h}!SCNxPTR@{SCNxPTR}}
+\index{SCNxPTR@{SCNxPTR}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{SCNxPTR}{SCNxPTR}}
+{\footnotesize\ttfamily \#define S\+C\+Nx\+P\+TR~\mbox{\hyperlink{inttypes_8h_a9c3c25e6145e629e4c9fabddc6061c30}{P\+R\+Ix\+P\+TR}}}
+
+
+
+Definition at line 226 of file inttypes.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inttypes_8h_a662339ac9368a94ba0233c1780d71936}\label{inttypes_8h_a662339ac9368a94ba0233c1780d71936}} 
+\index{inttypes.h@{inttypes.h}!imaxabs@{imaxabs}}
+\index{imaxabs@{imaxabs}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{imaxabs()}{imaxabs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}} imaxabs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inttypes_8h_abd7522a20e74084750ca68f24be1e02f}\label{inttypes_8h_abd7522a20e74084750ca68f24be1e02f}} 
+\index{inttypes.h@{inttypes.h}!imaxdiv@{imaxdiv}}
+\index{imaxdiv@{imaxdiv}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{imaxdiv()}{imaxdiv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimaxdiv__t}{imaxdiv\+\_\+t}} imaxdiv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}}}]{,  }\item[{\mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inttypes_8h_adfc58733cdac633c96a7fd7f993cf90e}\label{inttypes_8h_adfc58733cdac633c96a7fd7f993cf90e}} 
+\index{inttypes.h@{inttypes.h}!strtoimax@{strtoimax}}
+\index{strtoimax@{strtoimax}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{strtoimax()}{strtoimax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}} strtoimax (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+\+\_\+restrict,  }\item[{char $\ast$$\ast$}]{\+\_\+\+\_\+restrict,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+The strtoimax and strtoumax functions are equivalent to the strtol, strtoll, strtoul, and strtoull functions, except that the initial portion of the string is converted to intmax\+\_\+t and uintmax\+\_\+t representation, respectively.
+
+\begin{DoxyReturn}{Returns}
+The strtoimax and strtoumax functions return the converted value, if any. If no conversion could be performed, zero is returned. If the correct value is outside the range of representable values, I\+N\+T\+M\+A\+X\+\_\+\+M\+AX, I\+N\+T\+M\+A\+X\+\_\+\+M\+IN, or U\+I\+N\+T\+M\+A\+X\+\_\+\+M\+AX is returned (according to the return type and sign of the value, if any), and the value of the macro E\+R\+A\+N\+GE is stored in errno. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inttypes_8h_aad85de485708df684bc8c5b51bfe90cf}\label{inttypes_8h_aad85de485708df684bc8c5b51bfe90cf}} 
+\index{inttypes.h@{inttypes.h}!strtouimax@{strtouimax}}
+\index{strtouimax@{strtouimax}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{strtouimax()}{strtouimax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdint_8h_a2ba5f6c0633401558d277b2c0e4f758d}{uintmax\+\_\+t}} strtouimax (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+\+\_\+restrict,  }\item[{char $\ast$$\ast$}]{\+\_\+\+\_\+restrict,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+see strtoimax \mbox{\Hypertarget{inttypes_8h_a80eceb9c4442282324d75fef981e7b0b}\label{inttypes_8h_a80eceb9c4442282324d75fef981e7b0b}} 
+\index{inttypes.h@{inttypes.h}!wcstoimax@{wcstoimax}}
+\index{wcstoimax@{wcstoimax}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{wcstoimax()}{wcstoimax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdint_8h_a036cd61bb4b30bb510b9538af4cebd1d}{intmax\+\_\+t}} wcstoimax (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$}]{\+\_\+\+\_\+restrict,  }\item[{\mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$$\ast$}]{\+\_\+\+\_\+restrict,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+The wcstoimax and wcstoumax functions are equivalent to the wcstol, wcstoll, wcstoul, and wcstoull functions except that the initial portion of the wide string is converted to intmax\+\_\+t and uintmax\+\_\+t representation, respectively.
+
+\begin{DoxyReturn}{Returns}
+The wcstoimax function returns the converted value, if any. If no conversion could be performed, zero is returned. If the correct value is outside the range of representable values, I\+N\+T\+M\+A\+X\+\_\+\+M\+AX, I\+N\+T\+M\+A\+X\+\_\+\+M\+IN, or U\+I\+N\+T\+M\+A\+X\+\_\+\+M\+AX is returned (according to the return type and sign of the value, if any), and the value of the macro E\+R\+A\+N\+GE is stored in errno. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inttypes_8h_a5cc99c455a0d487e3675319240a15d1a}\label{inttypes_8h_a5cc99c455a0d487e3675319240a15d1a}} 
+\index{inttypes.h@{inttypes.h}!wcstouimax@{wcstouimax}}
+\index{wcstouimax@{wcstouimax}!inttypes.h@{inttypes.h}}
+\subsubsection{\texorpdfstring{wcstouimax()}{wcstouimax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdint_8h_a2ba5f6c0633401558d277b2c0e4f758d}{uintmax\+\_\+t}} wcstouimax (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$}]{\+\_\+\+\_\+restrict,  }\item[{\mbox{\hyperlink{wchar__t_8h_a29897a80acfa3eea3b5ddf233f105f37}{\+\_\+\+W\+C\+H\+A\+R\+\_\+\+T\+\_\+\+T\+Y\+PE}} $\ast$$\ast$}]{\+\_\+\+\_\+restrict,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+see wcstrtoimax 

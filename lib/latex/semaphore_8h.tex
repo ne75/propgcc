@@ -1,0 +1,68 @@
+\hypertarget{semaphore_8h}{}\section{include/semaphore.h File Reference}
+\label{semaphore_8h}\index{include/semaphore.h@{include/semaphore.h}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsem__t}{sem\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structsem__t}{sem\+\_\+t}} \mbox{\hyperlink{semaphore_8h_a53e32506220accc271507cd3984f145b}{sem\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{semaphore_8h_a532509bd8a6499f8193253192fb83a3d}{sem\+\_\+init}} (\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$sem, int pshared, unsigned int value)
+\item 
+int \mbox{\hyperlink{semaphore_8h_a6bc9a7dd941a9b5e319715b767af5682}{sem\+\_\+destroy}} (\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$sem)
+\item 
+int \mbox{\hyperlink{semaphore_8h_a4de7a9a334b01b6373b017aaefa07cf0}{sem\+\_\+trywait}} (\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$sem)
+\item 
+int \mbox{\hyperlink{semaphore_8h_aad70020dca2241a2b78e272ca033271b}{sem\+\_\+wait}} (\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$sem)
+\item 
+int \mbox{\hyperlink{semaphore_8h_a015dce85cab8477c679cc47968958247}{sem\+\_\+post}} (\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$sem)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{semaphore_8h_a53e32506220accc271507cd3984f145b}\label{semaphore_8h_a53e32506220accc271507cd3984f145b}} 
+\index{semaphore.h@{semaphore.h}!sem\_t@{sem\_t}}
+\index{sem\_t@{sem\_t}!semaphore.h@{semaphore.h}}
+\subsubsection{\texorpdfstring{sem\_t}{sem\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsem__t}{sem\+\_\+t}}  \mbox{\hyperlink{structsem__t}{sem\+\_\+t}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{semaphore_8h_a6bc9a7dd941a9b5e319715b767af5682}\label{semaphore_8h_a6bc9a7dd941a9b5e319715b767af5682}} 
+\index{semaphore.h@{semaphore.h}!sem\_destroy@{sem\_destroy}}
+\index{sem\_destroy@{sem\_destroy}!semaphore.h@{semaphore.h}}
+\subsubsection{\texorpdfstring{sem\_destroy()}{sem\_destroy()}}
+{\footnotesize\ttfamily int sem\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$}]{sem }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{semaphore_8h_a532509bd8a6499f8193253192fb83a3d}\label{semaphore_8h_a532509bd8a6499f8193253192fb83a3d}} 
+\index{semaphore.h@{semaphore.h}!sem\_init@{sem\_init}}
+\index{sem\_init@{sem\_init}!semaphore.h@{semaphore.h}}
+\subsubsection{\texorpdfstring{sem\_init()}{sem\_init()}}
+{\footnotesize\ttfamily int sem\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$}]{sem,  }\item[{int}]{pshared,  }\item[{unsigned int}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{semaphore_8h_a015dce85cab8477c679cc47968958247}\label{semaphore_8h_a015dce85cab8477c679cc47968958247}} 
+\index{semaphore.h@{semaphore.h}!sem\_post@{sem\_post}}
+\index{sem\_post@{sem\_post}!semaphore.h@{semaphore.h}}
+\subsubsection{\texorpdfstring{sem\_post()}{sem\_post()}}
+{\footnotesize\ttfamily int sem\+\_\+post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$}]{sem }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{semaphore_8h_a4de7a9a334b01b6373b017aaefa07cf0}\label{semaphore_8h_a4de7a9a334b01b6373b017aaefa07cf0}} 
+\index{semaphore.h@{semaphore.h}!sem\_trywait@{sem\_trywait}}
+\index{sem\_trywait@{sem\_trywait}!semaphore.h@{semaphore.h}}
+\subsubsection{\texorpdfstring{sem\_trywait()}{sem\_trywait()}}
+{\footnotesize\ttfamily int sem\+\_\+trywait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$}]{sem }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{semaphore_8h_aad70020dca2241a2b78e272ca033271b}\label{semaphore_8h_aad70020dca2241a2b78e272ca033271b}} 
+\index{semaphore.h@{semaphore.h}!sem\_wait@{sem\_wait}}
+\index{sem\_wait@{sem\_wait}!semaphore.h@{semaphore.h}}
+\subsubsection{\texorpdfstring{sem\_wait()}{sem\_wait()}}
+{\footnotesize\ttfamily int sem\+\_\+wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsem__t}{sem\+\_\+t}} $\ast$}]{sem }\end{DoxyParamCaption})}
+

@@ -1,0 +1,260 @@
+\hypertarget{thread_8h}{}\section{include/sys/thread.h File Reference}
+\label{thread_8h}\index{include/sys/thread.h@{include/sys/thread.h}}
+{\ttfamily \#include $<$sys/jmpbuf.\+h$>$}\newline
+{\ttfamily \#include $<$sys/fenv.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wchar\+\_\+t.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtm}{tm}}
+\item 
+struct \mbox{\hyperlink{struct__thread}{\+\_\+thread}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{thread_8h_ab6acb52581648b6218fad8a0914598f5}{\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+T\+M\+\_\+\+D\+E\+F\+I\+N\+ED}}
+\item 
+\#define \mbox{\hyperlink{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}{\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}~4
+\item 
+\#define \mbox{\hyperlink{thread_8h_a2f24fbe6cccaa4a7e6665a7b636efe5e}{\+\_\+\+T\+L\+S\+D\+E\+CL}}(x)~extern x
+\item 
+\#define \mbox{\hyperlink{thread_8h_a9c2d713cef31b055c9d6834d3b4ec4bd}{\+\_\+\+\_\+sync\+\_\+bool\+\_\+compare\+\_\+and\+\_\+swap}}(ptr,  oldval,  newval)~(($\ast$ptr == oldval) \&\& (($\ast$ptr = newval),\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})))
+\item 
+\#define \mbox{\hyperlink{thread_8h_ad4517bd8a60f835f8abf1587d871e9be}{\+\_\+\+\_\+sync\+\_\+add\+\_\+and\+\_\+fetch}}(ptr,  inc)~($\ast$ptr += inc)
+\item 
+\#define \mbox{\hyperlink{thread_8h_a916d17f6cbf7822b740c08d9ad69fcae}{\+\_\+\+\_\+trylock}}(ptr)~\mbox{\hyperlink{thread_8h_a9c2d713cef31b055c9d6834d3b4ec4bd}{\+\_\+\+\_\+sync\+\_\+bool\+\_\+compare\+\_\+and\+\_\+swap}}(ptr, 0, 1)
+\item 
+\#define \mbox{\hyperlink{thread_8h_a2d7cccb3bd4c85d3c1ce5db1d85e2cef}{\+\_\+\+\_\+addlock}}(ptr,  inc)~\mbox{\hyperlink{thread_8h_ad4517bd8a60f835f8abf1587d871e9be}{\+\_\+\+\_\+sync\+\_\+add\+\_\+and\+\_\+fetch}}(ptr, inc)
+\item 
+\#define \mbox{\hyperlink{thread_8h_aac2b35a75f8ff779459102e506bddf27}{\+\_\+\+\_\+lock}}(val)~while (!\mbox{\hyperlink{thread_8h_a916d17f6cbf7822b740c08d9ad69fcae}{\+\_\+\+\_\+trylock}}(val)) ;
+\item 
+\#define \mbox{\hyperlink{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}{\+\_\+\+\_\+unlock}}(val)~$\ast$val = 0
+\item 
+\#define \mbox{\hyperlink{thread_8h_ac0efe65b72ed90ffd30610437a9911b4}{\+\_\+\+\_\+this\+\_\+cpu\+\_\+mask}}()~(1$<$$<$\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+cogid())
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__thread}{\+\_\+thread}} \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} $\ast$volatile \mbox{\hyperlink{thread_8h_acb75659012caf2e738ff936db5473447}{\+\_\+thread\+\_\+queue\+\_\+t}}
+\item 
+typedef volatile int \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}} \mbox{\hyperlink{thread_8h_a2fac39c4595ddd15ce94cef2a50c8a7b}{atomic\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{thread_8h_ab43857982fbcda72c2862d4afd088658}{\+\_\+\+T\+L\+S\+D\+E\+CL}} (\mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} $\ast$\+\_\+\+T\+LS)
+\item 
+int \mbox{\hyperlink{thread_8h_a956df5aa95f29fada5c9f2ce2937a09f}{\+\_\+start\+\_\+cog\+\_\+thread}} (void $\ast$stacktop, void($\ast$func)(void $\ast$), void $\ast$arg, \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} $\ast$tls)
+\item 
+unsigned long long \mbox{\hyperlink{thread_8h_a6e5ce15f07f5bda8fa3bf132c7e8802c}{\+\_\+get\+Atomic64}} (unsigned long long $\ast$ptr)
+\item 
+void \mbox{\hyperlink{thread_8h_a5810d8da87c8ad16f64a5a50ec793bbb}{\+\_\+put\+Atomic64}} (unsigned long long x, unsigned long long $\ast$ptr)
+\item 
+void \mbox{\hyperlink{thread_8h_ae3d77e3344132c9b353ffe2221955a4d}{\+\_\+\+\_\+napuntil}} (unsigned int newclock)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \mbox{\hyperlink{thread_8h_a6adc81d048f5c03af98781f34410b4a4}{\+\_\+\+\_\+yield\+\_\+ptr}} )(void)
+\item 
+void($\ast$ \mbox{\hyperlink{thread_8h_a56acdd6d4316581b5ffe5effcaf6171b}{\+\_\+\+\_\+napuntil\+\_\+ptr}} )(unsigned int newclock)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{thread_8h_a2d7cccb3bd4c85d3c1ce5db1d85e2cef}\label{thread_8h_a2d7cccb3bd4c85d3c1ce5db1d85e2cef}} 
+\index{thread.h@{thread.h}!\_\_addlock@{\_\_addlock}}
+\index{\_\_addlock@{\_\_addlock}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_addlock}{\_\_addlock}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+addlock(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{inc }\end{DoxyParamCaption})~\mbox{\hyperlink{thread_8h_ad4517bd8a60f835f8abf1587d871e9be}{\+\_\+\+\_\+sync\+\_\+add\+\_\+and\+\_\+fetch}}(ptr, inc)}
+
+
+
+Definition at line 151 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_aac2b35a75f8ff779459102e506bddf27}\label{thread_8h_aac2b35a75f8ff779459102e506bddf27}} 
+\index{thread.h@{thread.h}!\_\_lock@{\_\_lock}}
+\index{\_\_lock@{\_\_lock}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_lock}{\_\_lock}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+lock(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~while (!\mbox{\hyperlink{thread_8h_a916d17f6cbf7822b740c08d9ad69fcae}{\+\_\+\+\_\+trylock}}(val)) ;}
+
+
+
+Definition at line 156 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_ad4517bd8a60f835f8abf1587d871e9be}\label{thread_8h_ad4517bd8a60f835f8abf1587d871e9be}} 
+\index{thread.h@{thread.h}!\_\_sync\_add\_and\_fetch@{\_\_sync\_add\_and\_fetch}}
+\index{\_\_sync\_add\_and\_fetch@{\_\_sync\_add\_and\_fetch}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_sync\_add\_and\_fetch}{\_\_sync\_add\_and\_fetch}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+sync\+\_\+add\+\_\+and\+\_\+fetch(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{inc }\end{DoxyParamCaption})~($\ast$ptr += inc)}
+
+
+
+Definition at line 127 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_a9c2d713cef31b055c9d6834d3b4ec4bd}\label{thread_8h_a9c2d713cef31b055c9d6834d3b4ec4bd}} 
+\index{thread.h@{thread.h}!\_\_sync\_bool\_compare\_and\_swap@{\_\_sync\_bool\_compare\_and\_swap}}
+\index{\_\_sync\_bool\_compare\_and\_swap@{\_\_sync\_bool\_compare\_and\_swap}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_sync\_bool\_compare\_and\_swap}{\_\_sync\_bool\_compare\_and\_swap}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+sync\+\_\+bool\+\_\+compare\+\_\+and\+\_\+swap(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{oldval,  }\item[{}]{newval }\end{DoxyParamCaption})~(($\ast$ptr == oldval) \&\& (($\ast$ptr = newval),\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})))}
+
+
+
+Definition at line 125 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_ac0efe65b72ed90ffd30610437a9911b4}\label{thread_8h_ac0efe65b72ed90ffd30610437a9911b4}} 
+\index{thread.h@{thread.h}!\_\_this\_cpu\_mask@{\_\_this\_cpu\_mask}}
+\index{\_\_this\_cpu\_mask@{\_\_this\_cpu\_mask}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_this\_cpu\_mask}{\_\_this\_cpu\_mask}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+this\+\_\+cpu\+\_\+mask(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(1$<$$<$\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+cogid())}
+
+
+
+Definition at line 170 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_a916d17f6cbf7822b740c08d9ad69fcae}\label{thread_8h_a916d17f6cbf7822b740c08d9ad69fcae}} 
+\index{thread.h@{thread.h}!\_\_trylock@{\_\_trylock}}
+\index{\_\_trylock@{\_\_trylock}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_trylock}{\_\_trylock}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+trylock(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})~\mbox{\hyperlink{thread_8h_a9c2d713cef31b055c9d6834d3b4ec4bd}{\+\_\+\+\_\+sync\+\_\+bool\+\_\+compare\+\_\+and\+\_\+swap}}(ptr, 0, 1)}
+
+
+
+Definition at line 150 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}\label{thread_8h_a3d7b57e7064a3666b567687f2c6f6436}} 
+\index{thread.h@{thread.h}!\_\_unlock@{\_\_unlock}}
+\index{\_\_unlock@{\_\_unlock}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_unlock}{\_\_unlock}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+unlock(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~$\ast$val = 0}
+
+
+
+Definition at line 158 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_ab6acb52581648b6218fad8a0914598f5}\label{thread_8h_ab6acb52581648b6218fad8a0914598f5}} 
+\index{thread.h@{thread.h}!\_STRUCT\_TM\_DEFINED@{\_STRUCT\_TM\_DEFINED}}
+\index{\_STRUCT\_TM\_DEFINED@{\_STRUCT\_TM\_DEFINED}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_STRUCT\_TM\_DEFINED}{\_STRUCT\_TM\_DEFINED}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+T\+M\+\_\+\+D\+E\+F\+I\+N\+ED}
+
+
+
+Definition at line 37 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}\label{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}} 
+\index{thread.h@{thread.h}!\_THREAD\_KEYS\_MAX@{\_THREAD\_KEYS\_MAX}}
+\index{\_THREAD\_KEYS\_MAX@{\_THREAD\_KEYS\_MAX}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_THREAD\_KEYS\_MAX}{\_THREAD\_KEYS\_MAX}}
+{\footnotesize\ttfamily \#define \+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX~4}
+
+
+
+Definition at line 94 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_a2f24fbe6cccaa4a7e6665a7b636efe5e}\label{thread_8h_a2f24fbe6cccaa4a7e6665a7b636efe5e}} 
+\index{thread.h@{thread.h}!\_TLSDECL@{\_TLSDECL}}
+\index{\_TLSDECL@{\_TLSDECL}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_TLSDECL}{\_TLSDECL}}
+{\footnotesize\ttfamily \#define \+\_\+\+T\+L\+S\+D\+E\+CL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~extern x}
+
+
+
+Definition at line 105 of file thread.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}\label{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}} 
+\index{thread.h@{thread.h}!\_atomic\_t@{\_atomic\_t}}
+\index{\_atomic\_t@{\_atomic\_t}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_atomic\_t}{\_atomic\_t}}
+{\footnotesize\ttfamily typedef volatile int \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}}}
+
+
+
+Definition at line 143 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_acb75659012caf2e738ff936db5473447}\label{thread_8h_acb75659012caf2e738ff936db5473447}} 
+\index{thread.h@{thread.h}!\_thread\_queue\_t@{\_thread\_queue\_t}}
+\index{\_thread\_queue\_t@{\_thread\_queue\_t}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_thread\_queue\_t}{\_thread\_queue\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}}$\ast$ volatile \mbox{\hyperlink{thread_8h_acb75659012caf2e738ff936db5473447}{\+\_\+thread\+\_\+queue\+\_\+t}}}
+
+
+
+Definition at line 59 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}\label{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}} 
+\index{thread.h@{thread.h}!\_thread\_state\_t@{\_thread\_state\_t}}
+\index{\_thread\_state\_t@{\_thread\_state\_t}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_thread\_state\_t}{\_thread\_state\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__thread}{\+\_\+thread}} \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}}}
+
+
+
+Definition at line 58 of file thread.\+h.
+
+\mbox{\Hypertarget{thread_8h_a2fac39c4595ddd15ce94cef2a50c8a7b}\label{thread_8h_a2fac39c4595ddd15ce94cef2a50c8a7b}} 
+\index{thread.h@{thread.h}!atomic\_t@{atomic\_t}}
+\index{atomic\_t@{atomic\_t}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{atomic\_t}{atomic\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{thread_8h_a6743820c6e04c49e472e7cbeded2f83f}{\+\_\+atomic\+\_\+t}} \mbox{\hyperlink{thread_8h_a2fac39c4595ddd15ce94cef2a50c8a7b}{atomic\+\_\+t}}}
+
+
+
+Definition at line 144 of file thread.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{thread_8h_ae3d77e3344132c9b353ffe2221955a4d}\label{thread_8h_ae3d77e3344132c9b353ffe2221955a4d}} 
+\index{thread.h@{thread.h}!\_\_napuntil@{\_\_napuntil}}
+\index{\_\_napuntil@{\_\_napuntil}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_napuntil()}{\_\_napuntil()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+napuntil (\begin{DoxyParamCaption}\item[{unsigned int}]{newclock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{thread_8h_a6e5ce15f07f5bda8fa3bf132c7e8802c}\label{thread_8h_a6e5ce15f07f5bda8fa3bf132c7e8802c}} 
+\index{thread.h@{thread.h}!\_getAtomic64@{\_getAtomic64}}
+\index{\_getAtomic64@{\_getAtomic64}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_getAtomic64()}{\_getAtomic64()}}
+{\footnotesize\ttfamily unsigned long long \+\_\+get\+Atomic64 (\begin{DoxyParamCaption}\item[{unsigned long long $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{thread_8h_a5810d8da87c8ad16f64a5a50ec793bbb}\label{thread_8h_a5810d8da87c8ad16f64a5a50ec793bbb}} 
+\index{thread.h@{thread.h}!\_putAtomic64@{\_putAtomic64}}
+\index{\_putAtomic64@{\_putAtomic64}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_putAtomic64()}{\_putAtomic64()}}
+{\footnotesize\ttfamily void \+\_\+put\+Atomic64 (\begin{DoxyParamCaption}\item[{unsigned long long}]{x,  }\item[{unsigned long long $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{thread_8h_a956df5aa95f29fada5c9f2ce2937a09f}\label{thread_8h_a956df5aa95f29fada5c9f2ce2937a09f}} 
+\index{thread.h@{thread.h}!\_start\_cog\_thread@{\_start\_cog\_thread}}
+\index{\_start\_cog\_thread@{\_start\_cog\_thread}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_start\_cog\_thread()}{\_start\_cog\_thread()}}
+{\footnotesize\ttfamily int \+\_\+start\+\_\+cog\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{stacktop,  }\item[{void($\ast$)(void $\ast$)}]{func,  }\item[{void $\ast$}]{arg,  }\item[{\mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} $\ast$}]{tls }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{thread_8h_ab43857982fbcda72c2862d4afd088658}\label{thread_8h_ab43857982fbcda72c2862d4afd088658}} 
+\index{thread.h@{thread.h}!\_TLSDECL@{\_TLSDECL}}
+\index{\_TLSDECL@{\_TLSDECL}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_TLSDECL()}{\_TLSDECL()}}
+{\footnotesize\ttfamily \+\_\+\+T\+L\+S\+D\+E\+CL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} $\ast$}]{\+\_\+\+T\+LS }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{thread_8h_a56acdd6d4316581b5ffe5effcaf6171b}\label{thread_8h_a56acdd6d4316581b5ffe5effcaf6171b}} 
+\index{thread.h@{thread.h}!\_\_napuntil\_ptr@{\_\_napuntil\_ptr}}
+\index{\_\_napuntil\_ptr@{\_\_napuntil\_ptr}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_napuntil\_ptr}{\_\_napuntil\_ptr}}
+{\footnotesize\ttfamily void($\ast$ \+\_\+\+\_\+napuntil\+\_\+ptr) (unsigned int newclock)}
+
+\mbox{\Hypertarget{thread_8h_a6adc81d048f5c03af98781f34410b4a4}\label{thread_8h_a6adc81d048f5c03af98781f34410b4a4}} 
+\index{thread.h@{thread.h}!\_\_yield\_ptr@{\_\_yield\_ptr}}
+\index{\_\_yield\_ptr@{\_\_yield\_ptr}!thread.h@{thread.h}}
+\subsubsection{\texorpdfstring{\_\_yield\_ptr}{\_\_yield\_ptr}}
+{\footnotesize\ttfamily void($\ast$ \+\_\+\+\_\+yield\+\_\+ptr) (void)}
+

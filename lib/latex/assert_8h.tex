@@ -1,0 +1,66 @@
+\hypertarget{assert_8h}{}\section{include/assert.h File Reference}
+\label{assert_8h}\index{include/assert.h@{include/assert.h}}
+
+
+Provides assert interface used for internal error detection.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{assert_8h_a3153a272f18d0f805028fce7e4337b53}{assert}}(cond)~((cond) ? 0 \+: (\mbox{\hyperlink{assert_8h_ac5e39c81e1dc6450d2c95353c9b0ca38}{\+\_\+\+\_\+eprintf}}(\#cond,(long)(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+), \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \mbox{\hyperlink{stdlib_8h_a8c75381eea4fbb56c6d472bf55263a52}{abort}}(), 0))
+\begin{DoxyCompactList}\small\item\em Abort the program if the assertion is false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+N\+O\+R\+E\+T\+U\+RN void \mbox{\hyperlink{assert_8h_a8c75381eea4fbb56c6d472bf55263a52}{abort}} (void)
+\item 
+void \mbox{\hyperlink{assert_8h_ac5e39c81e1dc6450d2c95353c9b0ca38}{\+\_\+\+\_\+eprintf}} (const char $\ast$expr, unsigned long line, const char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides assert interface used for internal error detection. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{assert_8h_a3153a272f18d0f805028fce7e4337b53}\label{assert_8h_a3153a272f18d0f805028fce7e4337b53}} 
+\index{assert.h@{assert.h}!assert@{assert}}
+\index{assert@{assert}!assert.h@{assert.h}}
+\subsubsection{\texorpdfstring{assert}{assert}}
+{\footnotesize\ttfamily \#define assert(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~((cond) ? 0 \+: (\mbox{\hyperlink{assert_8h_ac5e39c81e1dc6450d2c95353c9b0ca38}{\+\_\+\+\_\+eprintf}}(\#cond,(long)(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+), \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \mbox{\hyperlink{stdlib_8h_a8c75381eea4fbb56c6d472bf55263a52}{abort}}(), 0))}
+
+
+
+Abort the program if the assertion is false. 
+
+If macro N\+D\+E\+B\+UG is defined at the moment $<$\mbox{\hyperlink{assert_8h}{assert.\+h}}$>$ was last included the \mbox{\hyperlink{assert_8h_a3153a272f18d0f805028fce7e4337b53}{assert()}} macro genenrates no code and does nothing.
+
+Else \mbox{\hyperlink{assert_8h_a3153a272f18d0f805028fce7e4337b53}{assert()}} prints an error message to stderr and kills the program by calling \mbox{\hyperlink{assert_8h_a8c75381eea4fbb56c6d472bf55263a52}{abort()}} if cond is false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & The condition tested \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file assert.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{assert_8h_ac5e39c81e1dc6450d2c95353c9b0ca38}\label{assert_8h_ac5e39c81e1dc6450d2c95353c9b0ca38}} 
+\index{assert.h@{assert.h}!\_\_eprintf@{\_\_eprintf}}
+\index{\_\_eprintf@{\_\_eprintf}!assert.h@{assert.h}}
+\subsubsection{\texorpdfstring{\_\_eprintf()}{\_\_eprintf()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+eprintf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{expr,  }\item[{unsigned long}]{line,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assert_8h_a8c75381eea4fbb56c6d472bf55263a52}\label{assert_8h_a8c75381eea4fbb56c6d472bf55263a52}} 
+\index{assert.h@{assert.h}!abort@{abort}}
+\index{abort@{abort}!assert.h@{assert.h}}
+\subsubsection{\texorpdfstring{abort()}{abort()}}
+{\footnotesize\ttfamily \+\_\+\+N\+O\+R\+E\+T\+U\+RN void abort (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

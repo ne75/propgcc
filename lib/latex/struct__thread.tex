@@ -1,0 +1,216 @@
+\hypertarget{struct__thread}{}\section{\+\_\+thread Struct Reference}
+\label{struct__thread}\index{\_thread@{\_thread}}
+
+
+{\ttfamily \#include $<$thread.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__thread_aaa10b9f1f435fc73735ad02eb5e617c6}{queue\+\_\+next}}
+\item 
+\mbox{\hyperlink{thread_8h_acb75659012caf2e738ff936db5473447}{\+\_\+thread\+\_\+queue\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__thread_a26c9ef87b799f4ed1e0f9a3824385537}{queue}}
+\item 
+int \mbox{\hyperlink{struct__thread_afd1d4c8cdaccd36ad60cde7d96c435eb}{errno}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct__thread_a27b89cf9b6b70540b133827f387698df}{strtok\+\_\+scanpoint}}
+\item 
+unsigned long \mbox{\hyperlink{struct__thread_aea692689f0651abeafb8dbce076c8f40}{rand\+\_\+seed}}
+\item 
+struct \mbox{\hyperlink{structtm}{tm}} \mbox{\hyperlink{struct__thread_ae8c07f7023ee453f62dc51b2a9c1b50d}{time\+\_\+temp}}
+\item 
+char \mbox{\hyperlink{struct__thread_a9e69f2ea7a1a889bea1c05105d9f2354}{ctime\+\_\+buf}} \mbox{[}32\mbox{]}
+\item 
+\mbox{\hyperlink{jmpbuf_8h_a39955153a4f32ebff06ff99d7ee9a05e}{\+\_\+jmp\+\_\+buf}} \mbox{\hyperlink{struct__thread_a7e89c67c1bb923396cb5d7a76afb4091}{jmpbuf}}
+\item 
+short \mbox{\hyperlink{struct__thread_a74c458464917ed3d1f548fccd9c906d7}{pri}}
+\item 
+unsigned short \mbox{\hyperlink{struct__thread_ade2246148b4c3de39d7c867f10addb39}{flags}}
+\item 
+unsigned int \mbox{\hyperlink{struct__thread_aa2d46b239912575b51c5d254fc588717}{timer}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__thread_a33b6b5cd25cf365d42d7c866cada4446}{arg}}
+\item 
+void $\ast$($\ast$ \mbox{\hyperlink{struct__thread_aced825c6b63172f82cd026db0472db2e}{start}} )(void $\ast$)
+\item 
+unsigned short \mbox{\hyperlink{struct__thread_a1c8bc89fd242f53ae10993f17e80e449}{affinity}}
+\item 
+\mbox{\hyperlink{wchar__t_8h_a1e09beddcdd9f7bff253836c6de67964}{\+\_\+\+Mbstate\+\_\+t}} \mbox{\hyperlink{struct__thread_a7a9e7af384abbfb902e54ce4f16e4654}{mbr\+\_\+intern}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__thread_a71816284f1e2caf1bca6b6f6b30454a1}{thread\+\_\+data}} \mbox{[}\mbox{\hyperlink{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}{\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 61 of file thread.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__thread_a1c8bc89fd242f53ae10993f17e80e449}\label{struct__thread_a1c8bc89fd242f53ae10993f17e80e449}} 
+\index{\_thread@{\_thread}!affinity@{affinity}}
+\index{affinity@{affinity}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{affinity}{affinity}}
+{\footnotesize\ttfamily unsigned short \+\_\+thread\+::affinity}
+
+
+
+Definition at line 85 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a33b6b5cd25cf365d42d7c866cada4446}\label{struct__thread_a33b6b5cd25cf365d42d7c866cada4446}} 
+\index{\_thread@{\_thread}!arg@{arg}}
+\index{arg@{arg}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{arg}{arg}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+thread\+::arg}
+
+
+
+Definition at line 78 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a9e69f2ea7a1a889bea1c05105d9f2354}\label{struct__thread_a9e69f2ea7a1a889bea1c05105d9f2354}} 
+\index{\_thread@{\_thread}!ctime\_buf@{ctime\_buf}}
+\index{ctime\_buf@{ctime\_buf}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{ctime\_buf}{ctime\_buf}}
+{\footnotesize\ttfamily char \+\_\+thread\+::ctime\+\_\+buf\mbox{[}32\mbox{]}}
+
+
+
+Definition at line 71 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_afd1d4c8cdaccd36ad60cde7d96c435eb}\label{struct__thread_afd1d4c8cdaccd36ad60cde7d96c435eb}} 
+\index{\_thread@{\_thread}!errno@{errno}}
+\index{errno@{errno}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{errno}{errno}}
+{\footnotesize\ttfamily int \+\_\+thread\+::errno}
+
+
+
+Definition at line 66 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_ade2246148b4c3de39d7c867f10addb39}\label{struct__thread_ade2246148b4c3de39d7c867f10addb39}} 
+\index{\_thread@{\_thread}!flags@{flags}}
+\index{flags@{flags}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily unsigned short \+\_\+thread\+::flags}
+
+
+
+Definition at line 74 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a7e89c67c1bb923396cb5d7a76afb4091}\label{struct__thread_a7e89c67c1bb923396cb5d7a76afb4091}} 
+\index{\_thread@{\_thread}!jmpbuf@{jmpbuf}}
+\index{jmpbuf@{jmpbuf}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{jmpbuf}{jmpbuf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmpbuf_8h_a39955153a4f32ebff06ff99d7ee9a05e}{\+\_\+jmp\+\_\+buf}} \+\_\+thread\+::jmpbuf}
+
+
+
+Definition at line 72 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a7a9e7af384abbfb902e54ce4f16e4654}\label{struct__thread_a7a9e7af384abbfb902e54ce4f16e4654}} 
+\index{\_thread@{\_thread}!mbr\_intern@{mbr\_intern}}
+\index{mbr\_intern@{mbr\_intern}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{mbr\_intern}{mbr\_intern}}
+{\footnotesize\ttfamily \mbox{\hyperlink{wchar__t_8h_a1e09beddcdd9f7bff253836c6de67964}{\+\_\+\+Mbstate\+\_\+t}} \+\_\+thread\+::mbr\+\_\+intern}
+
+
+
+Definition at line 88 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a74c458464917ed3d1f548fccd9c906d7}\label{struct__thread_a74c458464917ed3d1f548fccd9c906d7}} 
+\index{\_thread@{\_thread}!pri@{pri}}
+\index{pri@{pri}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{pri}{pri}}
+{\footnotesize\ttfamily short \+\_\+thread\+::pri}
+
+
+
+Definition at line 73 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a26c9ef87b799f4ed1e0f9a3824385537}\label{struct__thread_a26c9ef87b799f4ed1e0f9a3824385537}} 
+\index{\_thread@{\_thread}!queue@{queue}}
+\index{queue@{queue}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{thread_8h_acb75659012caf2e738ff936db5473447}{\+\_\+thread\+\_\+queue\+\_\+t}}$\ast$ \+\_\+thread\+::queue}
+
+
+
+Definition at line 64 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_aaa10b9f1f435fc73735ad02eb5e617c6}\label{struct__thread_aaa10b9f1f435fc73735ad02eb5e617c6}} 
+\index{\_thread@{\_thread}!queue\_next@{queue\_next}}
+\index{queue\_next@{queue\_next}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{queue\_next}{queue\_next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}}$\ast$ \+\_\+thread\+::queue\+\_\+next}
+
+
+
+Definition at line 63 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_aea692689f0651abeafb8dbce076c8f40}\label{struct__thread_aea692689f0651abeafb8dbce076c8f40}} 
+\index{\_thread@{\_thread}!rand\_seed@{rand\_seed}}
+\index{rand\_seed@{rand\_seed}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{rand\_seed}{rand\_seed}}
+{\footnotesize\ttfamily unsigned long \+\_\+thread\+::rand\+\_\+seed}
+
+
+
+Definition at line 69 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_aced825c6b63172f82cd026db0472db2e}\label{struct__thread_aced825c6b63172f82cd026db0472db2e}} 
+\index{\_thread@{\_thread}!start@{start}}
+\index{start@{start}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily void$\ast$($\ast$ \+\_\+thread\+::start) (void $\ast$)}
+
+
+
+Definition at line 79 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a27b89cf9b6b70540b133827f387698df}\label{struct__thread_a27b89cf9b6b70540b133827f387698df}} 
+\index{\_thread@{\_thread}!strtok\_scanpoint@{strtok\_scanpoint}}
+\index{strtok\_scanpoint@{strtok\_scanpoint}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{strtok\_scanpoint}{strtok\_scanpoint}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+thread\+::strtok\+\_\+scanpoint}
+
+
+
+Definition at line 67 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_a71816284f1e2caf1bca6b6f6b30454a1}\label{struct__thread_a71816284f1e2caf1bca6b6f6b30454a1}} 
+\index{\_thread@{\_thread}!thread\_data@{thread\_data}}
+\index{thread\_data@{thread\_data}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{thread\_data}{thread\_data}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+thread\+::thread\+\_\+data\mbox{[}\mbox{\hyperlink{thread_8h_ae7fee02a354b0f3c3d1f2581b2c00c27}{\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+K\+E\+Y\+S\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+Definition at line 95 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_ae8c07f7023ee453f62dc51b2a9c1b50d}\label{struct__thread_ae8c07f7023ee453f62dc51b2a9c1b50d}} 
+\index{\_thread@{\_thread}!time\_temp@{time\_temp}}
+\index{time\_temp@{time\_temp}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{time\_temp}{time\_temp}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structtm}{tm}} \+\_\+thread\+::time\+\_\+temp}
+
+
+
+Definition at line 70 of file thread.\+h.
+
+\mbox{\Hypertarget{struct__thread_aa2d46b239912575b51c5d254fc588717}\label{struct__thread_aa2d46b239912575b51c5d254fc588717}} 
+\index{\_thread@{\_thread}!timer@{timer}}
+\index{timer@{timer}!\_thread@{\_thread}}
+\subsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily unsigned int \+\_\+thread\+::timer}
+
+
+
+Definition at line 76 of file thread.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/sys/\mbox{\hyperlink{thread_8h}{thread.\+h}}\end{DoxyCompactItemize}

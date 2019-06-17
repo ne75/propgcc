@@ -1,0 +1,104 @@
+\hypertarget{structI2C__OPS}{}\section{I2\+C\+\_\+\+O\+PS Struct Reference}
+\label{structI2C__OPS}\index{I2C\_OPS@{I2C\_OPS}}
+
+
+{\ttfamily \#include $<$i2c.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int($\ast$ \mbox{\hyperlink{structI2C__OPS_ac7ef347101ff035c6767ea9fb7250bd8}{close}} )(\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev)
+\item 
+int($\ast$ \mbox{\hyperlink{structI2C__OPS_a2ff14bf2b2b01d2c4f5b4e802322dc57}{read}} )(\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\item 
+int($\ast$ \mbox{\hyperlink{structI2C__OPS_a6ce358dfa4de1e4ee92ad5ba68c1e7b9}{read\+More}} )(\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\item 
+int($\ast$ \mbox{\hyperlink{structI2C__OPS_a930089cdac6e57badc81887655a5d53d}{write}} )(\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\item 
+int($\ast$ \mbox{\hyperlink{structI2C__OPS_a582c8913180598f905a1053c0e307e20}{write\+More}} )(\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file i2c.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structI2C__OPS_ac7ef347101ff035c6767ea9fb7250bd8}\label{structI2C__OPS_ac7ef347101ff035c6767ea9fb7250bd8}} 
+\index{I2C\_OPS@{I2C\_OPS}!close@{close}}
+\index{close@{close}!I2C\_OPS@{I2C\_OPS}}
+\subsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily int($\ast$ I2\+C\+\_\+\+O\+P\+S\+::close) (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev)}
+
+
+
+Definition at line 42 of file i2c.\+h.
+
+
+
+Referenced by i2c\+Close().
+
+\mbox{\Hypertarget{structI2C__OPS_a2ff14bf2b2b01d2c4f5b4e802322dc57}\label{structI2C__OPS_a2ff14bf2b2b01d2c4f5b4e802322dc57}} 
+\index{I2C\_OPS@{I2C\_OPS}!read@{read}}
+\index{read@{read}!I2C\_OPS@{I2C\_OPS}}
+\subsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily int($\ast$ I2\+C\+\_\+\+O\+P\+S\+::read) (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)}
+
+
+
+Definition at line 43 of file i2c.\+h.
+
+
+
+Referenced by i2c\+Read().
+
+\mbox{\Hypertarget{structI2C__OPS_a6ce358dfa4de1e4ee92ad5ba68c1e7b9}\label{structI2C__OPS_a6ce358dfa4de1e4ee92ad5ba68c1e7b9}} 
+\index{I2C\_OPS@{I2C\_OPS}!readMore@{readMore}}
+\index{readMore@{readMore}!I2C\_OPS@{I2C\_OPS}}
+\subsubsection{\texorpdfstring{readMore}{readMore}}
+{\footnotesize\ttfamily int($\ast$ I2\+C\+\_\+\+O\+P\+S\+::read\+More) (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)}
+
+
+
+Definition at line 44 of file i2c.\+h.
+
+
+
+Referenced by i2c\+Read\+More().
+
+\mbox{\Hypertarget{structI2C__OPS_a930089cdac6e57badc81887655a5d53d}\label{structI2C__OPS_a930089cdac6e57badc81887655a5d53d}} 
+\index{I2C\_OPS@{I2C\_OPS}!write@{write}}
+\index{write@{write}!I2C\_OPS@{I2C\_OPS}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily int($\ast$ I2\+C\+\_\+\+O\+P\+S\+::write) (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, int address, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)}
+
+
+
+Definition at line 45 of file i2c.\+h.
+
+
+
+Referenced by i2c\+Write().
+
+\mbox{\Hypertarget{structI2C__OPS_a582c8913180598f905a1053c0e307e20}\label{structI2C__OPS_a582c8913180598f905a1053c0e307e20}} 
+\index{I2C\_OPS@{I2C\_OPS}!writeMore@{writeMore}}
+\index{writeMore@{writeMore}!I2C\_OPS@{I2C\_OPS}}
+\subsubsection{\texorpdfstring{writeMore}{writeMore}}
+{\footnotesize\ttfamily int($\ast$ I2\+C\+\_\+\+O\+P\+S\+::write\+More) (\mbox{\hyperlink{structI2C}{I2C}} $\ast$dev, \mbox{\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} $\ast$buffer, int count, int stop)}
+
+
+
+Definition at line 46 of file i2c.\+h.
+
+
+
+Referenced by i2c\+Write\+More().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{i2c_8h}{i2c.\+h}}\end{DoxyCompactItemize}

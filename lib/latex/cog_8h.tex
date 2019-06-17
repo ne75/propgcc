@@ -1,0 +1,302 @@
+\hypertarget{cog_8h}{}\section{include/cog.h File Reference}
+\label{cog_8h}\index{include/cog.h@{include/cog.h}}
+
+
+Inludes common A\+PI definitions for C\+OG programming.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((cogmem))
+\begin{DoxyCompactList}\small\item\em Can be used in per-\/variable declarations to tell compiler that a variable should go in C\+OG memory. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cog_8h_ae76eb47f3dc3ba8259fede6d55a4bb21}{\+\_\+\+N\+A\+T\+I\+VE}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((native))
+\begin{DoxyCompactList}\small\item\em Can be used in per-\/function declarations to tell compiler that function will use cog \char`\"{}call/ret\char`\"{} calling (nonrecursive). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cog_8h_aec06822880610ebc60af1602e0809aa0}{\+\_\+\+N\+A\+K\+ED}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((naked))
+\begin{DoxyCompactList}\small\item\em Can be used in per-\/function declarations to tell compiler that function will not have an epilogue or prologue\+: these should never return. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cog_8h_a8f3ac29aeae422b333154aefaf798dd2}{\+\_\+\+F\+C\+A\+C\+HE}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((fcache))
+\begin{DoxyCompactList}\small\item\em Can be used in per-\/function declarations to tell compiler that function should be compiled to load into fcache; useful for guaranteeing timing of small functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cog_8h_a7c440c84eb8181d702434490646b7f72}{\+\_\+\+C\+L\+K\+F\+R\+EQ}}~\mbox{\hyperlink{time_8h_abdad9a90104ff4842f7d44184c6065f5}{\+\_\+clkfreq}}
+\begin{DoxyCompactList}\small\item\em This is an alias for the 32 bit clock frequency which is kept in address 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cog_8h_a38a78fe786fd45d116aec0b2a3a5efbc}{\+\_\+\+C\+L\+K\+M\+O\+DE}}~\mbox{\hyperlink{cog_8h_a97b52f57cd4db49a410838099e2f9851}{\+\_\+clkmode}}
+\begin{DoxyCompactList}\small\item\em This is an alias for the 8 bit clock mode which is kept in address 4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+P\+AR \mbox{\hyperlink{cog_8h_a6c8da091e1f0e9ab40c1d78c97044e95}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}P\+AR\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+C\+NT \mbox{\hyperlink{cog_8h_a7022eaccb81766ec200d3abb10aa531a}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}C\+NT\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+I\+NA \mbox{\hyperlink{cog_8h_a73846726566da5ceb57b5129f7c9cd04}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}I\+NA\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+I\+NB \mbox{\hyperlink{cog_8h_ade7488abc6255671db6f22fc2a03ce10}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}I\+NB\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+O\+U\+TA \mbox{\hyperlink{cog_8h_acc3a49bdced76e9f925ca82f3c6913f6}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}O\+U\+TA\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+O\+U\+TB \mbox{\hyperlink{cog_8h_ac23a9850496bf8b64059444c04623fec}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}O\+U\+TB\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+D\+I\+RA \mbox{\hyperlink{cog_8h_ad6d416662ade31a74c0e805f5577e59d}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}D\+I\+RA\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+D\+I\+RB \mbox{\hyperlink{cog_8h_a93b8e45e265609d236ac0031511b1349}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}D\+I\+RB\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+C\+T\+RA \mbox{\hyperlink{cog_8h_a31e9129c2ddd8198081ce316d3f968a9}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}C\+T\+RA\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+C\+T\+RB \mbox{\hyperlink{cog_8h_ae02ac0a289ac1297276a1d83b02e066f}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}C\+T\+RB\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+F\+R\+QA \mbox{\hyperlink{cog_8h_a83b9e1d964768a17de16b11f8e774888}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}F\+R\+QA\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+F\+R\+QB \mbox{\hyperlink{cog_8h_a8f3cfa476654d175db740ea9f62329c2}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}F\+R\+QB\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+P\+H\+SA \mbox{\hyperlink{cog_8h_ae2b1f3b4b78ee678f7811dbc9131309a}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}P\+H\+SA\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+P\+H\+SB \mbox{\hyperlink{cog_8h_a953d7c4d7c8115be75527aebdf12d9e5}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}P\+H\+SB\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+V\+C\+FG \mbox{\hyperlink{cog_8h_a3be1650e2633a145c5652ade56f3c2a6}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}V\+C\+FG\char`\"{})
+\item 
+\mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+V\+S\+CL \mbox{\hyperlink{cog_8h_af2319171f520676c049b1039ea3edfbc}{\+\_\+\+\_\+asm\+\_\+\+\_\+}} (\char`\"{}V\+S\+CL\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{cog_8h_a24f80986a60f78f7d7165df3a37f62f5}{\+\_\+clkfreq}}
+\item 
+unsigned char \mbox{\hyperlink{cog_8h_a97b52f57cd4db49a410838099e2f9851}{\+\_\+clkmode}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Inludes common A\+PI definitions for C\+OG programming. 
+
+Each C\+OG includes 16 32 bit special purpose registers. The purposes of the registers are to provide control over user I/O input and output. Some registers like I\+NB, O\+U\+TB, D\+I\+RB are not used with P8\+X32A.
+
+The state of each physical input pin is available to any C\+OG via I\+NA. Output pin values are the bitwise \char`\"{}wire O\+R\char`\"{} of all the C\+O\+Gs at the physical output pins when the D\+I\+RA bits are set high (1).
+
+O\+U\+TA bits control the state of the physical output pins. If one C\+OG sets a pin to output high (1), and another C\+OG sets the same pin to output low (0), the high (1) will be set.
+
+The per C\+OG special purpose register summary\+:
+
+\begin{DoxyVerb}Register Description
+
+PAR      Parameter register is used for sharing HUB RAM address info with the COG.
+CNT      The system clock count
+INA      Use to read the pins when corresponding DIRA bits are 0.
+INB      Unused in P8X32A
+OUTA     Use to set pin states when corresponding DIRA bits are 1.
+OUTB     Unused in P8X32A
+DIRA     Use to set pins to input (0) or output (1).
+DIRB     Unused in P8X32A
+CTRA     Counter A control register.
+CTRB     Counter B control register.
+FRQA     Counter A frequency register.
+FRQB     Counter B frequency register.
+PHSA     Counter A phase accumulation register.
+PHSB     Counter B phase accumulation register.
+VCFG     Video Configuration register can be used for other special output.
+VSCL     Video Scale register for setting pixel and frame clocks.
+\end{DoxyVerb}
+ 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cog_8h_a7c440c84eb8181d702434490646b7f72}\label{cog_8h_a7c440c84eb8181d702434490646b7f72}} 
+\index{cog.h@{cog.h}!\_CLKFREQ@{\_CLKFREQ}}
+\index{\_CLKFREQ@{\_CLKFREQ}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_CLKFREQ}{\_CLKFREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+K\+F\+R\+EQ~\mbox{\hyperlink{time_8h_abdad9a90104ff4842f7d44184c6065f5}{\+\_\+clkfreq}}}
+
+
+
+This is an alias for the 32 bit clock frequency which is kept in address 0. 
+
+
+
+Definition at line 103 of file cog.\+h.
+
+\mbox{\Hypertarget{cog_8h_a38a78fe786fd45d116aec0b2a3a5efbc}\label{cog_8h_a38a78fe786fd45d116aec0b2a3a5efbc}} 
+\index{cog.h@{cog.h}!\_CLKMODE@{\_CLKMODE}}
+\index{\_CLKMODE@{\_CLKMODE}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_CLKMODE}{\_CLKMODE}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+K\+M\+O\+DE~\mbox{\hyperlink{cog_8h_a97b52f57cd4db49a410838099e2f9851}{\+\_\+clkmode}}}
+
+
+
+This is an alias for the 8 bit clock mode which is kept in address 4. 
+
+This is not automatically updated by the clkset macro. 
+
+Definition at line 111 of file cog.\+h.
+
+\mbox{\Hypertarget{cog_8h_a06312c86d4e5f15b7653aa495760a482}\label{cog_8h_a06312c86d4e5f15b7653aa495760a482}} 
+\index{cog.h@{cog.h}!\_COGMEM@{\_COGMEM}}
+\index{\_COGMEM@{\_COGMEM}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_COGMEM}{\_COGMEM}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+O\+G\+M\+EM~\+\_\+\+\_\+attribute\+\_\+\+\_\+((cogmem))}
+
+
+
+Can be used in per-\/variable declarations to tell compiler that a variable should go in C\+OG memory. 
+
+
+
+Definition at line 52 of file cog.\+h.
+
+\mbox{\Hypertarget{cog_8h_a8f3ac29aeae422b333154aefaf798dd2}\label{cog_8h_a8f3ac29aeae422b333154aefaf798dd2}} 
+\index{cog.h@{cog.h}!\_FCACHE@{\_FCACHE}}
+\index{\_FCACHE@{\_FCACHE}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_FCACHE}{\_FCACHE}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+C\+A\+C\+HE~\+\_\+\+\_\+attribute\+\_\+\+\_\+((fcache))}
+
+
+
+Can be used in per-\/function declarations to tell compiler that function should be compiled to load into fcache; useful for guaranteeing timing of small functions. 
+
+
+
+Definition at line 65 of file cog.\+h.
+
+\mbox{\Hypertarget{cog_8h_aec06822880610ebc60af1602e0809aa0}\label{cog_8h_aec06822880610ebc60af1602e0809aa0}} 
+\index{cog.h@{cog.h}!\_NAKED@{\_NAKED}}
+\index{\_NAKED@{\_NAKED}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_NAKED}{\_NAKED}}
+{\footnotesize\ttfamily \#define \+\_\+\+N\+A\+K\+ED~\+\_\+\+\_\+attribute\+\_\+\+\_\+((naked))}
+
+
+
+Can be used in per-\/function declarations to tell compiler that function will not have an epilogue or prologue\+: these should never return. 
+
+
+
+Definition at line 62 of file cog.\+h.
+
+\mbox{\Hypertarget{cog_8h_ae76eb47f3dc3ba8259fede6d55a4bb21}\label{cog_8h_ae76eb47f3dc3ba8259fede6d55a4bb21}} 
+\index{cog.h@{cog.h}!\_NATIVE@{\_NATIVE}}
+\index{\_NATIVE@{\_NATIVE}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_NATIVE}{\_NATIVE}}
+{\footnotesize\ttfamily \#define \+\_\+\+N\+A\+T\+I\+VE~\+\_\+\+\_\+attribute\+\_\+\+\_\+((native))}
+
+
+
+Can be used in per-\/function declarations to tell compiler that function will use cog \char`\"{}call/ret\char`\"{} calling (nonrecursive). 
+
+
+
+Definition at line 57 of file cog.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cog_8h_a6c8da091e1f0e9ab40c1d78c97044e95}\label{cog_8h_a6c8da091e1f0e9ab40c1d78c97044e95}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+P\+AR \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}P\+AR\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by coginit(), getcnt(), getpin(), setpin(), and togglepin().
+
+\mbox{\Hypertarget{cog_8h_a7022eaccb81766ec200d3abb10aa531a}\label{cog_8h_a7022eaccb81766ec200d3abb10aa531a}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+C\+NT \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}C\+NT\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a73846726566da5ceb57b5129f7c9cd04}\label{cog_8h_a73846726566da5ceb57b5129f7c9cd04}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [3/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+I\+NA \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}I\+NA\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_ade7488abc6255671db6f22fc2a03ce10}\label{cog_8h_ade7488abc6255671db6f22fc2a03ce10}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [4/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+I\+NB \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}I\+NB\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_acc3a49bdced76e9f925ca82f3c6913f6}\label{cog_8h_acc3a49bdced76e9f925ca82f3c6913f6}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [5/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+O\+U\+TA \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}O\+U\+TA\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_ac23a9850496bf8b64059444c04623fec}\label{cog_8h_ac23a9850496bf8b64059444c04623fec}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [6/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+O\+U\+TB \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}O\+U\+TB\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_ad6d416662ade31a74c0e805f5577e59d}\label{cog_8h_ad6d416662ade31a74c0e805f5577e59d}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [7/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+D\+I\+RA \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}D\+I\+RA\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a93b8e45e265609d236ac0031511b1349}\label{cog_8h_a93b8e45e265609d236ac0031511b1349}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [8/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+D\+I\+RB \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}D\+I\+RB\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a31e9129c2ddd8198081ce316d3f968a9}\label{cog_8h_a31e9129c2ddd8198081ce316d3f968a9}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [9/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+C\+T\+RA \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}C\+T\+RA\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_ae02ac0a289ac1297276a1d83b02e066f}\label{cog_8h_ae02ac0a289ac1297276a1d83b02e066f}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [10/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+C\+T\+RB \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}C\+T\+RB\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a83b9e1d964768a17de16b11f8e774888}\label{cog_8h_a83b9e1d964768a17de16b11f8e774888}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [11/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+F\+R\+QA \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}F\+R\+QA\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a8f3cfa476654d175db740ea9f62329c2}\label{cog_8h_a8f3cfa476654d175db740ea9f62329c2}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [12/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+F\+R\+QB \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}F\+R\+QB\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_ae2b1f3b4b78ee678f7811dbc9131309a}\label{cog_8h_ae2b1f3b4b78ee678f7811dbc9131309a}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [13/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+P\+H\+SA \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}P\+H\+SA\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a953d7c4d7c8115be75527aebdf12d9e5}\label{cog_8h_a953d7c4d7c8115be75527aebdf12d9e5}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [14/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+P\+H\+SB \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}P\+H\+SB\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_a3be1650e2633a145c5652ade56f3c2a6}\label{cog_8h_a3be1650e2633a145c5652ade56f3c2a6}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [15/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+V\+C\+FG \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}V\+C\+FG\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cog_8h_af2319171f520676c049b1039ea3edfbc}\label{cog_8h_af2319171f520676c049b1039ea3edfbc}} 
+\index{cog.h@{cog.h}!\_\_asm\_\_@{\_\_asm\_\_}}
+\index{\_\_asm\_\_@{\_\_asm\_\_}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_\_asm\_\_()}{\_\_asm\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [16/16]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cog_8h_a06312c86d4e5f15b7653aa495760a482}{\+\_\+\+C\+O\+G\+M\+EM}} volatile unsigned int \+\_\+\+V\+S\+CL \+\_\+\+\_\+asm\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\char`\"{}V\+S\+CL\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{cog_8h_a24f80986a60f78f7d7165df3a37f62f5}\label{cog_8h_a24f80986a60f78f7d7165df3a37f62f5}} 
+\index{cog.h@{cog.h}!\_clkfreq@{\_clkfreq}}
+\index{\_clkfreq@{\_clkfreq}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_clkfreq}{\_clkfreq}}
+{\footnotesize\ttfamily unsigned int \+\_\+clkfreq}
+
+32 bit system startup clock frequency variable \mbox{\Hypertarget{cog_8h_a97b52f57cd4db49a410838099e2f9851}\label{cog_8h_a97b52f57cd4db49a410838099e2f9851}} 
+\index{cog.h@{cog.h}!\_clkmode@{\_clkmode}}
+\index{\_clkmode@{\_clkmode}!cog.h@{cog.h}}
+\subsubsection{\texorpdfstring{\_clkmode}{\_clkmode}}
+{\footnotesize\ttfamily unsigned char \+\_\+clkmode}
+
+System startup clock mode 

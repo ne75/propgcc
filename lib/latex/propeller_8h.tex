@@ -1,0 +1,542 @@
+\hypertarget{propeller_8h}{}\section{include/propeller.h File Reference}
+\label{propeller_8h}\index{include/propeller.h@{include/propeller.h}}
+
+
+Provides Propeller specific functions.  
+
+
+{\ttfamily \#include \char`\"{}cog.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/thread.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}propeller1.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{propeller_8h_aed019fe98cd209831728779153c5e247}{H\+U\+B\+D\+A\+TA}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((section(\char`\"{}.hub\char`\"{})))
+\begin{DoxyCompactList}\small\item\em H\+U\+B\+D\+A\+TA tells compiler to put data into H\+UB R\+AM section. This is mostly useful in X\+MM modes where data must be shared in hub. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a237ab369ab46bf5376afeeb3212d3747}{H\+U\+B\+T\+E\+XT}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((section(\char`\"{}.hubtext\char`\"{})))
+\begin{DoxyCompactList}\small\item\em H\+U\+B\+T\+E\+XT tells compiler to put code into H\+UB R\+AM section. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_aff0d4a4a463c7e4a0ca91c879cd77ace}{C\+L\+K\+F\+R\+EQ}}~\mbox{\hyperlink{cog_8h_a7c440c84eb8181d702434490646b7f72}{\+\_\+\+C\+L\+K\+F\+R\+EQ}}
+\begin{DoxyCompactList}\small\item\em Returns the current clock frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_afc1a700e9d3df83e08b7df4bdc0c004a}{C\+L\+K\+M\+O\+DE}}~\mbox{\hyperlink{cog_8h_a38a78fe786fd45d116aec0b2a3a5efbc}{\+\_\+\+C\+L\+K\+M\+O\+DE}}
+\begin{DoxyCompactList}\small\item\em Returns the current clock mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_acfef40b22a09027f91ddc2edb45384c4}{clkset}}(mode,  frequency)
+\begin{DoxyCompactList}\small\item\em Set clock mode and frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a92c3f7a12d1f728713367165b92e6db9}{cogid}}()~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+cogid()
+\begin{DoxyCompactList}\small\item\em Return the id of the current cog. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_ab9a90cc9adf61291eedb130afedfc48b}{cognew}}(code,  param)~\mbox{\hyperlink{propeller2_8h_a233b263323595f4d8e910ef0f8f87e6a}{coginit}}(0x8, (code), (param))
+\begin{DoxyCompactList}\small\item\em Start a new Propeller P\+A\+SM C\+OG. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_afd1b85736bf9422d9e7688f104d5c1e7}{cogstop}}(a)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+cogstop((a))
+\begin{DoxyCompactList}\small\item\em Stop a C\+OG. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_ab897aee4e9e6908fcd9d5a2a05e55925}{E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+Y\+T\+ES}}~(16 + sizeof(\mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}}))
+\item 
+\#define \mbox{\hyperlink{propeller_8h_a7130e4e2341008ca61e71b26ac447158}{E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+L\+O\+N\+GS}}~(\mbox{\hyperlink{propeller_8h_ab897aee4e9e6908fcd9d5a2a05e55925}{E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+Y\+T\+ES}} / 4)
+\item 
+\#define \mbox{\hyperlink{propeller_8h_a19c5ca3c5ff5afd3963b9c8e506e7175}{locknew}}()~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+locknew()
+\begin{DoxyCompactList}\small\item\em Get a new lock from the pool of Propeller hardware locks. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_ab70c6444bb412497ed9d978c12d5b2ad}{lockret}}(lockid)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+lockret((lockid))
+\begin{DoxyCompactList}\small\item\em Return lock to pool. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_af69a179c9cf1a170dd7c47555c3d5f2b}{lockset}}(lockid)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+lockset((lockid))
+\begin{DoxyCompactList}\small\item\em Set a lock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a35fcabd8a692b847f091724b1e6087e1}{lockclr}}(lockid)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+lockclr((lockid))
+\begin{DoxyCompactList}\small\item\em Clear lock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_abfb115793a1f26315b713a46891d53b2}{waitcnt}}(a)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitcnt((a),0)
+\begin{DoxyCompactList}\small\item\em Wait until system counter reaches a value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a32393fc315c1b71b84cdf15c87a80255}{waitcnt2}}(a,  b)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitcnt((a),(b))
+\begin{DoxyCompactList}\small\item\em Wait until system counter reaches a value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_ade2c9718605804a879c96500cd88f5da}{waitpeq}}(state,  mask)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitpeq((state), (mask))
+\begin{DoxyCompactList}\small\item\em Wait until I\+NA equal state \& mask. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a6851b8e3907edf6ac0d6149c695648ba}{waitpne}}(state,  mask)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitpne((state), (mask))
+\begin{DoxyCompactList}\small\item\em Wait until I\+NA not equal state \& mask. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a28f313e1fc55d60a6ce8ef850ce956c5}{waitvid}}(colors,  pixels)~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitvid((colors), (pixels))
+\begin{DoxyCompactList}\small\item\em Wait for video generator to accept pixel info. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a509d7a804c0a89bb935d7fd26746ee7c}{use\+\_\+cog\+\_\+driver}}(id)~extern uint32\+\_\+t binary\+\_\+\#\#id\#\#\+\_\+dat\+\_\+start\mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Make the load symbols available for a driver. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_a12715ad52a77528804fd9d5bd09831da}{get\+\_\+cog\+\_\+driver}}(id)~(binary\+\_\+\#\#id\#\#\+\_\+dat\+\_\+start)                              \textbackslash{}
+\begin{DoxyCompactList}\small\item\em Get a hub memory buffer containing a driver image. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller_8h_ae3317d0bc6b772cfa4ab721ecf40e212}{load\+\_\+cog\+\_\+driver}}(id,  param)~\mbox{\hyperlink{propeller_8h_ab9a90cc9adf61291eedb130afedfc48b}{cognew}}(binary\+\_\+\#\#id\#\#\+\_\+dat\+\_\+start, (uint32\+\_\+t $\ast$)(param))
+\begin{DoxyCompactList}\small\item\em Load a C\+OG driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{propeller_8h_a0c1e14651d8a660c23d1cb90c82a13c5}{cogstart}} (void($\ast$func)(void $\ast$), void $\ast$par, void $\ast$stack, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} stacksize)
+\begin{DoxyCompactList}\small\item\em Start a new propeller L\+MM function/thread in another C\+OG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides Propeller specific functions. 
+
+Copyright (c) 2011-\/2013 by Parallax, Inc. M\+IT Licensed 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{propeller_8h_aff0d4a4a463c7e4a0ca91c879cd77ace}\label{propeller_8h_aff0d4a4a463c7e4a0ca91c879cd77ace}} 
+\index{propeller.h@{propeller.h}!CLKFREQ@{CLKFREQ}}
+\index{CLKFREQ@{CLKFREQ}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{CLKFREQ}{CLKFREQ}}
+{\footnotesize\ttfamily \#define C\+L\+K\+F\+R\+EQ~\mbox{\hyperlink{cog_8h_a7c440c84eb8181d702434490646b7f72}{\+\_\+\+C\+L\+K\+F\+R\+EQ}}}
+
+
+
+Returns the current clock frequency. 
+
+
+
+Definition at line 46 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_afc1a700e9d3df83e08b7df4bdc0c004a}\label{propeller_8h_afc1a700e9d3df83e08b7df4bdc0c004a}} 
+\index{propeller.h@{propeller.h}!CLKMODE@{CLKMODE}}
+\index{CLKMODE@{CLKMODE}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{CLKMODE}{CLKMODE}}
+{\footnotesize\ttfamily \#define C\+L\+K\+M\+O\+DE~\mbox{\hyperlink{cog_8h_a38a78fe786fd45d116aec0b2a3a5efbc}{\+\_\+\+C\+L\+K\+M\+O\+DE}}}
+
+
+
+Returns the current clock mode. 
+
+
+
+Definition at line 49 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_acfef40b22a09027f91ddc2edb45384c4}\label{propeller_8h_acfef40b22a09027f91ddc2edb45384c4}} 
+\index{propeller.h@{propeller.h}!clkset@{clkset}}
+\index{clkset@{clkset}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{clkset}{clkset}}
+{\footnotesize\ttfamily \#define clkset(\begin{DoxyParamCaption}\item[{}]{mode,  }\item[{}]{frequency }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{  \_CLKFREQ = (frequency); \(\backslash\)}
+\DoxyCodeLine{  \_CLKMODE = (mode); \(\backslash\)}
+\DoxyCodeLine{  \_\_builtin\_propeller\_clkset(mode); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Set clock mode and frequency. 
+
+This macro is used to set the run-\/time clock mode and frequency. The clock mode and frequency are normally configured by the loader based on the user selected board type.
+
+Please see the Propeller Data Sheet for more clock information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The 8 bit clock mode \\
+\hline
+{\em frequency} & The 32 bit clock frequency \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This macro will not return a value. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a92c3f7a12d1f728713367165b92e6db9}\label{propeller_8h_a92c3f7a12d1f728713367165b92e6db9}} 
+\index{propeller.h@{propeller.h}!cogid@{cogid}}
+\index{cogid@{cogid}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{cogid}{cogid}}
+{\footnotesize\ttfamily \#define cogid(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+cogid()}
+
+
+
+Return the id of the current cog. 
+
+Sometimes we need to know which C\+OG is running the program. cogid returns that value. \begin{DoxyReturn}{Returns}
+ID number of current C\+OG 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_ab9a90cc9adf61291eedb130afedfc48b}\label{propeller_8h_ab9a90cc9adf61291eedb130afedfc48b}} 
+\index{propeller.h@{propeller.h}!cognew@{cognew}}
+\index{cognew@{cognew}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{cognew}{cognew}}
+{\footnotesize\ttfamily \#define cognew(\begin{DoxyParamCaption}\item[{}]{code,  }\item[{}]{param }\end{DoxyParamCaption})~\mbox{\hyperlink{propeller2_8h_a233b263323595f4d8e910ef0f8f87e6a}{coginit}}(0x8, (code), (param))}
+
+
+
+Start a new Propeller P\+A\+SM C\+OG. 
+
+This is use to start a C\+OG with code compiled as P\+A\+SM, AS, or C\+O\+G-\/C. P\+A\+SM can be any Spin/\+P\+A\+SM code that is self-\/contained. That is, all data for initialization and mailbox use are passed via the par parameter. Changing P\+A\+SM variables from S\+P\+IN code will not work with this method.
+
+G\+AS and C\+O\+G-\/C programs have similar restrictions. C\+O\+G-\/C programs should not use any stack or variables in H\+UB memory that are not accessed via P\+AR mailbox or pointers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Address of P\+A\+SM to load \\
+\hline
+{\em param} & Value of par parameter usually an address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+OG ID provided by the builtin function or -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_afd1b85736bf9422d9e7688f104d5c1e7}\label{propeller_8h_afd1b85736bf9422d9e7688f104d5c1e7}} 
+\index{propeller.h@{propeller.h}!cogstop@{cogstop}}
+\index{cogstop@{cogstop}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{cogstop}{cogstop}}
+{\footnotesize\ttfamily \#define cogstop(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+cogstop((a))}
+
+
+
+Stop a C\+OG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The C\+OG ID \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_ab897aee4e9e6908fcd9d5a2a05e55925}\label{propeller_8h_ab897aee4e9e6908fcd9d5a2a05e55925}} 
+\index{propeller.h@{propeller.h}!EXTRA\_STACK\_BYTES@{EXTRA\_STACK\_BYTES}}
+\index{EXTRA\_STACK\_BYTES@{EXTRA\_STACK\_BYTES}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{EXTRA\_STACK\_BYTES}{EXTRA\_STACK\_BYTES}}
+{\footnotesize\ttfamily \#define E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+Y\+T\+ES~(16 + sizeof(\mbox{\hyperlink{thread_8h_ab20cd1a493b8dba6200fdc5912bec0d0}{\+\_\+thread\+\_\+state\+\_\+t}}))}
+
+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+Y\+T\+ES is the number of additional bytes you need for a stack passed to cogstart beyond what is actually needed by the function being started. 
+
+Definition at line 112 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a7130e4e2341008ca61e71b26ac447158}\label{propeller_8h_a7130e4e2341008ca61e71b26ac447158}} 
+\index{propeller.h@{propeller.h}!EXTRA\_STACK\_LONGS@{EXTRA\_STACK\_LONGS}}
+\index{EXTRA\_STACK\_LONGS@{EXTRA\_STACK\_LONGS}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{EXTRA\_STACK\_LONGS}{EXTRA\_STACK\_LONGS}}
+{\footnotesize\ttfamily \#define E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+L\+O\+N\+GS~(\mbox{\hyperlink{propeller_8h_ab897aee4e9e6908fcd9d5a2a05e55925}{E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+Y\+T\+ES}} / 4)}
+
+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+\_\+\+L\+O\+N\+GS is the number of additional longs you need for a stack passed to cogstart beyond what is actually needed by the function being started. 
+
+Definition at line 120 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a12715ad52a77528804fd9d5bd09831da}\label{propeller_8h_a12715ad52a77528804fd9d5bd09831da}} 
+\index{propeller.h@{propeller.h}!get\_cog\_driver@{get\_cog\_driver}}
+\index{get\_cog\_driver@{get\_cog\_driver}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{get\_cog\_driver}{get\_cog\_driver}}
+{\footnotesize\ttfamily \#define get\+\_\+cog\+\_\+driver(\begin{DoxyParamCaption}\item[{}]{id }\end{DoxyParamCaption})~(binary\+\_\+\#\#id\#\#\+\_\+dat\+\_\+start)                              \textbackslash{}}
+
+
+
+Get a hub memory buffer containing a driver image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The C\+OG driver name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 327 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_aed019fe98cd209831728779153c5e247}\label{propeller_8h_aed019fe98cd209831728779153c5e247}} 
+\index{propeller.h@{propeller.h}!HUBDATA@{HUBDATA}}
+\index{HUBDATA@{HUBDATA}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{HUBDATA}{HUBDATA}}
+{\footnotesize\ttfamily \#define H\+U\+B\+D\+A\+TA~\+\_\+\+\_\+attribute\+\_\+\+\_\+((section(\char`\"{}.hub\char`\"{})))}
+
+
+
+H\+U\+B\+D\+A\+TA tells compiler to put data into H\+UB R\+AM section. This is mostly useful in X\+MM modes where data must be shared in hub. 
+
+
+
+Definition at line 32 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a237ab369ab46bf5376afeeb3212d3747}\label{propeller_8h_a237ab369ab46bf5376afeeb3212d3747}} 
+\index{propeller.h@{propeller.h}!HUBTEXT@{HUBTEXT}}
+\index{HUBTEXT@{HUBTEXT}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{HUBTEXT}{HUBTEXT}}
+{\footnotesize\ttfamily \#define H\+U\+B\+T\+E\+XT~\+\_\+\+\_\+attribute\+\_\+\+\_\+((section(\char`\"{}.hubtext\char`\"{})))}
+
+
+
+H\+U\+B\+T\+E\+XT tells compiler to put code into H\+UB R\+AM section. 
+
+This is a G\+CC super-\/power. Put code in H\+UB R\+AM even in X\+MM modes. Sometimes code in X\+MM programs is time sensitive.
+
+Use H\+U\+B\+T\+E\+XT before a function declaration to make sure code is run from H\+UB instead of external memory. Performance of code run from external memory is unpredictable across platforms. 
+
+Definition at line 43 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_ae3317d0bc6b772cfa4ab721ecf40e212}\label{propeller_8h_ae3317d0bc6b772cfa4ab721ecf40e212}} 
+\index{propeller.h@{propeller.h}!load\_cog\_driver@{load\_cog\_driver}}
+\index{load\_cog\_driver@{load\_cog\_driver}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{load\_cog\_driver}{load\_cog\_driver}}
+{\footnotesize\ttfamily \#define load\+\_\+cog\+\_\+driver(\begin{DoxyParamCaption}\item[{}]{id,  }\item[{}]{param }\end{DoxyParamCaption})~\mbox{\hyperlink{propeller_8h_ab9a90cc9adf61291eedb130afedfc48b}{cognew}}(binary\+\_\+\#\#id\#\#\+\_\+dat\+\_\+start, (uint32\+\_\+t $\ast$)(param))}
+
+
+
+Load a C\+OG driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The C\+OG driver name \\
+\hline
+{\em param} & Parameter to pass to the driver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the C\+OG that was loaded 
+\end{DoxyReturn}
+
+
+Definition at line 335 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a35fcabd8a692b847f091724b1e6087e1}\label{propeller_8h_a35fcabd8a692b847f091724b1e6087e1}} 
+\index{propeller.h@{propeller.h}!lockclr@{lockclr}}
+\index{lockclr@{lockclr}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{lockclr}{lockclr}}
+{\footnotesize\ttfamily \#define lockclr(\begin{DoxyParamCaption}\item[{}]{lockid }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+lockclr((lockid))}
+
+
+
+Clear lock. 
+
+\begin{DoxyWarning}{Warning}
+This function does not precisely follow the Spin semantics described in the Propeller Manual. In particular, it does not return a value. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em lockid} & (0 through 7, int type) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 170 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a19c5ca3c5ff5afd3963b9c8e506e7175}\label{propeller_8h_a19c5ca3c5ff5afd3963b9c8e506e7175}} 
+\index{propeller.h@{propeller.h}!locknew@{locknew}}
+\index{locknew@{locknew}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{locknew}{locknew}}
+{\footnotesize\ttfamily \#define locknew(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+locknew()}
+
+
+
+Get a new lock from the pool of Propeller hardware locks. 
+
+\begin{DoxyNote}{Note}
+this function follows the Spin semantics described in the Propeller Manual. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+The lock my be in either the set or cleared state\+: a new lock is not guarenteed to be cleared. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+new lockid (0 through 7) on success, -\/1 on failure (result is int type) 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_ab70c6444bb412497ed9d978c12d5b2ad}\label{propeller_8h_ab70c6444bb412497ed9d978c12d5b2ad}} 
+\index{propeller.h@{propeller.h}!lockret@{lockret}}
+\index{lockret@{lockret}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{lockret}{lockret}}
+{\footnotesize\ttfamily \#define lockret(\begin{DoxyParamCaption}\item[{}]{lockid }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+lockret((lockid))}
+
+
+
+Return lock to pool. 
+
+\begin{DoxyNote}{Note}
+this function follows the Spin semantics described in the Propeller Manual. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+The lock is returned in it\textquotesingle{}s current state (set or cleared). 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em lockid} & (0 through 7, int type) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 155 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_af69a179c9cf1a170dd7c47555c3d5f2b}\label{propeller_8h_af69a179c9cf1a170dd7c47555c3d5f2b}} 
+\index{propeller.h@{propeller.h}!lockset@{lockset}}
+\index{lockset@{lockset}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{lockset}{lockset}}
+{\footnotesize\ttfamily \#define lockset(\begin{DoxyParamCaption}\item[{}]{lockid }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+lockset((lockid))}
+
+
+
+Set a lock. 
+
+\begin{DoxyNote}{Note}
+this function follows the Spin semantics described in the Propeller Manual. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em lockid} & (0 through 7, int type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int with the previous state of the lock\+: -\/1 (0x\+F\+F\+F\+F\+F\+F\+FF) when the previous state was set, 0 when the previous state was not set. 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a509d7a804c0a89bb935d7fd26746ee7c}\label{propeller_8h_a509d7a804c0a89bb935d7fd26746ee7c}} 
+\index{propeller.h@{propeller.h}!use\_cog\_driver@{use\_cog\_driver}}
+\index{use\_cog\_driver@{use\_cog\_driver}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{use\_cog\_driver}{use\_cog\_driver}}
+{\footnotesize\ttfamily \#define use\+\_\+cog\+\_\+driver(\begin{DoxyParamCaption}\item[{}]{id }\end{DoxyParamCaption})~extern uint32\+\_\+t binary\+\_\+\#\#id\#\#\+\_\+dat\+\_\+start\mbox{[}$\,$\mbox{]}}
+
+
+
+Make the load symbols available for a driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The C\+OG driver name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 321 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_abfb115793a1f26315b713a46891d53b2}\label{propeller_8h_abfb115793a1f26315b713a46891d53b2}} 
+\index{propeller.h@{propeller.h}!waitcnt@{waitcnt}}
+\index{waitcnt@{waitcnt}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{waitcnt}{waitcnt}}
+{\footnotesize\ttfamily \#define waitcnt(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitcnt((a),0)}
+
+
+
+Wait until system counter reaches a value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Target value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 176 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a32393fc315c1b71b84cdf15c87a80255}\label{propeller_8h_a32393fc315c1b71b84cdf15c87a80255}} 
+\index{propeller.h@{propeller.h}!waitcnt2@{waitcnt2}}
+\index{waitcnt2@{waitcnt2}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{waitcnt2}{waitcnt2}}
+{\footnotesize\ttfamily \#define waitcnt2(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitcnt((a),(b))}
+
+
+
+Wait until system counter reaches a value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Target value \\
+\hline
+{\em b} & Adjust value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 183 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_ade2c9718605804a879c96500cd88f5da}\label{propeller_8h_ade2c9718605804a879c96500cd88f5da}} 
+\index{propeller.h@{propeller.h}!waitpeq@{waitpeq}}
+\index{waitpeq@{waitpeq}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{waitpeq}{waitpeq}}
+{\footnotesize\ttfamily \#define waitpeq(\begin{DoxyParamCaption}\item[{}]{state,  }\item[{}]{mask }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitpeq((state), (mask))}
+
+
+
+Wait until I\+NA equal state \& mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Target value \\
+\hline
+{\em mask} & Ignore masked 0 bits in state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a6851b8e3907edf6ac0d6149c695648ba}\label{propeller_8h_a6851b8e3907edf6ac0d6149c695648ba}} 
+\index{propeller.h@{propeller.h}!waitpne@{waitpne}}
+\index{waitpne@{waitpne}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{waitpne}{waitpne}}
+{\footnotesize\ttfamily \#define waitpne(\begin{DoxyParamCaption}\item[{}]{state,  }\item[{}]{mask }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitpne((state), (mask))}
+
+
+
+Wait until I\+NA not equal state \& mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Target value \\
+\hline
+{\em mask} & Ignore masked 0 bits in state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file propeller.\+h.
+
+\mbox{\Hypertarget{propeller_8h_a28f313e1fc55d60a6ce8ef850ce956c5}\label{propeller_8h_a28f313e1fc55d60a6ce8ef850ce956c5}} 
+\index{propeller.h@{propeller.h}!waitvid@{waitvid}}
+\index{waitvid@{waitvid}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{waitvid}{waitvid}}
+{\footnotesize\ttfamily \#define waitvid(\begin{DoxyParamCaption}\item[{}]{colors,  }\item[{}]{pixels }\end{DoxyParamCaption})~\+\_\+\+\_\+builtin\+\_\+propeller\+\_\+waitvid((colors), (pixels))}
+
+
+
+Wait for video generator to accept pixel info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colors} & A long containing four byte-\/sized color values, each describing the four possible colors of the pixel patterns in Pixels. \\
+\hline
+{\em pixels} & The next 16-\/pixel by 2-\/bit (or 32-\/pixel by 1-\/bit) pixel pattern to display. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 205 of file propeller.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{propeller_8h_a0c1e14651d8a660c23d1cb90c82a13c5}\label{propeller_8h_a0c1e14651d8a660c23d1cb90c82a13c5}} 
+\index{propeller.h@{propeller.h}!cogstart@{cogstart}}
+\index{cogstart@{cogstart}!propeller.h@{propeller.h}}
+\subsubsection{\texorpdfstring{cogstart()}{cogstart()}}
+{\footnotesize\ttfamily int cogstart (\begin{DoxyParamCaption}\item[{void($\ast$)(void $\ast$)}]{func,  }\item[{void $\ast$}]{par,  }\item[{void $\ast$}]{stack,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{stacksize }\end{DoxyParamCaption})}
+
+
+
+Start a new propeller L\+MM function/thread in another C\+OG. 
+
+This function starts a new L\+MM VM kernel in a new C\+OG with func as the start function. The stack size must be big enough to hold the struct \+\_\+thread\+\_\+state\+\_\+t, the initial stack frame, and other stack frames used by called functions.
+
+This function can be used instead of \+\_\+start\+\_\+cog\+\_\+thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & L\+MM start function \\
+\hline
+{\em par} & Value of par parameter usually an address \\
+\hline
+{\em stack} & Address of user defined stack space. \\
+\hline
+{\em stacksize} & Size of user defined stack space. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+OG ID allocated by the function or -\/1 on failure. 
+\end{DoxyReturn}

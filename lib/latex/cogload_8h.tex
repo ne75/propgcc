@@ -1,0 +1,156 @@
+\hypertarget{cogload_8h}{}\section{include/cogload.h File Reference}
+\label{cogload_8h}\index{include/cogload.h@{include/cogload.h}}
+
+
+Provides Propeller specific functions to load C\+O\+Gs from \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$i2c.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cogload_8h_a27a7c7ab6db3066eb6888e8fd179767d}{C\+O\+G\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+O\+F\+F\+S\+ET}}(a)~((uint32\+\_\+t)(a) -\/ 0xc0000000 + 0x8000)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cogload_8h_a34b35fef365b47805bea8993a2c596e2}{cognew\+From\+Boot\+Eeprom}} (void $\ast$code, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} code\+Size, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Start a new Propeller C\+OG from a C\+OG image in \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cogload_8h_a662b6feed6887b045e790236fb0d9e5c}{coginit\+From\+Boot\+Eeprom}} (int id, void $\ast$code, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} code\+Size, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Start a specified Propeller C\+OG from a C\+OG image in \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cogload_8h_a999b621722fe944459567f2b64003d21}{read\+From\+Boot\+Eeprom}} (uint32\+\_\+t offset, void $\ast$buf, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em Read from the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cogload_8h_adf067cc6a66d233302739af57d8746bd}{write\+To\+Boot\+Eeprom}} (uint32\+\_\+t offset, void $\ast$buf, \mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em Write to the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides Propeller specific functions to load C\+O\+Gs from \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+Copyright (c) 2011-\/2012 by Parallax, Inc. M\+IT Licensed 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cogload_8h_a27a7c7ab6db3066eb6888e8fd179767d}\label{cogload_8h_a27a7c7ab6db3066eb6888e8fd179767d}} 
+\index{cogload.h@{cogload.h}!COG\_IMAGE\_EEPROM\_OFFSET@{COG\_IMAGE\_EEPROM\_OFFSET}}
+\index{COG\_IMAGE\_EEPROM\_OFFSET@{COG\_IMAGE\_EEPROM\_OFFSET}!cogload.h@{cogload.h}}
+\subsubsection{\texorpdfstring{COG\_IMAGE\_EEPROM\_OFFSET}{COG\_IMAGE\_EEPROM\_OFFSET}}
+{\footnotesize\ttfamily \#define C\+O\+G\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+O\+F\+F\+S\+ET(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~((uint32\+\_\+t)(a) -\/ 0xc0000000 + 0x8000)}
+
+
+
+Definition at line 15 of file cogload.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cogload_8h_a662b6feed6887b045e790236fb0d9e5c}\label{cogload_8h_a662b6feed6887b045e790236fb0d9e5c}} 
+\index{cogload.h@{cogload.h}!coginitFromBootEeprom@{coginitFromBootEeprom}}
+\index{coginitFromBootEeprom@{coginitFromBootEeprom}!cogload.h@{cogload.h}}
+\subsubsection{\texorpdfstring{coginitFromBootEeprom()}{coginitFromBootEeprom()}}
+{\footnotesize\ttfamily int coginit\+From\+Boot\+Eeprom (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{void $\ast$}]{code,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{code\+Size,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Start a specified Propeller C\+OG from a C\+OG image in \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+This is used to start a C\+OG with code compiled as P\+A\+SM, AS, or C\+O\+G-\/C when the C\+OG image is in \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. P\+A\+SM can be any Spin/\+P\+A\+SM code that is self-\/contained. That is, all data for initialization and mailbox use are passed via the par parameter. Changing P\+A\+SM variables from S\+P\+IN code will not work with this method.
+
+G\+AS and C\+O\+G-\/C programs have similar restrictions. C\+O\+G-\/C programs should not use any stack or variables in H\+UB memory that are not accessed via P\+AR mailbox or pointers.
+
+This function requires the boot i2c C\+OG driver so it must either already be loaded or the memory space used by it cannot have been overwritten by calling the i2c\+Boot\+Buffer function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & C\+OG id of to load \\
+\hline
+{\em code} & Address of P\+A\+SM to load \\
+\hline
+{\em size} & of code in bytes \\
+\hline
+{\em param} & Value of par parameter usually an address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+OG ID provided by the builtin function or -\/1 on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cogload_8h_a34b35fef365b47805bea8993a2c596e2}\label{cogload_8h_a34b35fef365b47805bea8993a2c596e2}} 
+\index{cogload.h@{cogload.h}!cognewFromBootEeprom@{cognewFromBootEeprom}}
+\index{cognewFromBootEeprom@{cognewFromBootEeprom}!cogload.h@{cogload.h}}
+\subsubsection{\texorpdfstring{cognewFromBootEeprom()}{cognewFromBootEeprom()}}
+{\footnotesize\ttfamily int cognew\+From\+Boot\+Eeprom (\begin{DoxyParamCaption}\item[{void $\ast$}]{code,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{code\+Size,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Start a new Propeller C\+OG from a C\+OG image in \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+This is used to start a C\+OG with code compiled as P\+A\+SM, AS, or C\+O\+G-\/C when the C\+OG image is in \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. P\+A\+SM can be any Spin/\+P\+A\+SM code that is self-\/contained. That is, all data for initialization and mailbox use are passed via the par parameter. Changing P\+A\+SM variables from S\+P\+IN code will not work with this method.
+
+G\+AS and C\+O\+G-\/C programs have similar restrictions. C\+O\+G-\/C programs should not use any stack or variables in H\+UB memory that are not accessed via P\+AR mailbox or pointers.
+
+This function requires the boot i2c C\+OG driver so it must either already be loaded or the memory space used by it cannot have been overwritten by calling the i2c\+Boot\+Buffer function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Address of P\+A\+SM to load \\
+\hline
+{\em size} & of code in bytes \\
+\hline
+{\em param} & Value of par parameter usually an address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+OG ID provided by the builtin function or -\/1 on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cogload_8h_a999b621722fe944459567f2b64003d21}\label{cogload_8h_a999b621722fe944459567f2b64003d21}} 
+\index{cogload.h@{cogload.h}!readFromBootEeprom@{readFromBootEeprom}}
+\index{readFromBootEeprom@{readFromBootEeprom}!cogload.h@{cogload.h}}
+\subsubsection{\texorpdfstring{readFromBootEeprom()}{readFromBootEeprom()}}
+{\footnotesize\ttfamily int read\+From\+Boot\+Eeprom (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{offset,  }\item[{void $\ast$}]{buf,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Read from the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+Use this function to read from the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+This function requires the boot i2c C\+OG driver so it must either already be loaded or the memory space used by it cannot have been overwritten by calling the i2c\+Boot\+Buffer function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset from the start of the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} to start reading \\
+\hline
+{\em buf} & Buffer address to receive the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} data \\
+\hline
+{\em size} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or -\/1 on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cogload_8h_adf067cc6a66d233302739af57d8746bd}\label{cogload_8h_adf067cc6a66d233302739af57d8746bd}} 
+\index{cogload.h@{cogload.h}!writeToBootEeprom@{writeToBootEeprom}}
+\index{writeToBootEeprom@{writeToBootEeprom}!cogload.h@{cogload.h}}
+\subsubsection{\texorpdfstring{writeToBootEeprom()}{writeToBootEeprom()}}
+{\footnotesize\ttfamily int write\+To\+Boot\+Eeprom (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{offset,  }\item[{void $\ast$}]{buf,  }\item[{\mbox{\hyperlink{size__t_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Write to the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}. 
+
+Use this function to write to the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}}.
+
+This function requires the boot i2c C\+OG driver so it must either already be loaded or the memory space used by it cannot have been overwritten by calling the i2c\+Boot\+Buffer function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset from the start of the boot \mbox{\hyperlink{structEEPROM}{E\+E\+P\+R\+OM}} to start writing \\
+\hline
+{\em buf} & Buffer address containing the data to write \\
+\hline
+{\em size} & Number of bytes to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or -\/1 on failure. 
+\end{DoxyReturn}

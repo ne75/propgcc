@@ -1,13 +1,13 @@
 #
 # build library
 #
-make clean
-if test $? != 0
-then
-  echo "library build failed - make clean"
-  cd ..
-  exit 1
-fi
+#make clean
+#if test $? != 0
+#then
+#  echo "library build failed - make clean"
+#  cd ..
+#  exit 1
+#fi
 make
 if test $? != 0
 then

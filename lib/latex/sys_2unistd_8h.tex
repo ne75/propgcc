@@ -1,0 +1,165 @@
+\hypertarget{sys_2unistd_8h}{}\section{include/sys/unistd.h File Reference}
+\label{sys_2unistd_8h}\index{include/sys/unistd.h@{include/sys/unistd.h}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sys_2unistd_8h_afcf80a6d91178952d107ad00b165752b}{S\+T\+D\+I\+N\+\_\+\+F\+I\+L\+E\+NO}}~0
+\item 
+\#define \mbox{\hyperlink{sys_2unistd_8h_abd165ee6474b5b75bf075842fff13a04}{S\+T\+D\+O\+U\+T\+\_\+\+F\+I\+L\+E\+NO}}~1
+\item 
+\#define \mbox{\hyperlink{sys_2unistd_8h_ae2fe1725bb5e9823d089c46b9ed5266e}{S\+T\+D\+E\+R\+R\+\_\+\+F\+I\+L\+E\+NO}}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{sys_2unistd_8h_a4e3322434ea918ae562e0ea5237ab191}{useconds\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_a3d13a95311d2bbcd25d6d493b9cf0b7f}{write}} (int fd, const void $\ast$buf, int count)
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_aec19a0626d6167a834fa9f5b25214f7f}{read}} (int fd, void $\ast$buf, int count)
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_aafbcde67669a1b96577e735ddebd8634}{close}} (int fd)
+\item 
+\mbox{\hyperlink{types_8h_af83497edef361523a95b06deda0b4c2d}{off\+\_\+t}} \mbox{\hyperlink{sys_2unistd_8h_a8bd74caed008a66808d92d57fa74d9f6}{lseek}} (int fd, \mbox{\hyperlink{types_8h_af83497edef361523a95b06deda0b4c2d}{off\+\_\+t}} offset, int whence)
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_a49bb0c485f30ab14364721c9ce433bab}{isatty}} (int fd)
+\item 
+char $\ast$ \mbox{\hyperlink{sys_2unistd_8h_ac1eca3263b7a3a69b0b1865c2aab5b7c}{getcwd}} (char $\ast$buf, int size)
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_a03af571dfb595681bfa203c83385c07b}{chdir}} (const char $\ast$path)
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_ab2df76f2c62ae012c2e417813b5fe8ce}{rmdir}} (const char $\ast$path)
+\item 
+unsigned int \mbox{\hyperlink{sys_2unistd_8h_a69c97039c9ec10a30e5edbdf365e3bbd}{sleep}} (unsigned int seconds)
+\item 
+int \mbox{\hyperlink{sys_2unistd_8h_ac0383719bafa9b5b2aa25fabc586bd1f}{usleep}} (\mbox{\hyperlink{sys_2unistd_8h_a4e3322434ea918ae562e0ea5237ab191}{useconds\+\_\+t}} usec)
+\item 
+char $\ast$ \mbox{\hyperlink{sys_2unistd_8h_a7e8e717cbfb72335ae627b5fcb95a9c0}{\+\_\+mktemp}} (char $\ast$templ)
+\item 
+char $\ast$ \mbox{\hyperlink{sys_2unistd_8h_a90805504fda2908d2627e897a0f89e03}{mktemp}} (char $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sys_2unistd_8h_ae2fe1725bb5e9823d089c46b9ed5266e}\label{sys_2unistd_8h_ae2fe1725bb5e9823d089c46b9ed5266e}} 
+\index{unistd.h@{unistd.h}!STDERR\_FILENO@{STDERR\_FILENO}}
+\index{STDERR\_FILENO@{STDERR\_FILENO}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{STDERR\_FILENO}{STDERR\_FILENO}}
+{\footnotesize\ttfamily \#define S\+T\+D\+E\+R\+R\+\_\+\+F\+I\+L\+E\+NO~2}
+
+
+
+Definition at line 13 of file unistd.\+h.
+
+\mbox{\Hypertarget{sys_2unistd_8h_afcf80a6d91178952d107ad00b165752b}\label{sys_2unistd_8h_afcf80a6d91178952d107ad00b165752b}} 
+\index{unistd.h@{unistd.h}!STDIN\_FILENO@{STDIN\_FILENO}}
+\index{STDIN\_FILENO@{STDIN\_FILENO}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{STDIN\_FILENO}{STDIN\_FILENO}}
+{\footnotesize\ttfamily \#define S\+T\+D\+I\+N\+\_\+\+F\+I\+L\+E\+NO~0}
+
+
+
+Definition at line 11 of file unistd.\+h.
+
+\mbox{\Hypertarget{sys_2unistd_8h_abd165ee6474b5b75bf075842fff13a04}\label{sys_2unistd_8h_abd165ee6474b5b75bf075842fff13a04}} 
+\index{unistd.h@{unistd.h}!STDOUT\_FILENO@{STDOUT\_FILENO}}
+\index{STDOUT\_FILENO@{STDOUT\_FILENO}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{STDOUT\_FILENO}{STDOUT\_FILENO}}
+{\footnotesize\ttfamily \#define S\+T\+D\+O\+U\+T\+\_\+\+F\+I\+L\+E\+NO~1}
+
+
+
+Definition at line 12 of file unistd.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sys_2unistd_8h_a4e3322434ea918ae562e0ea5237ab191}\label{sys_2unistd_8h_a4e3322434ea918ae562e0ea5237ab191}} 
+\index{unistd.h@{unistd.h}!useconds\_t@{useconds\_t}}
+\index{useconds\_t@{useconds\_t}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{useconds\_t}{useconds\_t}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{sys_2unistd_8h_a4e3322434ea918ae562e0ea5237ab191}{useconds\+\_\+t}}}
+
+
+
+Definition at line 15 of file unistd.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys_2unistd_8h_a7e8e717cbfb72335ae627b5fcb95a9c0}\label{sys_2unistd_8h_a7e8e717cbfb72335ae627b5fcb95a9c0}} 
+\index{unistd.h@{unistd.h}!\_mktemp@{\_mktemp}}
+\index{\_mktemp@{\_mktemp}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{\_mktemp()}{\_mktemp()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+mktemp (\begin{DoxyParamCaption}\item[{char $\ast$}]{templ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_a03af571dfb595681bfa203c83385c07b}\label{sys_2unistd_8h_a03af571dfb595681bfa203c83385c07b}} 
+\index{unistd.h@{unistd.h}!chdir@{chdir}}
+\index{chdir@{chdir}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{chdir()}{chdir()}}
+{\footnotesize\ttfamily int chdir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_aafbcde67669a1b96577e735ddebd8634}\label{sys_2unistd_8h_aafbcde67669a1b96577e735ddebd8634}} 
+\index{unistd.h@{unistd.h}!close@{close}}
+\index{close@{close}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily int close (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_ac1eca3263b7a3a69b0b1865c2aab5b7c}\label{sys_2unistd_8h_ac1eca3263b7a3a69b0b1865c2aab5b7c}} 
+\index{unistd.h@{unistd.h}!getcwd@{getcwd}}
+\index{getcwd@{getcwd}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{getcwd()}{getcwd()}}
+{\footnotesize\ttfamily char$\ast$ getcwd (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_a49bb0c485f30ab14364721c9ce433bab}\label{sys_2unistd_8h_a49bb0c485f30ab14364721c9ce433bab}} 
+\index{unistd.h@{unistd.h}!isatty@{isatty}}
+\index{isatty@{isatty}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{isatty()}{isatty()}}
+{\footnotesize\ttfamily int isatty (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_a8bd74caed008a66808d92d57fa74d9f6}\label{sys_2unistd_8h_a8bd74caed008a66808d92d57fa74d9f6}} 
+\index{unistd.h@{unistd.h}!lseek@{lseek}}
+\index{lseek@{lseek}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{lseek()}{lseek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_af83497edef361523a95b06deda0b4c2d}{off\+\_\+t}} lseek (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\mbox{\hyperlink{types_8h_af83497edef361523a95b06deda0b4c2d}{off\+\_\+t}}}]{offset,  }\item[{int}]{whence }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_a90805504fda2908d2627e897a0f89e03}\label{sys_2unistd_8h_a90805504fda2908d2627e897a0f89e03}} 
+\index{unistd.h@{unistd.h}!mktemp@{mktemp}}
+\index{mktemp@{mktemp}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{mktemp()}{mktemp()}}
+{\footnotesize\ttfamily char$\ast$ mktemp (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_aec19a0626d6167a834fa9f5b25214f7f}\label{sys_2unistd_8h_aec19a0626d6167a834fa9f5b25214f7f}} 
+\index{unistd.h@{unistd.h}!read@{read}}
+\index{read@{read}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int read (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{void $\ast$}]{buf,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_ab2df76f2c62ae012c2e417813b5fe8ce}\label{sys_2unistd_8h_ab2df76f2c62ae012c2e417813b5fe8ce}} 
+\index{unistd.h@{unistd.h}!rmdir@{rmdir}}
+\index{rmdir@{rmdir}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{rmdir()}{rmdir()}}
+{\footnotesize\ttfamily int rmdir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_a69c97039c9ec10a30e5edbdf365e3bbd}\label{sys_2unistd_8h_a69c97039c9ec10a30e5edbdf365e3bbd}} 
+\index{unistd.h@{unistd.h}!sleep@{sleep}}
+\index{sleep@{sleep}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily unsigned int sleep (\begin{DoxyParamCaption}\item[{unsigned int}]{seconds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_ac0383719bafa9b5b2aa25fabc586bd1f}\label{sys_2unistd_8h_ac0383719bafa9b5b2aa25fabc586bd1f}} 
+\index{unistd.h@{unistd.h}!usleep@{usleep}}
+\index{usleep@{usleep}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{usleep()}{usleep()}}
+{\footnotesize\ttfamily int usleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sys_2unistd_8h_a4e3322434ea918ae562e0ea5237ab191}{useconds\+\_\+t}}}]{usec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sys_2unistd_8h_a3d13a95311d2bbcd25d6d493b9cf0b7f}\label{sys_2unistd_8h_a3d13a95311d2bbcd25d6d493b9cf0b7f}} 
+\index{unistd.h@{unistd.h}!write@{write}}
+\index{write@{write}!unistd.h@{unistd.h}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int write (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{const void $\ast$}]{buf,  }\item[{int}]{count }\end{DoxyParamCaption})}
+

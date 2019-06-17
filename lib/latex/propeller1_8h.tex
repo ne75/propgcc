@@ -1,0 +1,431 @@
+\hypertarget{propeller1_8h}{}\section{include/propeller1.h File Reference}
+\label{propeller1_8h}\index{include/propeller1.h@{include/propeller1.h}}
+
+
+Provides Propeller 1 specific functions.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{propeller1_8h_a39da62fe1e9d2828b49549df335e1c93}{coginit}}(id,  code,  param)
+\begin{DoxyCompactList}\small\item\em Start a cog with a parameter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_ac4f4136a49d9af6417ae1515c4682046}{getcnt}}()~\+\_\+\+C\+NT
+\begin{DoxyCompactList}\small\item\em C\+NT register accessor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a214a9b541003b871f81961eab349761d}{P\+AR}}~\+\_\+\+P\+AR
+\begin{DoxyCompactList}\small\item\em Parameter register is used for sharing H\+UB R\+AM address info with the C\+OG. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a6a4288add566c8d9c96f7cb0dc661c66}{C\+NT}}~\+\_\+\+C\+NT
+\begin{DoxyCompactList}\small\item\em The system clock count. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a94f8ac7f3e48b77e3d63604c74ff1dd4}{I\+NA}}~\+\_\+\+I\+NA
+\begin{DoxyCompactList}\small\item\em Use to read the pins when corresponding D\+I\+RA bits are 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a87d7f88129361059fe96135a3827e2a3}{I\+NB}}~\+\_\+\+I\+NB
+\begin{DoxyCompactList}\small\item\em Unused in P8\+X32A. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_ae7a773cd5d4efe75433c1818b93fca18}{O\+U\+TA}}~\+\_\+\+O\+U\+TA
+\begin{DoxyCompactList}\small\item\em Use to set output pin states when corresponding D\+I\+RA bits are 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a1441aa5a534a1180ad256616c559ef16}{O\+U\+TB}}~\+\_\+\+O\+U\+TB
+\begin{DoxyCompactList}\small\item\em Unused in P8\+X32A. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a9b229d9c9c5247460353d9b573f4c4cf}{D\+I\+RA}}~\+\_\+\+D\+I\+RA
+\begin{DoxyCompactList}\small\item\em Use to set pins to input (0) or output (1). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a418d7f0dc17bdb79cc99dabd325014d3}{D\+I\+RB}}~\+\_\+\+D\+I\+RB
+\begin{DoxyCompactList}\small\item\em Unused in P8\+X32A. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_af72d3c75ede87b1a22bf55e59abd09ff}{C\+T\+RA}}~\+\_\+\+C\+T\+RA
+\begin{DoxyCompactList}\small\item\em Counter A control register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_ac1437bb0875f9d1b2576857d5a140395}{C\+T\+RB}}~\+\_\+\+C\+T\+RB
+\begin{DoxyCompactList}\small\item\em Counter B control register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a0fea5362a109ef74b40dab02dc1db3bb}{F\+R\+QA}}~\+\_\+\+F\+R\+QA
+\begin{DoxyCompactList}\small\item\em Counter A frequency register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a3cd2e6eebe25eac14f14690059e2dd2a}{F\+R\+QB}}~\+\_\+\+F\+R\+QB
+\begin{DoxyCompactList}\small\item\em Counter B frequency register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a0ec99ed78e8e014059e115177b507d91}{P\+H\+SA}}~\+\_\+\+P\+H\+SA
+\begin{DoxyCompactList}\small\item\em Counter A phase accumulation register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a0ec0235f4f2b66034f66ecfb46f222e6}{P\+H\+SB}}~\+\_\+\+P\+H\+SB
+\begin{DoxyCompactList}\small\item\em Counter B phase accumulation register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a5e7bb0988a58283fea1cc2ec6691c05e}{V\+C\+FG}}~\+\_\+\+V\+C\+FG
+\begin{DoxyCompactList}\small\item\em Video Configuration register can be used for other special output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{propeller1_8h_a06adefa5d19b24438785c2409de6a67c}{V\+S\+CL}}~\+\_\+\+V\+S\+CL
+\begin{DoxyCompactList}\small\item\em Video Scale register for setting pixel and frame clocks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ int \mbox{\hyperlink{propeller1_8h_a0454360d6b382cffed87bf3baf9337a8}{getpin}} (int pin)
+\begin{DoxyCompactList}\small\item\em getpin accessor used to read the state of a pin. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ void \mbox{\hyperlink{propeller1_8h_a7a9feb4de74aac32154d3bdc2bdab17e}{setpin}} (int pin, int value)
+\begin{DoxyCompactList}\small\item\em setpin accessor used to write the state of a pin. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+inline\+\_\+\+\_\+ void \mbox{\hyperlink{propeller1_8h_a8c4c801692cb0f887cdf59fa13c67a29}{togglepin}} (int pin)
+\begin{DoxyCompactList}\small\item\em togglepin accessor used to toggle the state of a pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides Propeller 1 specific functions. 
+
+Copyright (c) 2011-\/2013 by Parallax, Inc. M\+IT Licensed 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{propeller1_8h_a6a4288add566c8d9c96f7cb0dc661c66}\label{propeller1_8h_a6a4288add566c8d9c96f7cb0dc661c66}} 
+\index{propeller1.h@{propeller1.h}!CNT@{CNT}}
+\index{CNT@{CNT}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{CNT}{CNT}}
+{\footnotesize\ttfamily \#define C\+NT~\+\_\+\+C\+NT}
+
+
+
+The system clock count. 
+
+
+
+Definition at line 117 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a39da62fe1e9d2828b49549df335e1c93}\label{propeller1_8h_a39da62fe1e9d2828b49549df335e1c93}} 
+\index{propeller1.h@{propeller1.h}!coginit@{coginit}}
+\index{coginit@{coginit}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{coginit}{coginit}}
+{\footnotesize\ttfamily \#define coginit(\begin{DoxyParamCaption}\item[{}]{id,  }\item[{}]{code,  }\item[{}]{param }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_builtin\_propeller\_coginit( \(\backslash\)}
+\DoxyCodeLine{                                     (((uint32\_t)(param) << 16) \& 0xfffc0000) \(\backslash\)}
+\DoxyCodeLine{                                    |(((uint32\_t)(code) <<  2) \& 0x0003fff0) \(\backslash\)}
+\DoxyCodeLine{                                    |(((\textcolor{keywordtype}{id})                  ) \& 0x0000000f))}
+
+\end{DoxyCode}
+
+
+Start a cog with a parameter. 
+
+The fields in parameters are\+:
+
+\begin{DoxyItemize}
+\item 31\+:18 = 14-\/bit Long address for P\+AR Register \item 17\+:4 = 14-\/bit Long address of C\+O\+DE to load \item 3 = New bit \item 2\+:0 = Cog ID. New bit 3 is 0.\end{DoxyItemize}
+It is important to realize that a 14 bit address means that long aligned addresses or pointers should be use. That is if you pass a value to the P\+AR such as 3, the value will be truncated to 0. A value 5 will be interpreted as 4.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The C\+OG id to initialize \\
+\hline
+{\em code} & Start address of P\+A\+SM code to load. \\
+\hline
+{\em param} & P\+AR address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+OG ID provided by the builtin function or -\/1 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_af72d3c75ede87b1a22bf55e59abd09ff}\label{propeller1_8h_af72d3c75ede87b1a22bf55e59abd09ff}} 
+\index{propeller1.h@{propeller1.h}!CTRA@{CTRA}}
+\index{CTRA@{CTRA}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{CTRA}{CTRA}}
+{\footnotesize\ttfamily \#define C\+T\+RA~\+\_\+\+C\+T\+RA}
+
+
+
+Counter A control register. 
+
+
+
+Definition at line 131 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_ac1437bb0875f9d1b2576857d5a140395}\label{propeller1_8h_ac1437bb0875f9d1b2576857d5a140395}} 
+\index{propeller1.h@{propeller1.h}!CTRB@{CTRB}}
+\index{CTRB@{CTRB}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{CTRB}{CTRB}}
+{\footnotesize\ttfamily \#define C\+T\+RB~\+\_\+\+C\+T\+RB}
+
+
+
+Counter B control register. 
+
+
+
+Definition at line 133 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a9b229d9c9c5247460353d9b573f4c4cf}\label{propeller1_8h_a9b229d9c9c5247460353d9b573f4c4cf}} 
+\index{propeller1.h@{propeller1.h}!DIRA@{DIRA}}
+\index{DIRA@{DIRA}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{DIRA}{DIRA}}
+{\footnotesize\ttfamily \#define D\+I\+RA~\+\_\+\+D\+I\+RA}
+
+
+
+Use to set pins to input (0) or output (1). 
+
+
+
+Definition at line 127 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a418d7f0dc17bdb79cc99dabd325014d3}\label{propeller1_8h_a418d7f0dc17bdb79cc99dabd325014d3}} 
+\index{propeller1.h@{propeller1.h}!DIRB@{DIRB}}
+\index{DIRB@{DIRB}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{DIRB}{DIRB}}
+{\footnotesize\ttfamily \#define D\+I\+RB~\+\_\+\+D\+I\+RB}
+
+
+
+Unused in P8\+X32A. 
+
+
+
+Definition at line 129 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a0fea5362a109ef74b40dab02dc1db3bb}\label{propeller1_8h_a0fea5362a109ef74b40dab02dc1db3bb}} 
+\index{propeller1.h@{propeller1.h}!FRQA@{FRQA}}
+\index{FRQA@{FRQA}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{FRQA}{FRQA}}
+{\footnotesize\ttfamily \#define F\+R\+QA~\+\_\+\+F\+R\+QA}
+
+
+
+Counter A frequency register. 
+
+
+
+Definition at line 135 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a3cd2e6eebe25eac14f14690059e2dd2a}\label{propeller1_8h_a3cd2e6eebe25eac14f14690059e2dd2a}} 
+\index{propeller1.h@{propeller1.h}!FRQB@{FRQB}}
+\index{FRQB@{FRQB}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{FRQB}{FRQB}}
+{\footnotesize\ttfamily \#define F\+R\+QB~\+\_\+\+F\+R\+QB}
+
+
+
+Counter B frequency register. 
+
+
+
+Definition at line 137 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_ac4f4136a49d9af6417ae1515c4682046}\label{propeller1_8h_ac4f4136a49d9af6417ae1515c4682046}} 
+\index{propeller1.h@{propeller1.h}!getcnt@{getcnt}}
+\index{getcnt@{getcnt}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{getcnt}{getcnt}}
+{\footnotesize\ttfamily \#define getcnt(\begin{DoxyParamCaption}\item[{}]{void }\end{DoxyParamCaption})~\+\_\+\+C\+NT}
+
+
+
+C\+NT register accessor. 
+
+P1 provides a C\+OG accessible C\+NT register.
+
+This macro is a convenience for portability between P1/\+P2 code.
+
+\begin{DoxyReturn}{Returns}
+the global C\+NT value. 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a94f8ac7f3e48b77e3d63604c74ff1dd4}\label{propeller1_8h_a94f8ac7f3e48b77e3d63604c74ff1dd4}} 
+\index{propeller1.h@{propeller1.h}!INA@{INA}}
+\index{INA@{INA}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{INA}{INA}}
+{\footnotesize\ttfamily \#define I\+NA~\+\_\+\+I\+NA}
+
+
+
+Use to read the pins when corresponding D\+I\+RA bits are 0. 
+
+
+
+Definition at line 119 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a87d7f88129361059fe96135a3827e2a3}\label{propeller1_8h_a87d7f88129361059fe96135a3827e2a3}} 
+\index{propeller1.h@{propeller1.h}!INB@{INB}}
+\index{INB@{INB}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{INB}{INB}}
+{\footnotesize\ttfamily \#define I\+NB~\+\_\+\+I\+NB}
+
+
+
+Unused in P8\+X32A. 
+
+
+
+Definition at line 121 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_ae7a773cd5d4efe75433c1818b93fca18}\label{propeller1_8h_ae7a773cd5d4efe75433c1818b93fca18}} 
+\index{propeller1.h@{propeller1.h}!OUTA@{OUTA}}
+\index{OUTA@{OUTA}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{OUTA}{OUTA}}
+{\footnotesize\ttfamily \#define O\+U\+TA~\+\_\+\+O\+U\+TA}
+
+
+
+Use to set output pin states when corresponding D\+I\+RA bits are 1. 
+
+
+
+Definition at line 123 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a1441aa5a534a1180ad256616c559ef16}\label{propeller1_8h_a1441aa5a534a1180ad256616c559ef16}} 
+\index{propeller1.h@{propeller1.h}!OUTB@{OUTB}}
+\index{OUTB@{OUTB}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{OUTB}{OUTB}}
+{\footnotesize\ttfamily \#define O\+U\+TB~\+\_\+\+O\+U\+TB}
+
+
+
+Unused in P8\+X32A. 
+
+
+
+Definition at line 125 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a214a9b541003b871f81961eab349761d}\label{propeller1_8h_a214a9b541003b871f81961eab349761d}} 
+\index{propeller1.h@{propeller1.h}!PAR@{PAR}}
+\index{PAR@{PAR}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{PAR}{PAR}}
+{\footnotesize\ttfamily \#define P\+AR~\+\_\+\+P\+AR}
+
+
+
+Parameter register is used for sharing H\+UB R\+AM address info with the C\+OG. 
+
+
+
+Definition at line 115 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a0ec99ed78e8e014059e115177b507d91}\label{propeller1_8h_a0ec99ed78e8e014059e115177b507d91}} 
+\index{propeller1.h@{propeller1.h}!PHSA@{PHSA}}
+\index{PHSA@{PHSA}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{PHSA}{PHSA}}
+{\footnotesize\ttfamily \#define P\+H\+SA~\+\_\+\+P\+H\+SA}
+
+
+
+Counter A phase accumulation register. 
+
+
+
+Definition at line 139 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a0ec0235f4f2b66034f66ecfb46f222e6}\label{propeller1_8h_a0ec0235f4f2b66034f66ecfb46f222e6}} 
+\index{propeller1.h@{propeller1.h}!PHSB@{PHSB}}
+\index{PHSB@{PHSB}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{PHSB}{PHSB}}
+{\footnotesize\ttfamily \#define P\+H\+SB~\+\_\+\+P\+H\+SB}
+
+
+
+Counter B phase accumulation register. 
+
+
+
+Definition at line 141 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a5e7bb0988a58283fea1cc2ec6691c05e}\label{propeller1_8h_a5e7bb0988a58283fea1cc2ec6691c05e}} 
+\index{propeller1.h@{propeller1.h}!VCFG@{VCFG}}
+\index{VCFG@{VCFG}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{VCFG}{VCFG}}
+{\footnotesize\ttfamily \#define V\+C\+FG~\+\_\+\+V\+C\+FG}
+
+
+
+Video Configuration register can be used for other special output. 
+
+
+
+Definition at line 143 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a06adefa5d19b24438785c2409de6a67c}\label{propeller1_8h_a06adefa5d19b24438785c2409de6a67c}} 
+\index{propeller1.h@{propeller1.h}!VSCL@{VSCL}}
+\index{VSCL@{VSCL}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{VSCL}{VSCL}}
+{\footnotesize\ttfamily \#define V\+S\+CL~\+\_\+\+V\+S\+CL}
+
+
+
+Video Scale register for setting pixel and frame clocks. 
+
+
+
+Definition at line 145 of file propeller1.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{propeller1_8h_a0454360d6b382cffed87bf3baf9337a8}\label{propeller1_8h_a0454360d6b382cffed87bf3baf9337a8}} 
+\index{propeller1.h@{propeller1.h}!getpin@{getpin}}
+\index{getpin@{getpin}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{getpin()}{getpin()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ int getpin (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+getpin accessor used to read the state of a pin. 
+
+P1 provides pin access via registers only. This inline macro provides access to read a given pin.
+
+This macro is a convenience for portability between P1/\+P2 code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Pin to read in the range 0\+:31. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State of the requested pin with range 0\+:1. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a7a9feb4de74aac32154d3bdc2bdab17e}\label{propeller1_8h_a7a9feb4de74aac32154d3bdc2bdab17e}} 
+\index{propeller1.h@{propeller1.h}!setpin@{setpin}}
+\index{setpin@{setpin}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{setpin()}{setpin()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ void setpin (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+setpin accessor used to write the state of a pin. 
+
+P1 provides pin access via registers only. This inline macro provides access to write the value to a given pin.
+
+This macro is a convenience for portability between P1/\+P2 code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Pin to read in the range 0\+:31. \\
+\hline
+{\em value} & The value to set to the pin 0\+:1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file propeller1.\+h.
+
+\mbox{\Hypertarget{propeller1_8h_a8c4c801692cb0f887cdf59fa13c67a29}\label{propeller1_8h_a8c4c801692cb0f887cdf59fa13c67a29}} 
+\index{propeller1.h@{propeller1.h}!togglepin@{togglepin}}
+\index{togglepin@{togglepin}!propeller1.h@{propeller1.h}}
+\subsubsection{\texorpdfstring{togglepin()}{togglepin()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+inline\+\_\+\+\_\+ void togglepin (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+togglepin accessor used to toggle the state of a pin. 
+
+P1 provides pin access via registers only. This inline macro provides access to toggle the value of a given pin. Toggle means to set the opposite of the existing state.
+
+This macro is a convenience for portability between P1/\+P2 code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Pin to read in the range 0\+:31. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file propeller1.\+h.
+
