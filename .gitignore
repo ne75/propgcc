@@ -3,3 +3,5 @@
 *.cog
 *.binary
 lib/.DS_Store
+
+build/*
