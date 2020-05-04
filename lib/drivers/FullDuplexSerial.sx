@@ -20,7 +20,7 @@ entry
 #if defined(__PROPELLER2__)
 '
 ' Propeller2 can use the hardware multitasking
-' 
+'
 x1			jmp	#setup
 x2			jmp	#transmit
 par			long	0
@@ -139,7 +139,7 @@ tx.loop
 			djnz	txcnt,#tx.loop
 
 			jmp	#transmit
-			
+
 
 #else
 
@@ -164,7 +164,7 @@ tx.loop
                         add     t1,#4                 'get buffer_ptr
                         rdlong  rxbuff,t1
                         mov     txbuff,rxbuff
-                        add     txbuff,#16
+                        add     txbuff,#256
 
                         test    rxtxmode,#%100  wz    'init tx pin according to mode
                         test    rxtxmode,#%010  wc
@@ -187,7 +187,7 @@ receive                 jmpret  rxcode,txcode         'run a chunk of transmit c
                         mov     rxbits,#9             'ready to receive byte
                         mov     rxcnt,bitticks
                         shr     rxcnt,#1
-                        add     rxcnt,cnt                          
+                        add     rxcnt,cnt
 
 rcv.bit                 add     rxcnt,bitticks        'ready next bit period
 
@@ -212,7 +212,7 @@ rcv.wait                jmpret  rxcode,txcode         'run a chuck of transmit c
                         wrbyte  rxdata,t2
                         sub     t2,rxbuff
                         add     t2,#1
-                        and     t2,#$0F
+                        and     t2,#$ff
                         wrlong  t2,par
 
                         jmp     #receive              'byte done, receive next byte
@@ -231,14 +231,14 @@ transmit                jmpret  txcode,rxcode         'run a chunk of receive co
 
 			' update the ticks if necessary
 			rdlong	bitticks,bitticks_ptr
-	
+
         if_z            jmp     #transmit
 
                         add     t3,txbuff             'get byte and inc tail
                         rdbyte  txdata,t3
                         sub     t3,txbuff
                         add     t3,#1
-                        and     t3,#$0F
+                        and     t3,#$ff
                         wrlong  t3,t1
 
                         or      txdata,#$100          'ready byte to transmit
@@ -251,7 +251,7 @@ tx.bit                  test    rxtxmode,#%100  wz    'output bit on tx pin acco
                         test    rxtxmode,#%010  wc
         if_z_and_c      xor     txdata,#1
                         shr     txdata,#1       wc
-        if_z            muxc    outa,txmask        
+        if_z            muxc    outa,txmask
         if_nz           muxnc   dira,txmask
                         add     txcnt,bitticks        'ready next cnt
 
@@ -296,9 +296,9 @@ txcode                  res     1
 #endif
 
 //┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-//│                                                   TERMS OF USE: MIT License                                                  │                                                            
+//│                                                   TERMS OF USE: MIT License                                                  │
 //├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-//│Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation    │ 
+//│Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation    │
 //│files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,    │
 //│modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software│
 //│is furnished to do so, subject to the following conditions:                                                                   │

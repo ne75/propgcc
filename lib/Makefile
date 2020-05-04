@@ -9,7 +9,7 @@ DEST = $(PREFIX)/propeller-elf
 ifdef BUILD
 OBJDIR=$(BUILD)/lib/obj
 else
-OBJDIR=../../build/lib/obj
+OBJDIR=../build/lib/obj
 endif
 
 CC=propeller-elf-gcc

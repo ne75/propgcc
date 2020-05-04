@@ -18,12 +18,12 @@ ROOT=$(shell pwd)
 CURSES=
 CURSES_PREFIX=$(HOME)
 ifeq ($(CROSS),)
-  BUILD?=$(ROOT)/../build
+  BUILD?=$(ROOT)/build
   PREFIX?=/opt/parallax
   CFGCROSS=
   CROSSCC=gcc
 else
-  BUILD?=$(ROOT)/../build-$(CROSS)
+  BUILD?=$(ROOT)/build-$(CROSS)
   PREFIX?=/opt/parallax-$(CROSS)
   ifeq ($(CROSS),win32)
     CROSS_TARGET=i586-mingw32msvc

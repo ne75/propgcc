@@ -37,6 +37,7 @@ lib:
 
 - changed i2c driver to support clock stretching.
 - changed terminal.c driver to require cooked mode to convert \n to \r\n
+- changed FullDuplexSerial to have a larger buffer size
 
 ------------------------------------------------------------------
 

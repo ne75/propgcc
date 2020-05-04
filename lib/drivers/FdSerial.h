@@ -11,7 +11,7 @@
 /**
  * Defines buffer length. hard coded in asm driver ... s/b bigger
  */
-#define FDSERIAL_BUFF_MASK 0xf
+#define FDSERIAL_BUFF_MASK 0xff
 
 /**
  * Defines mode bits
@@ -42,8 +42,10 @@ typedef struct FdSerial_struct
     int mode;      // interface mode
     int ticks;     // clkfreq / baud
     int buffptr;   // pointer to rx buffer
-    volatile char rxbuff[FDSERIAL_BUFF_MASK+1];  // receive buffer
-    volatile char txbuff[FDSERIAL_BUFF_MASK+1];  // transmit buffer
+    // volatile char rxbuff[FDSERIAL_BUFF_MASK+1];  // receive buffer
+    // volatile char txbuff[FDSERIAL_BUFF_MASK+1];  // transmit buffer
+    volatile char rxbuff[64];  // receive buffer
+    volatile char txbuff[64];  // transmit buffer
     int cogId;     // cog flag/id
 
     // make a linked list so we can find which pins are in use by other cogs
@@ -52,7 +54,7 @@ typedef struct FdSerial_struct
 } FdSerial_t;
 
 /**
- * start initializes and starts native assembly driver in a cog. 
+ * start initializes and starts native assembly driver in a cog.
  * @param rxpin is pin number for receive input
  * @param txpin is pin number for transmit output
  * @param mode is interface mode
@@ -61,45 +63,45 @@ typedef struct FdSerial_struct
  */
 int _FdSerial_start(FdSerial_t *data, int rxpin, int txpin, int mode, int baudrate);
 /**
- * stop stops the cog running the native assembly driver 
+ * stop stops the cog running the native assembly driver
  */
 void _FdSerial_stop(FdSerial_t *data);
 /**
- * rxflush empties the receive queue 
+ * rxflush empties the receive queue
  */
 void _FdSerial_rxflush(FdSerial_t *data);
 /**
  * rxcheck gets a byte from the receive queue if available
  * function does not block.
- * @returns receive byte 0 to 0xff or -1 if none available 
+ * @returns receive byte 0 to 0xff or -1 if none available
  */
 int _FdSerial_rxcheck(FdSerial_t *data);
 /**
  * rxtime gets a byte from the receive queue if available by timeout
  * function blocks if no recieve for ms timeout.
  * @param ms is number of milliseconds to wait for a char
- * @returns receive byte 0 to 0xff or -1 if none available 
+ * @returns receive byte 0 to 0xff or -1 if none available
  */
 int _FdSerial_rxtime(FdSerial_t *data, int ms);
 /**
  * rx waits for a byte from the receive queue. blocks until somehting is ready
- * @returns received byte 
+ * @returns received byte
  */
 int _FdSerial_rx(FdSerial_t *data);
 /**
  * tx sends a byte on the transmit queue.
- * @param txbyte is byte to send. 
- * @returns waits for and returns received byte if mode is 8 
+ * @param txbyte is byte to send.
+ * @returns waits for and returns received byte if mode is 8
  */
 int _FdSerial_tx(FdSerial_t *data, int txbyte);
 
-#endif 
+#endif
 
 /*
 +------------------------------------------------------------------------------------------------------------------------------+
-¦                                                   TERMS OF USE: MIT License                                                  ¦                                                            
+¦                                                   TERMS OF USE: MIT License                                                  ¦
 +------------------------------------------------------------------------------------------------------------------------------¦
-¦Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation    ¦ 
+¦Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation    ¦
 ¦files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,    ¦
 ¦modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software¦
 ¦is furnished to do so, subject to the following conditions:                                                                   ¦
